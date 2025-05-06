@@ -1,0 +1,82 @@
+/*
+------------- Table of content ----------------
+
+Template Name: Hospital Management Responsive  HTML5 Template
+Template URI: http://medico.com
+Description: Hospital Management Responsive  HTML5 Template
+Author: Gobinda Sarkar
+Author URI: http://medico.com
+Version: 1.0
+
+---------------------- common content ----------
+1.body reset content
+2.header area
+3.register-area
+4.scroll-bar
+5.main-sidebar
+6.section-title
+7.welcome-area
+8.pagination-area
+9.patient-list
+10.primary-tab
+11.primary-form
+12.doctors-area
+13.given-services
+14.expense-list
+15.doctor-profile
+16.chart-style
+17.top-doctors
+18.patient-activity
+19.Patient-Profile
+20.line-progress-bar
+21.accounts-area
+22.recent-review
+23.appointment-area
+24.testimonial-area
+25.full-calendar
+26.addappointment-from
+*/
+
+
+
+
+// variable
+@import "./variable/_variable.scss";
+
+// mixin
+@import "./mixin/_mixin.scss";
+
+// body reset content
+@import "./reset/_predefine.scss";
+
+// component content
+@import "./section/preloader/preloader";
+@import "./section/header/header";
+@import "./section/register-area/register-area";
+@import "./section/scroll-bar/_scroll-bar";
+@import "./section/main-sidebar/main-sidebar";
+@import "./section/section-title/section-title";
+@import "./section/welcome/welcome";
+@import "./section/pagination/pagination";
+@import "./section/patient-list/patient-list";
+@import "./section/primary-tab/primary-tab";
+@import "./section/primary-form/primary-form";
+@import "./section/doctors/doctors";
+@import "./section/given-services/given-services";
+@import "./section/expense-list/expense-list";
+@import "./section/doctor-profile/doctor-profile";
+@import "./section/chart-style/chart-style";
+@import "./section/top-doctors/top-doctors";
+@import "./section/patient-activity/patient-activity";
+@import "./section/Patient-Profile/Patient-Profile";
+@import "./section/line-progress-bar/line-progress-bar";
+@import "./section/accounts-area/accounts-area";
+@import "./section/recent-review/recent-review";
+@import "./section/appointment-area/appointment-area";
+@import "./section/testimonial-area/testimonial-area";
+@import "./section/full-calendar/full-calendar";
+@import "./section/appointment-area/addappointment-from";
+
+
+
+// page content

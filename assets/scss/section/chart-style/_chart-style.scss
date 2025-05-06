@@ -1,0 +1,305 @@
+/*-------------------------
+16.chart-style
+--------------------------*/
+.patient-history-chart {
+     .patienthistory-top {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-end;
+          align-items: center;
+          p {
+               margin: 0;
+          }
+          .Patient-status {
+               margin-right: 2.5rem;
+               font-size: 1.6rem;
+               font-weight: 400;
+               text-transform: capitalize;
+               color: #70708C;
+               .bulet {
+                    display: inline-block;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    border-radius: 50%;
+                    background: #605BFF;
+                    margin-right: .5rem;
+                    &.new {
+                         background: #FF55BF;
+                    }
+                    &.old {
+                         background: #605BFF;
+                    }
+               }
+          }
+     }
+}
+.diseases-chart {
+     .stats {
+          margin-top: 2rem;
+          ul {
+               display: flex;
+               flex-flow: row wrap;
+               justify-content: space-around;
+               margin: 0;
+               padding: 0;
+               li {
+                    list-style: none;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    color: #70708C;
+                    margin: .5rem 1rem;
+                    .bulet {
+                         display: inline-block;
+                         width:1.5rem;
+                         height: 1.5rem;
+                         border-radius: 50%;
+                         background: #4993FB;
+                         margin-right: 1rem;
+                         &.stroke {
+                              background: #4993FB;
+                         }
+                         &.diabetes {
+                              background: #FA54BB;
+                         }
+                         &.cirrhosis {
+                              background: #5D59F7;
+                         }
+                         &.tuberculosis {
+                              background: #FCBD01;
+                         }
+                         &.cancers {
+                              background: #F97951;
+                         }
+                    }
+               }
+          }
+     }
+}
+.total-patient-chart {
+     .stats {
+          margin:0;
+          ul {
+               display: flex;
+               flex-flow: row wrap;
+               justify-content: flex-end;
+               margin: 0;
+               padding: 0;
+               li {
+                    list-style: none;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    color: #70708C;
+                    margin: .5rem 1rem;
+                    .bulet {
+                         display: inline-block;
+                         width:1.5rem;
+                         height: 1.5rem;
+                         border-radius: 50%;
+                         background: #4993FB;
+                         margin-right: 1rem;
+                         &.admitted {
+                              background: #4993FB;
+                         }
+                         &.discharged {
+                              background: #FA54BB;
+                         }
+                    }
+               }
+          }
+     }
+}
+.revenue-chart {
+     .stats {
+          margin:0;
+          ul {
+               display: flex;
+               flex-flow: row wrap;
+               justify-content: flex-end;
+               margin: 0;
+               padding: 0;
+               li {
+                    list-style: none;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    color: #70708C;
+                    margin: .5rem 1rem;
+                    img {
+                         margin-right: .5rem;
+                    }
+               }
+          }
+     }
+}
+
+.single-blood-Pressure {
+     h4 {
+          font-size: 1.5rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          color: #70708C;
+     }
+     h2 {
+          font-size: 2.2rem;
+          font-weight: 700;
+          color: #FF8F6B;
+          sub {
+               font-size: 1.4rem;
+               font-weight: 400;
+               color: #70708C;
+               top: 0;
+               margin-left: 5px;
+          }
+     }
+     .diastolic {
+          h2 {
+               color: #5DD971;
+          }
+     }
+}
+
+.reports-area {
+     .reports-area-top {
+          .reports-top-left {
+               h4 {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color: #292968
+               }
+               p {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    color: #70708C;
+                    margin: 0;
+               }
+          }
+     }
+     .reports-chart {
+          .stats {
+               margin-bottom: 1rem;
+               ul {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: flex-end;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                         list-style: none;
+                         font-size: 1.6rem;
+                         font-weight: 400;
+                         text-transform: capitalize;
+                         color: #70708C;
+                         margin: .5rem 1rem;
+                         .bulet {
+                              display: inline-block;
+                              position: relative;
+                              top: 2px;
+                              width:1.5rem;
+                              height: 1.5rem;
+                              border-radius: 50%;
+                              background: #4993FB;
+                              margin-right: 1rem;
+                              &.Revenue {
+                                   background: #605BFF;
+                              }
+                              &.Expense {
+                                   background: #FF8F6B;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     .time-select {
+          .nice-select {
+               float: right;
+          }
+     }
+     .section-wrapper {
+          overflow: hidden;
+     }
+     .single-reports {
+          overflow: hidden;
+          .reports-top {
+               padding-top: 2rem;
+               padding-left: 2rem;
+               margin-bottom: -20px;
+               &.expense {
+                    h4 {
+                         color: #FF8F6B;
+                    }
+               }
+               h4 {
+                    margin: 0;
+                    margin-bottom: .5rem;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    color: #605BFF;
+               }
+               h2 {
+                    margin: 0;
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    color: #292968;
+               }
+          }
+     }
+}
+
+.visitors-chart {
+     .nice-select {
+          background-color: #fff;
+          border: none;
+          float: right;
+          font-size: 14px;
+          padding-left: 0;
+          padding-right: 30px;
+     }
+}
+#expense-chart {
+     display: flex;
+     justify-content: center;
+}
+@media (max-width: 1200px) {
+     .diseases-chart .stats {
+          margin-top: 0;
+     }
+     .diseases-chart .stats ul li {
+          font-size: 1.3rem;
+          margin: 0 .5rem;
+     }
+     .reports-area .single-reports .reports-top h4 {
+          font-size: 1.2rem;
+     }
+     .reports-area .single-reports .reports-top h2 {
+          font-size: 1.6rem;
+     }
+     .reports-area .single-reports .reports-top {
+          padding-top: 1rem;
+          padding-left: 1.5rem;
+          margin-bottom: -10px;
+     }
+}
+@media (max-width: 1024px) {
+     .diseases-chart .stats ul li .bulet {
+          margin-right: 0;
+     }
+     .diseases-chart .stats ul li .bulet {
+          width: 1.2rem;
+          height: 1.2rem;
+     }
+}
+
+@media (max-width: 375px) {
+     .patient-history-chart .patienthistory-top .Patient-status {
+          margin-right: 1rem;
+          font-size: 1.2rem;
+     }
+     .patient-history-chart .patienthistory-top .Patient-status .bulet {
+          width: 1rem;
+          height: 1rem;
+     }
+}

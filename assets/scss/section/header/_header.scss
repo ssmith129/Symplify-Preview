@@ -1,0 +1,182 @@
+/*-------------------------
+2.header area
+--------------------------*/
+.header-area {
+  padding: 2.5rem 3rem;
+  display: none;
+  .search-form {
+    .form-group {
+      position: relative;
+      .form-control {
+        width: 325px;
+        height: 5rem;
+        border-radius: 3rem;
+        border: 1px solid #E0E7FE;
+        padding: 1rem 1.5rem;
+        padding-left: 5.5rem;
+        font-family: $bodyFont;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #70708C;
+      }
+      .search-btn {
+        position: absolute;
+        left: 2.5rem;
+        top: 1.3rem;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        color: #A5AAB6;
+        transition: $transition;
+        &:hover {
+          color: var(--primary-color);
+        }
+        span {
+          &::before {
+            font-size: 1.6rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .header-right {
+    margin: 0;
+    padding: 0;
+    li {
+      margin-left: 3rem;
+      a {
+        display: inline;
+      }
+      .Patient-btn {
+        padding: 1.4rem 3rem;
+        border-radius: 3rem;
+        background: var(--primary-color);
+        color: var(--white);
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        transition: $transition;
+        &:hover {
+          color: var(--white);
+          background: var(--hover-color);
+        }
+      }
+    }
+    .notification {
+      a {
+        display: inline-block;
+        position: relative;
+        font-weight: 600;
+        color: #A5AAB6;
+        &::before {
+          position: absolute;
+          content: '';
+          width: 1.2rem;
+          height: 1.2rem;
+          line-height: 11.2rem;
+          border-radius: 50%;
+          background: #F51E1E;
+          right: -2px;
+          top: 0;
+          border: 2px solid var(--white);
+        }
+        span {
+          &:before {
+            font-size: 2.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+/*-------------------------
+Header Mobile CSS
+--------------------------*/
+.mobile-header {
+  padding: 20px 10px;
+  .menu-bar {
+    span {
+      color: var(--bColor);
+      transition: $transition;
+      &::before {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+  .user-area {
+    .user-image {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+    }
+  }
+  .page-title {
+    .title {
+      margin: 0;
+    }
+  }
+  .mobile-search-form {
+    margin-top: 15px;
+    .form-group {
+      position: relative;
+      .form-control {
+        width: 100%;
+        height: 4rem;
+        border-radius: 3rem;
+        border: 1px solid #E0E7FE;
+        padding: 1rem 1rem;
+        padding-left: 4.5rem;
+        font-family: $bodyFont;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #70708C;
+      }
+      .search-btn {
+        position: absolute;
+        left: 2rem;
+        top: 1.2rem;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        color: #A5AAB6;
+        transition: $transition;
+        line-height: 1;
+        &:hover {
+          color: var(--primary-color);
+        }
+        span {
+          &::before {
+            font-size: 1.6rem;
+            line-height: 1;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .header-area .header-right li .Patient-btn {
+    padding: 1.2rem 2rem;
+  }
+  .header-area .header-right li {
+    margin-left: 2rem;
+  }
+  .header-area .header-right li img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 991px) {
+
+}

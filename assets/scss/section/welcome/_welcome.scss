@@ -1,0 +1,73 @@
+/*-------------------------
+7.welcome-area
+--------------------------*/
+.welcome-area {
+     .slick-slide {
+          margin: 0 15px;
+     }
+     .slick-list {
+          margin: 0px -15px 0px -15px;
+     }
+     .single-welcome {
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+          border: 1px solid #E0E7FE;
+          box-sizing: border-box;
+          border-radius: 30px;
+          padding: 2.5rem;
+          margin-bottom: 3rem;
+          .welcome-icon {
+               @include flex-position(flex, center, center);
+               width: 5.5rem;
+               height: 5.5rem;
+               background: rgba(255, 85, 191, 0.2);
+               border-radius: 10px;
+               margin-right: 2rem;
+               &.bg-two {
+                    background: rgba(96, 91, 255, 0.2);
+               }
+               &.bg-three {
+                    background: rgba(255, 183, 0, 0.2);
+               }
+               &.bg-four {
+                    background: rgba(255, 101, 51, 0.2);
+               }
+          }
+          p {
+               font-size: 1.6rem;
+               font-weight: 500;
+               color: #70708C;
+          }
+          h3 {
+               margin: 0;
+               font-size: 2.6rem;
+               font-weight: 900;
+               color: #292968;
+          }
+     }
+}
+
+@media (max-width: 1400px) {
+     .welcome-area .single-welcome {
+          padding: 1.5rem 2rem;
+     }
+     .welcome-area .single-welcome .welcome-icon {
+          margin-right: 1rem;
+     }
+     .welcome-area .single-welcome .welcome-icon {
+          width: 4rem;
+          height: 4rem;
+          line-height: 4rem;
+     }
+     .welcome-area .single-welcome p {
+          font-size: 1.3rem;
+     }
+     .welcome-area .single-welcome h3 {
+          font-size: 1.8rem;
+     }
+}
+@media (max-width: 1300px) {
+     .welcome-area .single-welcome {
+          padding: 1.5rem 1rem;
+     }
+     
+}

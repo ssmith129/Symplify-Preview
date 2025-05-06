@@ -1,0 +1,172 @@
+/*-------------------------
+15.doctor-profile
+--------------------------*/
+.Profile-area {
+     border: 1px solid #E0E7FE;
+     box-sizing: border-box;
+     border-radius: 30px;
+     .profile-cover {
+          width: 100%;
+          border-radius: 2.2rem 2.2rem 0 0;
+          img {
+               width: 100%;
+               border-radius: 2.2rem 2.2rem 0 0;
+          }
+     }
+     .profile-top {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 3.5rem;
+          padding-top: 2.5rem;
+          height: 120px;
+          .profile-info {
+               .profile-image {
+                    position: relative;
+                    top: -115px;
+                    img {
+                         width: 200px;
+                         height: 200px;
+                         border-radius: 50%;
+                         border: 5px solid #ffffff;
+                         box-shadow: 6px 6px 20px -5px rgba(193, 207, 217, 0.5);
+                         object-fit: cover;
+                    }
+               }
+               .profile-content {
+                    h3 {
+                         margin-top: 0;
+                         margin-bottom: .5rem;
+                         font-size: 1.8rem;
+                         font-weight: 600;
+                         color: #292968;
+                    }
+                    p {
+                         margin: 0;
+                         font-size: 1.6rem;
+                         font-weight: 400;
+                         color: #70708C;
+                         i {
+                              margin-right: .7rem;
+                              &:before {
+                                   font-size: 1.6rem;
+                                   font-weight: 600;
+                              }
+                         }
+                    }
+               }
+          }
+          .rating-area {
+               text-align: right;
+               .rating {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                         display: inline-block;
+                         list-style: none;
+                         color: #FFCC00;
+                         cursor: pointer;
+                         span {
+                              &:before {
+                                   font-weight: 600;
+                                   font-size: 1.4rem;
+                              }
+                         }
+                    }
+               }
+               p {
+                    margin: 0;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    color: #70708C;
+               }
+          }
+     }
+     .profile-bottom {
+          padding: 3rem;
+          .profile-bottom-info {
+               p {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    line-height: 2.5rem;
+                    color: #70708C;
+                    margin-bottom: 1.5rem;
+                    &:last-child {
+                         margin-bottom: 0;
+                    }
+               }
+          }
+     }
+}
+
+@media (max-width: 1300px) {
+     .Profile-area .profile-top .profile-info .profile-content h3 {
+          font-size: 1.6rem;
+     }
+     .Profile-area .profile-top .profile-info .profile-image img {
+          width: 170px;
+          height: 170px;
+     }
+     .Profile-area .profile-top .profile-info .profile-image {
+          top: -80px;
+     }
+     .Profile-area .profile-top .profile-info .profile-content p {
+          font-size: 1.2rem;
+     }
+     .Profile-area .profile-top .profile-info .profile-content p {
+          font-size: 1.2rem;
+     }
+}
+@media (max-width: 1199px) {
+     .Profile-area .profile-top .rating-area {
+          display: none;
+     }
+     .Profile-area .profile-bottom .profile-bottom-info p {
+          font-size: 1.2rem;
+          line-height: 2.2rem;
+     }
+     .calendar header .month {
+          font-size: 1.2rem !important;
+     }
+     .appointment-area .appointment-lsit .single-appointment .appointment-date {
+          font-size: 1.2rem !important;
+     }
+     .appointment-area .appointment-lsit .single-appointment .appointment-time {
+          font-size: 1.2rem !important;
+     }
+     .calendar thead {
+          font-size: 1.2rem !important;
+     }
+     .calendar .day {
+          font-size: 1.2rem !important;
+     }
+}
+
+@media (max-width: 480px) {
+     .Profile-area .profile-top .profile-info {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          text-align: center;
+          margin-top: -70px;
+     }
+     .Profile-area .profile-top .profile-info .profile-image {
+          width: 100%;
+          top: 0;
+          margin-bottom: 2rem;
+     }
+     .Profile-area .profile-top .profile-info .profile-image.mr-5 {
+          margin-right: 0 !important;
+     }
+     .Profile-area .profile-top .profile-info .profile-image img {
+          margin: auto;
+     }
+     .Profile-area .profile-top {
+          height: auto;
+     }
+     .profile-content {
+          width: 100%;
+     }
+     .Profile-area .profile-cover img{
+          height: 140px;
+     }
+}

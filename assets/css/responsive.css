@@ -1,0 +1,72 @@
+/* Normal desktop :992px. */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+	.section-wrapper {
+        padding: 1.5rem 1rem;
+        
+    }
+}
+
+@media (max-width: 1199px) {
+    .main-content-wraper {
+        margin-left: 200px;
+    }
+    .page-wrape {
+        margin: 0 1.5rem;
+        padding: 2rem 1rem;
+    }
+}
+
+/* Tablet desktop :768px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+	
+}
+
+@media (max-width: 991px) {
+    .md-mt-30 {
+        margin-top: 3rem;
+    }
+    .md-mb-30 {
+        margin-bottom: 3rem;
+    }
+    .md-my-30 {
+        margin: 3rem 0;
+    }
+    
+    .main-content-wraper {
+        margin-left: 0;
+    }
+    .body-overlay {
+        display: block;
+    }
+}
+/*  Small mobile :320px. */
+
+@media (min-width: 320px) and (max-width: 767px) {
+	
+}
+@media (max-width: 768px) {
+    .page-wrape {
+        margin: 0 1rem;
+        padding: 2rem 0;
+    }
+}
+@media (max-width: 767px) {
+    .sm-mt-30 {
+        margin-top: 3rem;
+    }
+    .sm-mb-30 {
+        margin-bottom: 3rem;
+    }
+    .sm-my-30 {
+        margin: 3rem 0;
+    }
+}
+
+/* Large Mobile :577px. */
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+	
+}
+

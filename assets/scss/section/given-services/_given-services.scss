@@ -1,0 +1,73 @@
+/*-------------------------
+13.given-services
+--------------------------*/
+.given-services {
+     h3 {
+          margin: 0;
+          margin-bottom: 1.3rem;
+          font-size: 1.6rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: #3D3D66;
+     }
+     .table {
+          border-color: #DFE4EE;
+          width: 100%;
+          thead {
+               tr {
+                    border: none;
+                    background: var(--seconday-color);
+                    th {
+                         border: none;
+                         font-size: 1.6rem;
+                         font-weight: 500;
+                         text-transform: capitalize;
+                         color: var(--white);
+                         vertical-align: middle;
+                         padding: 1.2rem 1rem;
+                         &:first-child {
+                              text-align: center;
+                         }
+                    }
+               }
+          }
+          tbody {
+               tr {
+                    td {
+                         font-size: 1.6rem;
+                         font-weight: 400;
+                         text-transform: capitalize;
+                         color: #70708C;
+                         vertical-align: middle;
+                         padding: 1.2rem 1rem;
+                         &:first-child {
+                              text-align: center;
+                         }
+                    }
+                    th {
+                         font-size: 1.6rem;
+                         font-weight: 500;
+                         text-transform: capitalize;
+                         color: #70708C;
+                         vertical-align: middle;
+                         padding: 1.2rem 1rem;
+                         &:first-child {
+                              padding-left: 15%;
+                         }
+                    }
+               }
+          }
+     }
+}
+
+@media (max-width: 1200px) {
+     .given-services .table tbody tr td {
+          font-size: 1.2rem;
+     }
+     .given-services .table tbody tr th {
+          font-size: 1.2rem;
+     }
+     .given-services .table {
+          border: 1px solid #DFE4EE;
+     }
+}

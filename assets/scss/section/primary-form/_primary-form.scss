@@ -1,0 +1,233 @@
+/*-------------------------
+11.primary-form
+--------------------------*/
+.primary-form {
+     .user-image {
+          display: inline-block;
+          position: relative;
+          margin-bottom: 3rem;
+          img {
+               width: 12rem;
+               height: 12rem;
+               border-radius: 50%;
+          }
+          .edit-btn {
+               display: inline-block;
+               position: absolute;
+               right: -5px;
+               bottom: 1rem;
+               width: 3rem;
+               height: 3rem;
+               line-height: 3rem;
+               background: #2E2EA7;
+               text-align: center;
+               color: var(--white);
+               border-radius: 50%;
+               transition: $transition;
+               span {
+                    &::before {
+                         font-size: 1.4rem;
+                    }
+               }
+               &:hover {
+                    background: var(--hover-color);
+                    color: var(--white);
+               }
+          }
+     }
+     .form-group {
+          margin-bottom: 2.5rem;
+          label {
+               margin-bottom: 1rem;
+               font-size: 1.6rem;
+               font-weight: 400;
+               text-transform: capitalize;
+               color: #3D3D66;
+          }
+          .label-text {
+               margin-bottom: 1rem;
+               font-size: 1.6rem;
+               font-weight: 400;
+               text-transform: capitalize;
+               color: #3D3D66;
+          }
+          .form-control {
+               width: 100%;
+               height: 5rem;
+               font-family: $bodyFont;
+               background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+               border: 1px solid #E0E7FE;
+               box-sizing: border-box;
+               border-radius: 10px;
+               padding: 1rem 2rem;
+               font-size: 1.5rem;
+               font-weight: 400;
+               color: #70708C;
+               line-height: 3rem;
+          }
+          .nice-select {
+               margin-bottom: 2.5rem;
+          }
+          .message {
+               height: 15rem;
+               padding: 1.5rem 2rem;
+          }
+          .uplode-image {
+               @include flex-position(flex, center, center);
+               flex-direction: column;
+               width: 100%;
+               height: 200px;
+               cursor: pointer;
+               background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+               border: 1px dashed #E0E7FE;
+               box-sizing: border-box;
+               border-radius: 10px;
+               margin: 0;
+               padding: 1rem;
+               .uplode-icon {
+                    color: #AEAECC;
+                    font-weight: 500;
+                    &:before {
+                         font-size: 6rem;
+                         line-height: 1;
+                    }
+               }
+               .drop-text {
+                    display: inline-block;
+                    margin: 1rem 0 1rem 0;
+                    padding: 1rem 5rem;
+                    background: #F8F8FE;
+                    border: 1px solid #E0E7FE;
+                    box-sizing: border-box;
+                    border-radius: 30px;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    text-transform: capitalize;
+               }
+               .file-size {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: var(--seconday-color);
+               }
+          }
+          .form-file {
+               display: none;
+          }
+     }
+     .form-btn {
+          display: inline-block;
+          border: none;
+          box-shadow: none;
+          width: 255px;
+          height: 6rem;
+          line-height: 6rem;
+          padding: 0;
+          border-radius: 1rem;
+          background: #FF8F6B;
+          font-size: 1.8rem;
+          font-weight: 600;
+          text-transform: capitalize;
+          color: var(--white);
+          transition: $transition;
+          &:hover {
+               color: var(--white);
+               background: var(--primary-color);
+          }
+     }
+     .service-list-top {
+          padding: 0 3rem;
+          margin-bottom: 1.3rem;
+          h3 {
+               margin: 0;
+               font-size: 1.6rem;
+               font-weight: 500;
+               text-transform: capitalize;
+               color: #3D3D66;
+          }
+          .price {
+               width: 60px;
+          }
+     }
+     .service-form-check {
+          .service-check-label {
+               background: rgba(255, 255, 255, 0.9);
+               border: 1px solid #E0E7FE;
+               box-sizing: border-box;
+               border-radius: 10px;
+               padding: 0 3rem;
+               height: 6rem;
+               cursor: pointer;
+               span {
+                    display: inline-block;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    color: #70708C;
+               }
+               .price {
+                    width: 60px;
+               }
+          }
+          .form-check-input {
+               display: none;
+               &:checked ~  .service-check-label {
+                    border-color: #FF6864;
+               }
+          }
+     }
+     .service-title {
+          margin-bottom: 2rem;
+          font-size: 2rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: #3D3D66;
+     }
+}
+
+@media (max-width: 1200px) {
+     .primary-form .form-group .uplode-image .drop-text {
+          padding: 1rem 2rem;
+          font-size: 1.5rem;
+          font-size: 1.2rem;
+     }
+     .primary-form .form-group .uplode-image .file-size {
+          font-size: 1.2rem;
+     }
+     .primary-form .form-group .form-control {
+          height: 40px;
+          font-size: 1.2rem;
+          line-height: 1.7rem;
+          padding: 1rem 1rem;
+     }
+     .primary-form .form-group .nice-select {
+          line-height: 1.7rem;
+     }
+     .primary-form .form-group .message {
+          height: 12rem;
+     }
+     .primary-form .form-btn {
+          height: 5rem;
+          line-height: 5rem;
+          font-size: 1.6rem;
+     }
+     .primary-form .form-group .label-text {
+          font-size: 1.3rem;
+     }
+     .primary-form .form-group {
+          margin-bottom: 1.5rem;
+     }
+     .primary-form .form-group .nice-select {
+          margin-bottom: 1.5rem;
+     }
+     .primary-form .service-form-check .service-check-label {
+          height: 40px;
+     }
+     .primary-form .service-form-check .service-check-label span {
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+     }
+}
+@media (max-width: 575px) {
+     .primary-form .service-form-check .service-check-label {
+          padding: 0 1rem;
+     }
+}

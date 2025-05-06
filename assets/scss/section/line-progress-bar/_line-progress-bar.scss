@@ -1,0 +1,61 @@
+/*-------------------------
+20.line-progress-bar
+--------------------------*/
+.barfiller {
+     width: 100%;
+     height: 15px;
+     border-radius: 3rem;
+     position: relative;
+}
+   
+.barfiller .fill {
+     display: block;
+     position: relative;
+     width: 0px;
+     height: 100%;
+     background: #333;
+     z-index: 1;
+     border-radius: 3rem;
+}
+
+.barfiller .tipWrap { display: none; }
+
+.barfiller .tip {
+     margin-top: 0px;
+     margin-left: 40px;
+     font-size: 15px;
+     color: #292968;
+     left: 0px;
+     position: absolute;
+     z-index: 2;
+     line-height: 1;
+}
+
+.progress-list {
+     .single-bar {
+          margin-bottom: 1.5rem;
+          h4 {
+               margin: 0;
+               margin-bottom: .5rem;
+               font-size: 1.6rem;
+               font-weight: 400;
+               text-transform: capitalize;
+               color: #70708C;
+          }
+          &:last-child {
+               margin-bottom: 0;
+          }
+     }
+}
+
+@media (max-width: 1199px) {
+     .progress-list .single-bar h4 {
+          font-size: 1.2rem;
+     }
+     .barfiller {
+          height: 10px;
+     }
+     .progress-list .single-bar {
+          margin-bottom: 1rem;
+     }
+}

@@ -1,0 +1,86 @@
+/*-------------------------
+18.patient-activity
+--------------------------*/
+.Patient-activity-list {
+     .single-Patient-activity {
+          flex-flow: row wrap;
+          padding: 2rem 0;
+          border-bottom: 1px solid #F3F3F8;
+          &:first-child {
+               padding-top: 1.5rem;
+          }
+          &:last-child {
+               padding-bottom: 1.5rem;
+               border-bottom: none;
+          }
+          .Patient-images {
+               img {
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 1.5rem;
+                    object-fit: cover;
+               }
+          }
+          .Patient-name {
+               margin: 0;
+               font-size: 1.6rem;
+               font-weight: 400;
+               text-transform: capitalize;
+               color: #3D3D66;
+               a {
+                    color: #3D3D66;
+                    transition: $transition;
+                    &:hover {
+                         color: var(--primary-color);
+                    }
+               }
+          }
+          p{
+               font-size: 1.6rem;
+               font-weight: 400;
+               color: #70708C;
+          }
+          .single-Patient-center {
+               span {
+                    display: inline-block;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    color: #70708C;
+               }
+          }
+          .single-Patient-rihgt {
+               span {
+                    display: inline-block;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    color: #70708C;
+               }
+          }
+     }
+}
+
+@media (max-width: 1360px) {
+     .Patient-activity-list .single-Patient-activity .doctor-images  img {
+          width: 40px;
+          height: 40px;
+     }
+     .Patient-activity-list .single-Patient-activity .Patient-name {
+          font-size: 1.2rem;
+     }
+     .Patient-activity-list .single-Patient-activity p {
+          font-size: 1.2rem;
+     }
+     .Patient-activity-list .single-Patient-activity .single-Patient-center span {
+          font-size: 1.2rem;
+     }
+     .Patient-activity-list .single-Patient-activity .single-Patient-rihgt span {
+          font-size: 1.2rem;
+     }
+}
+@media (max-width: 375px) {
+     .Patient-activity-list .single-Patient-activity .single-Patient-center {
+          display: none;
+     }
+}

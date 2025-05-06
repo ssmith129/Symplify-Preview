@@ -1,0 +1,47 @@
+/*-------------------------
+10.primary-tab
+--------------------------*/
+.primary-tab {
+     .nav-tabs {
+          border-bottom: 2px solid #EDEDF2;
+          .nav-item {
+               margin-right: 3rem;
+               &:last-child {
+                    margin-right: 0;
+               }
+               a {
+                    display: inline-block;
+                    position: relative;
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    color: #3D3D66;
+                    padding: 0;
+                    background: transparent;
+                    border: none;
+                    padding-bottom: 1.5rem;
+                    &.active {
+                         &::before {
+                              width: 100%;
+                              opacity: 1;
+                         }
+                    }
+                    &:before {
+                         position: absolute;
+                         content: '';
+                         width: 0;
+                         height: 2px;
+                         background: var(--seconday-color);
+                         left: 0;
+                         bottom: -1px;
+                         border-radius: 1rem;
+                         opacity: 0;
+                         transition: $transition;
+                    }
+               }
+          }
+     }
+     .tab-content {
+          padding-top: 3rem;
+     }
+}

@@ -1,0 +1,94 @@
+/*-------------------------
+17.top-doctors
+--------------------------*/
+.top-doctors {
+     .doctor-list {
+          .single-doctor {
+               flex-flow: row wrap;
+               padding: 2rem 0;
+               border-bottom: 1px solid #F3F3F8;
+               &:first-child {
+                    padding-top: 1.4rem;
+               }
+               &:last-child {
+                    padding-bottom: 1.4rem;
+                    border-bottom: none;
+               }
+               .doctor-images {
+                    img {
+                         width: 4.8rem;
+                         height: 4.8rem;
+                         border-radius: 50%;
+                         object-fit: cover;
+                    }
+               }
+               .doctor-name {
+                    margin-bottom: 0;
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    color: #3D3D66;
+                    a {
+                         color: #3D3D66;
+                         transition: $transition;
+                         &:hover {
+                              color: var(--primary-color);
+                         }
+                    }
+               }
+               .doctor-catagory {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    color: #70708C;
+               }
+               .review {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                         display: inline-block;
+                         list-style: none;
+                         color: #FFCC00;
+                         margin-right: .2rem;
+                         &:last-child {
+                              margin-right: 0;
+                         }
+                         i {
+                              &:before {
+                                   font-size: 1.4rem;
+                                   font-weight: 600;
+                              }
+                         }
+                    }
+               }
+               .review-count {
+                    display: block;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    text-transform: capitalize;
+               }
+          }
+     }
+}
+
+@media (max-width: 1360px) {
+     .top-doctors .doctor-list .single-doctor .doctor-images img {
+          width: 4rem;
+          height: 4rem;
+     }
+     .top-doctors .doctor-list .single-doctor .doctor-name {
+          font-size: 1.3rem;
+     }
+     .top-doctors .doctor-list .single-doctor .doctor-catagory {
+          font-size: 1.2rem;
+     }
+     .top-doctors .doctor-list .single-doctor .review-count {
+          font-size: 1.2rem;
+     }
+     .top-doctors .doctor-list .single-doctor .review li {
+          margin-right: 0;
+     }
+     .top-doctors .doctor-list .single-doctor .review li i::before { 
+          font-size: 1rem;
+     }
+}

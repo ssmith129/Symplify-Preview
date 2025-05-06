@@ -1,0 +1,105 @@
+/*-------------------------
+14.expense-list
+--------------------------*/
+.Expense-list-area {
+     .filter-btn {
+          display: inline-block;
+          background: var(--seconday-color);
+          color: var(--white);
+          padding: 1rem 2.5rem;
+          border-radius: 1rem;
+          font-size: 1.6rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: var(--white);
+          transition: $transition;
+          &:hover{
+               background: var(--primary-color);
+               color: var(--white);
+          }
+          i {
+               margin-right: .5rem;
+          }
+     }
+     table {
+          width: 100%;
+          border-collapse: separate;  
+          border-spacing: 0 10px;
+          thead {
+               tr {
+                    th {
+                         padding: 1.5rem 2rem;
+                         font-size: 1.6rem;
+                         font-weight: 500;
+                         text-transform: capitalize;
+                         color: #3D3D66;
+                         vertical-align: middle;
+                         input {
+                              margin-right: 1rem;
+                         }
+                    }
+               }
+          }
+          tbody {
+               tr {
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+                    border: 0.5px solid #E0E7FE;
+                    box-sizing: border-box;
+                    td {
+                         vertical-align: middle;
+                         padding: 1.5rem 2rem;
+                         font-size: 1.6rem;
+                         font-weight: 400;
+                         text-transform: capitalize;
+                         color: #70708C;
+                         &:first-child {
+                              border-radius: 10px 0 0 10px;
+                         }
+                         &:last-child {
+                              border-radius: 0 10px 10px 0;
+                         }
+                         input {
+                              margin-right: 1rem;
+                         }
+                         .view-btn {
+                              display: inline-block;
+                              font-size: 1.6rem;
+                              font-weight: 500;
+                              text-transform: capitalize;
+                              color: #00BFAF;
+                              transition: $transition;
+                              &:hover {
+                                   color: var(--primary-color);
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+@media (max-width: 1400px) {
+     .Expense-list-area table  {
+          min-width: 1024px;
+     }
+}
+@media (max-width: 1199px) {
+     .Expense-list-area table thead tr th {
+          padding: 1rem 1.5rem;
+          font-size: 1.2rem;
+     }
+     .Expense-list-area table tbody tr td {
+          padding: 1rem 1.5rem;
+          font-size: 1.2rem;
+     }
+     .Expense-list-area table  {
+          min-width: 800px;
+     }
+}
+@media (max-width: 991px) {
+     .Expense-list-area table  {
+          min-width: 800px;
+     }
+     .Expense-list-area table tbody tr td .view-btn {
+          font-size: 1.2rem
+     }
+}
