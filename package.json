@@ -1,15 +1,40 @@
 {
   "name": "hospital-management-system",
   "version": "1.0.0",
-  "description": "Hospital Management Responsive HTML5 Template",
-  "main": "index.html",
+  "description": "Modern Hospital Management System built with React",
+  "type": "module",
   "scripts": {
-    "build": "echo 'Static site - no build needed' && exit 0",
-    "start": "echo 'Static site ready for deployment'"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": ["hospital", "management", "healthcare", "html5", "template"],
+  "keywords": ["hospital", "management", "healthcare", "react", "modern"],
+    "hospital",
+    "management",
+    "healthcare",
+    "html5",
+    "template"
+  ],
   "author": "Hospital Management",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.263.1",
+    "recharts": "^2.8.0",
+    "framer-motion": "^10.16.4",
+    "clsx": "^2.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.3",
+    "vite": "^4.4.5"
+  }
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.536.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "recharts": "^3.1.0",
+    "vite": "^7.0.6"
+  }
 }
