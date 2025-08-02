@@ -1,0 +1,15 @@
+{
+  "name": "hospital-management-system",
+  "version": "1.0.0",
+  "description": "Hospital Management Responsive HTML5 Template",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build needed' && exit 0",
+    "start": "echo 'Static site ready for deployment'"
+  },
+  "keywords": ["hospital", "management", "healthcare", "html5", "template"],
+  "author": "Hospital Management",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}
