@@ -1,0 +1,406 @@
+@use "sass:color";
+/*============================
+  1.variables
+============================*/
+
+// Font import
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// Base Font
+$font-size-base: 14px;
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+// Font Family
+$font-family-primary: "Inter", sans-serif;
+$font-awesome: "Fontawesome";
+
+:root {
+  --primary: #3550DC;
+  --primary-hover: #213abd;
+
+  --dark: #030303;
+  --black: #000;
+  --light: #F5F6F8;
+  --white: #fff;
+
+  --light-100: #FAFBFC;
+  --light-200: #F8FAFB;
+  --light-300: #FCFCFD;
+  --light-400: #FBFBFC;
+  --light-500: #FAFBFB;
+  --light-600: #F9FAFB;
+  --light-700: #F9F9FA;
+  --light-800: #F8F9FA;
+  --light-900: #FEFEFE;
+  
+  --gray-100: #E2E4E6;
+  --gray-200: #C6CACE;
+  --gray-300: #969AA2;
+  --gray-400: #90979F;
+  --gray-500: #6C7688;
+  --gray-600: #4E5561;
+  --gray-700: #2E3B48;
+  --gray-800: #182634;
+  --gray-900: #0A1B39;
+  --gray-950: #091833;
+}
+
+// Theme Colors Variables
+$primary: #2E37A4;
+$primary-hover: color.adjust($primary, $lightness: -10%);
+$secondary: #00D3C7;
+$secondary-hover: color.adjust($secondary, $lightness: -10%);
+$success: #27AE60;
+$success-hover: color.adjust($success, $lightness: -10%);
+$info: #2F80ED;
+$info-hover: color.adjust($info, $lightness: -10%);
+$warning: #FFCA18;
+$warning-hover: color.adjust($warning, $lightness: -10%);
+$danger: #EF1E1E;
+$danger-hover: color.adjust($danger, $lightness: -10%);
+$dark: var(--dark);
+$light: var(--light);
+$white: var(--white);
+$black: var(--black);
+$purple: #800080;
+$pink: #DD2590;
+$cyan: #06AED4;
+$teal: #0E9384;
+$orange: #E04F16;
+$indigo: #3538CD;
+
+// Primary
+$primary-100: #EFEEFF;
+$primary-200: #DFDCFF;
+$primary-300: #CFCBFF;
+$primary-400: #C0B9FF;
+$primary-500: #B2A7FF;
+$primary-600: #A495FF;
+$primary-700: #9781FF;
+$primary-800: #8A6DFF;
+$primary-900: #7F56FF;
+
+// Secondary
+$secondary-100: #ECF3FF;
+$secondary-200: #D9E8FF;
+$secondary-300: #C5DCFF;
+$secondary-400: #B2D1FF;
+$secondary-500: #9FC5FF;
+$secondary-600: #8CB9FE;
+$secondary-700: #79AEFE;
+$secondary-800: #65A2FE;
+$secondary-900: #55597B;
+
+// Light
+$light-100: var(--light-100);
+$light-200: var(--light-200);
+$light-300: var(--light-300);
+$light-400: var(--light-400);
+$light-500: var(--light-500);
+$light-600: var(--light-600);
+$light-700: var(--light-700);
+$light-800: var(--light-800);
+$light-900: var(--light-900);
+
+// Gray
+$gray-100: var(--gray-100);
+$gray-200: var(--gray-200);
+$gray-300: var(--gray-300);
+$gray-400: var(--gray-400);
+$gray-500: var(--gray-500);
+$gray-600: var(--gray-600);
+$gray-700: var(--gray-700);
+$gray-800: var(--gray-800);
+$gray-900: var(--gray-900);
+$gray-950: var(--gray-950);
+
+// Info
+$info-100: #EAF2FD;
+$info-200: #D5E6FB;
+$info-300: #C1D9FA;
+$info-400: #ACCCF8;
+$info-500: #97C0F6;
+$info-600: #82B3F4;
+$info-700: #6DA6F2;
+$info-800: #5999F1;
+$info-900: #448DEF;
+
+// Success
+$success-100: #E9F7EF;
+$success-200: #D4EFDF;
+$success-300: #BEE7CF;
+$success-400: #A9DFBF;
+$success-500: #93D7B0;
+$success-600: #7DCEA0;
+$success-700: #68C690;
+$success-800: #52BE80;
+$success-900: #3DB670;
+
+// Danger
+$danger-100: #FDE9E9;
+$danger-200: #FCD2D2;
+$danger-300: #FABCBC;
+$danger-400: #F9A5A5;
+$danger-500: #F78F8F;
+$danger-600: #F57878;
+$danger-700: #F46262;
+$danger-800: #F24B4B;
+$danger-900: #F13535;
+
+// Warning
+$warning-100: #FCF8EB;
+$warning-200: #F9F1D8;
+$warning-300: #F6EAC4;
+$warning-400: #F3E3B1;
+$warning-500: #F1DC9D;
+$warning-600: #EED589;
+$warning-700: #EBCE76;
+$warning-800: #E8C762;
+$warning-900: #E5C04F;
+
+// Pink
+$pink-100: #FFECF4;
+$pink-200: #FED9E8;
+$pink-300: #FDC6DD;
+$pink-400: #FAB2D2;
+$pink-500: #F79FC6;
+$pink-600: #F38BBB;
+$pink-700: #EF76B0;
+$pink-800: #E960A5;
+$pink-900: #E4479B;
+
+// Purple
+$purple-100: #F2E6F2;
+$purple-200: #E6CCE6;
+$purple-300: #D9B3D9;
+$purple-400: #CC99CC;
+$purple-500: #C080C0;
+$purple-600: #B366B3;
+$purple-700: #A64DA6;
+$purple-800: #993399;
+$purple-900: #8D1A8D;
+
+// Cyan
+$cyan-100: #ECF7FB;
+$cyan-200: #D9EFF7;
+$cyan-300: #C6E7F3;
+$cyan-400: #B3DFEF;
+$cyan-500: #9FD7EA;
+$cyan-600: #8BCFE6;
+$cyan-700: #75C7E2;
+$cyan-800: #5DBFDD;
+$cyan-900: #3FB6D9;
+
+// Teal
+$teal-100: #D4ECE9;
+$teal-200: #BEE2DE;
+$teal-300: #A8D8D3;
+$teal-400: #ADD3CC;
+$teal-500: #98C9C0;
+$teal-600: #83BEB3;
+$teal-700: #6DB3A7;
+$teal-800: #56A89B;
+$teal-900: #3B9E90;
+
+// Orange
+$orange-100: #FFEEE9;
+$orange-200: #FEDED4;
+$orange-300: #FCCDBE;
+$orange-400: #FABDA9;
+$orange-500: #F7AC94;
+$orange-600: #F49B7E;
+$orange-700: #EF8968;
+$orange-800: #EB7752;
+$orange-900: #E66438;
+
+// Indigo
+$indigo-100: #E7ECFC;
+$indigo-200: #D0DAF9;
+$indigo-300: #BAC7F5;
+$indigo-400: #A4B4F1;
+$indigo-500: #8EA2EC;
+$indigo-600: #7A8FE7;
+$indigo-700: #667BE1;
+$indigo-800: #5467DB;
+$indigo-900: #4351D4;
+
+$colors: (
+  "cyan":    $cyan,
+  "purple":     $purple,
+  "pink":       $pink,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);
+
+$theme-colors: (
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "purple": $purple
+);
+
+$text-color: var(--gray-500);
+$title-color: var(--gray-900);
+$sub-title: #6B7280;
+$body-bg: var(--white);
+$text-muted: #9EA4A9;
+$default-background: #F8F9FA;
+$black-bg: #141432;
+$input-bg: #2c2c50;
+$form-control-bg: var(--white);
+
+// Social Icons Colors
+$facebook: #3B5998;
+$twitter: #00ACEE;
+$google: #DD4B39;
+$linkedin: #0E76A8;
+$youtube: #C4302B;
+$instagram: #3F729B;
+$pinterest: #cc2127;
+$skype: #00AFF0;
+$email: #6567A5;
+$appstore: #000;
+
+// Gradient Variables
+$primary-transparent: #F8F5FF;
+$secondary-transparent: #EEF4FF;
+$success-transparent: #F4FBF7;
+$warning-transparent: #FEFBF5;
+$danger-transparent: #FEF4F4;
+$info-transparent: #F4F9FE;
+$pink-transparent: #FDF4F9;
+$light-transparent: #FDFDFE;
+$gray-transparent: #E7E8EB;
+$purple-transparent: #F9F2F9;
+$cyan-transparent: #E9F8FB;
+$orange-transparent: #FDF6F3;
+$teal-transparent: #E9F5F4;
+$indigo-transparent: #EDEDFB;
+$primary-gradient: linear-gradient(7.27deg, #7539FF 38.3%, #3F8BFE 92.24%);
+$primary-gradient-100: linear-gradient(135.02deg, #EDF0FF 35.76%, #FFFFFF 106.08%);
+$secondary-gradient: linear-gradient(161.69deg, #FE9738 18.83%, #FF7A00 88.52%);
+$secondary-gradient-100: linear-gradient(152.93deg, #FFF3E8 16.91%, #FFFFFF 100.77%);
+$success-gradient: linear-gradient(180deg, #01B664 0%, #00DE79 100%);
+$warning-gradient: linear-gradient(180deg, #F9B801 0%, #F3B400 100%);
+$danger-gradient: linear-gradient(180deg, #FF0000 0%, #D50000 100%);
+$info-gradient: linear-gradient(180deg, #0080FF 0%, #0059B0 100%);
+$light-gradient: linear-gradient(180deg, #F3F4F6 0%, #E6E6E6 100%);
+$light-gradient-100: linear-gradient(90deg, #F3F4F6 0%, #FFFFFF 100%);
+$dark-gradient: linear-gradient(180deg, #01060B 0%, #00264D 100%);
+$pink-gradient: linear-gradient(180deg, #FFA795 0%, #FFFFFF 100%);
+$purple-gradient: linear-gradient(180deg, #8E4BEB 0%, #472282 100%);
+$teal-gradient: linear-gradient(180deg, #E6F9FF 0%, #FFFFFF 100%);
+$orange-gradient: linear-gradient(175.15deg, #FF9966 3.91%, #FF5E62 96.09%);
+$gradient-purple: linear-gradient(180deg, #667CE8 0%, #754EA7 100%);
+$blue-gradient: linear-gradient(180deg, #18ACCF 0%, #0F59AD 100%);
+$maroon-gradient: linear-gradient(175.15deg, #DB1F80 3.91%, #52002B 96.09%);
+$lightblue-gradient: linear-gradient(176.09deg, #AE7BD4 3.2%, #4471CC 96.55%);
+$darkblue-gradient: linear-gradient(174.21deg, #0D55A7 4.61%, #091D37 95.75%);
+$indigo-gradient: linear-gradient(175.15deg, #F25965 3.91%, #940C33 96.09%);
+$darkgreen-gradient: linear-gradient(175.15deg, #3F484F 3.91%, #002D43 96.09%);
+
+// Style Anchor Elements
+$link-color: $primary;
+$link-decoration: none;
+$link-shade-percentage: 20%;
+/*$link-hover-color: darken($link-color, 10%);*/
+$link-hover-decoration: null;
+$spacer: 1rem;
+
+// Border
+$border-width: 1px;
+$border-style: solid;
+$border-color: $gray-transparent;
+$default-border: $gray-100;
+$input-border: $border-color;
+
+// Border Radius
+$border-radius: 4px;
+$border-radius-sm: 3px;
+$border-radius-lg: 5px;
+$border-radius-xl: 8px;
+$border-radius-xxl: 12px;
+$rounded: 50%;
+$rounded-pill: 1.5rem;
+
+// Box Shadow
+$box-shadow: 0px 4px 30px 0px #BDBDBD1A;
+$box-shadow-xs: 0px 1px 1px 1px rgba(198, 198, 198, 0.2);
+$box-shadow-sm: 0px 1px 1px 0px #0000000D;
+$box-shadow-md: 0px 4px 20px 0px #5C5C5C14;
+$box-shadow-lg: 0px 4px 30px 0px #14141414;
+$box-shadow-primary: 0px 4px 30px 0px #F4EDFF;
+// Font Size
+$font-size-8: 8px;
+$font-size-9: 9px;
+$font-size-10: 10px;
+$font-size-11: 11px;
+$font-size-12: 12px;
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-15: 15px;
+$font-size-16: 16px;
+$font-size-17: 17px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-22: 22px;
+$font-size-24: 24px;
+$font-size-26: 26px;
+$font-size-28: 28px;
+$font-size-30: 30px;
+$font-size-32: 32px;
+$font-size-34: 34px;
+$font-size-36: 36px;
+$font-size-38: 38px;
+$font-size-40: 40px;
+$font-size-42: 42px;
+$font-size-44: 44px;
+$font-size-46: 46px;
+$font-size-48: 48px;
+$font-size-50: 50px;
+$font-size-54: 54px;
+$font-size-56: 56px;
+$font-size-60: 60px;
+$font-size-64: 64px;
+
+$h1-font-size: 28px;
+$h2-font-size: 24px;
+$h3-font-size: 20px;
+$h4-font-size: 18px;
+$h5-font-size: 16px;
+$h6-font-size: 14px;
+
+
+$dark-green: #111926;
+
+$dark-green: #111926;
+$night-blue: #0F0F41;
+$dark-gray: #2E2E48;
+$royal-blue: #0039C6;
+$indigo: #391694;
+$darkaqua: #116D6E;
+$whiterock: #F0E4D7;
+$rockblue: #8CB9BD;
+$bluehaze: #B5C0D0;
+$brightblue:  #2066FF;
+$lunargreen: #365E32;
+$lavendar: #673AB7;
+$magenta: #E83E8C;
+$chromeyellow: #FF9B04;
+$lavared: #DC2626;
+$blackpearl: #080821;
+$maroon: #7C2220;
+$bluegem: #3E1C95;
+$firefly: #053333;
+$gray-color: #E5E7EA;

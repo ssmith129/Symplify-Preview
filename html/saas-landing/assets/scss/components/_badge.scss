@@ -1,0 +1,157 @@
+@use "../utils/variables";
+
+/*============================
+  8.badge
+============================*/
+
+.badge {
+    &.badge-cyan{
+        background-color: variables.$cyan;
+        color: variables.$white;
+    }
+    &.badge-pink{
+        background-color: variables.$pink;
+        color: variables.$white;
+    }
+    &.badge-primary {
+        background: variables.$primary;
+        color: variables.$white;
+    }
+    &.badge-soft-primary {
+        background: variables.$primary-transparent;
+        color: variables.$primary;
+    }
+    &.badge-soft-secondary {
+        background: variables.$secondary-transparent;
+        color: variables.$secondary;
+    }
+    &.badge-soft-light {
+        background: variables.$light-transparent;
+        color: variables.$gray-900;
+    }
+    &.badge-soft-dark {
+        background: variables.$gray-transparent;
+        color: variables.$dark;
+    }
+    &.badge-soft-info {
+        background: variables.$info-transparent;
+        color: variables.$info;
+    }
+    &.badge-soft-warning {
+        background:variables.$warning-transparent;
+        color: variables.$warning;
+    }
+    &.badge-soft-danger {
+        background:variables.$danger-transparent;
+        color: variables.$danger;
+    }
+    &.badge-soft-success {
+        background:variables.$success-transparent;
+        color: variables.$success;
+    }
+    &.badge-soft-pink {
+        background:variables.$pink-transparent;
+        color: variables.$pink;
+    }
+    &.badge-outline-primary {
+        border: 1px solid variables.$primary;
+        color: variables.$primary;
+    }
+}
+@each $color, $value in variables.$theme-colors {
+    .badge {
+        &.badge-#{$color} {
+            background: #{$value};
+            color: variables.$white;
+        }
+        &.badge-outline-#{$color} {
+            border: 1px solid #{$value};
+            color: $value;
+        }
+    }
+}
+.badge-border {
+    border-left: 2px solid;
+}
+.badge{
+    padding: .25rem .5rem;
+    font-weight: variables.$font-weight-medium;
+    font-size: variables.$font-size-13;
+    letter-spacing: 0.5px;
+    border-radius: variables.$border-radius-lg;
+    &.badge-xs {
+        font-size: 10px;
+        font-weight: variables.$font-weight-medium;
+        padding: 0px 5px;
+        line-height: 18px;
+    }
+    &.badge-sm {
+        font-size: 12px;
+        padding: 1px 8px;
+        line-height: 18px;
+    }
+    &.badge-md {
+        font-size: 13px;
+        padding: 5px 8px;
+        line-height: 19px;
+    }
+    &.badge-lg {
+        font-size: variables.$font-size-14;
+        padding: 3px 12px;
+        line-height: 21px;
+    }
+    &.badge-xl {
+        font-size: variables.$font-size-16;
+        padding: 0px 15px;
+        line-height: 35px;
+    }
+    &.badge-soft-cyan {
+        background: variables.$cyan-100;
+        color: variables.$cyan;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    .badge {
+        font-size: inherit;
+    }
+}
+.badge-label {
+    margin-left: 8px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        border: 9px solid transparent;
+        border-right-color: transparent;
+        left: -15px;
+        top: 0;
+    }
+    &.badge-primary:before {
+        border-right-color: variables.$primary;
+    }
+    &.badge-secondary:before {
+        border-right-color: variables.$secondary;
+    }
+    &.badge-warning:before {
+        border-right-color: variables.$warning;
+    }
+    &.badge-success:before {
+        border-right-color: variables.$success;
+    }
+    &.badge-info:before {
+        border-right-color: variables.$info;
+    }
+    &.badge-dark:before {
+        border-right-color: variables.$dark;
+    }
+    &.badge-danger:before {
+        border-right-color: variables.$danger;
+    }
+}
+
+.pricing-badge{
+    position: absolute;
+    top: 40px;
+    right: -45px;
+    transform: rotate(45deg);
+}

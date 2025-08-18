@@ -1,0 +1,57 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+.faq-card {
+	background: variables.$white;
+	padding: 16px;
+	border-radius: 10px;
+	border: 1px solid variables.$gray-transparent !important;
+    box-shadow: 0px 1px 1px 0px #0000000D;
+    margin-bottom: 20px;
+	.faq-title {
+		font-size: variables.$font-size-16;
+		font-weight: variables.$font-weight-semibold;
+		margin-bottom: 0;
+		@include mixins.respond-below(lg) {
+			font-size: variables.$font-size-16;
+	   }
+	}
+	a {
+		color: variables.$gray-900;
+		display: block;
+		position: relative;
+		padding-left: 0px;
+        font-weight: 700;
+        padding-right: 30px;
+		&:after {
+			content: "\eb0b";
+			font-family: "tabler-icons";
+            font-size: variables.$font-size-14;
+			position: absolute;
+            color: variables.$gray-900;
+			top: 0;
+			right: 0;
+			font-size: variables.$font-size-16;
+            width: 22px;
+            height: 22px;
+            background-color: variables.$light;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+		}
+		&:not(.collapsed) {
+			&:after {
+				content: "\eaf2";
+                background-color: variables.$primary;
+                color: variables.$white;
+			}
+		}
+	}
+	.card-collapse {
+		.faq-content {
+			padding-top: 8px;
+			font-size: variables.$font-size-16;
+		}
+	}
+}

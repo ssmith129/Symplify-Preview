@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flag Icons | Preclinic - Medical & Hospital - Bootstrap 5 Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Dreams Technologies">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- Theme Script js -->
+    <script src="assets/js/theme-script.js"></script>
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Tabler Icon CSS -->
+	<link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+    <!-- Flag CSS -->
+    <link rel="stylesheet" href="assets/plugins/icons/flags/flags.css">
+    
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+	<!-- Begin Wrapper -->
+	<div class="main-wrapper">		
+
+		<!-- Topbar Start -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+
+                        <!-- Logo Normal -->
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                            <span class="logo-sm"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+
+                        <!-- Logo Dark -->
+                        <span class="logo-dark">
+                            <span class="logo-lg"><img src="assets/img/logo-white.svg" alt="dark logo"></span>
+                        </span>
+                    </a>
+
+                    <!-- Sidebar Mobile Button -->
+                    <a id="mobile_btn" class="mobile-btn" href="#sidebar">
+                        <i class="ti ti-menu-deep fs-24"></i>
+                    </a>
+                       
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2"> 
+                        <i class="ti ti-arrow-right"></i>
+                    </button>  
+					
+                    <!-- Search -->
+                    <div class="me-auto d-flex align-items-center header-search d-lg-flex d-none">
+                        <!-- Search -->
+                        <div class="input-icon-start position-relative me-2">
+                            <span class="input-icon-addon">
+                                <i class="ti ti-search"></i>
+                            </span>
+                           <input type="text" class="form-control shadow-sm" placeholder="Search">
+                           <span class="input-icon-addon text-dark shadow fs-18 d-inline-flex p-0 header-search-icon"><i class="ti ti-command"></i></span>
+                        </div>
+                        <!-- /Search -->
+                    </div>
+					
+                </div>
+
+                <div class="d-flex align-items-center">
+				
+                    <!-- Search for Mobile -->
+                    <div class="header-item d-flex d-lg-none me-2">
+                        <button class="topbar-link btn btn-icon" data-bs-toggle="modal" data-bs-target="#searchModal" type="button">
+                            <i class="ti ti-search fs-16"></i>
+                        </button>
+                    </div>
+					
+                    <!-- AI Assistance -->
+					<a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+                    <!-- AI Assistance -->
+
+                    <!-- Appointment -->
+                    <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="new-appointment.html" class="btn topbar-link"><i class="ti ti-calendar-due"></i></a>
+                        </div>
+                    </div>                    
+                    <!-- Appointment -->
+
+                    <!-- Settings -->
+                    <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="profile-settings.html" class="btn topbar-link"><i class="ti ti-settings-2"></i></a>
+                        </div> 
+                    </div> 
+                    <!-- Settings -->                   
+
+                    <!-- Light/Dark Mode Button -->
+                    <div class="header-item d-none d-sm-flex me-2">
+                        <button class="topbar-link btn btn-icon topbar-link" id="light-dark-mode" type="button">
+                            <i class="ti ti-moon fs-16"></i>
+                        </button>
+                    </div>
+                    
+					
+					<!-- Notification Dropdown -->
+                    <div class="header-item">
+						<div class="dropdown me-3">
+						
+							<button class="topbar-link btn btn-icon topbar-link dropdown-toggle drop-arrow-none" data-bs-toggle="dropdown" data-bs-offset="0,24" type="button" aria-haspopup="false" aria-expanded="false">
+								<i class="ti ti-bell-check fs-16 animate-ring"></i>
+								<span class="notification-badge"></span>
+							</button>
+							
+							<div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg" style="min-height: 300px;">
+							
+								<div class="p-2 border-bottom">
+									<div class="row align-items-center">
+										<div class="col">
+											<h6 class="m-0 fs-16 fw-semibold"> Notifications</h6>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Notification Body -->
+								<div class="notification-body position-relative z-2 rounded-0" data-simplebar>
+								 
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-1">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-01.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Dr. Smith</p>
+												<p class="mb-1 text-wrap">
+													updated the <span class="fw-medium text-dark">surgery</span> schedule. 
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>4 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-1">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+							
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-2">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-06.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Dr. Patel</p>
+												<p class="mb-1 text-wrap">
+                                                    completed a <span class="fw-medium text-dark">follow-up</span> report for patient <span class="fw-medium text-dark">Emily</span>.
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>8 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-2">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-3">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-02.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Emily</p>
+												<p class="mb-1 text-wrap">
+                                                    booked an appointment with <span class="fw-medium text-dark">Dr. Patel</span> for <span class="fw-medium text-dark">April 15</span>
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>15 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-3">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap" id="notification-4">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-07.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Amelia</p>
+												<p class="mb-1 text-wrap">
+                                                    completed the <span class="fw-medium text-dark">pre-visit</span> health questionnaire.
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>20 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-4">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									 
+								</div>
+								
+								<!-- View All-->
+								<div class="p-2 rounded-bottom border-top text-center">
+									<a href="notifications.html" class="text-center text-decoration-underline fs-14 mb-0">
+										View All Notifications
+									</a>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+					<!-- User Dropdown -->
+					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/users/user-01.jpg" width="32" class="rounded-circle d-flex" alt="user-image">
+                            <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
+                        
+                            <div class="d-flex align-items-center bg-light rounded-3 p-2 mb-2">
+                                <img src="assets/img/users/user-01.jpg" class="rounded-circle" width="42" height="42" alt="">
+                                <div class="ms-2">
+                                    <p class="fw-medium text-dark mb-0">Jimmy Anderson</p>
+                                    <span class="d-block fs-13">Administrator</span>
+                                </div>
+                            </div>
+
+                            <!-- Item-->
+                            <a href="profile-settings.html" class="dropdown-item">
+                                <i class="ti ti-user-circle me-1 align-middle"></i>
+                                <span class="align-middle">Profile Settings</span>
+                            </a>
+
+                            <!-- Item-->
+                            <a href="account-settings.html" class="dropdown-item">
+                                <i class="ti ti-settings me-1 align-middle"></i>
+                                <span class="align-middle">Account Settings</span>
+                            </a>
+
+                            <!-- item -->
+                            <div class="form-check form-switch form-check-reverse d-flex align-items-center justify-content-between dropdown-item mb-0">
+                                <label class="form-check-label" for="notify"><i class="ti ti-bell me-1"></i>Notifications</label>
+                                <input class="form-check-input me-0" type="checkbox" role="switch" id="notify">
+                            </div>
+
+                            <!-- Item-->
+                            <a href="transactions.html" class="dropdown-item">
+                                <i class="ti ti-transition-right me-1 align-middle"></i>
+                                <span class="align-middle">Transactions</span>
+                            </a>
+
+                                        
+                            
+                            <!-- Item-->
+                            <div class="pt-2 mt-2 border-top">
+                                <a href="login.html" class="dropdown-item text-danger">
+                                    <i class="ti ti-logout me-1 fs-17 align-middle"></i>
+                                    <span class="align-middle">Log Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+						
+                </div>
+            </div>
+        </header>
+        <!-- Topbar End -->
+
+        <!-- Search Modal -->
+        <div class="modal fade" id="searchModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-transparent">
+                    <div class="card shadow-none mb-0">
+                        <div class="px-3 py-2 d-flex flex-row align-items-center" id="search-top">
+                            <i class="ti ti-search fs-22"></i>
+                            <input type="search" class="form-control border-0" placeholder="Search">
+                            <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x fs-22"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidenav Menu Start -->
+        <div class="sidebar" id="sidebar">
+            
+            <!-- Start Logo -->
+            <div class="sidebar-logo">
+                <div>
+                    <!-- Logo Normal -->
+                    <a href="index.html" class="logo logo-normal">
+                        <img src="assets/img/logo.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Small -->
+                    <a href="index.html" class="logo-small">
+                        <img src="assets/img/logo-small.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Dark -->
+                    <a href="index.html" class="dark-logo">
+                        <img src="assets/img/logo-white.svg" alt="Logo">
+                    </a>
+                </div>
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
+                    <i class="ti ti-arrow-left text-body"></i>
+                </button>
+
+                <!-- Sidebar Menu Close -->
+                <button class="sidebar-close">
+                    <i class="ti ti-x align-middle"></i>
+                </button>                
+            </div>
+            <!-- End Logo -->
+
+            <!-- Sidenav Menu -->
+            <div class="sidebar-inner" data-simplebar>                
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <div class="sidebar-top shadow-sm p-2 rounded-1 mb-3 dropend">
+                        <a href="javascript:void(0);" class="drop-arrow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <span class="avatar rounded-circle flex-shrink-0 p-2"><img src="./assets/img/icons/trustcare.svg" alt="img"></span>
+                                    <div class="ms-2">
+                                        <h6 class="fs-14 fw-semibold mb-0">Trustcare Clinic</h6>
+                                        <p class="fs-13 mb-0">Lasvegas</p>
+                                    </div>
+                                </div>
+                                <i class="ti ti-arrows-transfer-up"></i>                            
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg">
+                            <div class="p-2"> 
+                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
+                                    <span class="d-flex align-items-center">
+                                        <span class="me-2"><img src="assets/img/icons/clinic-01.svg" alt=""></span>
+                                        <span class="fw-semibold text-dark">CureWell Medical Hub<small class="d-block text-muted fw-normal fs-13">Ohio</small></span>
+                                    </span>
+                                    <input class="form-check-input m-0 me-2" type="checkbox">
+                                </label> 
+                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
+                                    <span class="d-flex align-items-center">
+                                        <span class="me-2"><img src="assets/img/icons/clinic-02.svg" alt=""></span>
+                                        <span class="fw-semibold text-dark">Trustcare Clinic<small class="d-block text-muted fw-normal fs-13">Lasvegas</small></span>
+                                    </span>
+                                    <input class="form-check-input m-0 me-2" type="checkbox">
+                                </label> 
+                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
+                                    <span class="d-flex align-items-center">
+                                        <span class="me-2"><img src="assets/img/icons/clinic-03.svg" alt=""></span>
+                                        <span class="fw-semibold text-dark">NovaCare Medical<small class="d-block text-muted fw-normal fs-13">Washington</small></span>
+                                    </span>
+                                    <input class="form-check-input m-0 me-2" type="checkbox">
+                                </label> 
+                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
+                                    <span class="d-flex align-items-center">
+                                        <span class="me-2"><img src="assets/img/icons/clinic-04.svg" alt=""></span>
+                                        <span class="fw-semibold text-dark">Greeny Medical Clinic<small class="d-block text-muted fw-normal fs-13">Illinios</small></span>
+                                    </span>
+                                    <input class="form-check-input m-0 me-2" type="checkbox">
+                                </label> 
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="menu-title"><span>Main Menu</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-layout-dashboard"></i><span>Dashboard</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="index.html">Admin Dashboard</a></li>
+                                        <li><a href="doctor-dashboard.html">Doctor Dashboard</a></li>
+                                        <li><a href="patient-dashboard.html">Patient Dashboard</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-apps"></i><span>Applications</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="chat.html">Chat</a></li>
+                                        <li class="submenu submenu-two">
+                                            <a href="#">Calls<span class="menu-arrow inside-submenu"></span></a>
+                                            <ul>
+                                                <li><a href="voice-call.html">Voice Call</a></li>
+                                                <li><a href="video-call.html">Video Call</a></li>
+                                                <li><a href="outgoing-call.html">Outgoing Call</a></li>
+                                                <li><a href="incoming-call.html">Incoming Call</a></li>
+                                                <li><a href="call-history.html">Call History</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="calendar.html">Calendar</a></li>
+                                        <li><a href="contacts.html">Contacts</a></li>		
+                                        <li><a href="email.html">Email</a></li>
+                                        <li class="submenu submenu-two">
+                                            <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
+                                            <ul>
+                                                <li><a href="invoice.html">Invoices</a></li>
+                                                <li><a href="invoice-details.html">Invoice Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="todo.html">To Do</a></li>
+                                        <li><a href="notes.html">Notes</a></li>
+                                        <li><a href="kanban-view.html">Kanban Board</a></li>
+                                        <li><a href="file-manager.html">File Manager</a></li>
+                                        <li><a href="social-feed.html">Social Feed</a></li>
+                                        <li><a href="search-list.html">Search Result</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-layout-sidebar"></i><span>Layouts</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="index.html">Default</a></li>
+                                        <li><a href="layout-mini.html">Mini</a></li>
+                                        <li><a href="layout-hover-view.html">Hover View</a></li>
+                                        <li><a href="layout-hidden.html">Hidden</a></li>
+                                        <li><a href="layout-full-width.html">Full Width</a></li>
+                                        <li><a href="layout-rtl.html">RTL</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Clinic</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-user-plus"></i><span>Doctors</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="doctors.html">Doctors</a></li>
+                                        <li><a href="doctor-details.html">Doctor Details</a></li>
+                                        <li><a href="add-doctor.html">Add Doctor</a></li>
+                                        <li><a href="doctor-schedule.html">Doctor Schedule</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-user-heart"></i><span>Patients</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="patients.html">Patients</a></li>
+                                        <li><a href="patient-details.html">Patient Details</a></li>
+                                        <li><a href="create-patient.html">Create Patient</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-calendar-check"></i><span>Appointments</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="appointments.html">Appointments</a></li>
+                                        <li><a href="new-appointment.html">New Appointment</a></li>
+                                        <li><a href="appointment-calendar.html">Calendar</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="locations.html">
+                                        <i class="ti ti-map-pin"></i><span>Locations</span>
+                                    </a>
+                                </li>  
+                                <li>
+                                    <a href="services.html">
+                                        <i class="ti ti-user-cog"></i><span>Services</span>
+                                    </a>
+                                </li>  
+                                <li>
+                                    <a href="specializations.html">
+                                        <i class="ti ti-user-shield"></i><span>Specializations</span>
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="assets.html">
+                                        <i class="ti ti-asset"></i><span>Assets</span>
+                                    </a>
+                                </li>  
+                                <li>
+                                    <a href="activities.html">
+                                        <i class="ti ti-activity"></i><span>Activities</span>
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="messages.html">
+                                        <i class="ti ti-messages"></i><span>Messages</span>
+                                    </a>
+                                </li>                           
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>HRM</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="staffs.html">
+                                        <i class="ti ti-users-group"></i><span>Staffs</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="hrm-departments.html">
+                                        <i class="ti ti-building-bank"></i><span>Departments</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="designation.html">
+                                        <i class="ti ti-user-cog"></i><span>Designation</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="attendance.html">
+                                        <i class="ti ti-user-check"></i><span>Attendance</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-users-minus"></i><span>Leaves</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="leaves.html">Leaves</a></li>
+                                        <li><a href="leave-type.html">Leave Type</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="holidays.html">
+                                        <i class="ti ti-home-exclamation"></i><span>Holidays</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="payroll.html">
+                                        <i class="ti ti-coin"></i><span>Payroll</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Finance & Accounts</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-credit-card"></i><span>Expenses</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="expenses.html">Expenses</a></li>
+                                        <li><a href="expense-category.html">Expense Category</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="income.html">
+                                        <i class="ti ti-coins"></i><span>Income</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-file-invoice"></i><span>Invoices</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="invoices.html">Invoices</a></li>
+                                        <li><a href="invoices-details.html">Invoice Details</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="payments.html">
+                                        <i class="ti ti-cards"></i><span>Payments</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="transactions.html">
+                                        <i class="ti ti-transition-right"></i><span>Transactions</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Administration</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-user"></i><span>Users</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="roles-and-permissions.html">Roles & Permissions</a></li>
+                                        <li><a href="delete-account-request.html">Delete Account Request</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-report"></i><span>Reports</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="income-report.html">Income Report</a></li>
+                                        <li><a href="expense-report.html">Expense Report</a></li>
+                                        <li><a href="profit-and-loss.html">Profit & Loss</a></li>
+                                        <li><a href="appointment-report.html">Appointment Report</a></li>
+                                        <li><a href="patient-report.html">Patient Report</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Content</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="pages.html">
+                                        <i class="ti ti-brand-pagekit"></i><span>Pages</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-brand-blogger"></i><span>Blogs</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="add-blog.html">Add Blog</a></li>
+                                        <li><a href="blogs.html">Blogs</a></li>
+                                        <li><a href="blog-categories.html">Blog Categories</a></li>
+                                        <li><a href="blog-comments.html">Blog Comments</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-map-pins"></i><span>Location</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="countries.html">Countries</a></li>
+                                        <li><a href="states.html">States</a></li>
+                                        <li><a href="cities.html">Cities</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="testimonials.html">
+                                        <i class="ti ti-brand-wechat"></i><span>Testimonials</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faq.html">
+                                        <i class="ti ti-question-mark"></i><span>FAQ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Support</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="contact-messages.html">
+                                        <i class="ti ti-message-dots"></i><span>Contact Messages</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tickets.html">
+                                        <i class="ti ti-ticket"></i><span>Tickets</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="announcements.html">
+                                        <i class="ti ti-speakerphone"></i><span>Announcements</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="newsletters.html">
+                                        <i class="ti ti-mail-bolt"></i><span>Newsletters</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Pages</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="starter.html">
+                                        <i class="ti ti-player-play"></i><span>Starter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="profile.html">
+                                        <i class="ti ti-user-circle"></i><span>Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gallery.html">
+                                        <i class="ti ti-photo"></i><span>Gallery</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="timeline.html">
+                                        <i class="ti ti-timeline-event-text"></i><span>Timeline</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pricing.html">
+                                        <i class="ti ti-tag"></i><span>Pricing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="coming-soon.html">
+                                        <i class="ti ti-sparkles"></i><span>Coming Soon</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="under-maintenance.html">
+                                        <i class="ti ti-settings-down"></i><span>Under Maintenance</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="privacy-policy.html">
+                                        <i class="ti ti-shield-check"></i><span>Privacy Policy</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="terms-and-conditions.html">
+                                        <i class="ti ti-file-time"></i><span>Terms & Conditions</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Authentication</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-login"></i><span>Login</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="login-cover.html">Cover</a></li>
+                                        <li><a href="login-illustration.html">Illustration</a></li>
+                                        <li><a href="login-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-file-pencil"></i><span>Register</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="register-cover.html">Cover</a></li>
+                                        <li><a href="register-illustration.html">Illustration</a></li>
+                                        <li><a href="register-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-lock-exclamation"></i><span>Forgot Password</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="forgot-password-cover.html">Cover</a></li>
+                                        <li><a href="forgot-password-illustration.html">Illustration</a></li>
+                                        <li><a href="forgot-password-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-restore"></i><span>Reset Password</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="reset-password-cover.html">Cover</a></li>
+                                        <li><a href="reset-password-illustration.html">Illustration</a></li>
+                                        <li><a href="reset-password-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-mail-check"></i><span>Email Verification</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="email-verification-cover.html">Cover</a></li>
+                                        <li><a href="email-verification-illustration.html">Illustration</a></li>
+                                        <li><a href="email-verification-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-discount-check"></i><span>2 Step Verification</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="two-step-verification-cover.html">Cover</a></li>
+                                        <li><a href="two-step-verification-illustration.html">Illustration</a></li>
+                                        <li><a href="two-step-verification-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="lock-screen.html">
+                                        <i class="ti ti-lock"></i><span>Lock Screen</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-exclamation-mark-off"></i><span>Error Pages</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="error-404.html">404 Error</a></li>
+                                        <li><a href="error-500.html">500 Error</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Settings</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-user-cog"></i><span>Account Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="profile-settings.html">Profile</a></li>
+                                        <li><a href="security-settings.html">Security</a></li>
+                                        <li><a href="notifications-settings.html">Notifications</a></li>
+                                        <li><a href="integrations-settings.html">Integrations</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-world-cog"></i><span>Website Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="organization-settings.html">Organization</a></li>
+                                        <li><a href="localization-settings.html">Localization</a></li>
+                                        <li><a href="prefixes-settings.html">Prefixes</a></li>
+                                        <li><a href="seo-setup-settings.html">SEO Setup</a></li>
+                                        <li><a href="language-settings.html">Language</a></li>
+                                        <li><a href="maintenance-mode-settings.html">Maintenance Mode</a></li>
+                                        <li><a href="login-and-register-settings.html">Login & Register</a></li>
+                                        <li><a href="preferences-settings.html">Preferences</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-building-hospital"></i><span>Clinic Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="appointment-settings.html">Appointment</a></li>
+                                        <li><a href="working-hours-settings.html">Working Hours</a></li>
+                                        <li><a href="cancellation-reason-settings.html">Cancellation Reason</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-device-mobile-cog"></i><span>App Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="invoice-settings.html">Invoice Settings</a></li>
+                                        <li><a href="invoice-templates-settings.html">Invoice Templates</a></li>
+                                        <li><a href="signatures-settings.html">Signatures</a></li>
+                                        <li><a href="custom-fields-settings.html">Custom Fields</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-device-desktop-cog"></i><span>System Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="email-settings.html">Email Settings</a></li>
+                                        <li><a href="email-templates-settings.html">Email Templates</a></li>
+                                        <li><a href="sms-gateways-settings.html">SMS Gateways</a></li>
+                                        <li><a href="sms-templates-settings.html">SMS Templates</a></li>
+                                        <li><a href="gdpr-cookies-settings.html">GDPR Cookies</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-settings-dollar"></i><span>Finance & Accounts</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="payment-methods-settings.html">Payment Methods</a></li>
+                                        <li><a href="bank-accounts-settings.html">Bank Accounts</a></li>
+                                        <li><a href="tax-rates-settings.html">Tax Rates</a></li>
+                                        <li><a href="currencies-settings.html">Currencies</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-settings-2"></i><span>Other Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="sitemap-settings.html">Sitemap</a></li>
+                                        <li><a href="clear-cache-settings.html">Clear Cache</a></li>
+                                        <li><a href="storage-settings.html">Storage</a></li>
+                                        <li><a href="cronjob-settings.html">Cronjob</a></li>
+                                        <li><a href="ban-ip-address-settings.html">Ban IP Address</a></li>
+                                        <li><a href="system-backup-settings.html">System Backup</a></li>
+                                        <li><a href="database-backup-settings.html">Database Backup</a></li>
+                                        <li><a href="system-update.html">System Update</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>UI Interface</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-chart-pie"></i><span>Base UI</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="ui-accordion.html">Accordion</a></li>
+                                        <li><a href="ui-alerts.html">Alerts</a></li>
+                                        <li><a href="ui-avatar.html">Avatar</a></li>
+                                        <li><a href="ui-badges.html">Badges</a></li>
+                                        <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
+                                        <li><a href="ui-buttons.html">Buttons</a></li>
+                                        <li><a href="ui-buttons-group.html">Button Group</a></li>
+                                        <li><a href="ui-cards.html">Card</a></li>
+                                        <li><a href="ui-carousel.html">Carousel</a></li>
+                                        <li><a href="ui-collapse.html">Collapse</a></li>
+                                        <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                                        <li><a href="ui-ratio.html">Ratio</a></li>
+                                        <li><a href="ui-grid.html">Grid</a></li>
+                                        <li><a href="ui-images.html">Images</a></li>
+                                        <li><a href="ui-links.html">Links</a></li>
+                                        <li><a href="ui-list-group.html">List Group</a></li>
+                                        <li><a href="ui-modals.html">Modals</a></li>
+                                        <li><a href="ui-offcanvas.html">Offcanvas</a></li>
+                                        <li><a href="ui-pagination.html">Pagination</a></li>
+                                        <li><a href="ui-placeholders.html">Placeholders</a></li>
+                                        <li><a href="ui-popovers.html">Popovers</a></li>
+                                        <li><a href="ui-progress.html">Progress</a></li>
+                                        <li><a href="ui-scrollspy.html">Scrollspy</a></li>
+                                        <li><a href="ui-spinner.html">Spinner</a></li>
+                                        <li><a href="ui-nav-tabs.html">Tabs</a></li>
+                                        <li><a href="ui-toasts.html">Toasts</a></li>
+                                        <li><a href="ui-tooltips.html">Tooltips</a></li>
+                                        <li><a href="ui-typography.html">Typography</a></li>
+                                        <li><a href="ui-utilities.html">Utilities</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-radar"></i><span>Advanced UI</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="extended-dragula.html">Dragula</a></li>
+                                        <li><a href="ui-clipboard.html">Clipboard</a></li>
+                                        <li><a href="ui-rangeslider.html">Range Slider</a></li>
+                                        <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
+										<li><a href="ui-lightbox.html">Lightbox</a></li>
+										<li><a href="ui-rating.html">Rating</a></li>
+										<li><a href="ui-scrollbar.html">Scrollbar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-forms"></i><span>Forms</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li class="submenu submenu-two">
+                                            <a href="javascript:void(0);">Form Elements<span class="menu-arrow inside-submenu"></span></a>
+                                            <ul>
+                                                <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
+                                                <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
+                                                <li><a href="form-input-groups.html">Input Groups</a></li>
+                                                <li><a href="form-grid-gutters.html">Grid & Gutters</a></li>
+                                                <li><a href="form-mask.html">Input Masks</a></li>
+                                                <li><a href="form-fileupload.html">File Uploads</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu submenu-two">
+                                            <a href="javascript:void(0);">Layouts<span class="menu-arrow inside-submenu"></span></a>
+                                            <ul>
+                                                <li><a href="form-horizontal.html">Horizontal Form</a></li>
+                                                <li><a href="form-vertical.html">Vertical Form</a></li>
+                                                <li><a href="form-floating-labels.html">Floating Labels</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="form-validation.html">Form Validation</a></li>
+                                        <li><a href="form-select2.html">Select2</a></li>
+                                        <li><a href="form-wizard.html">Form Wizard</a></li>
+                                        <li><a href="form-pickers.html">Form Picker</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-table-row"></i><span>Tables</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="tables-basic.html">Basic Tables </a></li>
+                                        <li><a href="data-tables.html">Data Table </a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-chart-donut"></i>
+                                        <span>Charts</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="chart-apex.html">Apex Charts</a></li>
+                                        <li><a href="chart-c3.html">Chart C3</a></li>
+                                        <li><a href="chart-js.html">Chart Js</a></li>
+                                        <li><a href="chart-morris.html">Morris Charts</a></li>
+                                        <li><a href="chart-flot.html">Flot Charts</a></li>
+                                        <li><a href="chart-peity.html">Peity Charts</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);" class="active subdrop">
+                                        <i class="ti ti-icons"></i>
+                                        <span>Icons</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
+                                        <li><a href="icon-tabler.html">Tabler Icons</a></li>
+                                        <li><a href="icon-bootstrap.html">Bootstrap Icons</a></li>
+                                        <li><a href="icon-remix.html">Remix Icons</a></li>
+                                        <li><a href="icon-feather.html">Feather Icons</a></li>
+                                        <li><a href="icon-ionic.html">Ionic Icons</a></li>
+                                        <li><a href="icon-material.html">Material Icons</a></li>
+                                        <li><a href="icon-pe7.html">Pe7 Icons</a></li>
+                                        <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
+                                        <li><a href="icon-themify.html">Themify Icons</a></li>
+                                        <li><a href="icon-weather.html">Weather Icons</a></li>
+                                        <li><a href="icon-typicons.html">Typicons Icons</a></li>
+                                        <li><a href="icon-flag.html" class="active">Flag Icons</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Help</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="ti ti-file-dots"></i><span>Documentation</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="ti ti-status-change"></i><span>Changelog</span><span class="badge bg-danger ms-2 badge-md rounded-2 fs-12 fw-medium">v1.6.8</span></a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-versions"></i><span>Multi Level</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="javascript:void(0);">Multilevel 1</a></li>
+                                        <li class="submenu submenu-two">
+                                            <a href="javascript:void(0);">Multilevel 2<span
+                                                    class="menu-arrow inside-submenu"></span></a>
+                                            <ul>
+                                                <li><a href="javascript:void(0);">Multilevel 2.1</a></li>
+                                                <li class="submenu submenu-two submenu-three">
+                                                    <a href="javascript:void(0);">Multilevel 2.2<span
+                                                            class="menu-arrow inside-submenu inside-submenu-two"></span></a>
+                                                    <ul>
+                                                        <li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
+                                                        <li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0);">Multilevel 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>                        
+                    </ul>                   
+                </div>
+                <div class="sidebar-footer border-top mt-3">
+                    <div class="trial-item mt-0 p-3 text-center">
+                        <div class="trial-item-icon rounded-4 mb-3 p-2 text-center shadow-sm d-inline-flex">
+                            <img src="./assets/img/icons/sidebar-icon.svg" alt="img">
+                        </div>
+                        <div>
+                            <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Preclinic like a pro</p>
+                        </div>
+                        <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Sidenav Menu End -->
+
+		<!-- ========================
+			Start Page Content
+		========================= -->
+
+        <div class="page-wrapper cardhead">
+
+			<!-- Start Content -->
+            <div class="content pb-0">
+
+                <!-- Page Header -->
+                <div class="d-flex align-items-sm-center flex-sm-row flex-column gap-2 pb-3">
+                    <div class="flex-grow-1">
+                        <h4 class="fw-bold mb-0">Flag Icon</h4>
+                    </div>
+                    <div class="text-end">
+                        <ol class="breadcrumb m-0 py-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                            
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Icons</a></li>
+                            
+                            <li class="breadcrumb-item active">Flag Icon</li>
+                        </ol>
+                    </div>
+				</div>
+				<!-- End Page Header -->
+
+				<!-- start row -->
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">Flag Icons</div>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="icons-list">
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ad" data-bs-toggle="tooltip" title="flag flag-ad"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ae" data-bs-toggle="tooltip" title="flag flag-ae"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-af" data-bs-toggle="tooltip" title="flag flag-af"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ag" data-bs-toggle="tooltip" title="flag flag-ag"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ai" data-bs-toggle="tooltip" title="flag flag-ai"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-al" data-bs-toggle="tooltip" title="flag flag-al"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-am" data-bs-toggle="tooltip" title="flag flag-am"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ao" data-bs-toggle="tooltip" title="flag flag-ao"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ar" data-bs-toggle="tooltip" title="flag flag-ar"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-as" data-bs-toggle="tooltip" title="flag flag-as"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-at" data-bs-toggle="tooltip" title="flag flag-at"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-au" data-bs-toggle="tooltip" title="flag flag-au"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-aw" data-bs-toggle="tooltip" title="flag flag-aw"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ax" data-bs-toggle="tooltip" title="flag flag-ax"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-az" data-bs-toggle="tooltip" title="flag flag-az"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ba" data-bs-toggle="tooltip" title="flag flag-ba"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bb" data-bs-toggle="tooltip" title="flag flag-bb"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bd" data-bs-toggle="tooltip" title="flag flag-bd"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-be" data-bs-toggle="tooltip" title="flag flag-be"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bf" data-bs-toggle="tooltip" title="flag flag-bf"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bg" data-bs-toggle="tooltip" title="flag flag-bg"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bh" data-bs-toggle="tooltip" title="flag flag-bh"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bi" data-bs-toggle="tooltip" title="flag flag-bi"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bj" data-bs-toggle="tooltip" title="flag flag-bj"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bl" data-bs-toggle="tooltip" title="flag flag-bl"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bm" data-bs-toggle="tooltip" title="flag flag-bm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bn" data-bs-toggle="tooltip" title="flag flag-bn"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bo" data-bs-toggle="tooltip" title="flag flag-bo"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bq" data-bs-toggle="tooltip" title="flag flag-bq"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-br" data-bs-toggle="tooltip" title="flag flag-br"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bs" data-bs-toggle="tooltip" title="flag flag-bs"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bt" data-bs-toggle="tooltip" title="flag flag-bt"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bv" data-bs-toggle="tooltip" title="flag flag-bv"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bw" data-bs-toggle="tooltip" title="flag flag-bw"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-by" data-bs-toggle="tooltip" title="flag flag-by"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-bz" data-bs-toggle="tooltip" title="flag flag-bz"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ca" data-bs-toggle="tooltip" title="flag flag-ca"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cc" data-bs-toggle="tooltip" title="flag flag-cc"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cd" data-bs-toggle="tooltip" title="flag flag-cd"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cf" data-bs-toggle="tooltip" title="flag flag-cf"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cg" data-bs-toggle="tooltip" title="flag flag-cg"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ch" data-bs-toggle="tooltip" title="flag flag-ch"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ci" data-bs-toggle="tooltip" title="flag flag-ci"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ck" data-bs-toggle="tooltip" title="flag flag-ck"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cl" data-bs-toggle="tooltip" title="flag flag-cl"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cm" data-bs-toggle="tooltip" title="flag flag-cm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cn" data-bs-toggle="tooltip" title="flag flag-cn"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-co" data-bs-toggle="tooltip" title="flag flag-co"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cr" data-bs-toggle="tooltip" title="flag flag-cr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cu" data-bs-toggle="tooltip" title="flag flag-cu"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cv" data-bs-toggle="tooltip" title="flag flag-cv"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cw" data-bs-toggle="tooltip" title="flag flag-cw"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cx" data-bs-toggle="tooltip" title="flag flag-cx"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cy" data-bs-toggle="tooltip" title="flag flag-cy"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-cz" data-bs-toggle="tooltip" title="flag flag-cz"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-de" data-bs-toggle="tooltip" title="flag flag-de"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-dj" data-bs-toggle="tooltip" title="flag flag-dj"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-dk" data-bs-toggle="tooltip" title="flag flag-dk"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-dm" data-bs-toggle="tooltip" title="flag flag-dm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-do" data-bs-toggle="tooltip" title="flag flag-do"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-dz" data-bs-toggle="tooltip" title="flag flag-dz"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ec" data-bs-toggle="tooltip" title="flag flag-ec"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ee" data-bs-toggle="tooltip" title="flag flag-ee"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-eg" data-bs-toggle="tooltip" title="flag flag-eg"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-er" data-bs-toggle="tooltip" title="flag flag-er"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-es" data-bs-toggle="tooltip" title="flag flag-es"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-et" data-bs-toggle="tooltip" title="flag flag-et"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-fi" data-bs-toggle="tooltip" title="flag flag-fi"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-fj" data-bs-toggle="tooltip" title="flag flag-fj"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-fk" data-bs-toggle="tooltip" title="flag flag-fk"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-fm" data-bs-toggle="tooltip" title="flag flag-fm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-fo" data-bs-toggle="tooltip" title="flag flag-fo"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-fr" data-bs-toggle="tooltip" title="flag flag-fr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ga" data-bs-toggle="tooltip" title="flag flag-ga"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gb" data-bs-toggle="tooltip" title="flag flag-gb"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gd" data-bs-toggle="tooltip" title="flag flag-gd"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ge" data-bs-toggle="tooltip" title="flag flag-ge"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gf" data-bs-toggle="tooltip" title="flag flag-gf"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gg" data-bs-toggle="tooltip" title="flag flag-gg"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gh" data-bs-toggle="tooltip" title="flag flag-gh"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gi" data-bs-toggle="tooltip" title="flag flag-gi"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gl" data-bs-toggle="tooltip" title="flag flag-gl"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gm" data-bs-toggle="tooltip" title="flag flag-gm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gn" data-bs-toggle="tooltip" title="flag flag-gn"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gp" data-bs-toggle="tooltip" title="flag flag-gp"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gq" data-bs-toggle="tooltip" title="flag flag-gq"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gr" data-bs-toggle="tooltip" title="flag flag-gr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gs" data-bs-toggle="tooltip" title="flag flag-gs"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gt" data-bs-toggle="tooltip" title="flag flag-gt"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gu" data-bs-toggle="tooltip" title="flag flag-gu"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gw" data-bs-toggle="tooltip" title="flag flag-gw"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-gy" data-bs-toggle="tooltip" title="flag flag-gy"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-hk" data-bs-toggle="tooltip" title="flag flag-hk"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-hn" data-bs-toggle="tooltip" title="flag flag-hn"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-hr" data-bs-toggle="tooltip" title="flag flag-hr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ht" data-bs-toggle="tooltip" title="flag flag-ht"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-hu" data-bs-toggle="tooltip" title="flag flag-hu"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-id" data-bs-toggle="tooltip" title="flag flag-id"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ie" data-bs-toggle="tooltip" title="flag flag-ie"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-il" data-bs-toggle="tooltip" title="flag flag-il"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-im" data-bs-toggle="tooltip" title="flag flag-im"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-in" data-bs-toggle="tooltip" title="flag flag-in"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-io" data-bs-toggle="tooltip" title="flag flag-io"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-iq" data-bs-toggle="tooltip" title="flag flag-iq"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ir" data-bs-toggle="tooltip" title="flag flag-ir"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-is" data-bs-toggle="tooltip" title="flag flag-is"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-it" data-bs-toggle="tooltip" title="flag flag-it"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-je" data-bs-toggle="tooltip" title="flag flag-je"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-jm" data-bs-toggle="tooltip" title="flag flag-jm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-jo" data-bs-toggle="tooltip" title="flag flag-jo"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-jp" data-bs-toggle="tooltip" title="flag flag-jp"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ke" data-bs-toggle="tooltip" title="flag flag-ke"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-kg" data-bs-toggle="tooltip" title="flag flag-kg"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-kh" data-bs-toggle="tooltip" title="flag flag-kh"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ki" data-bs-toggle="tooltip" title="flag flag-ki"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-km" data-bs-toggle="tooltip" title="flag flag-km"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-kn" data-bs-toggle="tooltip" title="flag flag-kn"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-kp" data-bs-toggle="tooltip" title="flag flag-kp"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-kr" data-bs-toggle="tooltip" title="flag flag-kr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-kw" data-bs-toggle="tooltip" title="flag flag-kw"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ky" data-bs-toggle="tooltip" title="flag flag-ky"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-kz" data-bs-toggle="tooltip" title="flag flag-kz"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-la" data-bs-toggle="tooltip" title="flag flag-la"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-lb" data-bs-toggle="tooltip" title="flag flag-lb"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-lc" data-bs-toggle="tooltip" title="flag flag-lc"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-li" data-bs-toggle="tooltip" title="flag flag-li"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-lk" data-bs-toggle="tooltip" title="flag flag-lk"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-lr" data-bs-toggle="tooltip" title="flag flag-lr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ls" data-bs-toggle="tooltip" title="flag flag-ls"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-lt" data-bs-toggle="tooltip" title="flag flag-lt"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-lu" data-bs-toggle="tooltip" title="flag flag-lu"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-lv" data-bs-toggle="tooltip" title="flag flag-lv"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ly" data-bs-toggle="tooltip" title="flag flag-ly"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ma" data-bs-toggle="tooltip" title="flag flag-ma"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mc" data-bs-toggle="tooltip" title="flag flag-mc"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-md" data-bs-toggle="tooltip" title="flag flag-md"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-me" data-bs-toggle="tooltip" title="flag flag-me"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mg" data-bs-toggle="tooltip" title="flag flag-mg"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mh" data-bs-toggle="tooltip" title="flag flag-mh"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mk" data-bs-toggle="tooltip" title="flag flag-mk"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ml" data-bs-toggle="tooltip" title="flag flag-ml"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mm" data-bs-toggle="tooltip" title="flag flag-mm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mn" data-bs-toggle="tooltip" title="flag flag-mn"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mo" data-bs-toggle="tooltip" title="flag flag-mo"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mp" data-bs-toggle="tooltip" title="flag flag-mp"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mq" data-bs-toggle="tooltip" title="flag flag-mq"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mr" data-bs-toggle="tooltip" title="flag flag-mr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ms" data-bs-toggle="tooltip" title="flag flag-ms"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mt" data-bs-toggle="tooltip" title="flag flag-mt"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mu" data-bs-toggle="tooltip" title="flag flag-mu"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mv" data-bs-toggle="tooltip" title="flag flag-mv"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mw" data-bs-toggle="tooltip" title="flag flag-mw"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mx" data-bs-toggle="tooltip" title="flag flag-mx"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-my" data-bs-toggle="tooltip" title="flag flag-my"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-mz" data-bs-toggle="tooltip" title="flag flag-mz"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-na" data-bs-toggle="tooltip" title="flag flag-na"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-nc" data-bs-toggle="tooltip" title="flag flag-nc"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ne" data-bs-toggle="tooltip" title="flag flag-ne"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-nf" data-bs-toggle="tooltip" title="flag flag-nf"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ng" data-bs-toggle="tooltip" title="flag flag-ng"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ni" data-bs-toggle="tooltip" title="flag flag-ni"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-nl" data-bs-toggle="tooltip" title="flag flag-nl"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-no" data-bs-toggle="tooltip" title="flag flag-no"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-np" data-bs-toggle="tooltip" title="flag flag-np"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-nr" data-bs-toggle="tooltip" title="flag flag-nr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-nu" data-bs-toggle="tooltip" title="flag flag-nu"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-nz" data-bs-toggle="tooltip" title="flag flag-nz"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-om" data-bs-toggle="tooltip" title="flag flag-om"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pa" data-bs-toggle="tooltip" title="flag flag-pa"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pe" data-bs-toggle="tooltip" title="flag flag-pe"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pf" data-bs-toggle="tooltip" title="flag flag-pf"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pg" data-bs-toggle="tooltip" title="flag flag-pg"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ph" data-bs-toggle="tooltip" title="flag flag-ph"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pk" data-bs-toggle="tooltip" title="flag flag-pk"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pl" data-bs-toggle="tooltip" title="flag flag-pl"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pm" data-bs-toggle="tooltip" title="flag flag-pm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pn" data-bs-toggle="tooltip" title="flag flag-pn"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pr" data-bs-toggle="tooltip" title="flag flag-pr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ps" data-bs-toggle="tooltip" title="flag flag-ps"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pt" data-bs-toggle="tooltip" title="flag flag-pt"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-pw" data-bs-toggle="tooltip" title="flag flag-pw"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-py" data-bs-toggle="tooltip" title="flag flag-py"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-qa" data-bs-toggle="tooltip" title="flag flag-qa"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-re" data-bs-toggle="tooltip" title="flag flag-re"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ro" data-bs-toggle="tooltip" title="flag flag-ro"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-rs" data-bs-toggle="tooltip" title="flag flag-rs"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ru" data-bs-toggle="tooltip" title="flag flag-ru"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-rw" data-bs-toggle="tooltip" title="flag flag-rw"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sa" data-bs-toggle="tooltip" title="flag flag-sa"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sb" data-bs-toggle="tooltip" title="flag flag-sb"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sc" data-bs-toggle="tooltip" title="flag flag-sc"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sd" data-bs-toggle="tooltip" title="flag flag-sd"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-se" data-bs-toggle="tooltip" title="flag flag-se"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sg" data-bs-toggle="tooltip" title="flag flag-sg"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sh" data-bs-toggle="tooltip" title="flag flag-sh"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-si" data-bs-toggle="tooltip" title="flag flag-si"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sk" data-bs-toggle="tooltip" title="flag flag-sk"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sl" data-bs-toggle="tooltip" title="flag flag-sl"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sm" data-bs-toggle="tooltip" title="flag flag-sm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sn" data-bs-toggle="tooltip" title="flag flag-sn"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-so" data-bs-toggle="tooltip" title="flag flag-so"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sr" data-bs-toggle="tooltip" title="flag flag-sr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ss" data-bs-toggle="tooltip" title="flag flag-ss"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-st" data-bs-toggle="tooltip" title="flag flag-st"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sv" data-bs-toggle="tooltip" title="flag flag-sv"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sx" data-bs-toggle="tooltip" title="flag flag-sx"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sy" data-bs-toggle="tooltip" title="flag flag-sy"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-sz" data-bs-toggle="tooltip" title="flag flag-sz"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tc" data-bs-toggle="tooltip" title="flag flag-tc"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-td" data-bs-toggle="tooltip" title="flag flag-td"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tf" data-bs-toggle="tooltip" title="flag flag-tf"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tg" data-bs-toggle="tooltip" title="flag flag-tg"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-th" data-bs-toggle="tooltip" title="flag flag-th"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tj" data-bs-toggle="tooltip" title="flag flag-tj"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tk" data-bs-toggle="tooltip" title="flag flag-tk"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tl" data-bs-toggle="tooltip" title="flag flag-tl"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tm" data-bs-toggle="tooltip" title="flag flag-tm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tn" data-bs-toggle="tooltip" title="flag flag-tn"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-to" data-bs-toggle="tooltip" title="flag flag-to"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tr" data-bs-toggle="tooltip" title="flag flag-tr"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tt" data-bs-toggle="tooltip" title="flag flag-tt"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tv" data-bs-toggle="tooltip" title="flag flag-tv"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tw" data-bs-toggle="tooltip" title="flag flag-tw"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-tz" data-bs-toggle="tooltip" title="flag flag-tz"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ua" data-bs-toggle="tooltip" title="flag flag-ua"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ug" data-bs-toggle="tooltip" title="flag flag-ug"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-um" data-bs-toggle="tooltip" title="flag flag-um"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-us" data-bs-toggle="tooltip" title="flag flag-us"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-uy" data-bs-toggle="tooltip" title="flag flag-uy"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-uz" data-bs-toggle="tooltip" title="flag flag-uz"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-va" data-bs-toggle="tooltip" title="flag flag-va"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-vc" data-bs-toggle="tooltip" title="flag flag-vc"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ve" data-bs-toggle="tooltip" title="flag flag-ve"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-vg" data-bs-toggle="tooltip" title="flag flag-vg"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-vi" data-bs-toggle="tooltip" title="flag flag-vi"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-vn" data-bs-toggle="tooltip" title="flag flag-vn"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-vu" data-bs-toggle="tooltip" title="flag flag-vu"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-wf" data-bs-toggle="tooltip" title="flag flag-wf"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ws" data-bs-toggle="tooltip" title="flag flag-ws"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-ye" data-bs-toggle="tooltip" title="flag flag-ye"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-yt" data-bs-toggle="tooltip" title="flag flag-yt"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-za" data-bs-toggle="tooltip" title="flag flag-za"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-zm" data-bs-toggle="tooltip" title="flag flag-zm"></i>
+                                    </div>
+                                    <div class="icons-list-item">
+                                        <i class="flag flag-zw" data-bs-toggle="tooltip" title="flag flag-zw"></i>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                </div>
+				<!-- end row -->
+
+            </div>
+			<!-- End Content -->
+
+            <!-- Footer Start -->
+            <div class="footer text-center bg-white p-2 border-top">
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Preclinic</a>, All Rights Reserved</p>
+            </div>
+            <!-- Footer End -->
+
+        </div>
+
+		<!-- ========================
+			Start Page Content
+		========================= -->
+
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- jQuery -->
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+
+	<!-- Simplebar JS -->
+	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

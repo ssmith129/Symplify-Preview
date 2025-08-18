@@ -1,0 +1,670 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+/*============================
+  6.alerts
+============================*/
+
+.alert {
+  padding: 12px 20px;
+  border-radius: variables.$border-radius-lg;
+  font-size: 0.8125rem;
+  &.alert-dismissible {
+    padding: 12px 35px 12px 20px;
+  }
+  &.alert-borderless {
+    border: 0;
+  }
+  .btn-close {
+    background-image: none;
+    padding: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: variables.$font-size-18;
+      line-height: 18px;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .alert-link {
+    font-weight: variables.$font-weight-semibold;
+  }
+}
+[dir="rtl"] {
+  .alert.alert-dismissible {
+    padding: 0.625rem 0.85rem 0.625rem 2.25rem;
+  }
+}
+@mixin custom-close($color) {
+  background-color: $color;
+  color: variables.$white;
+  opacity: 1;
+  border-radius: 50px;
+  box-shadow: variables.$box-shadow;
+  padding: 0.85rem;
+}
+.alert-warning {
+  background-color: rgba(variables.$warning, 0.1);
+  color: variables.$warning;
+  border-color: rgba(variables.$warning, 0.1);
+  .alert-link {
+    color: variables.$warning;
+  }
+  .btn-close {
+    color: variables.$warning;
+    &.custom-close {
+      @include custom-close(variables.$warning);
+    }
+  }
+  &.alert-label-icon {   
+    .label-icon {
+      background-color: variables.$warning-transparent;
+      color: variables.$warning;
+    }
+  }
+}
+.alert-primary {
+  background-color: variables.$primary-transparent;
+  color: variables.$primary;
+  border-color: variables.$primary;
+  .alert-link {
+    color: variables.$primary;
+  }
+  .custom-alert-icon {	
+	color: variables.$primary;
+  }
+  .btn-close {
+    color: variables.$primary;
+    &.custom-close {
+      @include custom-close(variables.$primary);
+    }
+  }
+  &.alert-label-icon {   
+    .label-icon {
+      background-color: variables.$primary-transparent;
+      color: variables.$primary;
+    }
+  }
+}
+.alert-secondary {
+  background-color: variables.$secondary-transparent;
+  color: variables.$secondary;
+  border-color: variables.$secondary;
+  .alert-link {
+    color: variables.$secondary;
+  }
+  .btn-close {
+    color: variables.$secondary;
+    &.custom-close {
+      @include custom-close(variables.$secondary);
+    }
+  }
+  &.alert-label-icon {   
+    .label-icon {
+      background-color: variables.$secondary-transparent;
+      color: variables.$secondary;
+    }
+  }
+}
+.alert-success {
+  background-color: variables.$success-transparent;
+  color: variables.$success;
+  border-color: variables.$success;
+  .alert-link {
+    color: variables.$success;
+  }
+  .btn-close {
+    color: variables.$success;
+    &.custom-close {
+      @include custom-close(variables.$success);
+    }
+  }
+  &.alert-label-icon {   
+    .label-icon {
+      background-color: variables.$success-transparent;
+      color: variables.$success;
+    }
+  }
+}
+.alert-info {
+  background-color: variables.$info-transparent;
+  color: variables.$info;
+  border-color: variables.$info;
+  .alert-link {
+    color: variables.$info;
+  }
+  .btn-close {
+    color: variables.$info;
+    &.custom-close {
+      @include custom-close(variables.$info);
+    }
+  }
+  &.alert-label-icon {   
+    .label-icon {
+      background-color: variables.$info-transparent;
+      color: variables.$info;
+    }
+  }
+}
+.alert-danger {
+  background-color: variables.$danger-transparent;
+  color: variables.$danger;
+  border-color: variables.$danger;
+  .alert-link {
+    color: variables.$danger;
+  }
+  .btn-close {
+    color: variables.$danger;
+    &.custom-close {
+      @include custom-close(variables.$danger);
+    }
+  }
+  &.alert-label-icon {   
+    .label-icon {
+      background-color: variables.$danger-transparent;
+      color: variables.$danger;
+    }
+  }
+}
+.alert-light {
+  background-color: variables.$light-transparent;
+  color: variables.$text-color;
+  border-color: variables.$gray-100;
+  .alert-link {
+    color: variables.$text-color;
+  }
+  .btn-close {
+    color: variables.$text-color;
+    &.custom-close {
+      @include custom-close(variables.$light);
+    }
+  }
+  &.alert-label-icon {   
+    .label-icon {
+      background-color: variables.$light-transparent;
+      color: variables.$text-color;
+    }
+  }
+}
+.alert-dark {
+  background-color: variables.$gray-transparent;
+  color: variables.$dark;
+  border-color: variables.$dark;
+  .alert-link {
+    color: variables.$dark;
+  }
+  .btn-close {
+    color: variables.$dark;
+    &.custom-close {
+      @include custom-close(variables.$dark);
+    }
+  }
+  &.alert-label-icon {   
+    .label-icon {
+      background-color: variables.$gray-transparent;
+      color: variables.$dark;
+    }
+  }
+}
+@mixin alert-solid-color($color) {
+  background-color: $color;
+  color: variables.$white;
+  border-color: $color;
+  .btn-close {
+    color: variables.$white;
+  }
+}
+.alert-solid-primary {
+  @include alert-solid-color(variables.$primary);
+}
+.alert-solid-secondary {
+  @include alert-solid-color(variables.$secondary);
+}
+.alert-solid-warning {
+  @include alert-solid-color(variables.$warning);
+}
+.alert-solid-info {
+  @include alert-solid-color(variables.$info);
+}
+.alert-solid-success {
+  @include alert-solid-color(variables.$success);
+}
+.alert-solid-danger {
+  @include alert-solid-color(variables.$danger);
+}
+.alert-solid-light {
+  background-color: variables.$light;
+  color: variables.$text-color;
+  border-color: variables.$default-border;
+}
+.alert-solid-dark {
+  @include alert-solid-color(variables.$dark);
+}
+@mixin outline-alert($color) {
+  background-color: variables.$white;
+  color: $color;
+  border-color: $color;
+  .btn-close {
+    color: $color;
+  }
+}
+@mixin alert($color) {
+  .btn-close {
+    color: $color;
+  }
+}
+.alert-outline-primary {
+  @include outline-alert(variables.$primary);
+}
+.alert-outline-secondary {
+  @include outline-alert(variables.$secondary);
+}
+.alert-outline-info {
+  @include outline-alert(variables.$info);
+}
+.alert-outline-warning {
+  @include outline-alert(variables.$warning);
+}
+.alert-outline-success {
+  @include outline-alert(variables.$success);
+}
+.alert-outline-danger {
+  @include outline-alert(variables.$danger);
+}
+.alert-outline-light {
+  background-color: variables.$white;
+  color: variables.$text-color;
+  border-color: variables.$gray-100;
+}
+.alert-outline-dark {
+  @include outline-alert(variables.$dark);
+}
+@mixin custom-alert($color) {
+  border-inline-start: 0.313rem solid $color !important;
+  color: variables.$text-muted;
+  background-color: variables.$white;
+  border: 1px solid variables.$default-border;
+  font-size: 0.813rem;
+  .btn-close {
+    color: variables.$text-color;
+  }
+}
+@mixin alert-border-left($color) {
+  border-inline-start: 0.313rem solid $color !important;
+}
+@mixin alert-top-border($color) {
+  border-top: 2px solid $color !important;
+}
+.alert-primary {
+  &.custom-alert-icon {
+    @include custom-alert(variables.$primary);
+    & > i {
+    color: variables.$primary;
+    }
+  }
+  &.alert-border-left {
+    @include alert-border-left(variables.$primary);
+  }
+  &.alert-top-border {
+    @include alert-top-border(variables.$primary);
+  }
+}
+.alert-secondary {
+  &.custom-alert-icon {
+    @include custom-alert(variables.$secondary);
+    & > i {
+    color: variables.$secondary;
+    }
+  }
+  &.alert-border-left {
+    @include alert-border-left(variables.$secondary);
+  }
+  &.alert-top-border {
+    @include alert-top-border(variables.$secondary);
+  }
+}
+.alert-warning {
+  &.custom-alert-icon {
+    @include custom-alert(variables.$warning);
+    & > i {
+    color: variables.$warning;
+    }
+  }
+  &.alert-border-left {
+    @include alert-border-left(variables.$warning);
+  }
+  &.alert-top-border {
+    @include alert-top-border(variables.$warning);
+  }
+}
+.alert-danger {
+  &.custom-alert-icon {
+    @include custom-alert(variables.$danger);
+    & > i {
+    color: variables.$danger;
+    }
+  }
+  &.alert-border-left {
+    @include alert-border-left(variables.$danger);
+  }
+  &.alert-top-border {
+    @include alert-top-border(variables.$danger);
+  }
+}
+.alert-dark {
+  &.alert-border-left {
+    @include alert-border-left(variables.$dark);
+  }
+  &.alert-top-border {
+    @include alert-top-border(variables.$dark);
+  }
+}
+.alert-light {
+  &.alert-border-left {
+    @include alert-border-left(variables.$gray-100);
+  }
+  &.alert-top-border {
+    @include alert-top-border(variables.$gray-100);
+  }
+}
+.alert-success {
+  &.custom-alert-icon {
+    @include custom-alert(variables.$success);
+  }
+  &.alert-border-left {
+    @include alert-border-left(variables.$success);
+  }
+  &.alert-top-border {
+    @include alert-top-border(variables.$success);
+  }
+}
+.alert-info {
+  .custom-alert-icon {
+    @include custom-alert(variables.$info);
+  }
+  &.alert-border-left {
+    @include alert-border-left(variables.$info);
+  }
+  &.alert-top-border {
+    @include alert-top-border(variables.$info);
+  }
+}
+.alert-light.custom-alert-icon {
+  @include custom-alert(variables.$light);
+}
+.alert-dark.custom-alert-icon {
+  @include custom-alert(variables.$dark);
+}
+.custom-alert1 {
+  margin-block-end: 0;
+  background-color: variables.$white;
+  border: 0;
+  padding: 1.25rem;
+  color: variables.$text-color;
+  p {
+    margin-block-end: 2.5rem;
+    color: variables.$text-muted;
+    font-size: 0.8rem;
+  }
+  .custom-alert-icon {
+	font-size: variables.$font-size-40;
+    margin-bottom: 0.85rem;
+	i {		
+		font-size: variables.$font-size-40;
+	}
+  }
+  .btn-close {
+    padding: 0;
+    margin-block-end: 1rem;
+  }
+  &.alert-primary {
+    border-block-start: 0.313rem solid variables.$primary;	
+	.custom-alert-icon {	
+		color: variables.$primary;
+	}
+  }
+  &.alert-secondary {
+    border-block-start: 0.313rem solid variables.$secondary;	
+	.custom-alert-icon {	
+		color: variables.$secondary;
+	}
+  }
+  &.alert-warning {
+    border-block-start: 0.313rem solid variables.$warning;	
+	.custom-alert-icon {	
+		color: variables.$warning;
+	}
+  }
+  &.alert-danger {
+    border-block-start: 0.313rem solid variables.$danger;	
+	.custom-alert-icon {	
+		color: variables.$danger;
+	}
+  }
+}
+.alert-img {
+  display: flex;
+  align-items: center;
+  .avatar {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+@media screen and (max-width: 400px) {
+  .btn-close.custom-close {
+    margin: 9px 9px 9px 0;
+  }
+}
+.op-7 {
+    opacity: 0.7;
+}
+.op-8 {
+    opacity: 0.8;
+}
+.alert-label-icon {
+  position: relative;
+  padding-left: 70px !important;
+  border: 0 !important;
+  .label-icon {
+    position: absolute;
+    width: 54px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(variables.$white,.15);
+    font-size: variables.$font-size-14;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 4px 0 0 4px;
+  }
+  &.label-arrow {
+    .label-icon {
+      &:after {
+        content: "";
+        position: absolute;
+        border: 6px solid transparent;
+        border-left-color: transparent;
+        right: -12px
+    }
+    }
+  }
+}
+.alert-primary, .alert-secondary, .alert-danger, .alert-warning, .alert-dark, .alert-info, .alert-success {
+  &:is(.rounded-label,.alert-additional) {    
+  :is(.label-icon,.alert-content) {
+    color: variables.$white;
+  }
+  }
+}
+.alert-light {
+  &:is(.rounded-label,.alert-additional) {    
+    :is(.label-icon,.alert-content) {
+      color: variables.$text-color;
+    }
+  }
+}
+.rounded-label {
+  .label-icon {
+    width: 54px;
+    height: 38px;
+    left: 0;
+    top: 50%;
+    @include mixins.transform(translateY(-50%));
+    border-radius: 0 30px 30px 0;
+  }
+  &.alert-primary { 
+    .label-icon {
+      background: variables.$primary;
+    }
+  }
+  &.alert-secondary { 
+    .label-icon {
+      background: variables.$secondary;
+    }
+  }
+  &.alert-info { 
+    .label-icon {
+      background: variables.$info;
+    }
+  }
+  &.alert-warning { 
+    .label-icon {
+      background: variables.$warning;
+    }
+  }
+  &.alert-danger { 
+    .label-icon {
+      background: variables.$danger;
+    }
+  }
+  &.alert-dark { 
+    .label-icon {
+      background: variables.$dark;
+    }
+  }
+  &.alert-success { 
+    .label-icon {
+      background: variables.$success;
+    }
+  }
+  &.alert-light { 
+    .label-icon {
+      background: variables.$light;
+    }
+  }
+}
+.label-arrow {
+  &.alert-primary {
+    .label-icon {
+      background: variables.$primary;
+      color: variables.$white;
+      &:after {
+        border-left-color:  variables.$primary !important
+      }
+    }
+  }
+  &.alert-secondary {
+    .label-icon {
+      background: variables.$secondary;
+      color: variables.$white;
+      &:after {
+        border-left-color:  variables.$secondary !important
+      }
+    }
+  }
+  &.alert-light {
+    .label-icon {
+      background: variables.$light;
+      color: variables.$text-color;
+      &:after {
+        border-left-color:  variables.$light !important
+      }
+    }
+  }
+  &.alert-dark {
+    .label-icon {
+      background: variables.$dark;
+      color: variables.$white;
+      &:after {
+        border-left-color:  variables.$dark !important
+      }
+    }
+  }
+  &.alert-info {
+    .label-icon {
+      background: variables.$info;
+      color: variables.$white;
+      &:after {
+        border-left-color:  variables.$info !important
+      }
+    }
+  }
+  &.alert-warning {
+    .label-icon {
+      background: variables.$warning;
+      color: variables.$white;
+      &:after {
+        border-left-color:  variables.$warning !important
+      }
+    }
+  }
+  &.alert-success {
+    .label-icon {
+      background: variables.$success;
+      color: variables.$white;
+      &:after {
+        border-left-color:  variables.$success !important
+      }
+    }
+  }
+  &.alert-danger {
+    .label-icon {
+      background: variables.$danger;
+      color: variables.$white;
+      &:after {
+        border-left-color:  variables.$danger !important
+      }
+    }
+  }
+}
+.alert-additional {
+  padding: 0 !important;
+  .alert-body {
+    padding: 12px 32px 12px 20px;
+  }
+  .alert-content {
+    padding: 12px 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  &.alert-primary .alert-content {
+    background-color: variables.$primary;
+  }
+  &.alert-secondary .alert-content {
+    background-color: variables.$secondary;
+  }
+  &.alert-success .alert-content {
+    background-color: variables.$success;
+  }
+  &.alert-danger .alert-content {
+    background-color: variables.$danger;
+  }
+  &.alert-warning .alert-content {
+    background-color: variables.$warning;
+  }
+  &.alert-danger .alert-content {
+    background-color: variables.$danger;
+  }
+  &.alert-info .alert-content {
+    background-color: variables.$info;
+  }
+}

@@ -1,0 +1,126 @@
+/*---------------------------------------------------------------------------------
+
+    Template Name: Kanakku
+    Version      : 1.0
+    Author: Dreams Technologies
+    Author URI: https://themeforest.net/user/dreamstechnologies
+
+-----------------------------------------------------------------------------------
+
+/*============================
+[Table of CSS]
+
+1.variables
+2.mixins
+3.base
+4.background
+5.accordion
+6.alerts
+7.avatar
+8.badge
+9.boostrap
+10.border
+11.breadcrumb
+12.button
+13.calendar
+14.call
+15.cards
+16.chart
+17.dropdown
+18.file-manager
+19.file-upload
+20.font
+21.form-wizard
+22.forms
+23.grid
+24.icons
+25.incoming-call
+26.navs-tabs
+27.notes
+28.pagination
+29.popovers
+30.popup
+31.progress
+32.ribbon
+33.sweetalert
+34.tables
+35.timeline
+36.todo
+37.tooltips
+38.typography
+39.common
+40.content
+41.header
+42.notification
+43.sidebar
+
+============================*/
+
+/****** Utils ******/
+@use "utils/variables";
+@use "utils/mixins";
+
+/******* Base *******/
+@use "base/base";
+@use "base/background";
+
+/******* Components ******/
+@use "components/avatar";
+@use "components/boostrap";
+@use "components/button";
+@use "components/badge";
+@use "components/border";
+@use "components/calendar";
+@use "components/chart";
+@use "components/dropdown";
+@use "components/icons";
+@use "components/incoming-call";
+@use "components/call";
+@use "components/progress";
+@use "components/loader";
+@use "components/notes";
+@use "components/todo";
+@use "components/pagination";
+@use "components/file-manager";
+@use "components/font";
+@use "components/typography";
+@use "components/alerts";
+@use "components/popovers";
+@use "components/forms";
+@use "components/tables";
+@use "components/accordion";
+@use "components/breadcrumb";
+@use "components/cards";
+@use "components/tooltips";
+@use "components/navs-tabs";
+@use "components/ribbon";
+@use "components/popup";
+@use "components/grid";
+@use "components/file-upload";
+@use "components/timeline";
+@use "components/sweetalert";
+
+/****** Layout ******/
+@use "layout/common";
+@use "layout/content";
+@use "layout/header";
+@use "layout/sidebar";
+@use "layout/notification";
+
+/******* Vendors ******/
+@use "vendors/select2";
+@use "vendors/datatables";
+@use "vendors/rangepicker-plugin";
+
+/******* Pages ******/
+@use "pages/home";
+@use "pages/blogs";
+@use "pages/contact-us";
+@use "pages/departments";
+@use "pages/faq";
+
+
+
+
+
+

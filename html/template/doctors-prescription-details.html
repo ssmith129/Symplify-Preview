@@ -1,0 +1,678 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prescription | Preclinic - Medical & Hospital - Bootstrap 5 Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Dreams Technologies">
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/theme-script.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+	<!-- Daterangepikcer CSS -->
+	<link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker.css">
+
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+
+</head>
+
+
+<body>
+
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Topbar Start -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+
+                        <!-- Logo Normal -->
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                            <span class="logo-sm"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+
+                        <!-- Logo Dark -->
+                        <span class="logo-dark">
+                            <span class="logo-lg"><img src="assets/img/logo-white.svg" alt="dark logo"></span>
+                        </span>
+                    </a>
+
+                    <!-- Sidebar Mobile Button -->
+                    <a id="mobile_btn" class="mobile-btn" href="#sidebar">
+                        <i class="ti ti-menu-deep fs-24"></i>
+                    </a>
+                       
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2"> 
+                        <i class="ti ti-arrow-right"></i>
+                    </button>  
+					
+                    <!-- Search -->
+                    <div class="me-auto d-flex align-items-center header-search d-lg-flex d-none">
+                        <!-- Search -->
+                        <div class="input-icon-start position-relative me-2">
+                            <span class="input-icon-addon">
+                                <i class="ti ti-search"></i>
+                            </span>
+                           <input type="text" class="form-control shadow-sm" placeholder="Search">
+                           <span class="input-icon-addon text-dark shadow fs-18 d-inline-flex p-0 header-search-icon"><i class="ti ti-command"></i></span>
+                        </div>
+                        <!-- /Search -->
+                    </div>
+					
+                </div>
+
+                <div class="d-flex align-items-center">
+				
+                    <!-- Search for Mobile -->
+                    <div class="header-item d-flex d-lg-none me-2">
+                        <button class="topbar-link btn btn-icon" data-bs-toggle="modal" data-bs-target="#searchModal" type="button">
+                            <i class="ti ti-search fs-16"></i>
+                        </button>
+                    </div>
+					
+                    <!-- AI Assistance -->
+					<a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+
+                    <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="doctors-appointments.html" class="btn topbar-link"><i class="ti ti-calendar-due"></i></a>
+                        </div>
+                    </div>                    
+
+                    <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="doctors-profile-settings.html" class="btn topbar-link"><i class="ti ti-settings-2"></i></a>
+                        </div> 
+                    </div>                    
+
+                    <!-- Light/Dark Mode Button -->
+                    <div class="header-item d-none d-sm-flex me-2">
+                        <button class="topbar-link btn btn-icon topbar-link" id="light-dark-mode" type="button">
+                            <i class="ti ti-moon fs-16"></i>
+                        </button>
+                    </div>
+                    
+					
+					<!-- Notification Dropdown -->
+                    <div class="header-item">
+						<div class="dropdown me-3">
+						
+							<button class="topbar-link btn btn-icon topbar-link dropdown-toggle drop-arrow-none" data-bs-toggle="dropdown" data-bs-offset="0,24" type="button" aria-haspopup="false" aria-expanded="false">
+								<i class="ti ti-bell-check fs-16 animate-ring"></i>
+								<span class="notification-badge"></span>
+							</button>
+							
+							<div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg" style="min-height: 300px;">
+							
+								<div class="p-2 border-bottom">
+									<div class="row align-items-center">
+										<div class="col">
+											<h6 class="m-0 fs-16 fw-semibold"> Notifications</h6>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Notification Body -->
+								<div class="notification-body position-relative z-2 rounded-0" data-simplebar>
+								 
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-1">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-01.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Dr. Smith</p>
+												<p class="mb-1 text-wrap">
+													updated the <span class="fw-medium text-dark">surgery</span> schedule. 
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>4 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-1">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+							
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-2">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-06.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Dr. Patel</p>
+												<p class="mb-1 text-wrap">
+                                                    completed a <span class="fw-medium text-dark">follow-up</span> report for patient <span class="fw-medium text-dark">Emily</span>.
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>8 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-2">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-3">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-02.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Emily</p>
+												<p class="mb-1 text-wrap">
+                                                    booked an appointment with <span class="fw-medium text-dark">Dr. Patel</span> for <span class="fw-medium text-dark">April 15</span>
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>15 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-3">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap" id="notification-4">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-07.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Amelia</p>
+												<p class="mb-1 text-wrap">
+                                                    completed the <span class="fw-medium text-dark">pre-visit</span> health questionnaire.
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>20 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-4">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									 
+								</div>
+								
+								<!-- View All-->
+								<div class="p-2 rounded-bottom border-top text-center">
+									<a href="doctors-notifications.html" class="text-center text-decoration-underline fs-14 mb-0">
+										View All Notifications
+									</a>
+								</div> 
+								
+							</div>
+						</div>
+					</div>
+					
+					<!-- User Dropdown -->
+					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/doctors/doctor-01.jpg" width="32" class="rounded-circle d-flex" alt="user-image">
+                            <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
+                        
+                            <div class="d-flex align-items-center bg-light rounded-3 p-2 mb-2">
+                                <img src="assets/img/doctors/doctor-01.jpg" class="rounded-circle" width="42" height="42" alt="">
+                                <div class="ms-2">
+                                    <p class="fw-medium text-dark mb-0">Dr.Michael Smith</p>
+                                    <span class="d-block fs-13">Cardiologist</span>
+                                </div>
+                            </div>
+
+                            <!-- Item-->
+                            <a href="doctors-profile-settings.html" class="dropdown-item">
+                                <i class="ti ti-user-circle me-1 align-middle"></i>
+                                <span class="align-middle">Profile Settings</span>
+                            </a>
+
+                            <!-- item -->
+                            <div class="form-check form-switch form-check-reverse d-flex align-items-center justify-content-between dropdown-item mb-0">
+                                <label class="form-check-label" for="notify"><i class="ti ti-bell me-1"></i>Notifications</label>
+                                <input class="form-check-input me-0" type="checkbox" role="switch" id="notify">
+                            </div>
+
+                            <!-- Item-->
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="ti ti-receipt me-1 align-middle"></i>
+                                <span class="align-middle">Activity Logs</span>
+                            </a>
+
+                             <!-- Item-->
+                             <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="ti ti-help me-1 align-middle"></i>
+                                <span class="align-middle">Help & Support</span>
+                            </a>
+                                        
+                            
+                            <!-- Item-->
+                            <div class="pt-2 mt-2 border-top">
+                                <a href="login.html" class="dropdown-item text-danger">
+                                    <i class="ti ti-logout me-1 fs-17 align-middle"></i>
+                                    <span class="align-middle">Log Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+						
+                </div>
+            </div>
+        </header>
+        <!-- Topbar End -->
+
+        <!-- Search Modal -->
+        <div class="modal fade" id="searchModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-transparent">
+                    <div class="card shadow-none mb-0">
+                        <div class="px-3 py-2 d-flex flex-row align-items-center" id="search-top">
+                            <i class="ti ti-search fs-22"></i>
+                            <input type="search" class="form-control border-0" placeholder="Search">
+                            <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x fs-22"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidenav Menu Start -->
+        <div class="sidebar" id="sidebar">
+            
+            <!-- Start Logo -->
+            <div class="sidebar-logo">
+                <div>
+                    <!-- Logo Normal -->
+                    <a href="index.html" class="logo logo-normal">
+                        <img src="assets/img/logo.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Small -->
+                    <a href="index.html" class="logo-small">
+                        <img src="assets/img/logo-small.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Dark -->
+                    <a href="index.html" class="dark-logo">
+                        <img src="assets/img/logo-white.svg" alt="Logo">
+                    </a>
+                </div>
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
+                    <i class="ti ti-arrow-left text-body"></i>
+                </button>
+
+                <!-- Sidebar Menu Close -->
+                <button class="sidebar-close">
+                    <i class="ti ti-x align-middle"></i>
+                </button>                
+            </div>
+            <!-- End Logo -->
+
+            <!-- Sidenav Menu -->
+            <div class="sidebar-inner" data-simplebar>                
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <div class="sidebar-top shadow-sm p-2 rounded-1 mb-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <span class="avatar rounded-circle flex-shrink-0 p-2"><img src="./assets/img/icons/trustcare.svg" alt="img"></span>
+                                <div class="ms-2">
+                                    <h6 class="fs-14 fw-semibold mb-0">Trustcare Clinic</h6>
+                                    <p class="fs-13 mb-0">Lasvegas</p>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0);"><i class="ti ti-arrows-transfer-up"></i></a>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="menu-title"><span>Main Menu</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="doctor-dashboard.html">
+                                        <i class="ti ti-layout-dashboard"></i><span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-calendar-check"></i><span>Appointments</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="doctors-appointments.html">Appointments</a></li>
+                                        <li><a href="online-consultations.html">Online Consultations</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="doctors-schedules.html">
+                                        <i class="ti ti-clock-check"></i><span>My Schedule</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="doctors-prescriptions.html">
+                                        <i class="ti ti-prescription"></i><span>Prescriptions</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="doctors-leaves.html">
+                                        <i class="ti ti-calendar-x"></i><span>Leave</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="doctors-reviews.html">
+                                        <i class="ti ti-star"></i><span>Reviews</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-settings"></i><span>Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="doctors-profile-settings.html">Profile Settings</a></li>
+                                        <li><a href="doctors-password-settings.html">Change Password</a></li>
+                                        <li><a href="doctors-notification-settings.html">Notifications</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                                        
+                    </ul>                   
+                </div>
+                <div class="sidebar-footer border-top mt-3">
+                    <div class="trial-item mt-0 p-3 text-center">
+                        <div class="trial-item-icon rounded-4 mb-3 p-2 text-center shadow-sm d-inline-flex">
+                            <img src="./assets/img/icons/sidebar-icon.svg" alt="img">
+                        </div>
+                        <div>
+                            <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Preclinic like a pro</p>
+                        </div>
+                        <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Sidenav Menu End -->
+
+        <!-- ========================
+			Start Page Content
+		========================= -->
+         
+        <div class="page-wrapper">
+
+            <!-- Start Content -->
+            <div class="content">
+
+                <!-- start row-->
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <!-- start page header -->
+                        <div class="d-flex align-items-sm-center flex-sm-row flex-column mb-4">
+                            <div class="flex-grow-1">
+                                <h6 class="fw-bold mb-0 d-flex align-items-center "> <a href="doctors-prescriptions.html" class="me-1"><i class="ti ti-chevron-left"></i> Prescriptions </a></h6>
+                            </div>
+                        </div>
+                        <!-- end page header -->
+
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Items -->
+                                <div class="d-flex align-items-center justify-content-between border-1 border-bottom pb-3 mb-3">
+                                    <div class="invoice-logo">
+                                        <img src="assets/img/logo.svg" class="logo-white" alt="logo">
+                                        <img src="assets/img/logo-white.svg" class="logo-dark" alt="logo">
+                                    </div>
+                                    <span class="badge bg-info-subtle text-info-emphasis fs-13 fw-medium border border-primary py-1 px-2"> #PRE0025</span>
+                                </div>
+
+                                <!-- Items -->
+                                <div class="d-flex align-items-center justify-content-between border-1 border-bottom pb-3 mb-3 flex-wrap gap-2">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="avatar avatar-xxl rounded bg-light border p-2">
+                                            <img src="./assets/img/icons/trust-care.svg" alt="favicon.png" class="img-fluid img1 ">
+                                        </div>
+                                        <div>
+                                            <h6 class="text-dark fw-semibold mb-1">Trustcare Clinic </h6>
+                                            <p class="mb-1"> Dr. Mick Thompson </p>
+                                            <p class="mb-0"> MD Cardiologist. MBBS,MS</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-lg-end">
+                                        <p class="text-dark mb-1"> Department : <span class="text-body"> Cardiology OP</span> </p>
+                                        <p class="text-dark mb-1"> Prescribed  on :  : <span class="text-body"> Cardiology OP</span> </p>
+                                        <p class="text-dark mb-0"> Consultation  :  : <span class="text-body"> Cardiology OP</span> </p>
+                                    </div>
+                                </div>
+
+                                <!-- Items -->
+                                <div class="mb-3">
+                                    <h6 class=" mb-2 fs-14 fw-medium"> Patient Details </h6>
+                                    <div class="px-3 py-2 bg-light rounded d-flex align-items-center justify-content-between">
+                                        <h6 class="m-0 fw-semibold fs-16"> M.Reyan Verol </h6>
+                                        <div class="d-flex align-items-center  gap-3">
+                                            <p class="mb-0 text-dark"> 28Y /  Male </p>
+                                            <p class="mb-0 text-dark"> <span class="text-body"> Blood  </span> : O+ve</p>
+                                            <p class="mb-0 text-dark"> Patient ID <span class="text-body"> PT0025</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Items -->
+                                 <div class="mb-4">
+                                    <h6 class="mb-3 fs-16 fw-semibold text-center">Cardiology Prescription</h6>
+                                    <div class="">
+                                        <!-- Table List -->
+                                            <div class="table-responsive border bg-white">
+                                                <table class="table table-nowrap">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th class="text-dark">SNO</th>
+                                                            <th class="text-dark">Medecine  Name</th>
+                                                            <th class="text-dark">Dosage</th>
+                                                            <th class="text-dark"> Frequency</th>
+                                                            <th class="text-dark"> Duration </th>
+                                                            <th class="text-dark"> Timings</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>01</td>
+                                                            <td>General Medicine</td>
+                                                            <td>Ecosprin 75MG </td>
+                                                            <td> 1-0-1 </td>
+                                                            <td> 1 month </td>
+                                                            <td> Before meal </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>02</td>
+                                                            <td>Axer 90MG Tab </td>
+                                                            <td>90 mg </td>
+                                                            <td> 1-1-1 </td>
+                                                            <td> 1 month </td>
+                                                            <td> After meal </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>03</td>
+                                                            <td>Ramistar XL 2.5</td>
+                                                            <td>75 ml</td>
+                                                            <td> 1-0-1 </td>
+                                                            <td> 1 month </td>
+                                                            <td> After meal </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>04</td>
+                                                            <td>General Medicine</td>
+                                                            <td>Ecosprin 75MG </td>
+                                                            <td> 1-0-1 </td>
+                                                            <td> 1 month </td>
+                                                            <td> Before meal </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- /Table List -->
+                                    </div>
+                                 </div>
+
+                                <!-- Items -->
+                                 <div class="pb-3 mb-3 border-1 border-bottom">
+                                    <h6 class="mb-1 fs-16 fw-semibold">Advice</h6>
+                                    <p> An account of the present illness, which includes the circumstances surrounding the onset of recent health changes and the chronology of subsequent events that have led the patient to seek medical care, is essential to understanding the course of the disease process. Medications are listed in the medical history because they may play a role in the current illness. </p>
+                                 </div>
+
+                                <!-- Items -->
+
+                                <div class="pb-3 mb-3 border-1 border-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                    <div class="">
+                                        <h6 class="mb-1 16-14 fw-semibold"> Follow Up </h6>
+                                        <p> Follow u p after 3 months, Have to come on empty stomach</p>
+                                    </div>
+                                    <div class="">
+                                        <img src="assets/img/icons/signature-img.svg" alt="" class="img-fluid "> 
+                                        <h6 class="fs-14 fw-semibold"> Dr. Mick Thompson </h6>
+                                        <p class="fs-13 fw-normal"> MD Cardiologist </p>
+                                    </div>
+                                </div>
+
+                                <div class="text-center d-flex align-items-center justify-content-center">
+                                    <a href="" class="btn btn-md btn-dark me-2 d-flex align-items-center" > <i class="ti ti-printer me-1"></i> Print</a>
+                                    <a href="" class="btn btn-md btn-primary d-flex align-items-center" > <i class="ti ti-download me-1"></i> Download</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- end row-->
+
+                
+
+                
+
+                
+            </div>
+            <!-- End Content -->
+
+        </div>
+
+
+        <!-- Start Phone Number-->
+        <div class="modal fade" id="cancel-leave">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-dark fw-bold">Cancel Reason</h5>
+                        <button type="button" class="btn-close custom-btn-close opacity-100" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x bg-white fs-16 text-dark"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <div>
+                                <label class="form-label mb-1 text-dark fs-14 fw-medium">Reason</label>
+                                <textarea rows="4" class="form-control rounded" placeholder="Description"> </textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light btn-sm me-2 fs-13 fw-medium" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-sm fs-13 fw-medium">Cancel Leave</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Phone Number -->
+
+
+        <!-- ========================
+			End Page Content
+		========================= -->
+
+        <!-- Start Footer-->
+        <div class="p-3 bg-white border-1 border-top text-center">
+            <p class="text-dark text-center"> 2025 © <span class="text-info">Preclinic </span> , All Rights Reserved </p>
+        </div>
+        <!-- End Footer-->
+
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>    
+
+	<!-- Simplebar JS -->
+	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <!-- Daterangepikcer JS -->
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+
+    <!-- Datatable JS -->
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
