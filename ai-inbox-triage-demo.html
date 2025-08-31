@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AI Inbox Triage Demo | Symplify - Medical & Hospital Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Dreams Technologies">
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/theme-script.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+    
+    <!-- AI Features CSS -->
+    <link rel="stylesheet" href="assets/css/ai-features.css">
+
+</head>
+
+<body>
+
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Topbar Start -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/img/logo.svg" alt="Logo" class="logo-normal">
+                        <img src="assets/img/logo-small.svg" alt="Logo" class="logo-small">
+                    </a>
+
+                    <!-- Sidebar Toggle -->
+                    <button class="topbar-link btn btn-icon" id="sidebar-toggle" type="button">
+                        <i class="ti ti-menu-2 fs-16"></i>
+                    </button>
+
+                </div>
+				
+                <div class="d-flex align-items-center gap-3">
+                    
+                    <!-- Search -->
+                    <div class="header-item">
+                        <button class="topbar-link btn btn-icon topbar-link" data-bs-toggle="modal" data-bs-target="#searchModal" type="button">
+                            <i class="ti ti-search fs-16"></i>
+                        </button>
+                    </div>
+					
+                    <!-- AI Assistance -->
+					<a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+                    <!-- AI Assistance -->
+
+                    <!-- Light/Dark Mode Button -->
+                    <div class="header-item d-none d-sm-flex me-2">
+                        <button class="topbar-link btn btn-icon topbar-link" id="light-dark-mode" type="button">
+                            <i class="ti ti-moon fs-16"></i>
+                        </button>
+                    </div>
+                    
+					
+					<!-- Notification Dropdown -->
+                    <div class="header-item">
+						<div class="dropdown me-3">
+						
+							<button class="topbar-link btn btn-icon topbar-link dropdown-toggle drop-arrow-none" data-bs-toggle="dropdown" data-bs-offset="0,24" type="button" aria-haspopup="false" aria-expanded="false">
+								<i class="ti ti-bell-check fs-16 animate-ring"></i>
+								<span class="notification-badge"></span>
+							</button>
+							
+							<div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg" style="min-height: 300px;">
+							
+								<div class="p-2 border-bottom">
+									<div class="row align-items-center">
+										<div class="col">
+											<h6 class="m-0 fs-16 fw-semibold"> Notifications</h6>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Notification Body -->
+								<div class="notification-body position-relative z-2 rounded-0" data-simplebar>
+								 
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-1">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-01.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Dr. Smith</p>
+												<p class="mb-1 text-wrap">
+													updated the <span class="fw-medium text-dark">surgery</span> schedule. 
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>4 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-1">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								 
+								</div>
+								
+								<!-- View All-->
+								<div class="p-2 rounded-bottom border-top text-center">
+									<a href="notifications.html" class="text-center text-decoration-underline fs-14 mb-0">
+										View All Notifications
+									</a>
+								</div>
+							</div>
+						</div>
+                    </div>
+
+                    <!-- User Profile Dropdown -->
+                    <div class="header-item">
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="avatar" data-bs-toggle="dropdown" data-bs-offset="0,20" aria-expanded="false">
+                                <img src="assets/img/profiles/avatar-23.jpg" alt="User" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="px-2 py-2">
+                                    <div class="d-flex align-items-center">
+                                        <img src="assets/img/profiles/avatar-23.jpg" alt="User" class="avatar avatar-md rounded-circle me-2 flex-shrink-0">
+                                        <div>
+                                            <h6 class="mb-1 fw-semibold fs-14">Admin User</h6>
+                                            <p class="mb-0 fs-13">admin@symplify.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-divider my-1"></div>
+                                <a href="profile.html" class="dropdown-item">
+                                    <i class="ti ti-user me-1 align-middle"></i>
+                                    <span class="align-middle">My Profile</span>
+                                </a>
+                                <a href="javascript:void(0);" class="dropdown-item">
+                                    <i class="ti ti-logout me-1 align-middle"></i>
+                                    <span class="align-middle">Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+					
+                </div>
+            </div>
+        </header>
+        <!-- Topbar End -->
+
+        <!-- ========================
+			Start Page Content
+		========================= -->
+         
+        <div class="page-wrapper">
+
+            <!-- Start Content -->
+            <div class="content pb-0">
+
+                <!-- Page Header -->
+                <div class="d-flex align-items-sm-center justify-content-between flex-wrap gap-2 mb-4">
+                    <div>
+                        <h4 class="fw-bold mb-0">AI Inbox Triage Demo</h4>
+                        <p class="text-muted mb-0">Demonstration of AI-powered message triage and classification</p>
+                    </div>
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                       <a href="index.html" class="btn btn-outline-primary d-inline-flex align-items-center"><i class="ti ti-arrow-left me-1"></i>Back to Dashboard</a>
+                    </div>
+				</div>
+				<!-- End Page Header -->
+
+                <!-- AI Features Demo Row -->
+                <div class="row">
+                    <!-- AI Inbox Triage Card Container -->
+                    <div id="ai-inbox-triage-container"></div>
+                    
+                    <!-- Demo Information Card -->
+                    <div class="col-xl-8 col-lg-6 d-flex">
+                        <div class="card shadow-sm flex-fill w-100">
+                            <div class="card-header">
+                                <h5 class="fw-bold mb-0">AI Inbox Triage Features</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <h6 class="fw-semibold mb-3"><i class="ti ti-brain me-2 text-primary"></i>AI Classification</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="ti ti-check text-success me-2"></i>Automatic priority detection</li>
+                                            <li class="mb-2"><i class="ti ti-check text-success me-2"></i>Category classification</li>
+                                            <li class="mb-2"><i class="ti ti-check text-success me-2"></i>Urgency scoring (1-5 scale)</li>
+                                            <li class="mb-2"><i class="ti ti-check text-success me-2"></i>Confidence scoring</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6 class="fw-semibold mb-3"><i class="ti ti-clock me-2 text-info"></i>Smart Features</h6>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="ti ti-check text-success me-2"></i>Estimated response time</li>
+                                            <li class="mb-2"><i class="ti ti-check text-success me-2"></i>Action requirement detection</li>
+                                            <li class="mb-2"><i class="ti ti-check text-success me-2"></i>Smart sorting by urgency</li>
+                                            <li class="mb-2"><i class="ti ti-check text-success me-2"></i>Real-time filtering</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-info mt-4">
+                                    <div class="d-flex align-items-center">
+                                        <i class="ti ti-info-circle me-2"></i>
+                                        <div>
+                                            <strong>Demo Note:</strong> This AI Inbox Triage system uses mock data for demonstration. 
+                                            In production, it would connect to your actual message systems and use trained AI models 
+                                            for accurate classification.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <h6 class="fw-semibold mb-3">Priority Levels</h6>
+                                    <div class="row g-2">
+                                        <div class="col-sm-3">
+                                            <div class="d-flex align-items-center p-2 bg-danger-transparent rounded-2">
+                                                <i class="ti ti-alert-triangle-filled text-danger me-2"></i>
+                                                <span class="fw-medium">Critical</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="d-flex align-items-center p-2 bg-warning-transparent rounded-2">
+                                                <i class="ti ti-exclamation-circle text-warning me-2"></i>
+                                                <span class="fw-medium">High</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="d-flex align-items-center p-2 bg-info-transparent rounded-2">
+                                                <i class="ti ti-info-circle text-info me-2"></i>
+                                                <span class="fw-medium">Medium</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="d-flex align-items-center p-2 bg-success-transparent rounded-2">
+                                                <i class="ti ti-check-circle text-success me-2"></i>
+                                                <span class="fw-medium">Low</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End AI Features Demo Row -->
+
+            </div>
+            <!-- End Content -->
+
+            <!-- Footer Start -->
+            <div class="footer text-center bg-white p-2 border-top">
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
+            </div>
+            <!-- Footer End -->
+
+        </div>
+
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content bg-transparent">
+                <div class="card shadow-none mb-0">
+                    <div class="px-3 py-2 d-flex flex-row align-items-center" id="search-top">
+                        <i class="ti ti-search fs-22"></i>
+                        <input type="search" class="form-control border-0" placeholder="Search">
+                        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x fs-22"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Bundle Js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Simplebar Js -->
+    <script src="assets/plugins/simplebar/simplebar.min.js"></script>
+
+    <!-- Theme Settings Js -->
+    <script src="assets/js/theme-settings.js"></script>
+
+    <!-- Common Js -->
+    <script src="assets/js/app.js"></script>
+    
+    <!-- AI Inbox Triage Card -->
+    <script src="assets/js/ai-inbox-triage.js"></script>
+
+</body>
+
+</html>
