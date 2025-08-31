@@ -1302,6 +1302,8 @@ Template Name: Symplify - Bootstrap Admin Template
 		}
 		// Inject CSS once
 		ensureAICSS();
+		// Always load AI toggle manager
+		load('assets/js/ai-toggle.js');
 		// Page-aware loaders
 		if (document.querySelector('.notification-body')) load('assets/js/ai-notifications.js');
 		if (document.getElementById('calendar')) load('assets/js/ai-appointment-calendar.js');
