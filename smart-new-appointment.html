@@ -1,86 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-	<!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Smart Appointment Scheduling - Medical & Hospital - Bootstrap 5 Admin Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Dreams Technologies">
-	
-    <!-- Favicon -->
+    <meta name="author" content="Dreams Technologies">
+    
     <link rel="shortcut icon" href="assets/img/favicon.png">
-
-    <!-- Apple Icon -->
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-
-    <!-- Theme Config Js -->
+    
     <script src="assets/js/theme-script.js"></script>
-
-    <!-- Font Awosome Icon CSS -->
+    
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!-- Tabler Icon CSS -->
     <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
-
-    <!-- Select2 CSS -->
     <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
-
-    <!-- intel input -->
     <link rel="stylesheet" href="assets/plugins/intltelinput/css/intlTelInput.css">
-
-    <!-- Daterangepikcer CSS -->
-	<link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker.css">
-
-    <!-- Datetimepicker CSS -->
+    <link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
-
-    <!-- Simplebar CSS -->
     <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
-
-    <!-- Datatable CSS -->
     <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
-
-    <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css" id="app-style">
-
-    <!-- AI Features CSS -->
     <link rel="stylesheet" href="assets/css/ai-features.css">
-
 </head>
 
 <body>
-
-    <!-- Begin Wrapper -->
     <div class="main-wrapper">
-
+        
         <!-- Topbar Start -->
         <header class="navbar-header">
             <div class="page-container topbar-menu">
                 <div class="d-flex align-items-center gap-2">
-
-                    <!-- Logo -->
                     <a href="index.html" class="logo">
-
-                        <!-- Logo Normal -->
                         <span class="logo-light">
                             <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
                             <span class="logo-sm"><img src="assets/img/logo-small.svg" alt="small logo"></span>
                         </span>
-
-                        <!-- Logo Dark -->
                         <span class="logo-dark">
                             <span class="logo-lg"><img src="assets/img/logo-white.svg" alt="dark logo"></span>
                         </span>
                     </a>
 
-                    <!-- Sidebar Mobile Button -->
                     <a id="mobile_btn" class="mobile-btn" href="#sidebar">
                         <i class="ti ti-menu-deep fs-24"></i>
                     </a>
@@ -89,9 +51,7 @@
                         <i class="ti ti-arrow-right"></i>
                     </button>  
 					
-                    <!-- Search -->
                     <div class="me-auto d-flex align-items-center header-search d-lg-flex d-none">
-                        <!-- Search -->
                         <div class="input-icon-start position-relative me-2">
                             <span class="input-icon-addon">
                                 <i class="ti ti-search"></i>
@@ -99,176 +59,68 @@
                            <input type="text" class="form-control shadow-sm" placeholder="Search">
                            <span class="input-icon-addon text-dark shadow fs-18 d-inline-flex p-0 header-search-icon"><i class="ti ti-command"></i></span>
                         </div>
-                        <!-- /Search -->
                     </div>
-					
                 </div>
 
                 <div class="d-flex align-items-center">
-				
-                    <!-- Search for Mobile -->
                     <div class="header-item d-flex d-lg-none me-2">
                         <button class="topbar-link btn btn-icon" data-bs-toggle="modal" data-bs-target="#searchModal" type="button">
                             <i class="ti ti-search fs-16"></i>
                         </button>
                     </div>
 					
-                    <!-- AI Assistance -->
-					<a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
-                    <!-- AI Assistance -->
+                    <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
 
-                    <!-- Appointment -->
-                    <div class="header-item">
-                    <!-- Appointment -->
-
-
-                    <!-- Light/Dark Mode Button -->
                     <div class="header-item d-none d-sm-flex me-2">
                         <button class="topbar-link btn btn-icon topbar-link" id="light-dark-mode" type="button">
                             <i class="ti ti-moon fs-16"></i>
                         </button>
                     </div>
                     
-					
-					<!-- Notification Dropdown -->
                     <div class="header-item">
-						<div class="dropdown me-3">
-						
-							<button class="topbar-link btn btn-icon topbar-link dropdown-toggle drop-arrow-none" data-bs-toggle="dropdown" data-bs-offset="0,24" type="button" aria-haspopup="false" aria-expanded="false">
-								<i class="ti ti-bell-check fs-16 animate-ring"></i>
-								<span class="notification-badge"></span>
-							</button>
-							
-							<div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg" style="min-height: 300px;">
-							
-								<div class="p-2 border-bottom">
-									<div class="row align-items-center">
-										<div class="col">
-											<h6 class="m-0 fs-16 fw-semibold"> Notifications</h6>
-										</div>
-									</div>
-								</div>
-								
-								<!-- Notification Body -->
-								<div class="notification-body position-relative z-2 rounded-0" data-simplebar>
-								 
-									<!-- Item-->
-									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-1">
-										<div class="d-flex">
-											<div class="me-2 position-relative flex-shrink-0">
-												<img src="assets/img/doctors/doctor-01.jpg" class="avatar-md rounded-circle" alt="">
-											</div>
-											<div class="flex-grow-1">
-												<p class="mb-0 fw-medium text-dark">Dr. Smith</p>
-												<p class="mb-1 text-wrap">
-													updated the <span class="fw-medium text-dark">surgery</span> schedule. 
-												</p>
-												<div class="d-flex justify-content-between align-items-center">
-													<span class="fs-12"><i class="ti ti-clock me-1"></i>4 min ago</span>
-													<div class="notification-action d-flex align-items-center float-end gap-2">
-														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
-														<button class="btn rounded-circle p-0" data-dismissible="#notification-1">
-															<i class="ti ti-x"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-							
-									<!-- Item-->
-									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-2">
-										<div class="d-flex">
-											<div class="me-2 position-relative flex-shrink-0">
-												<img src="assets/img/doctors/doctor-06.jpg" class="avatar-md rounded-circle" alt="">
-											</div>
-											<div class="flex-grow-1">
-												<p class="mb-0 fw-medium text-dark">Dr. Patel</p>
-												<p class="mb-1 text-wrap">
-                                                    completed a <span class="fw-medium text-dark">follow-up</span> report for patient <span class="fw-medium text-dark">Emily</span>.
-												</p>
-												<div class="d-flex justify-content-between align-items-center">
-													<span class="fs-12"><i class="ti ti-clock me-1"></i>8 min ago</span>
-													<div class="notification-action d-flex align-items-center float-end gap-2">
-														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
-														<button class="btn rounded-circle p-0" data-dismissible="#notification-2">
-															<i class="ti ti-x"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									
-									<!-- Item-->
-									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-3">
-										<div class="d-flex">
-											<div class="me-2 position-relative flex-shrink-0">
-												<img src="assets/img/doctors/doctor-02.jpg" class="avatar-md rounded-circle" alt="">
-											</div>
-											<div class="flex-grow-1">
-												<p class="mb-0 fw-medium text-dark">Emily</p>
-												<p class="mb-1 text-wrap">
-                                                    booked an appointment with <span class="fw-medium text-dark">Dr. Patel</span> for <span class="fw-medium text-dark">April 15</span>
-												</p>
-												<div class="d-flex justify-content-between align-items-center">
-													<span class="fs-12"><i class="ti ti-clock me-1"></i>15 min ago</span>
-													<div class="notification-action d-flex align-items-center float-end gap-2">
-														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
-														<button class="btn rounded-circle p-0" data-dismissible="#notification-3">
-															<i class="ti ti-x"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									
-									<!-- Item-->
-									<div class="dropdown-item notification-item py-3 text-wrap" id="notification-4">
-										<div class="d-flex">
-											<div class="me-2 position-relative flex-shrink-0">
-												<img src="assets/img/doctors/doctor-07.jpg" class="avatar-md rounded-circle" alt="">
-											</div>
-											<div class="flex-grow-1">
-												<p class="mb-0 fw-medium text-dark">Amelia</p>
-												<p class="mb-1 text-wrap">
-                                                    completed the <span class="fw-medium text-dark">pre-visit</span> health questionnaire.
-												</p>
-												<div class="d-flex justify-content-between align-items-center">
-													<span class="fs-12"><i class="ti ti-clock me-1"></i>20 min ago</span>
-													<div class="notification-action d-flex align-items-center float-end gap-2">
-														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
-														<button class="btn rounded-circle p-0" data-dismissible="#notification-4">
-															<i class="ti ti-x"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									 
-								</div>
-								
-								<!-- View All-->
-								<div class="p-2 rounded-bottom border-top text-center">
-									<a href="notifications.html" class="text-center text-decoration-underline fs-14 mb-0">
-										View All Notifications
-									</a>
-								</div>
-								
-							</div>
-						</div>
-					</div>
+                        <div class="dropdown me-3">
+                            <button class="topbar-link btn btn-icon topbar-link dropdown-toggle drop-arrow-none" data-bs-toggle="dropdown" data-bs-offset="0,24" type="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="ti ti-bell-check fs-16 animate-ring"></i>
+                                <span class="notification-badge"></span>
+                            </button>
+                            
+                            <div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg" style="min-height: 300px;">
+                                <div class="p-2 border-bottom">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h6 class="m-0 fs-16 fw-semibold"> Notifications</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-body position-relative z-2 rounded-0" data-simplebar>
+                                    <div class="dropdown-item notification-item py-3 text-wrap border-bottom">
+                                        <div class="d-flex">
+                                            <div class="me-2 position-relative flex-shrink-0">
+                                                <img src="assets/img/doctors/doctor-01.jpg" class="avatar-md rounded-circle" alt="">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <p class="mb-0 fw-medium text-dark">Dr. Smith</p>
+                                                <p class="mb-1 text-wrap">updated the <span class="fw-medium text-dark">surgery</span> schedule.</p>
+                                                <span class="fs-12"><i class="ti ti-clock me-1"></i>4 min ago</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="p-2 rounded-bottom border-top text-center">
+                                    <a href="notifications.html" class="text-center text-decoration-underline fs-14 mb-0">View All Notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 					
-					<!-- User Dropdown -->
-					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                    <div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
                         <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
                             <img src="assets/img/users/user-01.jpg" width="32" class="rounded-circle d-flex" alt="user-image">
                             <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
-                        
                             <div class="d-flex align-items-center bg-light rounded-3 p-2 mb-2">
                                 <img src="assets/img/users/user-01.jpg" class="rounded-circle" width="42" height="42" alt="">
                                 <div class="ms-2">
@@ -276,34 +128,14 @@
                                     <span class="d-block fs-13">Administrator</span>
                                 </div>
                             </div>
-
-                            <!-- Item-->
                             <a href="profile-settings.html" class="dropdown-item">
                                 <i class="ti ti-user-circle me-1 align-middle"></i>
                                 <span class="align-middle">Profile Settings</span>
                             </a>
-
-                            <!-- Item-->
                             <a href="account-settings.html" class="dropdown-item">
                                 <i class="ti ti-settings me-1 align-middle"></i>
                                 <span class="align-middle">Account Settings</span>
                             </a>
-
-                            <!-- item -->
-                            <div class="form-check form-switch form-check-reverse d-flex align-items-center justify-content-between dropdown-item mb-0">
-                                <label class="form-check-label" for="notify"><i class="ti ti-bell me-1"></i>Notifications</label>
-                                <input class="form-check-input me-0" type="checkbox" role="switch" id="notify">
-                            </div>
-
-                            <!-- Item-->
-                            <a href="transactions.html" class="dropdown-item">
-                                <i class="ti ti-transition-right me-1 align-middle"></i>
-                                <span class="align-middle">Transactions</span>
-                            </a>
-
-                                        
-                            
-                            <!-- Item-->
                             <div class="pt-2 mt-2 border-top">
                                 <a href="login.html" class="dropdown-item text-danger">
                                     <i class="ti ti-logout me-1 fs-17 align-middle"></i>
@@ -312,18 +144,16 @@
                             </div>
                         </div>
                     </div>
-						
                 </div>
             </div>
         </header>
-        <!-- Topbar End -->
 
         <!-- Search Modal -->
         <div class="modal fade" id="searchModal">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content bg-transparent">
                     <div class="card shadow-none mb-0">
-                        <div class="px-3 py-2 d-flex flex-row align-items-center" id="search-top">
+                        <div class="px-3 py-2 d-flex flex-row align-items-center">
                             <i class="ti ti-search fs-22"></i>
                             <input type="search" class="form-control border-0" placeholder="Search">
                             <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x fs-22"></i></button>
@@ -333,23 +163,16 @@
             </div>
         </div>
 
-        <!-- Sidenav Menu Start -->
+        <!-- Sidebar (simplified for brevity) -->
         <div class="sidebar" id="sidebar">
-            
-            <!-- Start Logo -->
             <div class="sidebar-logo">
                 <div>
-                    <!-- Logo Normal -->
                     <a href="index.html" class="logo logo-normal">
                         <img src="assets/img/logo.svg" alt="Logo">
                     </a>
-
-                    <!-- Logo Small -->
                     <a href="index.html" class="logo-small">
                         <img src="assets/img/logo-small.svg" alt="Logo">
                     </a>
-
-                    <!-- Logo Dark -->
                     <a href="index.html" class="dark-logo">
                         <img src="assets/img/logo-white.svg" alt="Logo">
                     </a>
@@ -357,321 +180,39 @@
                 <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
                     <i class="ti ti-arrow-left text-body"></i>
                 </button>
-
-                <!-- Sidebar Menu Close -->
                 <button class="sidebar-close">
                     <i class="ti ti-x align-middle"></i>
                 </button>                
             </div>
-            <!-- End Logo -->
-
-            <!-- Sidenav Menu -->
+            
             <div class="sidebar-inner" data-simplebar>                
                 <div id="sidebar-menu" class="sidebar-menu">
-                    <div class="sidebar-top shadow-sm p-2 rounded-1 mb-3 dropend">
-                        <a href="javascript:void(0);" class="drop-arrow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex align-items-center">
-                                    <span class="avatar rounded-circle flex-shrink-0 p-2"><img src="./assets/img/icons/trustcare.svg" alt="img"></span>
-                                    <div class="ms-2">
-                                        <h6 class="fs-14 fw-semibold mb-0">Trustcare Clinic</h6>
-                                        <p class="fs-13 mb-0">Lasvegas</p>
-                                    </div>
-                                </div>
-                                <i class="ti ti-arrows-transfer-up"></i>                            
-                            </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-lg">
-                            <div class="p-2"> 
-                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
-                                    <span class="d-flex align-items-center">
-                                        <span class="me-2"><img src="assets/img/icons/clinic-01.svg" alt=""></span>
-                                        <span class="fw-semibold text-dark">CureWell Medical Hub<small class="d-block text-muted fw-normal fs-13">Ohio</small></span>
-                                    </span>
-                                    <input class="form-check-input m-0 me-2" type="checkbox">
-                                </label> 
-                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
-                                    <span class="d-flex align-items-center">
-                                        <span class="me-2"><img src="assets/img/icons/clinic-02.svg" alt=""></span>
-                                        <span class="fw-semibold text-dark">Trustcare Clinic<small class="d-block text-muted fw-normal fs-13">Lasvegas</small></span>
-                                    </span>
-                                    <input class="form-check-input m-0 me-2" type="checkbox">
-                                </label> 
-                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
-                                    <span class="d-flex align-items-center">
-                                        <span class="me-2"><img src="assets/img/icons/clinic-03.svg" alt=""></span>
-                                        <span class="fw-semibold text-dark">NovaCare Medical<small class="d-block text-muted fw-normal fs-13">Washington</small></span>
-                                    </span>
-                                    <input class="form-check-input m-0 me-2" type="checkbox">
-                                </label> 
-                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
-                                    <span class="d-flex align-items-center">
-                                        <span class="me-2"><img src="assets/img/icons/clinic-04.svg" alt=""></span>
-                                        <span class="fw-semibold text-dark">Greeny Medical Clinic<small class="d-block text-muted fw-normal fs-13">Illinios</small></span>
-                                    </span>
-                                    <input class="form-check-input m-0 me-2" type="checkbox">
-                                </label> 
-                            </div>
-                        </div>
-                    </div>
                     <ul>
                         <li class="menu-title"><span>Main Menu</span></li>
-                        <li>
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="ti ti-calendar-check"></i><span>Appointments</span>
+                                <span class="menu-arrow"></span>
+                            </a>
                             <ul>
-                                <li class="submenu">
-                                    <a href="javascript:void(0);">
-                                        <i class="ti ti-layout-dashboard"></i><span>Dashboard</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="index.html">Admin Dashboard</a></li>
-                                        <li><a href="doctor-dashboard.html">Doctor Dashboard</a></li>
-                                        <li><a href="patient-dashboard.html">Patient Dashboard</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu">
-                                    <a href="javascript:void(0);">
-                                        <i class="ti ti-apps"></i><span>Applications</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="chat.html">Chat</a></li>
-                                        <li class="submenu submenu-two">
-                                            <a href="#">Calls<span class="menu-arrow inside-submenu"></span></a>
-                                            <ul>
-                                                <li><a href="voice-call.html">Voice Call</a></li>
-                                                <li><a href="video-call.html">Video Call</a></li>
-                                                <li><a href="outgoing-call.html">Outgoing Call</a></li>
-                                                <li><a href="incoming-call.html">Incoming Call</a></li>
-                                                <li><a href="call-history.html">Call History</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="calendar.html">Calendar</a></li>
-                                        <li><a href="contacts.html">Contacts</a></li>		
-                                        <li><a href="email.html">Email</a></li>
-                                        <li class="submenu submenu-two">
-                                            <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
-                                            <ul>
-                                                <li><a href="invoice.html">Invoices</a></li>
-                                                <li><a href="invoice-details.html">Invoice Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="todo.html">To Do</a></li>
-                                        <li><a href="notes.html">Notes</a></li>
-                                        <li><a href="kanban-view.html">Kanban Board</a></li>
-                                        <li><a href="file-manager.html">File Manager</a></li>
-                                        <li><a href="social-feed.html">Social Feed</a></li>
-                                        <li><a href="search-list.html">Search Result</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu">
-                                    <a href="javascript:void(0);">
-                                        <i class="ti ti-layout-sidebar"></i><span>Layouts</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="index.html">Default</a></li>
-                                        <li><a href="layout-mini.html">Mini</a></li>
-                                        <li><a href="layout-hover-view.html">Hover View</a></li>
-                                        <li><a href="layout-hidden.html">Hidden</a></li>
-                                        <li><a href="layout-full-width.html">Full Width</a></li>
-                                        <li><a href="layout-rtl.html">RTL</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-title"><span>Clinic</span></li>
-                        <li>
-                            <ul>
-                                <li class="submenu">
-                                    <a href="javascript:void(0);">
-                                        <i class="ti ti-user-plus"></i><span>Doctors</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="doctors.html">Doctors</a></li>
-                                        <li><a href="doctor-details.html">Doctor Details</a></li>
-                                        <li><a href="add-doctor.html">Add Doctor</a></li>
-                                        <li><a href="doctor-schedule.html">Doctor Schedule</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu">
-                                    <a href="javascript:void(0);">
-                                        <i class="ti ti-user-heart"></i><span>Patients</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="patients.html">Patients</a></li>
-                                        <li><a href="patient-details.html">Patient Details</a></li>
-                                        <li><a href="create-patient.html">Create Patient</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu">
-                                    <a href="javascript:void(0);">
-                                        <i class="ti ti-calendar-check"></i><span>Appointments</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="appointments.html">Appointments</a></li>
-                                        <li><a href="new-appointment.html">New Appointment</a></li>
-                                        <li><a href="smart-new-appointment.html" class="active">Smart Appointment</a></li>
-                                        <li><a href="appointment-calendar.html">Calendar</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="locations.html">
-                                        <i class="ti ti-map-pin"></i><span>Locations</span>
-                                    </a>
-                                </li>  
-                                <li>
-                                    <a href="services.html">
-                                        <i class="ti ti-user-cog"></i><span>Services</span>
-                                    </a>
-                                </li>  
-                                <li>
-                                    <a href="specializations.html">
-                                        <i class="ti ti-user-shield"></i><span>Specializations</span>
-                                    </a>
-                                </li> 
-                                <li>
-                                    <a href="assets.html">
-                                        <i class="ti ti-asset"></i><span>Assets</span>
-                                    </a>
-                                </li>  
-                                <li>
-                                    <a href="activities.html">
-                                        <i class="ti ti-activity"></i><span>Activities</span>
-                                    </a>
-                                </li> 
-                                <li>
-                                    <a href="messages.html">
-                                        <i class="ti ti-messages"></i><span>Messages</span>
-                                    </a>
-                                </li>                           
-                            </ul>
-                        </li>
-                        <li class="menu-title"><span>HRM</span></li>
-                        <li>
-                            <ul>
-                                <li>
-                                    <a href="staffs.html">
-                                        <i class="ti ti-users-group"></i><span>Staffs</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="hrm-departments.html">
-                                        <i class="ti ti-building-bank"></i><span>Departments</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="designation.html">
-                                        <i class="ti ti-user-cog"></i><span>Designation</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="attendance.html">
-                                        <i class="ti ti-user-check"></i><span>Attendance</span>
-                                    </a>
-                                </li>
-                                <li class="submenu">
-                                    <a href="javascript:void(0);">
-                                        <i class="ti ti-users-minus"></i><span>Leaves</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="leaves.html">Leaves</a></li>
-                                        <li><a href="leave-type.html">Leave Type</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="holidays.html">
-                                        <i class="ti ti-home-exclamation"></i><span>Holidays</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="payroll.html">
-                                        <i class="ti ti-coin"></i><span>Payroll</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-title"><span>Finance & Accounts</span></li>
-                        <li>
-                            <ul>
-                                <li class="submenu">
-                                    <a href="javascript:void(0);">
-                                        <i class="ti ti-credit-card"></i><span>Expenses</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="expenses.html">Expenses</a></li>
-                                        <li><a href="expense-category.html">Expense Category</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="income.html">
-                                        <i class="ti ti-coins"></i><span>Income</span>
-                                    </a>
-                                </li>
-                                <li class="submenu">
-                                    <a href="javascript:void(0);">
-                                        <i class="ti ti-file-invoice"></i><span>Invoices</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="invoices.html">Invoices</a></li>
-                                        <li><a href="add-invoices.html">Add Invoices</a></li>
-                                        <li><a href="edit-invoices.html">Edit Invoices</a></li>
-                                        <li><a href="invoices-details.html">Invoices Details</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="payments.html">
-                                        <i class="ti ti-receipt-2"></i><span>Payments</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="transactions.html">
-                                        <i class="ti ti-transition-right"></i><span>Transactions</span>
-                                    </a>
-                                </li>
-                                <li class="submenu">
-                                    <a href="javascript:void(0);">
-                                        <i class="ti ti-chart-bar"></i><span>Reports</span>
-                                        <span class="menu-arrow"></span>
-                                    </a>
-                                    <ul>
-                                        <li><a href="expense-report.html">Expense Report</a></li>
-                                        <li><a href="income-report.html">Income Report</a></li>
-                                        <li><a href="profit-and-loss.html">Profit & Loss</a></li>
-                                        <li><a href="patient-report.html">Patient Report</a></li>
-                                        <li><a href="appointment-report.html">Appointment Report</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="appointments.html">Appointments</a></li>
+                                <li><a href="new-appointment.html">New Appointment</a></li>
+                                <li><a href="smart-new-appointment.html" class="active">Smart Appointment</a></li>
+                                <li><a href="appointment-calendar.html">Calendar</a></li>
                             </ul>
                         </li>
                     </ul>                   
                 </div>
             </div>
-
         </div>
-        <!-- Sidenav Menu End -->
 
-        <!-- ========================
-			Start Page Content
-		========================= -->
-         
+        <!-- Page Content -->
         <div class="page-wrapper">
-
-            <!-- Start Content -->
             <div class="content">
-
-                <!-- row start -->
                 <div class="row">
                     
                     <!-- Main Form Column -->
                     <div class="col-lg-8" id="mainFormColumn">
-                        <!-- page header start -->
                         <div class="mb-4">
                             <div class="d-flex align-items-center justify-content-between">
                                 <h6 class="fw-bold mb-0 d-flex align-items-center">
@@ -682,23 +223,15 @@
                                 
                                 <div class="smart-mode-toggle">
                                     <div class="form-check form-switch">
-                                        <input 
-                                            class="form-check-input" 
-                                            type="checkbox" 
-                                            id="smartModeToggle"
-                                            checked
-                                        />
+                                        <input class="form-check-input" type="checkbox" id="smartModeToggle" checked />
                                         <label class="form-check-label fw-medium text-primary" for="smartModeToggle">
-                                            <i class="ti ti-robot me-1"></i>
-                                            Smart Scheduling On
+                                            <i class="ti ti-robot me-1"></i>Smart Scheduling On
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- page header end -->
 
-                        <!-- card start -->
                         <div class="card">
                             <div class="card-body">
                                 <form id="smartAppointmentForm">
@@ -720,10 +253,6 @@
                                                     <option value="susan-babin">Susan Babin</option>
                                                     <option value="martin-lisa">Martin Lisa</option>
                                                     <option value="stella-mary">Stella Mary</option>
-                                                    <option value="carol-lam">Carol Lam</option>
-                                                    <option value="jesus-adams">Jesus Adams</option>
-                                                    <option value="ezra-belcher">Ezra Belcher</option>
-                                                    <option value="bernard-griffith">Bernard Griffith</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -734,12 +263,8 @@
                                                     <option value="">Select</option>
                                                     <option value="general-medicine">General Medicine</option>
                                                     <option value="pediatrics">Pediatrics</option>
-                                                    <option value="gynecology">Gynecology</option>
                                                     <option value="cardiology">Cardiology</option>
                                                     <option value="orthopedics">Orthopedics</option>
-                                                    <option value="dermatology">Dermatology</option>
-                                                    <option value="ent">ENT</option>
-                                                    <option value="neurology">Neurology</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -751,14 +276,10 @@
                                                 <label class="form-label mb-1 fw-medium">Doctor<span class="text-danger ms-1">*</span></label>
                                                 <select class="select" id="doctorSelect">
                                                     <option value="">Select</option>
-                                                    <option value="dr-mick-thompson">Dr. Mick Thompson</option>
+                                                    <option value="dr-john-smith">Dr. John Smith</option>
                                                     <option value="dr-sarah-johnson">Dr. Sarah Johnson</option>
                                                     <option value="dr-emily-carter">Dr. Emily Carter</option>
                                                     <option value="dr-david-lee">Dr. David Lee</option>
-                                                    <option value="dr-anna-kim">Dr. Anna Kim</option>
-                                                    <option value="dr-john-smith">Dr. John Smith</option>
-                                                    <option value="dr-lisa-white">Dr. Lisa White</option>
-                                                    <option value="dr-patricia-brown">Dr. Patricia Brown</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -804,9 +325,7 @@
                                     </div>
 
                                     <!-- Conflict Warnings -->
-                                    <div id="conflictWarnings" class="mb-3">
-                                        <!-- Conflicts will be rendered here by JavaScript -->
-                                    </div>
+                                    <div id="conflictWarnings" class="mb-3"></div>
                                     
                                     <div class="mb-3">
                                         <label class="form-label mb-1 fw-medium">Appointment Reason<span class="text-danger ms-1">*</span></label>
@@ -817,17 +336,14 @@
                                         <label class="form-label mb-1 fw-medium">Status<span class="text-danger ms-1">*</span></label>
                                         <select class="select">
                                             <option value="">Select</option>
-                                            <option value="checked-out">Checked Out</option>
-                                            <option value="checked-in">Checked In</option>
-                                            <option value="cancelled">Cancelled</option>
-                                            <option value="schedule">Schedule</option>
+                                            <option value="scheduled">Scheduled</option>
                                             <option value="confirmed">Confirmed</option>
+                                            <option value="cancelled">Cancelled</option>
                                         </select>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <!-- card end -->
 
                         <div class="d-flex align-items-center justify-content-end">
                             <a href="javascript:void(0);" class="btn btn-light me-2">Cancel</a>
@@ -841,15 +357,9 @@
                             <div class="card border-primary">
                                 <div class="card-header bg-primary text-white">
                                     <h6 class="mb-0 fw-bold d-flex align-items-center">
-                                        <i class="ti ti-robot me-2"></i>
-                                        Smart Time Suggestions
-                                        <div id="loadingSpinner" class="spinner-border spinner-border-sm ms-2" role="status" style="display: none;">
-                                            <span class="visually-hidden">Loading...</span>
-                                        </div>
+                                        <i class="ti ti-robot me-2"></i>Smart Time Suggestions
                                     </h6>
-                                    <small class="opacity-75">
-                                        AI-powered recommendations based on historical data and preferences
-                                    </small>
+                                    <small class="opacity-75">AI-powered recommendations based on historical data</small>
                                 </div>
                                 
                                 <div class="card-body p-0">
@@ -868,26 +378,20 @@
                                             <span class="visually-hidden">Loading...</span>
                                         </div>
                                         <h6 class="text-muted mb-2">Analyzing Optimal Times</h6>
-                                        <p class="text-muted fs-13 mb-0">
-                                            Processing schedules, preferences, and availability...
-                                        </p>
+                                        <p class="text-muted fs-13 mb-0">Processing schedules and preferences...</p>
                                     </div>
 
                                     <!-- Suggestions Content -->
                                     <div id="suggestionsContent" style="display: none;">
-                                        <div id="smartSlotsList" class="suggestions-list">
-                                            <!-- Smart slots will be rendered here by JavaScript -->
-                                        </div>
+                                        <div id="smartSlotsList" class="suggestions-list"></div>
                                         
                                         <div class="suggestions-footer p-3 bg-light">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <small class="text-muted">
-                                                    <i class="ti ti-refresh me-1"></i>
-                                                    Updated 2 min ago
+                                                    <i class="ti ti-refresh me-1"></i>Updated 2 min ago
                                                 </small>
                                                 <button class="btn btn-outline-primary btn-sm">
-                                                    <i class="ti ti-search me-1"></i>
-                                                    More Options
+                                                    <i class="ti ti-search me-1"></i>More Options
                                                 </button>
                                             </div>
                                         </div>
@@ -899,276 +403,81 @@
                             <div class="card border-info mt-3">
                                 <div class="card-header bg-info-transparent">
                                     <h6 class="mb-0 fw-bold text-info">
-                                        <i class="ti ti-bulb me-2"></i>
-                                        AI Insights
+                                        <i class="ti ti-bulb me-2"></i>AI Insights
                                     </h6>
                                 </div>
                                 <div class="card-body p-3">
-                                    <div id="aiInsights" class="insights-list">
-                                        <!-- AI insights will be rendered here by JavaScript -->
-                                    </div>
+                                    <div id="aiInsights" class="insights-list"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- row end -->               
-                
             </div>
-            <!-- End Content -->
 
-            <!-- Footer Start -->
+            <!-- Footer -->
             <div class="footer text-center bg-white p-2 border-top">
                 <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
             </div>
-            <!-- Footer End -->
-
         </div>
-
-        <!-- ========================
-			End Page Content
-		========================= -->
-
     </div>
-    <!-- End Wrapper -->
 
-    <!-- Start Add modal -->
+    <!-- Add Patient Modal -->
     <div class="modal fade" id="add_modal">
         <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title text-dark fw-bold">Add New Patient</h5>
-                    <button type="button" class="btn-close custom-btn-close opacity-100" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x bg-white fs-16 text-dark"></i></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body pb-0">
-                    <!-- form start -->
+                <div class="modal-body">
                     <div class="form">
-                        <h6 class="fw-bold mb-3">Patient Information</h6>
                         <div class="row">
-
-                            <div class="col-lg-12">
-                                <div class="mb-3 d-flex align-items-center">
-                                    <label class="form-label mb-0">Profile Image</label>
-                                    <div class="drag-upload-btn avatar avatar-xxl rounded-circle bg-light text-muted position-relative overflow-hidden z-1 mb-2 ms-4 p-0">
-                                        <i class="ti ti-user-plus fs-16"></i>
-                                        <input type="file" class="form-control image-sign" multiple="">
-                                        <div class="position-absolute bottom-0 end-0 star-0 w-100 h-25 bg-dark d-flex align-items-center justify-content-center z-n1">
-                                            <a href="javascript:void(0);" class="text-white d-flex align-items-center justify-content-center">
-                                                <i class="ti ti-photo fs-14"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">First Name<span class="text-danger ms-1">*</span></label>
+                                    <label class="form-label">First Name<span class="text-danger">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">Last Name<span class="text-danger ms-1">*</span></label>
+                                    <label class="form-label">Last Name<span class="text-danger">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">Phone Number<span class="text-danger ms-1">*</span></label>
-                                    <input type="tel" class="form-control" id="phone" name="phone">
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">Email Address<span class="text-danger ms-1">*</span></label>
+                                    <label class="form-label">Email<span class="text-danger">*</span></label>
                                     <input type="email" class="form-control">
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">Primary Doctor<span class="text-danger ms-1">*</span></label>
-                                    <select class="select">
-                                        <option value="">Select</option>
-                                        <option value="dr-mick-thompson">Dr. Mick Thompson</option>
-                                        <option value="dr-sarah-johnson">Dr. Sarah Johnson</option>
-                                        <option value="dr-emily-carter">Dr. Emily Carter</option>
-                                        <option value="dr-david-lee">Dr. David Lee</option>
-                                        <option value="dr-anna-kim">Dr. Anna Kim</option>
-                                        <option value="dr-john-smith">Dr. John Smith</option>
-                                        <option value="dr-lisa-white">Dr. Lisa White</option>
-                                        <option value="dr-patricia-brown">Dr. Patricia Brown</option>
-                                    </select>
+                                    <label class="form-label">Phone<span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control">
                                 </div>
                             </div>
-
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">DOB<span class="text-danger ms-1">*</span></label>
-                                    <div class="input-icon-end position-relative">  
-                                        <input type="date" class="form-control">
-                                        <span class="input-icon-addon">
-                                            <i class="ti ti-calendar"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">Gender<span class="text-danger ms-1">*</span></label>
-                                    <select class="select">
-                                        <option value="">Select</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">Blood Group<span class="text-danger ms-1">*</span></label>
-                                    <select class="select">
-                                        <option value="">Select</option>
-                                        <option value="o-positive">O+</option>
-                                        <option value="o-negative">O-</option>
-                                        <option value="a-positive">A+</option>
-                                        <option value="a-negative">A-</option>
-                                        <option value="b-positive">B+</option>
-                                        <option value="b-negative">B-</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">Status<span class="text-danger ms-1">*</span></label>
-                                    <select class="select">
-                                        <option value="">Select</option>
-                                        <option value="available">Available</option>
-                                        <option value="unavailable">Unavailable</option>
-                                    </select>
-                                </div>
-                            </div>
-
                         </div>
-
-                        <h6 class="fw-bold mb-3 border-top pt-3">Address Information</h6> 
-
-                        <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">Address 1<span class="text-danger ms-1">*</span></label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1 fw-medium">Address 2<span class="text-danger ms-1">*</span></label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1">Country<span class="text-danger ms-1">*</span></label>
-                                    <select class="select"> 
-                                        <option>Select</option>
-                                        <option>United States</option>
-                                        <option>Canada</option>
-                                        <option>UK</option>
-                                        <option>Germany</option>
-                                        <option>France</option>
-                                    </select>
-                                </div>
-                            </div>                        
-    
-                            <div class="col-lg-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1">State<span class="text-danger ms-1">*</span></label>
-                                    <select class="select"> 
-                                        <option>Select</option>
-                                        <option>California</option>
-                                        <option>Ontario</option>
-                                        <option>Bavaria</option>
-                                        <option>Wellington</option>
-                                        <option>Le-de-France</option>
-                                    </select>
-                                </div>
-                            </div>
-    
-                            <div class="col-lg-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1">City<span class="text-danger ms-1">*</span></label>
-                                    <select class="select"> 
-                                        <option>Select</option>
-                                        <option>Los Angeles</option>
-                                        <option>Toronto</option>
-                                        <option>London</option>
-                                        <option>Munich</option>
-                                        <option>Sydney</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="mb-3">
-                                    <label class="form-label mb-1">Pincode<span class="text-danger ms-1">*</span></label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                        </div>  
-
                     </div>
-                    <!-- form end -->
-                    
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-light btn-sm me-2 fs-13 fw-medium" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary btn-sm fs-13 fw-medium">Add New Patient</button>
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Patient</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Add modal  -->
 
-
-    <!-- jQuery -->
+    <!-- Scripts -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
-
-    <!-- Bootstrap Core JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>    
-
-	<!-- Simplebar JS -->
-	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
-
-    <!-- Select2 JS -->
+    <script src="assets/plugins/simplebar/simplebar.min.js"></script>
     <script src="assets/plugins/select2/js/select2.min.js"></script>
-
-    <!-- intel Input -->
     <script src="assets/plugins/intltelinput/js/intlTelInput.js"></script>
-
-    <!-- Daterangepikcer JS -->
-	<script src="assets/js/moment.min.js"></script>
-	<script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
-
-    <!-- Datetimepicker JS -->
     <script src="assets/js/moment.min.js"></script>
+    <script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
     <script src="assets/js/bootstrap-datetimepicker.min.js"></script> 
-
-    <!-- AI Smart Appointment JS -->
     <script src="assets/js/ai-smart-appointment.js"></script>
-
-    <!-- Main JS -->
     <script src="assets/js/script.js"></script>
-
 </body>
-
 </html>
