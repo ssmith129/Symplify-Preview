@@ -71,14 +71,65 @@
   }
 
   // SMART APPOINTMENT
+  function ensureSmartAppointmentUI(){
+    // Insert toggle near page header if missing
+    var headerRow = document.querySelector('.content .mb-4');
+    if (headerRow && !document.getElementById('smartModeToggle')){
+      var toggleWrap = document.createElement('div');
+      toggleWrap.className = 'd-flex align-items-center justify-content-end mb-2';
+      toggleWrap.innerHTML = '<div class="form-check form-switch d-flex align-items-center gap-2"><input class="form-check-input" type="checkbox" id="smartModeToggle" data-ai-toggle="smart-appointment"><label class="form-check-label fw-medium" for="smartModeToggle"><i class="ti ti-robot me-1"></i>Smart Scheduling</label></div>';
+      headerRow.parentNode.insertBefore(toggleWrap, headerRow.nextSibling);
+    }
+
+    // Add IDs to core fields if missing (best-effort by label text)
+    function setIdByLabel(labelText, inputSelector, id){
+      var label = Array.from(document.querySelectorAll('label.form-label, label.form-label.mb-1, label.form-label.mb-0')).find(function(l){ return (l.textContent||'').trim().toLowerCase().startsWith(labelText); });
+      if (label){
+        var container = label.closest('.mb-3') || label.parentElement;
+        if (container){
+          var el = container.querySelector(inputSelector);
+          if (el && !el.id){ el.id = id; }
+        }
+      }
+    }
+    setIdByLabel('patient', 'select', 'patientSelect');
+    setIdByLabel('department', 'select', 'departmentSelect');
+    setIdByLabel('doctor', 'select', 'doctorSelect');
+    setIdByLabel('appointment type', 'select', 'appointmentTypeSelect');
+    setIdByLabel('date of appointment', 'input', 'appointmentDate');
+    setIdByLabel('time', 'input', 'appointmentTime');
+
+    // Inject conflict warnings container if missing
+    if (!document.getElementById('conflictWarnings')){
+      var timeInput = document.getElementById('appointmentTime');
+      if (timeInput){
+        var group = timeInput.closest('.mb-3');
+        var cw = document.createElement('div'); cw.id = 'conflictWarnings'; cw.className = 'mb-3';
+        if (group && group.parentNode){ group.parentNode.parentNode.insertBefore(cw, group.parentNode.nextSibling); }
+      }
+    }
+
+    // Inject smart suggestions panel if missing
+    if (!document.getElementById('smartSuggestionsPanel')){
+      var mainContent = document.querySelector('.content .row.justify-content-center .col-lg-10') || document.querySelector('.content');
+      if (mainContent){
+        var panel = document.createElement('div');
+        panel.id = 'smartSuggestionsPanel';
+        panel.className = 'mt-3';
+        panel.style.display = 'none';
+        panel.innerHTML = '<div class="smart-suggestions-panel"><div class="card border-primary"><div class="card-header bg-primary text-white"><h6 class="mb-0 fw-bold d-flex align-items-center"><i class="ti ti-robot me-2"></i>Smart Time Suggestions</h6><small class="opacity-75">AI-powered recommendations based on historical data</small></div><div class="card-body p-0"><div id="emptyState" class="empty-state p-4 text-center"><i class="ti ti-info-circle text-muted fs-48 mb-3"></i><h6 class="text-muted mb-2">Complete Basic Information</h6><p class="text-muted fs-13 mb-0">Select patient, department, and doctor to see smart time suggestions</p></div><div id="loadingState" class="loading-state p-4 text-center" style="display: none;"><div class="spinner-border text-primary mb-3" role="status"><span class="visually-hidden">Loading...</span></div><h6 class="text-muted mb-2">Analyzing Optimal Times</h6><p class="text-muted fs-13 mb-0">Processing schedules and preferences...</p></div><div id="suggestionsContent" style="display: none;"><div id="smartSlotsList" class="suggestions-list"></div><div class="suggestions-footer p-3 bg-light"><div class="d-flex align-items-center justify-content-between"><small class="text-muted"><i class="ti ti-refresh me-1"></i>Updated 2 min ago</small><button class="btn btn-outline-primary btn-sm"><i class="ti ti-search me-1"></i>More Options</button></div></div></div></div></div><div class="card border-info mt-3"><div class="card-header bg-info-transparent"><h6 class="mb-0 fw-bold text-info"><i class="ti ti-bulb me-2"></i>AI Insights</h6></div><div class="card-body p-3"><div id="aiInsights" class="insights-list"></div></div></div></div>';
+        mainContent.appendChild(panel);
+      }
+    }
+  }
+
   function enableSmartAppointment(){
     ensureCss();
+    ensureSmartAppointmentUI();
     var toggle = document.getElementById('smartModeToggle');
     if (toggle) toggle.checked = true;
     var panel = document.getElementById('smartSuggestionsPanel');
-    var main = document.getElementById('mainFormColumn');
     if (panel){ panel.style.display = 'block'; }
-    if (main){ main.className = 'col-lg-8'; }
     loadScript('assets/js/ai-smart-appointment.js');
   }
   function disableSmartAppointment(){
