@@ -1281,5 +1281,32 @@ Template Name: Symplify - Bootstrap Admin Template
 	}
 
 	
-})();
 
+	// AI modules dynamic loader
+	document.addEventListener('DOMContentLoaded', function(){
+		function ensureAICSS(){
+			if (!document.querySelector('link[href="assets/css/ai-features.css"]')){
+				var l = document.createElement('link');
+				l.rel = 'stylesheet';
+				l.href = 'assets/css/ai-features.css';
+				document.head.appendChild(l);
+			}
+		}
+		function load(src){
+			if (!document.querySelector('script[src="'+src+'"]')){
+				var s = document.createElement('script');
+				s.src = src;
+				s.defer = true;
+				document.body.appendChild(s);
+			}
+		}
+		// Inject CSS once
+		ensureAICSS();
+		// Page-aware loaders
+		if (document.querySelector('.notification-body')) load('assets/js/ai-notifications.js');
+		if (document.getElementById('calendar')) load('assets/js/ai-appointment-calendar.js');
+		if (document.querySelector('.mails-list')) load('assets/js/ai-email-insights.js');
+		if (document.getElementById('ai-inbox-triage-container')) load('assets/js/ai-inbox-triage.js');
+	});
+
+})();
