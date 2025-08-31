@@ -117,19 +117,8 @@
 
                     <!-- Appointment -->
                     <div class="header-item">
-                        <div class="dropdown me-2">
-                            <a href="new-appointment.html" class="btn topbar-link"><i class="ti ti-calendar-due"></i></a>
-                        </div>
-                    </div>                    
                     <!-- Appointment -->
 
-                    <!-- Settings -->
-                    <div class="header-item">
-                        <div class="dropdown me-2">
-                            <a href="profile-settings.html" class="btn topbar-link"><i class="ti ti-settings-2"></i></a>
-                        </div> 
-                    </div> 
-                    <!-- Settings -->                   
 
                     <!-- Light/Dark Mode Button -->
                     <div class="header-item d-none d-sm-flex me-2">
@@ -956,7 +945,7 @@
                                 </li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);">
-                                        <i class="ti ti-settings-2"></i><span>Other Settings</span>
+                                        <span>Other Settings</span>
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
@@ -1146,7 +1135,7 @@
                         </div>
                         <div>
                             <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
-                            <p class="fs-13 mb-0">Check 1 min video and begin use Preclinic like a pro</p>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Symplify like a pro</p>
                         </div>
                         <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
                     </div>
@@ -1265,7 +1254,6 @@
                         </div>
                     </div>
                     <div class="d-flex table-dropdown mb-3 pb-1 right-content align-items-center flex-wrap row-gap-3">
-                        <div class="dropdown me-2">
                             <a href="javascript:void(0);" class="btn btn-white bg-white fs-14 py-1 border d-inline-flex text-dark align-items-center" data-bs-toggle="dropdown" data-bs-auto-close="outside">
                                 <i class="ti ti-filter text-gray-5 me-1"></i>Filters
                             </a>
@@ -1274,34 +1262,28 @@
                                     <h5 class="mb-0 fw-bold">Filter</h5>
                                     <div class="d-flex align-items-center">
                                         <a href="javascript:void(0);" class="link-danger text-decoration-underline">Clear All</a>
-                                    </div>
-                                </div>
                                 <form action="#">
                                     <div class="filter-body pb-0">
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Employee</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
-                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>James Adair</option>
                                                 <option value="m-2">Adam Milne</option>
                                                 <option value="m-3">Richard Clark</option>
                                                 <option value="m-4">Robert Reid</option>
                                             </select>
-                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Leave Type</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
-                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Sick Leave</option>
                                                 <option value="m-2">Casual Leave</option>
                                                 <option value="m-3">Emergency</option>
                                                 <option value="m-4">Vacation</option>
                                             </select>
-                                        </div>
                                         <div class="mb-3">
                                             <label class="form-label mb-1 text-dark fs-14 fw-medium">Date</label>
                                             <div class="input-icon-end position-relative">  
@@ -1309,26 +1291,18 @@
                                                 <span class="input-icon-addon">
                                                     <i class="ti ti-calendar"></i>
                                                 </span>
-                                            </div>
-                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Status</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
-                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Approved</option>
                                                 <option value="m-2">Rejected</option>
                                             </select>
-                                        </div>
-                                    </div>
                                     <div class="filter-footer d-flex align-items-center justify-content-end border-top">
                                         <a href="javascript:void(0);" class="btn btn-light btn-md me-2" id="close-filter">Close</a>
                                         <button type="submit" class="btn btn-primary btn-md">Filter</button>
-                                    </div>
                                 </form>
-                            </div>
-                        </div>
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle btn bg-white btn-md d-inline-flex align-items-center fw-normal rounded border text-dark px-2 py-1 fs-14" data-bs-toggle="dropdown">
                                <span  class="me-1"> Sort By : </span>  Recent
@@ -1341,9 +1315,6 @@
                                     <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="table-responsive">
                     <table class="table table-nowrap datatable">
@@ -1369,8 +1340,6 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">James Adair</a></h6>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>Sick Leave</td>
                                 <td>30 Apr 2025 - 30 Apr 2025</td>
@@ -1390,7 +1359,6 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_leave">Delete</a>
                                             </li>
                                         </ul>
-                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1402,8 +1370,6 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Adam Milne</a></h6>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>Casual Leave</td>
                                 <td>15 Apr 2025 - 15 Apr 2025</td>
@@ -1423,7 +1389,6 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_leave">Delete</a>
                                             </li>
                                         </ul>
-                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1435,8 +1400,6 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Richard Clark</a></h6>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>Emergency</td>
                                 <td>02 Apr 2025 - 03 Apr 2025</td>
@@ -1456,7 +1419,6 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_leave">Delete</a>
                                             </li>
                                         </ul>
-                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1468,8 +1430,6 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Robert Reid</a></h6>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>Vacation</td>
                                 <td>12 Mar 2025 - 13 Mar 2025</td>
@@ -1489,7 +1449,6 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_leave">Delete</a>
                                             </li>
                                         </ul>
-                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1501,8 +1460,6 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Dottie Jeny</a></h6>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>Maternity</td>
                                 <td>27 Mar 2025 - 29 Mar 2025</td>
@@ -1522,7 +1479,6 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_leave">Delete</a>
                                             </li>
                                         </ul>
-                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1534,8 +1490,6 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Cheryl Bilodeau</a></h6>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>Paternity</td>
                                 <td>05 Mar 2025 - 05 Mar 2025</td>
@@ -1555,7 +1509,6 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_leave">Delete</a>
                                             </li>
                                         </ul>
-                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1567,8 +1520,6 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Valerie Padgett</a></h6>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>Sick Leave</td>
                                 <td>24 Feb 2025 - 25 Feb 2025</td>
@@ -1588,7 +1539,6 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_leave">Delete</a>
                                             </li>
                                         </ul>
-                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1600,8 +1550,6 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Diane Nash</a></h6>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>Casual Leave</td>
                                 <td>16 Feb 2025 - 17 Feb 2025</td>
@@ -1621,7 +1569,6 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_leave">Delete</a>
                                             </li>
                                         </ul>
-                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1633,8 +1580,6 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Sally Cavazos</a></h6>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>Emergency</td>
                                 <td>01 Feb 2025 - 01 Feb 2025</td>
@@ -1654,7 +1599,6 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_leave">Delete</a>
                                             </li>
                                         </ul>
-                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1666,8 +1610,6 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Forest Heath</a></h6>
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>Vacation</td>
                                 <td>25 Jan 2025 - 29 Jan 2025</td>
@@ -1687,23 +1629,18 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_leave">Delete</a>
                                             </li>
                                         </ul>
-                                    </div>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
                                 
-            </div>
             <!-- End Content -->
 
             <!-- Footer Start -->
             <div class="footer text-center bg-white p-2 border-top">
-                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Preclinic</a>, All Rights Reserved</p>
-            </div>
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
             <!-- Footer End -->
 
-        </div>
 
         <!-- ========================
 			End Page Content
@@ -1716,7 +1653,6 @@
                     <div class="modal-header">
                         <h4 class="text-dark modal-title fw-bold">Add New Leave</h4>
                         <button type="button" class="btn-close btn-close-modal custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
-                    </div>
                     <form action="leaves.html">
                         <div class="modal-body">
                             <!-- start row -->
@@ -1731,8 +1667,6 @@
                                             <option>Richard Clark</option>
                                             <option>Robert Reid</option>
                                         </select>
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-6">
                                     <div class="mb-0">
                                         <label class="form-label">Leave Type<span class="text-danger ms-1">*</span></label>
@@ -1743,8 +1677,6 @@
                                             <option>Emergency</option>
                                             <option>Vacation</option>
                                         </select>
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-6">
                                     <div class="mb-0">
                                         <label class="form-label">From Date<span class="text-danger ms-1">*</span></label>
@@ -1753,9 +1685,6 @@
                                             <span class="input-icon-addon">
                                                 <i class="ti ti-calendar"></i>
                                             </span>
-                                        </div>
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-6">
                                     <div class="mb-0">
                                         <label class="form-label">To Date<span class="text-danger ms-1">*</span></label>
@@ -1764,48 +1693,30 @@
                                             <span class="input-icon-addon">
                                                 <i class="ti ti-calendar"></i>
                                             </span>
-                                        </div>
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-12">
                                     <div class="mb-0">
                                         <label class="form-label">No of Days<span class="text-danger ms-1">*</span></label>
                                         <input type="text" class="form-control">
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-12">
                                     <div class="p-2 bg-light rounded">
                                         <div class="row align-items-center">
                                             <div class="col-md-6">
                                                 <span class="text-body">dd/mm/yyyy</span>
-                                            </div>
                                             <div class="col-md-6">
                                                 <select class="select">
                                                     <option>Select</option>
                                                     <option>Full Day</option>
                                                     <option>Half Day</option>
                                                 </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-12">
                                     <div class="mb-0">
                                         <label class="form-label">No of Days<span class="text-danger ms-1">*</span></label>
                                         <textarea class="form-control" rows="3"></textarea>
-                                    </div>
-                                </div><!-- end col -->
-                             </div>
                              <!-- end row -->
-                        </div>
                         <div class="modal-footer d-flex align-items-center gap-1">
                             <button type="button" class="btn btn-white border" data-bs-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary">Add New Leave</button>
-                        </div>
                     </form>
-                </div>
-            </div>
-        </div>
         <!-- End Add Modal -->
 
         <!-- Start Add Modal -->
@@ -1815,7 +1726,6 @@
                     <div class="modal-header">
                         <h4 class="text-dark modal-title fw-bold">Edit Leave</h4>
                         <button type="button" class="btn-close btn-close-modal custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
-                    </div>
                     <form action="leaves.html">
                         <div class="modal-body">
                             <!-- start row -->
@@ -1830,8 +1740,6 @@
                                             <option>Richard Clark</option>
                                             <option>Robert Reid</option>
                                         </select>
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-6">
                                     <div class="mb-0">
                                         <label class="form-label">Leave Type<span class="text-danger ms-1">*</span></label>
@@ -1842,8 +1750,6 @@
                                             <option>Emergency</option>
                                             <option>Vacation</option>
                                         </select>
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-6">
                                     <div class="mb-0">
                                         <label class="form-label">From Date<span class="text-danger ms-1">*</span></label>
@@ -1852,9 +1758,6 @@
                                             <span class="input-icon-addon">
                                                 <i class="ti ti-calendar"></i>
                                             </span>
-                                        </div>
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-6">
                                     <div class="mb-0">
                                         <label class="form-label">To Date<span class="text-danger ms-1">*</span></label>
@@ -1863,60 +1766,39 @@
                                             <span class="input-icon-addon">
                                                 <i class="ti ti-calendar"></i>
                                             </span>
-                                        </div>
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-12">
                                     <div class="mb-0">
                                         <label class="form-label">No of Days<span class="text-danger ms-1">*</span></label>
                                         <input type="text" class="form-control" value="2">
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-12">
                                     <div class="p-2 bg-light rounded">
                                         <div class="row align-items-center mb-2">
                                             <div class="col-md-6">
                                                 <span class="text-body">18 Jan 2025</span>
-                                            </div>
                                             <div class="col-md-6">
                                                 <select class="select">
                                                     <option>Select</option>
                                                     <option selected>Full Day</option>
                                                     <option>Half Day</option>
                                                 </select>
-                                            </div>
-                                        </div>
                                         <div class="row align-items-center">
                                             <div class="col-md-6">
                                                 <span class="text-body">18 Jan 2025</span>
-                                            </div>
                                             <div class="col-md-6">
                                                 <select class="select">
                                                     <option>Select</option>
                                                     <option selected>Full Day</option>
                                                     <option>Half Day</option>
                                                 </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!-- end col -->
                                 <div class="col-md-12">
                                     <div class="mb-0">
                                         <label class="form-label">No of Days<span class="text-danger ms-1">*</span></label>
                                         <textarea class="form-control" rows="3">Not feeling well due to cold and fatigue, taking rest as advised by family doctor.</textarea>
-                                    </div>
-                                </div><!-- end col -->
-                             </div>
                              <!-- end row -->
-                        </div>
                         <div class="modal-footer d-flex align-items-center gap-1">
                             <button type="button" class="btn btn-white border" data-bs-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary">Save Changes</button>
-                        </div>
                     </form>
-                </div>
-            </div>
-        </div>
         <!-- End Add Modal -->
 
         <!-- Start Delete Modal  -->
@@ -1928,20 +1810,13 @@
                         <img src="assets/img/bg/delete-modal-bg-02.png" alt="" class="img-fluid position-absolute bottom-0 end-0 z-n1">
                         <div class="mb-3">
                             <span class="avatar avatar-lg bg-danger text-white"><i class="ti ti-trash fs-24"></i></span>
-                        </div>
                         <h5 class="fw-bold mb-1">Delete Confirmation</h5>
                         <p class="mb-3">Are you sure want to delete?</p>
                         <div class="d-flex justify-content-center">
                             <a href="javascript:void(0);" class="btn btn-light position-relative z-1 me-3" data-bs-dismiss="modal">Cancel</a>
                             <a href="leaves.html" class="btn btn-danger position-relative z-1">Yes, Delete</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- End Delete Modal  -->
 
-    </div>
     <!-- End Wrapper -->
 
     <!-- jQuery -->

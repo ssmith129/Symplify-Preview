@@ -1,6 +1,6 @@
 /*
 Author       : Dreamstechnologies
-Template Name: Preclinic - Bootstrap Admin Template
+Template Name: Symplify - Bootstrap Admin Template
 */
 (function () {
     "use strict";
