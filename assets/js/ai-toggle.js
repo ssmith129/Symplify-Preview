@@ -14,8 +14,29 @@
   }
 
   // EMAIL AI
+  function ensureEmailToggleAndContainer(){
+    var header = document.querySelector('.mail-notifications .p-3.border-bottom .d-flex.align-items-center');
+    if (header && !document.getElementById('aiToggleEmail')){
+      var wrap = document.createElement('div');
+      wrap.className = 'form-check form-switch d-flex align-items-center gap-2 ms-2';
+      wrap.innerHTML = '<input class="form-check-input" type="checkbox" id="aiToggleEmail" data-ai-toggle="email"><label class="form-check-label fw-medium" for="aiToggleEmail"><i class="ti ti-brain me-1"></i>AI Insights</label>';
+      header.appendChild(wrap);
+    }
+    if (!document.getElementById('ai-inbox-triage-container')){
+      var headerBlock = document.querySelector('.mail-notifications .p-3.border-bottom');
+      if (headerBlock){
+        var tri = document.createElement('div');
+        tri.id = 'ai-inbox-triage-container';
+        tri.className = 'my-3';
+        tri.style.display = 'none';
+        headerBlock.parentNode.insertBefore(tri, headerBlock.nextSibling);
+      }
+    }
+  }
+
   function enableEmailAI(){
     ensureCss();
+    ensureEmailToggleAndContainer();
     if (document.querySelector('.mails-list')){
       loadScript('assets/js/ai-email-insights.js');
     }
