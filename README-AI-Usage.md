@@ -237,6 +237,24 @@ Messages are automatically sorted by:
 - Note error messages or unexpected behavior
 - Include your user role and department information
 
+## 📣 Using AI Notifications Intelligence
+
+- Open the notifications dropdown; AI badges appear per item
+- Summary at top shows counts by priority; use it to scan urgency
+- Action badges indicate items needing attention
+
+## 📆 Using Smart Appointment Calendar Insights
+
+- Scroll below the calendar to see AI-recommended slots
+- Review risk indicators to plan staffing and overbooking
+- Pick slots with higher scores for better outcomes
+
+## ✉️ Using Email AI Insights & Filters
+
+- The AI toolbar appears under the Inbox header
+- Use priority filter buttons to focus on specific urgency levels
+- Each email row shows AI badges for quick scanning
+
 ## 🔮 Tips for Success
 
 ### Maximizing AI Effectiveness

@@ -58,6 +58,15 @@ Add before closing `</body>` tag:
 
 <!-- AI Inbox Triage Component -->
 <script src="assets/js/ai-inbox-triage.js"></script>
+
+<!-- AI Notifications Intelligence (optional) -->
+<script src="assets/js/ai-notifications.js"></script>
+
+<!-- AI Appointment Calendar Insights (optional) -->
+<script src="assets/js/ai-appointment-calendar.js"></script>
+
+<!-- AI Email Insights (optional) -->
+<script src="assets/js/ai-email-insights.js"></script>
 ```
 
 ### Step 3: Add HTML Container

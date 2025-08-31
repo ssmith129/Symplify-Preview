@@ -24,7 +24,29 @@ Symplify integrates advanced AI-powered features to enhance healthcare managemen
 - 📊 **Better Workflow**: Smart sorting by urgency and priority
 - 💡 **Actionable Insights**: Clear indicators for required actions
 
-### 2. Smart Filtering & Search
+### 2. AI Notifications Intelligence
+
+Purpose: Enriches notification feeds with AI classification and summary.
+- Auto-classifies dropdown notifications with priority and category
+- Highlights action-required alerts with badges
+- Adds real-time summary counters (Critical/High/Medium/Low)
+- Non-intrusive, works across pages with notification dropdowns
+
+### 3. Smart Appointment Calendar Insights
+
+Purpose: Adds AI-powered scheduling insights below the calendar.
+- Recommended slots based on availability patterns
+- Risk indicators (no-show risk, overbook risk, utilization)
+- Compact card placed under FullCalendar
+
+### 4. Email AI Insights & Filters
+
+Purpose: Helps triage the inbox list with AI badges and quick filters.
+- Classifies each email row by priority/category using content cues
+- Adds an AI toolbar with quick priority filters and counts
+- Works without changing existing email markup
+
+### 5. Smart Filtering & Search
 
 **Features**:
 - Category-based filtering (Emergency, Medical, Appointments, Administrative)
