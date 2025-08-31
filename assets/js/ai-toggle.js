@@ -173,6 +173,13 @@
   }
 
   document.addEventListener('DOMContentLoaded', function(){
+    // Proactively inject toggle UIs where applicable
+    if (document.querySelector('.mails-list') || document.querySelector('.mail-notifications')){
+      ensureEmailToggleAndContainer();
+    }
+    if (document.querySelector('title') && (document.title || '').toLowerCase().includes('new appointment')){
+      ensureSmartAppointmentUI();
+    }
     document.querySelectorAll('[data-ai-toggle]').forEach(initToggle);
   });
 })();
