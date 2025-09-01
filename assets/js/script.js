@@ -1314,6 +1314,22 @@ Template Name: Symplify - Bootstrap Admin Template
 		var aiEmailOn = localStorage.getItem('ai_email_enabled') === '1';
 		if (aiEmailOn && document.querySelector('.mails-list')) load('assets/js/ai-email-insights.js');
 		if (aiEmailOn && document.getElementById('ai-inbox-triage-container')) load('assets/js/ai-inbox-triage.js');
+		// Unified Chat enhancements
+		if (document.querySelector('.chat-users') || document.querySelector('.chat-messages')) {
+			load('assets/js/unified-chat.js');
+		}
+		// Notifications feed enhancements
+		if (document.querySelector('.notication-list')) {
+			load('assets/js/ai-notifications-feed.js');
+		}
+		// Notification settings enhancements
+		if (document.querySelector('title') && (document.title||'').toLowerCase().includes('notifications settings')) {
+			load('assets/js/ai-notification-settings.js');
+		}
+		// Integrations onboarding workflow
+		if (document.querySelector('title') && (document.title||'').toLowerCase().includes('integrations settings')) {
+			load('assets/js/ai-onboarding-workflow.js');
+		}
 	});
 
 })();
