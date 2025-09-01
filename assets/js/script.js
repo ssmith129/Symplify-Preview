@@ -1306,7 +1306,10 @@ Template Name: Symplify - Bootstrap Admin Template
 		load('assets/js/ai-toggle.js');
 		// Page-aware loaders
 		if (document.querySelector('.notification-body')) load('assets/js/ai-notifications.js');
-		if (document.getElementById('calendar')) load('assets/js/ai-appointment-calendar.js');
+		if (document.getElementById('calendar')) {
+			load('assets/js/ai-appointment-calendar.js');
+			load('assets/js/smart-appointment-calendar.js');
+		}
 		// Respect per-page AI toggles for email and triage
 		var aiEmailOn = localStorage.getItem('ai_email_enabled') === '1';
 		if (aiEmailOn && document.querySelector('.mails-list')) load('assets/js/ai-email-insights.js');
