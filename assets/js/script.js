@@ -1308,6 +1308,7 @@ Template Name: Symplify - Bootstrap Admin Template
 				console.log('[AI Loader] Script already present:', src);
 			}
 		}
+
 		// Inject CSS once
 		ensureAICSS();
 		// Always load master AI toggle manager
@@ -1321,6 +1322,14 @@ Template Name: Symplify - Bootstrap Admin Template
 				console.log('[AI Loader] Initialized', feature, 'as enabled');
 			}
 		});
+
+		// Check AI feature settings (moved to top to avoid undefined variables)
+		var aiEmailOn = localStorage.getItem('ai_email_enabled') !== '0';
+		var aiChatOn = localStorage.getItem('ai_chat_enabled') !== '0';
+		var aiNotificationsOn = localStorage.getItem('ai_notifications_enabled') !== '0';
+		var aiCalendarOn = localStorage.getItem('ai_calendar_enabled') !== '0';
+
+		console.log('[AI Loader] Feature status - Email:', aiEmailOn, 'Chat:', aiChatOn, 'Notifications:', aiNotificationsOn, 'Calendar:', aiCalendarOn);
 
 		// Page-aware loaders
 		console.log('[AI Loader] Checking page elements...');
@@ -1339,14 +1348,6 @@ Template Name: Symplify - Bootstrap Admin Template
 		} else {
 			console.log('[AI Loader] Calendar AI not loaded - enabled:', aiCalendarOn, '#calendar found:', !!document.getElementById('calendar'));
 		}
-
-		// Check AI feature settings (now defaults to enabled)
-		var aiEmailOn = localStorage.getItem('ai_email_enabled') !== '0';
-		var aiChatOn = localStorage.getItem('ai_chat_enabled') !== '0';
-		var aiNotificationsOn = localStorage.getItem('ai_notifications_enabled') !== '0';
-		var aiCalendarOn = localStorage.getItem('ai_calendar_enabled') !== '0';
-
-		console.log('[AI Loader] Feature status - Email:', aiEmailOn, 'Chat:', aiChatOn, 'Notifications:', aiNotificationsOn, 'Calendar:', aiCalendarOn);
 
 		if (aiEmailOn && document.querySelector('.mails-list')) {
 			console.log('[AI Loader] Email AI enabled and .mails-list found, loading email insights');
