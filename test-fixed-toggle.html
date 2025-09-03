@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test Fixed AI Toggle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+    
+    <!-- AI Features CSS -->
+    <link rel="stylesheet" href="assets/css/ai-features.css">
+</head>
+<body>
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+        <!-- Header (Matching original structure) -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <a href="index.html" class="logo">
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                            <span class="logo-sm"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+                    </a>
+                    <h4 class="mb-0 ms-3">Fixed AI Toggle Test</h4>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <!-- Original AI Assistance Button (Should be transformed or supplemented) -->
+                    <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">🔧 Fixed AI Toggle System Test</h4>
+                            </div>
+                            <div class="card-body">
+                                <!-- Test Controls -->
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <h5>🎯 Test Controls</h5>
+                                        <div class="d-flex flex-column gap-2">
+                                            <button type="button" class="btn btn-primary" onclick="testButtonDetection()">🔍 Test Button Detection</button>
+                                            <button type="button" class="btn btn-success" onclick="manualEnable()">✅ Manual Enable AI</button>
+                                            <button type="button" class="btn btn-danger" onclick="manualDisable()">❌ Manual Disable AI</button>
+                                            <button type="button" class="btn btn-info" onclick="checkStatus()">📊 Check AI Status</button>
+                                            <button type="button" class="btn btn-warning" onclick="forceInject()">🔧 Force Inject Toggle</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h5>📈 Test Results</h5>
+                                        <div id="test-output" class="border rounded p-3" style="height: 200px; overflow-y: auto; background: #f8f9fa;">
+                                            <p class="text-muted">Click buttons to run tests...</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Current Status -->
+                                <div class="alert alert-info">
+                                    <h6>📋 Expected Behavior:</h6>
+                                    <ul class="mb-0">
+                                        <li>The "AI Assistance" button should transform into "AI Features ON/OFF" toggle</li>
+                                        <li>If transformation fails, a dedicated toggle button should be created</li>
+                                        <li>Clicking the toggle should enable/disable all AI features</li>
+                                        <li>A notification should appear when toggling</li>
+                                        <li>The page should reload after 1.5 seconds to apply changes</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Feature Status Display -->
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="card border">
+                                            <div class="card-body text-center">
+                                                <i class="ti ti-mail fs-24 text-primary mb-2"></i>
+                                                <h6>Email AI</h6>
+                                                <span id="email-status" class="badge bg-secondary">Unknown</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card border">
+                                            <div class="card-body text-center">
+                                                <i class="ti ti-calendar fs-24 text-success mb-2"></i>
+                                                <h6>Calendar AI</h6>
+                                                <span id="calendar-status" class="badge bg-secondary">Unknown</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card border">
+                                            <div class="card-body text-center">
+                                                <i class="ti ti-message fs-24 text-warning mb-2"></i>
+                                                <h6>Chat AI</h6>
+                                                <span id="chat-status" class="badge bg-secondary">Unknown</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card border">
+                                            <div class="card-body text-center">
+                                                <i class="ti ti-bell fs-24 text-info mb-2"></i>
+                                                <h6>Notifications AI</h6>
+                                                <span id="notifications-status" class="badge bg-secondary">Unknown</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Test Script -->
+    <script>
+        function log(message) {
+            console.log(message);
+            const output = document.getElementById('test-output');
+            const p = document.createElement('div');
+            p.innerHTML = `<small class="text-muted">${new Date().toLocaleTimeString()}</small> ${message}`;
+            output.appendChild(p);
+            output.scrollTop = output.scrollHeight;
+        }
+
+        function testButtonDetection() {
+            log('🔍 Testing button detection...');
+            
+            if (window.FixedAI && window.FixedAI.findButton) {
+                const button = window.FixedAI.findButton();
+                if (button) {
+                    log(`✅ Found AI button: ${button.tagName}.${button.className}`);
+                    log(`📝 Button text: "${button.textContent}"`);
+                } else {
+                    log('❌ AI Assistance button not found');
+                }
+            } else {
+                log('❌ FixedAI system not loaded');
+            }
+            
+            // Check if toggle exists
+            const masterToggle = document.getElementById('masterAIToggle');
+            const fixedToggle = document.getElementById('fixedAIToggle');
+            
+            if (masterToggle) {
+                log('✅ Master toggle found (transformed button)');
+            } else if (fixedToggle) {
+                log('✅ Fixed toggle found (dedicated button)');
+            } else {
+                log('❌ No AI toggle button found');
+            }
+        }
+
+        function manualEnable() {
+            log('✅ Manually enabling AI features...');
+            if (window.FixedAI) {
+                window.FixedAI.enable();
+            } else {
+                log('❌ FixedAI system not available');
+            }
+        }
+
+        function manualDisable() {
+            log('❌ Manually disabling AI features...');
+            if (window.FixedAI) {
+                window.FixedAI.disable();
+            } else {
+                log('❌ FixedAI system not available');
+            }
+        }
+
+        function checkStatus() {
+            log('📊 Checking AI status...');
+            
+            if (window.FixedAI) {
+                const status = window.FixedAI.getStatus();
+                log(`🎯 Master Status: ${status.master ? 'ENABLED' : 'DISABLED'}`);
+                log(`🔘 Toggle Exists: ${status.toggleExists ? 'YES' : 'NO'}`);
+                
+                Object.entries(status.features).forEach(([feature, info]) => {
+                    log(`📌 ${feature}: ${info.enabled ? 'ON' : 'OFF'} (stored: ${info.stored})`);
+                });
+            } else {
+                log('❌ FixedAI system not available');
+            }
+            
+            updateStatusDisplay();
+        }
+
+        function forceInject() {
+            log('🔧 Force injecting AI toggle...');
+            if (window.FixedAI) {
+                window.FixedAI.inject();
+                setTimeout(checkStatus, 500);
+            } else {
+                log('❌ FixedAI system not available');
+            }
+        }
+
+        function updateStatusDisplay() {
+            const features = ['email', 'calendar', 'chat', 'notifications'];
+            features.forEach(feature => {
+                const statusEl = document.getElementById(`${feature}-status`);
+                const stored = localStorage.getItem(`ai_${feature}_enabled`);
+                const enabled = stored === null ? true : stored === '1';
+                
+                statusEl.textContent = enabled ? 'ON' : 'OFF';
+                statusEl.className = `badge bg-${enabled ? 'success' : 'secondary'}`;
+            });
+        }
+
+        // Listen for AI toggle events
+        window.addEventListener('masterAIToggle', function(e) {
+            log(`🔔 Master AI Toggle Event: ${e.detail.enabled ? 'ENABLED' : 'DISABLED'}`);
+            updateStatusDisplay();
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            log('🚀 Page loaded, initializing tests...');
+            
+            setTimeout(() => {
+                log(`🔍 FixedAI available: ${!!window.FixedAI}`);
+                checkStatus();
+            }, 1000);
+            
+            // Update status display initially
+            updateStatusDisplay();
+        });
+    </script>
+    
+    <!-- Load Fixed AI Toggle System -->
+    <script src="assets/js/fixed-ai-toggle.js"></script>
+</body>
+</html>
