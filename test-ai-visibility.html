@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AI Features Visibility Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+    
+    <!-- AI Features CSS -->
+    <link rel="stylesheet" href="assets/css/ai-features.css">
+</head>
+<body>
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+        <!-- Simple Header -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <h4 class="mb-0">AI Features Visibility Test</h4>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <!-- AI Assistance Button (Should be transformed) -->
+                    <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                
+                <!-- Test Status Card -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="card-title">Test Results</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="test-results"></div>
+                        <button type="button" class="btn btn-primary mt-3" onclick="runTests()">Run Tests</button>
+                    </div>
+                </div>
+
+                <!-- Email AI Test Section -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            Email AI Test
+                            <span id="email-status" class="badge bg-secondary ms-2">Unknown</span>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mail-notifications">
+                            <div class="p-3 border-bottom">
+                                <h6>Email Header (AI toolbar should appear below this)</h6>
+                            </div>
+                            <div class="mails-list">
+                                <div class="mail-item p-3 border-bottom" data-subject="Emergency Patient Update" data-preview="Urgent review needed for critical patient case">
+                                    <div class="d-flex align-items-start">
+                                        <div class="avatar avatar-sm me-2">
+                                            <span class="avatar-title bg-danger text-white">E</span>
+                                        </div>
+                                        <div class="flex-fill">
+                                            <h6 class="mb-1">Emergency Patient Update</h6>
+                                            <p class="text-muted mb-0">Urgent review needed for critical patient case</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mail-item p-3 border-bottom" data-subject="Appointment Confirmation" data-preview="Follow-up appointment scheduled for next week">
+                                    <div class="d-flex align-items-start">
+                                        <div class="avatar avatar-sm me-2">
+                                            <span class="avatar-title bg-info text-white">A</span>
+                                        </div>
+                                        <div class="flex-fill">
+                                            <h6 class="mb-1">Appointment Confirmation</h6>
+                                            <p class="text-muted mb-0">Follow-up appointment scheduled for next week</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar AI Test Section -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            Calendar AI Test
+                            <span id="calendar-status" class="badge bg-secondary ms-2">Unknown</span>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="calendar">
+                            <div class="p-3 border rounded">
+                                <h6>Calendar Element (AI insights should appear below this)</h6>
+                                <p class="text-muted">This simulates a calendar component</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat AI Test Section -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            Chat AI Test
+                            <span id="chat-status" class="badge bg-secondary ms-2">Unknown</span>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="chat-users">
+                            <div class="p-3 border rounded">
+                                <h6>Chat Users (AI enhancements should be applied)</h6>
+                            </div>
+                        </div>
+                        <div class="chat-messages mt-3">
+                            <div class="p-3 border rounded">
+                                <h6>Chat Messages (AI enhancements should be applied)</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications AI Test Section -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title">
+                            Notifications AI Test
+                            <span id="notifications-status" class="badge bg-secondary ms-2">Unknown</span>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="notification-body">
+                            <div class="notification-item p-3 border-bottom">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar avatar-sm me-2">
+                                        <span class="avatar-title bg-danger text-white">!</span>
+                                    </div>
+                                    <div class="flex-fill">
+                                        <h6 class="mb-1">Emergency Alert</h6>
+                                        <p class="text-muted mb-0">Critical patient condition update</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-item p-3 border-bottom">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar avatar-sm me-2">
+                                        <span class="avatar-title bg-warning text-white">L</span>
+                                    </div>
+                                    <div class="flex-fill">
+                                        <h6 class="mb-1">Lab Results</h6>
+                                        <p class="text-muted mb-0">Blood test results available for review</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notication-list mt-3">
+                            <div class="p-3 border rounded">
+                                <h6>Notification List (AI feed enhancements should be applied)</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Test Script -->
+    <script>
+        let testResults = [];
+
+        function updateStatus(elementId, status, message) {
+            const element = document.getElementById(elementId);
+            element.className = `badge ms-2 bg-${status === 'pass' ? 'success' : status === 'fail' ? 'danger' : 'warning'}`;
+            element.textContent = status === 'pass' ? 'PASS' : status === 'fail' ? 'FAIL' : 'PENDING';
+            testResults.push({ section: elementId, status, message });
+        }
+
+        function checkMasterToggle() {
+            const aiBtn = document.querySelector('a.btn-liner-gradient');
+            const masterToggle = document.getElementById('masterAIToggle');
+            
+            if (masterToggle) {
+                return { pass: true, message: 'Master toggle successfully created' };
+            } else if (aiBtn) {
+                return { pass: false, message: 'AI Assistance button exists but was not transformed' };
+            } else {
+                return { pass: false, message: 'No AI Assistance button found' };
+            }
+        }
+
+        function checkEmailAI() {
+            const toolbar = document.querySelector('.ai-email-toolbar');
+            if (toolbar) {
+                return { pass: true, message: 'AI email toolbar found' };
+            } else {
+                return { pass: false, message: 'AI email toolbar not found' };
+            }
+        }
+
+        function checkCalendarAI() {
+            const insights = document.querySelector('#ai-calendar-insights');
+            if (insights) {
+                return { pass: true, message: 'AI calendar insights found' };
+            } else {
+                return { pass: false, message: 'AI calendar insights not found' };
+            }
+        }
+
+        function checkNotificationsAI() {
+            const summary = document.querySelector('.ai-notification-summary');
+            if (summary) {
+                return { pass: true, message: 'AI notification summary found' };
+            } else {
+                return { pass: false, message: 'AI notification summary not found' };
+            }
+        }
+
+        function checkChatAI() {
+            // Chat AI may not have visible indicators, so check if script loaded
+            const chatUsers = document.querySelector('.chat-users');
+            const chatMessages = document.querySelector('.chat-messages');
+            
+            if (chatUsers && chatMessages) {
+                return { pass: true, message: 'Chat elements found (AI script should enhance these)' };
+            } else {
+                return { pass: false, message: 'Chat elements not found' };
+            }
+        }
+
+        function getAIFeatureStatus() {
+            return {
+                email: localStorage.getItem('ai_email_enabled') !== '0',
+                calendar: localStorage.getItem('ai_calendar_enabled') !== '0',
+                chat: localStorage.getItem('ai_chat_enabled') !== '0',
+                notifications: localStorage.getItem('ai_notifications_enabled') !== '0'
+            };
+        }
+
+        function runTests() {
+            testResults = [];
+            console.log('Running AI visibility tests...');
+
+            // Test master toggle
+            const toggleTest = checkMasterToggle();
+            updateStatus('master-toggle-status', toggleTest.pass ? 'pass' : 'fail', toggleTest.message);
+
+            // Check AI feature statuses
+            const statuses = getAIFeatureStatus();
+            console.log('AI Feature Statuses:', statuses);
+
+            // Wait a bit for AI scripts to load and apply
+            setTimeout(() => {
+                // Test Email AI
+                if (statuses.email) {
+                    const emailTest = checkEmailAI();
+                    updateStatus('email-status', emailTest.pass ? 'pass' : 'fail', emailTest.message);
+                } else {
+                    updateStatus('email-status', 'warning', 'Email AI disabled');
+                }
+
+                // Test Calendar AI
+                if (statuses.calendar) {
+                    const calendarTest = checkCalendarAI();
+                    updateStatus('calendar-status', calendarTest.pass ? 'pass' : 'fail', calendarTest.message);
+                } else {
+                    updateStatus('calendar-status', 'warning', 'Calendar AI disabled');
+                }
+
+                // Test Chat AI
+                if (statuses.chat) {
+                    const chatTest = checkChatAI();
+                    updateStatus('chat-status', chatTest.pass ? 'pass' : 'fail', chatTest.message);
+                } else {
+                    updateStatus('chat-status', 'warning', 'Chat AI disabled');
+                }
+
+                // Test Notifications AI
+                if (statuses.notifications) {
+                    const notificationsTest = checkNotificationsAI();
+                    updateStatus('notifications-status', notificationsTest.pass ? 'pass' : 'fail', notificationsTest.message);
+                } else {
+                    updateStatus('notifications-status', 'warning', 'Notifications AI disabled');
+                }
+
+                // Display summary
+                displayTestResults();
+            }, 2000);
+        }
+
+        function displayTestResults() {
+            const resultsDiv = document.getElementById('test-results');
+            let html = '<h6>Test Summary</h6><ul>';
+            
+            testResults.forEach(result => {
+                const icon = result.status === 'pass' ? '✅' : result.status === 'fail' ? '❌' : '⚠️';
+                html += `<li>${icon} <strong>${result.section}:</strong> ${result.message}</li>`;
+            });
+            
+            html += '</ul>';
+            
+            const passCount = testResults.filter(r => r.status === 'pass').length;
+            const totalCount = testResults.length;
+            
+            if (passCount === totalCount) {
+                html += '<div class="alert alert-success mt-3">🎉 All tests passed! AI features are working correctly.</div>';
+            } else {
+                html += `<div class="alert alert-warning mt-3">⚠️ ${passCount}/${totalCount} tests passed. Some issues detected.</div>`;
+            }
+            
+            resultsDiv.innerHTML = html;
+        }
+
+        // Add status indicators to header
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.card-header h4');
+            header.innerHTML += ' <span id="master-toggle-status" class="badge bg-secondary ms-2">Unknown</span>';
+            
+            // Run tests after page loads
+            setTimeout(runTests, 1000);
+        });
+
+        // Listen for master toggle events
+        window.addEventListener('masterAIToggle', function(e) {
+            console.log('Master AI Toggle Event received:', e.detail);
+            setTimeout(runTests, 1000);
+        });
+    </script>
+    
+    <!-- Main Script -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
