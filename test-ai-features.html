@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AI Features Test & Enable</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .test-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-left: 4px solid #007bff;
+            border-radius: 8px;
+        }
+        .status-good { color: #28a745; font-weight: bold; }
+        .status-bad { color: #dc3545; font-weight: bold; }
+        .status-warn { color: #ffc107; font-weight: bold; }
+        .console-output {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            height: 300px;
+            overflow-y: auto;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>🤖 AI Features Test & Debug</h1>
+        
+        <div class="test-section">
+            <h3>Quick AI Enable</h3>
+            <p>Click the button below to enable all AI features and reload the page:</p>
+            <button class="btn btn-success btn-lg" onclick="enableAllAI()">
+                <i class="ti ti-brain"></i> Enable All AI Features
+            </button>
+            <button class="btn btn-info btn-lg ms-2" onclick="testCurrentPage()">
+                <i class="ti ti-refresh"></i> Test Current Page
+            </button>
+        </div>
+
+        <div class="test-section">
+            <h3>AI Loading Status</h3>
+            <div id="loading-status">
+                <p>Checking AI loading status...</p>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>Page Navigation Tests</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <button class="btn btn-outline-primary w-100 mb-2" onclick="testPage('email.html')">
+                        📧 Test Email AI
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-primary w-100 mb-2" onclick="testPage('appointment-calendar.html')">
+                        📅 Test Calendar AI
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-primary w-100 mb-2" onclick="testPage('chat.html')">
+                        💬 Test Chat AI
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-primary w-100 mb-2" onclick="testPage('notifications.html')">
+                        🔔 Test Notifications AI
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>Console Output</h3>
+            <div id="console-output" class="console-output">
+                <div>[System] Console monitoring started...</div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>Test Elements (Email Page Simulation)</h3>
+            <div class="mails-list" style="background: #e9ecef; padding: 1rem; margin: 1rem 0;">
+                <p><strong>.mails-list</strong> - Email list container (should trigger Email AI loading)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load scripts -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Console capture
+        const consoleOutput = document.getElementById('console-output');
+        const originalLog = console.log;
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            
+            const message = args.map(arg => 
+                typeof arg === 'object' ? JSON.stringify(arg) : String(arg)
+            ).join(' ');
+            
+            const div = document.createElement('div');
+            div.innerHTML = `[${new Date().toLocaleTimeString()}] ${message}`;
+            consoleOutput.appendChild(div);
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            
+            // Keep only last 30 messages
+            while (consoleOutput.children.length > 30) {
+                consoleOutput.removeChild(consoleOutput.firstChild);
+            }
+        };
+
+        function enableAllAI() {
+            console.log('🤖 Enabling all AI features...');
+            
+            // Enable all AI features
+            localStorage.setItem('ai_email_enabled', '1');
+            localStorage.setItem('ai_calendar_enabled', '1');
+            localStorage.setItem('ai_chat_enabled', '1');
+            localStorage.setItem('ai_notifications_enabled', '1');
+            
+            console.log('✅ All AI features enabled in localStorage');
+            console.log('🔄 Reloading page in 2 seconds...');
+            
+            setTimeout(() => {
+                location.reload();
+            }, 2000);
+        }
+
+        function testCurrentPage() {
+            console.log('🧪 Testing current page...');
+            updateLoadingStatus();
+            
+            // Check if AI scripts are working
+            setTimeout(() => {
+                checkAIElements();
+            }, 1000);
+        }
+
+        function testPage(page) {
+            console.log(`🔗 Navigating to ${page} for testing...`);
+            window.location.href = page;
+        }
+
+        function updateLoadingStatus() {
+            const statusDiv = document.getElementById('loading-status');
+            
+            // Check localStorage
+            const emailAI = localStorage.getItem('ai_email_enabled') === '1';
+            const calendarAI = localStorage.getItem('ai_calendar_enabled') === '1';
+            const chatAI = localStorage.getItem('ai_chat_enabled') === '1';
+            const notificationsAI = localStorage.getItem('ai_notifications_enabled') === '1';
+            
+            // Check loaded scripts
+            const aiCSS = document.querySelector('link[href*="ai-features.css"]');
+            const aiToggle = document.querySelector('script[src*="ai-toggle.js"]');
+            const emailScript = document.querySelector('script[src*="ai-email-insights.js"]');
+            const chatScript = document.querySelector('script[src*="unified-chat.js"]');
+            
+            // Check DOM elements
+            const mailsList = document.querySelector('.mails-list');
+            const calendar = document.querySelector('#calendar');
+            const chatUsers = document.querySelector('.chat-users');
+            
+            statusDiv.innerHTML = `
+                <h5>LocalStorage Settings:</h5>
+                <p>📧 Email AI: <span class="${emailAI ? 'status-good' : 'status-bad'}">${emailAI ? 'Enabled' : 'Disabled'}</span></p>
+                <p>📅 Calendar AI: <span class="${calendarAI ? 'status-good' : 'status-bad'}">${calendarAI ? 'Enabled' : 'Disabled'}</span></p>
+                <p>💬 Chat AI: <span class="${chatAI ? 'status-good' : 'status-bad'}">${chatAI ? 'Enabled' : 'Disabled'}</span></p>
+                <p>🔔 Notifications AI: <span class="${notificationsAI ? 'status-good' : 'status-bad'}">${notificationsAI ? 'Enabled' : 'Disabled'}</span></p>
+                
+                <h5>Loaded Scripts:</h5>
+                <p>🎨 AI CSS: <span class="${aiCSS ? 'status-good' : 'status-bad'}">${aiCSS ? 'Loaded' : 'Missing'}</span></p>
+                <p>🔧 AI Toggle: <span class="${aiToggle ? 'status-good' : 'status-bad'}">${aiToggle ? 'Loaded' : 'Missing'}</span></p>
+                <p>📧 Email Script: <span class="${emailScript ? 'status-good' : 'status-warn'}">${emailScript ? 'Loaded' : 'Not Loaded'}</span></p>
+                <p>💬 Chat Script: <span class="${chatScript ? 'status-good' : 'status-warn'}">${chatScript ? 'Loaded' : 'Not Loaded'}</span></p>
+                
+                <h5>DOM Elements:</h5>
+                <p>📧 Mails List: <span class="${mailsList ? 'status-good' : 'status-warn'}">${mailsList ? 'Found' : 'Not Found'}</span></p>
+                <p>📅 Calendar: <span class="${calendar ? 'status-good' : 'status-warn'}">${calendar ? 'Found' : 'Not Found'}</span></p>
+                <p>💬 Chat Users: <span class="${chatUsers ? 'status-good' : 'status-warn'}">${chatUsers ? 'Found' : 'Not Found'}</span></p>
+            `;
+        }
+
+        function checkAIElements() {
+            console.log('🔍 Checking for AI-generated elements...');
+            
+            // Check for AI elements that should be injected
+            const aiToggleEmail = document.getElementById('aiToggleEmail');
+            const aiTriageContainer = document.getElementById('ai-inbox-triage-container');
+            const smartSuggestions = document.querySelector('.smart-suggestions-panel');
+            const aiToolbar = document.querySelector('.ai-toolbar');
+            
+            console.log('📧 Email AI Toggle:', !!aiToggleEmail);
+            console.log('📧 Triage Container:', !!aiTriageContainer);
+            console.log('📅 Smart Suggestions Panel:', !!smartSuggestions);
+            console.log('🔧 AI Toolbar:', !!aiToolbar);
+            
+            if (!aiToggleEmail && !aiTriageContainer && !smartSuggestions && !aiToolbar) {
+                console.log('⚠️ No AI elements found. AI scripts may have errors or need manual triggering.');
+            }
+        }
+
+        // Auto-run status check
+        setTimeout(() => {
+            console.log('🚀 AI test page loaded');
+            updateLoadingStatus();
+        }, 500);
+
+        // Update status every 3 seconds
+        setInterval(updateLoadingStatus, 3000);
+    </script>
+</body>
+</html>
