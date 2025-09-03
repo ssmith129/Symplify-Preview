@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AI Toggle System Test</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .test-container {
+            background: #f8f9fa;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-left: 4px solid #007bff;
+            border-radius: 8px;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-on { background-color: #28a745; }
+        .status-off { background-color: #dc3545; }
+        .status-loading { background-color: #ffc107; }
+        .console-monitor {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            height: 200px;
+            overflow-y: auto;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card.enabled {
+            border-color: #28a745;
+            background-color: #f8fff8;
+        }
+        .feature-card.disabled {
+            border-color: #dc3545;
+            background-color: #fff8f8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simulate header structure for AI toggle injection -->
+    <header class="navbar-header">
+        <div class="page-container topbar-menu">
+            <div class="d-flex align-items-center gap-2">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.svg" alt="Logo" class="img-fluid">
+                </a>
+                
+                <div class="d-flex align-items-center ms-auto">
+                    <!-- AI Assistance Button (existing) -->
+                    <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">
+                        AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i>
+                    </a>
+                    
+                    <!-- AI Toggle controls will be injected here by the script -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <h1>🤖 AI Toggle System Test</h1>
+        <p class="lead">Testing the enhanced AI toggle management system with default-enabled features.</p>
+        
+        <div class="test-container">
+            <h3>🎯 Test Status</h3>
+            <div id="test-status" class="mb-3">
+                <div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>
+                <span>Running tests...</span>
+            </div>
+            <div id="test-results"></div>
+        </div>
+
+        <div class="test-container">
+            <h3>📊 AI Features Status</h3>
+            <div class="row" id="features-status">
+                <div class="col-md-3 mb-3">
+                    <div class="card feature-card" id="email-status">
+                        <div class="card-body text-center">
+                            <i class="ti ti-mail fs-36 text-primary mb-2"></i>
+                            <h6>Email AI</h6>
+                            <span class="status-indicator status-loading"></span>
+                            <span class="status-text">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card feature-card" id="calendar-status">
+                        <div class="card-body text-center">
+                            <i class="ti ti-calendar fs-36 text-primary mb-2"></i>
+                            <h6>Calendar AI</h6>
+                            <span class="status-indicator status-loading"></span>
+                            <span class="status-text">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card feature-card" id="chat-status">
+                        <div class="card-body text-center">
+                            <i class="ti ti-messages fs-36 text-primary mb-2"></i>
+                            <h6>Chat AI</h6>
+                            <span class="status-indicator status-loading"></span>
+                            <span class="status-text">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card feature-card" id="notifications-status">
+                        <div class="card-body text-center">
+                            <i class="ti ti-bell fs-36 text-primary mb-2"></i>
+                            <h6>Notifications AI</h6>
+                            <span class="status-indicator status-loading"></span>
+                            <span class="status-text">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>🔧 Toggle Controls Test</h3>
+            <div class="alert alert-info">
+                <strong>Instructions:</strong> The AI toggle controls should appear in the header above. 
+                Test the master toggle and individual feature toggles in the settings modal.
+            </div>
+            <div class="d-flex gap-2 mb-3">
+                <button class="btn btn-success" onclick="testEnableAll()">Test Enable All</button>
+                <button class="btn btn-warning" onclick="testDisableAll()">Test Disable All</button>
+                <button class="btn btn-info" onclick="refreshStatus()">Refresh Status</button>
+                <button class="btn btn-secondary" onclick="clearAllSettings()">Clear Settings</button>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>🖥️ Console Monitor</h3>
+            <div id="console-monitor" class="console-monitor">
+                <div>[System] Console monitor started...</div>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>🧪 Test Elements</h3>
+            <p>These elements simulate various page types for AI feature detection:</p>
+            
+            <!-- Email elements -->
+            <div class="mails-list bg-light p-3 mb-2 rounded">
+                <strong>.mails-list</strong> - Email page element
+            </div>
+            
+            <!-- Calendar elements -->
+            <div id="calendar" class="bg-light p-3 mb-2 rounded">
+                <strong>#calendar</strong> - Calendar page element
+            </div>
+            
+            <!-- Chat elements -->
+            <div class="chat-users bg-light p-3 mb-2 rounded">
+                <strong>.chat-users</strong> - Chat page element
+            </div>
+            
+            <!-- Notifications elements -->
+            <div class="notication-list bg-light p-3 mb-2 rounded">
+                <strong>.notication-list</strong> - Notifications page element
+            </div>
+            
+            <div class="notification-body bg-light p-3 mb-2 rounded">
+                <strong>.notification-body</strong> - Notification dropdown element
+            </div>
+        </div>
+    </div>
+
+    <!-- Load scripts -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Console capture for monitoring
+        const consoleMonitor = document.getElementById('console-monitor');
+        const originalLog = console.log;
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            
+            const message = args.map(arg => 
+                typeof arg === 'object' ? JSON.stringify(arg) : String(arg)
+            ).join(' ');
+            
+            const div = document.createElement('div');
+            div.innerHTML = `[${new Date().toLocaleTimeString()}] ${message}`;
+            consoleMonitor.appendChild(div);
+            consoleMonitor.scrollTop = consoleMonitor.scrollHeight;
+            
+            // Keep only last 20 messages
+            while (consoleMonitor.children.length > 20) {
+                consoleMonitor.removeChild(consoleMonitor.firstChild);
+            }
+        };
+
+        // AI Features tracking
+        const AI_FEATURES = {
+            email: { storageKey: 'ai_email_enabled', element: '#email-status' },
+            calendar: { storageKey: 'ai_calendar_enabled', element: '#calendar-status' },
+            chat: { storageKey: 'ai_chat_enabled', element: '#chat-status' },
+            notifications: { storageKey: 'ai_notifications_enabled', element: '#notifications-status' }
+        };
+
+        function updateFeatureStatus() {
+            Object.keys(AI_FEATURES).forEach(feature => {
+                const config = AI_FEATURES[feature];
+                const enabled = localStorage.getItem(config.storageKey) !== '0';
+                const element = document.querySelector(config.element);
+                
+                if (element) {
+                    const indicator = element.querySelector('.status-indicator');
+                    const statusText = element.querySelector('.status-text');
+                    
+                    indicator.className = `status-indicator ${enabled ? 'status-on' : 'status-off'}`;
+                    statusText.textContent = enabled ? 'Enabled' : 'Disabled';
+                    element.className = `card feature-card ${enabled ? 'enabled' : 'disabled'}`;
+                }
+            });
+        }
+
+        function refreshStatus() {
+            console.log('🔄 Refreshing AI feature status...');
+            updateFeatureStatus();
+            runTests();
+        }
+
+        function testEnableAll() {
+            console.log('🟢 Testing enable all features...');
+            if (window.AIToggle) {
+                window.AIToggle.setMasterStatus(true);
+            } else {
+                Object.keys(AI_FEATURES).forEach(feature => {
+                    localStorage.setItem(AI_FEATURES[feature].storageKey, '1');
+                });
+                updateFeatureStatus();
+            }
+        }
+
+        function testDisableAll() {
+            console.log('🔴 Testing disable all features...');
+            if (window.AIToggle) {
+                window.AIToggle.setMasterStatus(false);
+            } else {
+                Object.keys(AI_FEATURES).forEach(feature => {
+                    localStorage.setItem(AI_FEATURES[feature].storageKey, '0');
+                });
+                updateFeatureStatus();
+            }
+        }
+
+        function clearAllSettings() {
+            console.log('🗑️ Clearing all AI settings...');
+            Object.keys(AI_FEATURES).forEach(feature => {
+                localStorage.removeItem(AI_FEATURES[feature].storageKey);
+            });
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
+        }
+
+        function runTests() {
+            const testStatus = document.getElementById('test-status');
+            const testResults = document.getElementById('test-results');
+            
+            console.log('🧪 Running AI toggle system tests...');
+            
+            const tests = [
+                {
+                    name: 'AI Toggle Enhanced Script Loaded',
+                    test: () => typeof window.AIToggle !== 'undefined',
+                    expected: true
+                },
+                {
+                    name: 'Master Toggle UI Present',
+                    test: () => !!document.getElementById('masterAIToggle'),
+                    expected: true
+                },
+                {
+                    name: 'AI Settings Modal Present',
+                    test: () => !!document.getElementById('aiSettingsModal'),
+                    expected: true
+                },
+                {
+                    name: 'Default Settings Initialized',
+                    test: () => Object.keys(AI_FEATURES).every(feature => 
+                        localStorage.getItem(AI_FEATURES[feature].storageKey) !== null
+                    ),
+                    expected: true
+                },
+                {
+                    name: 'Features Enabled by Default',
+                    test: () => Object.keys(AI_FEATURES).every(feature => 
+                        localStorage.getItem(AI_FEATURES[feature].storageKey) === '1'
+                    ),
+                    expected: true
+                }
+            ];
+
+            const results = tests.map(test => ({
+                ...test,
+                result: test.test(),
+                passed: test.test() === test.expected
+            }));
+
+            const allPassed = results.every(r => r.passed);
+            
+            testStatus.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <i class="ti ti-${allPassed ? 'check-circle text-success' : 'x-circle text-danger'} me-2"></i>
+                    <span class="fw-bold">${allPassed ? 'All Tests Passed' : 'Some Tests Failed'}</span>
+                </div>
+            `;
+
+            testResults.innerHTML = `
+                <div class="table-responsive">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Test</th>
+                                <th>Result</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${results.map(r => `
+                                <tr class="${r.passed ? 'table-success' : 'table-danger'}">
+                                    <td>${r.name}</td>
+                                    <td>${r.result}</td>
+                                    <td>
+                                        <i class="ti ti-${r.passed ? 'check' : 'x'} text-${r.passed ? 'success' : 'danger'}"></i>
+                                        ${r.passed ? 'PASS' : 'FAIL'}
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+
+            console.log('✅ Tests completed:', allPassed ? 'All passed' : 'Some failed');
+        }
+
+        // Initialize when ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 AI Toggle System Test Page loaded');
+            
+            setTimeout(() => {
+                refreshStatus();
+            }, 1000);
+            
+            // Update status every 3 seconds
+            setInterval(updateFeatureStatus, 3000);
+        });
+
+        // Listen for AI feature toggle events
+        window.addEventListener('aiFeatureToggle', function(e) {
+            console.log('🔄 AI Feature toggled:', e.detail);
+            updateFeatureStatus();
+        });
+    </script>
+</body>
+</html>
