@@ -1313,31 +1313,74 @@ Template Name: Symplify - Bootstrap Admin Template
 		// Always load AI toggle manager
 		load('assets/js/ai-toggle.js');
 		// Page-aware loaders
-		if (document.querySelector('.notification-body')) load('assets/js/ai-notifications.js');
+		console.log('[AI Loader] Checking page elements...');
+
+		if (document.querySelector('.notification-body')) {
+			console.log('[AI Loader] Found .notification-body, loading ai-notifications.js');
+			load('assets/js/ai-notifications.js');
+		} else {
+			console.log('[AI Loader] .notification-body not found');
+		}
+
 		if (document.getElementById('calendar')) {
+			console.log('[AI Loader] Found #calendar, loading appointment calendar AI');
 			load('assets/js/ai-appointment-calendar.js');
 			load('assets/js/smart-appointment-calendar.js');
+		} else {
+			console.log('[AI Loader] #calendar not found');
 		}
+
 		// Respect per-page AI toggles for email and triage
 		var aiEmailOn = localStorage.getItem('ai_email_enabled') === '1';
-		if (aiEmailOn && document.querySelector('.mails-list')) load('assets/js/ai-email-insights.js');
-		if (aiEmailOn && document.getElementById('ai-inbox-triage-container')) load('assets/js/ai-inbox-triage.js');
+		console.log('[AI Loader] Email AI enabled:', aiEmailOn);
+
+		if (aiEmailOn && document.querySelector('.mails-list')) {
+			console.log('[AI Loader] Email AI enabled and .mails-list found, loading email insights');
+			load('assets/js/ai-email-insights.js');
+		} else {
+			console.log('[AI Loader] Email AI not loaded - enabled:', aiEmailOn, 'mails-list found:', !!document.querySelector('.mails-list'));
+		}
+
+		if (aiEmailOn && document.getElementById('ai-inbox-triage-container')) {
+			console.log('[AI Loader] Email AI enabled and triage container found, loading inbox triage');
+			load('assets/js/ai-inbox-triage.js');
+		} else {
+			console.log('[AI Loader] Inbox triage not loaded - enabled:', aiEmailOn, 'container found:', !!document.getElementById('ai-inbox-triage-container'));
+		}
+
 		// Unified Chat enhancements
 		if (document.querySelector('.chat-users') || document.querySelector('.chat-messages')) {
+			console.log('[AI Loader] Found chat elements, loading unified chat');
 			load('assets/js/unified-chat.js');
+		} else {
+			console.log('[AI Loader] Chat elements not found');
 		}
+
 		// Notifications feed enhancements
 		if (document.querySelector('.notication-list')) {
+			console.log('[AI Loader] Found .notication-list, loading notifications feed');
 			load('assets/js/ai-notifications-feed.js');
+		} else {
+			console.log('[AI Loader] .notication-list not found');
 		}
+
 		// Notification settings enhancements
 		if (document.querySelector('title') && (document.title||'').toLowerCase().includes('notifications settings')) {
+			console.log('[AI Loader] Notifications settings page detected, loading notification settings');
 			load('assets/js/ai-notification-settings.js');
+		} else {
+			console.log('[AI Loader] Not notifications settings page, title:', document.title);
 		}
+
 		// Integrations onboarding workflow
 		if (document.querySelector('title') && (document.title||'').toLowerCase().includes('integrations settings')) {
+			console.log('[AI Loader] Integrations settings page detected, loading onboarding workflow');
 			load('assets/js/ai-onboarding-workflow.js');
+		} else {
+			console.log('[AI Loader] Not integrations settings page, title:', document.title);
 		}
+
+		console.log('[AI Loader] AI detection complete');
 	});
 
 })();
