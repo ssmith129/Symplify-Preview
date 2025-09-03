@@ -275,7 +275,10 @@
     getStatus: getPageAIStatus,
     getCurrentConfig: getCurrentPageConfig,
     configs: PAGE_AI_CONFIGS,
-    reinitialize: initializePageSpecificToggles
+    reinitialize: function() {
+      initialized = false;
+      initializePageSpecificToggles();
+    }
   };
 
   console.log('[Page AI] Page-specific toggle system loaded');
