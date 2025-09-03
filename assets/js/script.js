@@ -1363,11 +1363,11 @@ Template Name: Symplify - Bootstrap Admin Template
 		}
 
 		// Unified Chat enhancements
-		if (document.querySelector('.chat-users') || document.querySelector('.chat-messages')) {
-			console.log('[AI Loader] Found chat elements, loading unified chat');
+		if (aiChatOn && (document.querySelector('.chat-users') || document.querySelector('.chat-messages'))) {
+			console.log('[AI Loader] Found chat elements and chat AI enabled, loading unified chat');
 			load('assets/js/unified-chat.js');
 		} else {
-			console.log('[AI Loader] Chat elements not found');
+			console.log('[AI Loader] Chat AI not loaded - enabled:', aiChatOn, 'elements found:', !!(document.querySelector('.chat-users') || document.querySelector('.chat-messages')));
 		}
 
 		// Notifications feed enhancements
