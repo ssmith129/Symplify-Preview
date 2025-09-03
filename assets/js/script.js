@@ -1340,14 +1340,13 @@ Template Name: Symplify - Bootstrap Admin Template
 			console.log('[AI Loader] #calendar not found');
 		}
 
-		// Respect per-page AI toggles for email and triage (default enabled)
-		var aiEmailSetting = localStorage.getItem('ai_email_enabled');
-		var aiEmailOn = aiEmailSetting === null ? true : aiEmailSetting === '1';
-		if (aiEmailSetting === null) {
-			localStorage.setItem('ai_email_enabled', '1');
-			console.log('[AI Loader] Email AI enabled by default');
-		}
-		console.log('[AI Loader] Email AI enabled:', aiEmailOn);
+		// Check AI feature settings (now defaults to enabled)
+		var aiEmailOn = localStorage.getItem('ai_email_enabled') !== '0';
+		var aiChatOn = localStorage.getItem('ai_chat_enabled') !== '0';
+		var aiNotificationsOn = localStorage.getItem('ai_notifications_enabled') !== '0';
+		var aiCalendarOn = localStorage.getItem('ai_calendar_enabled') !== '0';
+
+		console.log('[AI Loader] Feature status - Email:', aiEmailOn, 'Chat:', aiChatOn, 'Notifications:', aiNotificationsOn, 'Calendar:', aiCalendarOn);
 
 		if (aiEmailOn && document.querySelector('.mails-list')) {
 			console.log('[AI Loader] Email AI enabled and .mails-list found, loading email insights');
