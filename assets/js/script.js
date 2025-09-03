@@ -1312,6 +1312,16 @@ Template Name: Symplify - Bootstrap Admin Template
 		ensureAICSS();
 		// Always load enhanced AI toggle manager
 		load('assets/js/ai-toggle-enhanced.js');
+
+		// Initialize default AI settings (first-time users)
+		const aiFeatures = ['ai_email_enabled', 'ai_calendar_enabled', 'ai_chat_enabled', 'ai_notifications_enabled'];
+		aiFeatures.forEach(function(feature) {
+			if (localStorage.getItem(feature) === null) {
+				localStorage.setItem(feature, '1');
+				console.log('[AI Loader] Initialized', feature, 'as enabled');
+			}
+		});
+
 		// Page-aware loaders
 		console.log('[AI Loader] Checking page elements...');
 
