@@ -1325,19 +1325,19 @@ Template Name: Symplify - Bootstrap Admin Template
 		// Page-aware loaders
 		console.log('[AI Loader] Checking page elements...');
 
-		if (document.querySelector('.notification-body')) {
-			console.log('[AI Loader] Found .notification-body, loading ai-notifications.js');
+		if (aiNotificationsOn && document.querySelector('.notification-body')) {
+			console.log('[AI Loader] Found .notification-body and notifications AI enabled, loading ai-notifications.js');
 			load('assets/js/ai-notifications.js');
 		} else {
-			console.log('[AI Loader] .notification-body not found');
+			console.log('[AI Loader] Notifications AI not loaded - enabled:', aiNotificationsOn, '.notification-body found:', !!document.querySelector('.notification-body'));
 		}
 
-		if (document.getElementById('calendar')) {
-			console.log('[AI Loader] Found #calendar, loading appointment calendar AI');
+		if (aiCalendarOn && document.getElementById('calendar')) {
+			console.log('[AI Loader] Found #calendar and calendar AI enabled, loading appointment calendar AI');
 			load('assets/js/ai-appointment-calendar.js');
 			load('assets/js/smart-appointment-calendar.js');
 		} else {
-			console.log('[AI Loader] #calendar not found');
+			console.log('[AI Loader] Calendar AI not loaded - enabled:', aiCalendarOn, '#calendar found:', !!document.getElementById('calendar'));
 		}
 
 		// Check AI feature settings (now defaults to enabled)
