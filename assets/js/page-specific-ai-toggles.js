@@ -264,12 +264,9 @@
     setTimeout(initializePageSpecificToggles, 100);
   }
 
-  // Try initialization after delays for dynamic content
-  setTimeout(initializePageSpecificToggles, 500);
-  setTimeout(initializePageSpecificToggles, 1000);
-
   // Listen for page changes (for SPAs)
   window.addEventListener('popstate', function() {
+    initialized = false;
     setTimeout(initializePageSpecificToggles, 200);
   });
 
