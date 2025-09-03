@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AI Debug Console</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .debug-console {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 400px;
+            max-height: 90vh;
+            background: rgba(0,0,0,0.95);
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            padding: 15px;
+            border: 2px solid #00ff00;
+            border-radius: 8px;
+            z-index: 10000;
+            overflow-y: auto;
+        }
+        .debug-header {
+            color: #ffff00;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 5px;
+        }
+        .debug-section {
+            margin: 10px 0;
+            padding: 5px 0;
+            border-bottom: 1px solid #333;
+        }
+        .status-ok { color: #00ff00; }
+        .status-warn { color: #ffaa00; }
+        .status-error { color: #ff4444; }
+        .debug-controls {
+            margin: 10px 0;
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .debug-btn {
+            background: #333;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 4px 8px;
+            font-size: 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .debug-btn:hover {
+            background: #00ff00;
+            color: #000;
+        }
+        .minimized {
+            height: 40px;
+            overflow: hidden;
+        }
+        .minimize-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+            color: #ffff00;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="debugConsole" class="debug-console">
+        <button class="minimize-btn" onclick="toggleConsole()">−</button>
+        <div class="debug-header">🤖 AI Debug Console v1.0</div>
+        
+        <div class="debug-controls">
+            <button class="debug-btn" onclick="runFullDiagnostic()">Full Scan</button>
+            <button class="debug-btn" onclick="enableEmailAI()">Enable Email AI</button>
+            <button class="debug-btn" onclick="disableEmailAI()">Disable Email AI</button>
+            <button class="debug-btn" onclick="clearAIStorage()">Clear Storage</button>
+            <button class="debug-btn" onclick="injectAIFeatures()">Force Inject</button>
+        </div>
+        
+        <div id="debugOutput">
+            <div class="debug-section">
+                <div class="status-warn">⏳ Initializing debug console...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h1>AI Debug Console - Live Page Analysis</h1>
+        <p>This debug console is now running on the page. Check the floating console on the right →</p>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Click "Full Scan" to analyze current page</li>
+            <li>Try "Enable Email AI" if on email page</li>
+            <li>Watch console output for detailed diagnostics</li>
+            <li>Check browser developer console for additional logs</li>
+        </ol>
+    </div>
+
+    <script>
+        let isMinimized = false;
+        let debugOutput = document.getElementById('debugOutput');
+        
+        function log(message, type = 'info') {
+            const colors = {
+                'info': 'status-ok',
+                'warn': 'status-warn', 
+                'error': 'status-error'
+            };
+            
+            const div = document.createElement('div');
+            div.className = `debug-section ${colors[type]}`;
+            div.innerHTML = `[${new Date().toLocaleTimeString()}] ${message}`;
+            debugOutput.appendChild(div);
+            debugOutput.scrollTop = debugOutput.scrollHeight;
+            
+            // Keep only last 50 messages
+            while (debugOutput.children.length > 50) {
+                debugOutput.removeChild(debugOutput.firstChild);
+            }
+        }
+
+        function toggleConsole() {
+            const console = document.getElementById('debugConsole');
+            const btn = console.querySelector('.minimize-btn');
+            isMinimized = !isMinimized;
+            
+            if (isMinimized) {
+                console.classList.add('minimized');
+                btn.textContent = '+';
+            } else {
+                console.classList.remove('minimized');
+                btn.textContent = '−';
+            }
+        }
+
+        function runFullDiagnostic() {
+            log('🔍 RUNNING FULL AI DIAGNOSTIC...', 'warn');
+            
+            // Check current page
+            const currentPage = window.location.pathname.split('/').pop();
+            log(`📄 Current Page: ${currentPage}`);
+            
+            // Check if main script is loaded
+            const mainScript = document.querySelector('script[src*="script.js"]');
+            log(`📜 Main Script: ${mainScript ? '✅ Loaded' : '❌ Missing'}`, mainScript ? 'info' : 'error');
+            
+            // Check AI CSS
+            const aiCSS = document.querySelector('link[href*="ai-features.css"]');
+            log(`🎨 AI CSS: ${aiCSS ? '✅ Loaded' : '❌ Missing'}`, aiCSS ? 'info' : 'error');
+            
+            // Check AI Scripts
+            const aiScripts = [
+                'ai-toggle.js',
+                'smart-appointment-calendar.js',
+                'ai-email-insights.js',
+                'ai-inbox-triage.js',
+                'unified-chat.js',
+                'ai-notifications-feed.js'
+            ];
+            
+            log('🔧 AI Scripts Status:');
+            aiScripts.forEach(script => {
+                const loaded = document.querySelector(`script[src*="${script}"]`);
+                log(`  ${script}: ${loaded ? '✅' : '❌'}`, loaded ? 'info' : 'warn');
+            });
+            
+            // Check DOM elements for detection
+            const elements = [
+                { name: 'Calendar (#calendar)', selector: '#calendar' },
+                { name: 'Mails List (.mails-list)', selector: '.mails-list' },
+                { name: 'Chat Users (.chat-users)', selector: '.chat-users' },
+                { name: 'Notifications (.notication-list)', selector: '.notication-list' },
+                { name: 'Notification Body (.notification-body)', selector: '.notification-body' }
+            ];
+            
+            log('🎯 DOM Element Detection:');
+            elements.forEach(el => {
+                const found = document.querySelector(el.selector);
+                log(`  ${el.name}: ${found ? '✅ Found' : '❌ Missing'}`, found ? 'info' : 'warn');
+            });
+            
+            // Check localStorage
+            log('💾 LocalStorage AI Settings:');
+            const aiKeys = Object.keys(localStorage).filter(k => k.includes('ai'));
+            if (aiKeys.length === 0) {
+                log('  No AI settings found', 'warn');
+            } else {
+                aiKeys.forEach(key => {
+                    log(`  ${key}: ${localStorage.getItem(key)}`);
+                });
+            }
+            
+            // Check for AI elements that should be injected
+            log('🤖 AI Feature Elements:');
+            const aiElements = [
+                { name: 'Email AI Toggle', selector: '#aiToggleEmail' },
+                { name: 'AI Inbox Triage Container', selector: '#ai-inbox-triage-container' },
+                { name: 'Calendar Suggestions Panel', selector: '.smart-suggestions-panel' },
+                { name: 'AI Toolbar', selector: '.ai-toolbar' }
+            ];
+            
+            aiElements.forEach(el => {
+                const found = document.querySelector(el.selector);
+                log(`  ${el.name}: ${found ? '✅ Present' : '❌ Missing'}`, found ? 'info' : 'warn');
+            });
+            
+            log('✅ DIAGNOSTIC COMPLETE', 'info');
+        }
+
+        function enableEmailAI() {
+            localStorage.setItem('ai_email_enabled', '1');
+            log('📧 Email AI enabled in localStorage', 'info');
+            log('🔄 Page reload required for changes to take effect', 'warn');
+            setTimeout(() => {
+                location.reload();
+            }, 2000);
+        }
+
+        function disableEmailAI() {
+            localStorage.setItem('ai_email_enabled', '0');
+            log('📧 Email AI disabled in localStorage', 'warn');
+        }
+
+        function clearAIStorage() {
+            const aiKeys = Object.keys(localStorage).filter(k => k.includes('ai'));
+            aiKeys.forEach(key => localStorage.removeItem(key));
+            log(`🗑️ Cleared ${aiKeys.length} AI storage keys`, 'warn');
+        }
+
+        function injectAIFeatures() {
+            log('💉 Attempting to force inject AI features...', 'warn');
+            
+            // Try to manually load AI CSS
+            if (!document.querySelector('link[href*="ai-features.css"]')) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'assets/css/ai-features.css';
+                document.head.appendChild(link);
+                log('  ✅ AI CSS injected');
+            }
+            
+            // Try to manually load AI toggle script
+            if (!document.querySelector('script[src*="ai-toggle.js"]')) {
+                const script = document.createElement('script');
+                script.src = 'assets/js/ai-toggle.js';
+                script.defer = true;
+                document.body.appendChild(script);
+                log('  ✅ AI toggle script injected');
+            }
+            
+            // If on email page, try to load email AI
+            if (document.querySelector('.mails-list')) {
+                if (!document.querySelector('script[src*="ai-email-insights.js"]')) {
+                    const script = document.createElement('script');
+                    script.src = 'assets/js/ai-email-insights.js';
+                    script.defer = true;
+                    document.body.appendChild(script);
+                    log('  ✅ Email AI script injected');
+                }
+            }
+            
+            log('💉 Force injection complete', 'info');
+        }
+
+        // Auto-run diagnostic on load
+        setTimeout(() => {
+            log('🚀 AI Debug Console Ready');
+            runFullDiagnostic();
+        }, 1000);
+
+        // Monitor console.log for AI Loader messages
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            
+            const message = args.join(' ');
+            if (message.includes('[AI Loader]')) {
+                log(`🔍 ${message}`);
+            }
+        };
+
+        log('🎯 Debug console initialized', 'info');
+    </script>
+</body>
+</html>
