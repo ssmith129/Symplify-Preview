@@ -1330,8 +1330,13 @@ Template Name: Symplify - Bootstrap Admin Template
 			console.log('[AI Loader] #calendar not found');
 		}
 
-		// Respect per-page AI toggles for email and triage
-		var aiEmailOn = localStorage.getItem('ai_email_enabled') === '1';
+		// Respect per-page AI toggles for email and triage (default enabled)
+		var aiEmailSetting = localStorage.getItem('ai_email_enabled');
+		var aiEmailOn = aiEmailSetting === null ? true : aiEmailSetting === '1';
+		if (aiEmailSetting === null) {
+			localStorage.setItem('ai_email_enabled', '1');
+			console.log('[AI Loader] Email AI enabled by default');
+		}
 		console.log('[AI Loader] Email AI enabled:', aiEmailOn);
 
 		if (aiEmailOn && document.querySelector('.mails-list')) {
