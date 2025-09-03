@@ -138,16 +138,31 @@
   function updateToggleState(toggleBtn, feature, enabled) {
     const iconClass = feature.icon;
     const colorClass = feature.color;
-    
+
     if (enabled) {
-      toggleBtn.className = `btn btn-${colorClass} me-3 d-lg-flex d-none page-ai-toggle ai-enabled`;
+      toggleBtn.className = `btn btn-${colorClass} me-3 d-flex page-ai-toggle ai-enabled`;
+      toggleBtn.style.cssText = `
+        min-width: 140px;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        z-index: 1000;
+        position: relative;
+      `;
       toggleBtn.innerHTML = `
         <i class="${iconClass} me-2"></i>
         <span class="toggle-text">${feature.name} ON</span>
       `;
       toggleBtn.setAttribute('title', `${feature.description} (Click to disable)`);
     } else {
-      toggleBtn.className = `btn btn-outline-${colorClass} me-3 d-lg-flex d-none page-ai-toggle ai-disabled`;
+      toggleBtn.className = `btn btn-outline-${colorClass} me-3 d-flex page-ai-toggle ai-disabled`;
+      toggleBtn.style.cssText = `
+        min-width: 140px;
+        font-weight: 600;
+        border-width: 2px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+        position: relative;
+      `;
       toggleBtn.innerHTML = `
         <i class="${iconClass} me-2"></i>
         <span class="toggle-text">${feature.name} OFF</span>
