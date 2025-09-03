@@ -1348,11 +1348,18 @@ Template Name: Symplify - Bootstrap Admin Template
 
 		console.log('[AI Loader] Feature status - Email:', aiEmailOn, 'Chat:', aiChatOn, 'Notifications:', aiNotificationsOn, 'Calendar:', aiCalendarOn);
 
-		if (aiEmailOn && document.querySelector('.mails-list')) {
-			console.log('[AI Loader] Email AI enabled and .mails-list found, loading email insights');
-			load('assets/js/ai-email-insights.js');
+		if (document.querySelector('.mails-list')) {
+			console.log('[AI Loader] Email page detected, loading email AI toggle injector');
+			load('assets/js/email-ai-toggle-injector.js');
+
+			if (aiEmailOn) {
+				console.log('[AI Loader] Email AI enabled, loading email insights');
+				load('assets/js/ai-email-insights.js');
+			} else {
+				console.log('[AI Loader] Email AI disabled, skipping email insights');
+			}
 		} else {
-			console.log('[AI Loader] Email AI not loaded - enabled:', aiEmailOn, 'mails-list found:', !!document.querySelector('.mails-list'));
+			console.log('[AI Loader] Email page not detected - .mails-list not found');
 		}
 
 		if (aiEmailOn && document.getElementById('ai-inbox-triage-container')) {
