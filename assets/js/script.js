@@ -1284,12 +1284,17 @@ Template Name: Symplify - Bootstrap Admin Template
 
 	// AI modules dynamic loader
 	document.addEventListener('DOMContentLoaded', function(){
+		console.log('[AI Loader] Starting AI features detection...');
+
 		function ensureAICSS(){
 			if (!document.querySelector('link[href="assets/css/ai-features.css"]')){
 				var l = document.createElement('link');
 				l.rel = 'stylesheet';
 				l.href = 'assets/css/ai-features.css';
 				document.head.appendChild(l);
+				console.log('[AI Loader] AI CSS injected');
+			} else {
+				console.log('[AI Loader] AI CSS already present');
 			}
 		}
 		function load(src){
@@ -1298,6 +1303,9 @@ Template Name: Symplify - Bootstrap Admin Template
 				s.src = src;
 				s.defer = true;
 				document.body.appendChild(s);
+				console.log('[AI Loader] Loaded script:', src);
+			} else {
+				console.log('[AI Loader] Script already present:', src);
 			}
 		}
 		// Inject CSS once
