@@ -1371,11 +1371,11 @@ Template Name: Symplify - Bootstrap Admin Template
 		}
 
 		// Notifications feed enhancements
-		if (document.querySelector('.notication-list')) {
-			console.log('[AI Loader] Found .notication-list, loading notifications feed');
+		if (aiNotificationsOn && document.querySelector('.notication-list')) {
+			console.log('[AI Loader] Found .notication-list and notifications AI enabled, loading notifications feed');
 			load('assets/js/ai-notifications-feed.js');
 		} else {
-			console.log('[AI Loader] .notication-list not found');
+			console.log('[AI Loader] Notifications feed not loaded - enabled:', aiNotificationsOn, '.notication-list found:', !!document.querySelector('.notication-list'));
 		}
 
 		// Notification settings enhancements
