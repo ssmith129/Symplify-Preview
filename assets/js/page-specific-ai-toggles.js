@@ -191,31 +191,48 @@
     }, 3000);
   }
 
+  let initialized = false;
+
   function initializePageSpecificToggles() {
+    if (initialized) {
+      console.log('[Page AI] Already initialized, skipping...');
+      return;
+    }
+
     console.log('[Page AI] Initializing page-specific AI toggles...');
-    
+
     // Remove global AI Assistance button
     const removedCount = removeGlobalAIButton();
     if (removedCount > 0) {
       console.log(`[Page AI] Removed ${removedCount} global AI Assistance button(s)`);
     }
-    
+
     // Check if this page should have a specific AI toggle
     const pageConfig = getCurrentPageConfig();
     if (pageConfig) {
       const { configKey, config } = pageConfig;
+
+      // Check if toggle already exists
+      if (document.getElementById(`${configKey}AIToggle`)) {
+        console.log('[Page AI] Toggle already exists, skipping creation');
+        initialized = true;
+        return;
+      }
+
       console.log(`[Page AI] Current page needs ${config.feature.name} toggle`);
-      
+
       // Set default if not set
       if (localStorage.getItem(config.feature.storageKey) === null) {
         localStorage.setItem(config.feature.storageKey, '1');
         console.log(`[Page AI] Initialized ${config.feature.name} as enabled`);
       }
-      
+
       // Create the page-specific toggle
       createPageSpecificToggle(configKey, config);
+      initialized = true;
     } else {
       console.log('[Page AI] No AI features available for this page');
+      initialized = true;
     }
   }
 
