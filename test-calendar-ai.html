@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AI Calendar Test</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        #calendar {
+            height: 300px;
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .test-status {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #007bff;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Calendar AI Test</h1>
+        
+        <div class="test-status">
+            <h4>Test Status: <span id="test-result">Testing...</span></h4>
+            <p id="test-details">Initializing test...</p>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5>Calendar Element</h5>
+                <div id="calendar">
+                    <div class="text-center">
+                        <i class="ti ti-calendar fs-48 text-muted"></i>
+                        <p class="text-muted mt-2">Calendar placeholder</p>
+                    </div>
+                </div>
+                <!-- AI suggestions panel should appear here after calendar -->
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5>Console Output</h5>
+                <div id="console-output" style="background: #000; color: #00ff00; padding: 1rem; font-family: monospace; height: 200px; overflow-y: auto;">
+                    <div>Waiting for console output...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load main script first -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Intercept console.log to display in our output
+        const consoleOutput = document.getElementById('console-output');
+        const originalLog = console.log;
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            
+            // Add to our visual console
+            const message = args.map(arg => 
+                typeof arg === 'object' ? JSON.stringify(arg) : String(arg)
+            ).join(' ');
+            
+            const div = document.createElement('div');
+            div.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+            consoleOutput.appendChild(div);
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        };
+
+        // Test function
+        function runTest() {
+            console.log('=== AI Calendar Test Started ===');
+            
+            const testResult = document.getElementById('test-result');
+            const testDetails = document.getElementById('test-details');
+            
+            // Check if calendar element exists
+            const calendar = document.getElementById('calendar');
+            console.log('Calendar element found:', !!calendar);
+            
+            // Check if AI CSS is loaded
+            setTimeout(() => {
+                const aiCSS = document.querySelector('link[href="assets/css/ai-features.css"]');
+                console.log('AI CSS loaded:', !!aiCSS);
+                
+                // Check if smart calendar script is loaded
+                const smartScript = document.querySelector('script[src="assets/js/smart-appointment-calendar.js"]');
+                console.log('Smart calendar script loaded:', !!smartScript);
+                
+                // Check if AI panel was created
+                setTimeout(() => {
+                    const aiPanel = document.querySelector('.smart-suggestions-panel');
+                    console.log('AI suggestions panel created:', !!aiPanel);
+                    
+                    if (aiPanel) {
+                        console.log('✅ AI Panel found! Calendar AI is working.');
+                        testResult.textContent = '✅ SUCCESS';
+                        testResult.style.color = '#28a745';
+                        testDetails.textContent = 'AI suggestions panel was successfully created and injected.';
+                        
+                        // Check for toggle and suggestions
+                        const toggle = aiPanel.querySelector('#calSmartMode');
+                        const suggestions = aiPanel.querySelector('[data-cal-suggestions]');
+                        console.log('Smart mode toggle found:', !!toggle);
+                        console.log('Suggestions container found:', !!suggestions);
+                        
+                        if (suggestions && suggestions.children.length > 0) {
+                            console.log('✅ Suggestions populated:', suggestions.children.length, 'items');
+                        }
+                        
+                    } else {
+                        console.log('❌ AI Panel not found. Calendar AI failed to initialize.');
+                        testResult.textContent = '❌ FAILED';
+                        testResult.style.color = '#dc3545';
+                        testDetails.textContent = 'AI suggestions panel was not created. Check console for errors.';
+                    }
+                }, 2000); // Wait 2 seconds for AI panel creation
+                
+            }, 1000); // Wait 1 second for scripts to load
+        }
+
+        // Start test after page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM Content Loaded - starting test in 1 second...');
+            setTimeout(runTest, 1000);
+        });
+    </script>
+</body>
+</html>
