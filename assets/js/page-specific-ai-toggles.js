@@ -93,9 +93,19 @@
   function createPageSpecificToggle(configKey, config) {
     const feature = config.feature;
     const isEnabled = getFeatureStatus(feature.storageKey);
-    
-    // Find the header container
-    const headerContainer = document.querySelector('.topbar-menu .d-flex:last-child, .navbar-header .d-flex:last-child');
+
+    // Find the header container with multiple fallbacks
+    let headerContainer = document.querySelector('.topbar-menu .d-flex:last-child');
+    if (!headerContainer) {
+      headerContainer = document.querySelector('.navbar-header .d-flex:last-child');
+    }
+    if (!headerContainer) {
+      headerContainer = document.querySelector('.topbar-menu');
+    }
+    if (!headerContainer) {
+      headerContainer = document.querySelector('.navbar-header');
+    }
+
     if (!headerContainer) {
       console.log('[Page AI] Header container not found');
       return false;
@@ -105,32 +115,50 @@
     const toggleBtn = document.createElement('button');
     toggleBtn.id = `${configKey}AIToggle`;
     toggleBtn.type = 'button';
-    toggleBtn.className = `btn me-3 d-lg-flex d-none page-ai-toggle`;
+    toggleBtn.className = `btn me-3 d-flex page-ai-toggle`;
     toggleBtn.setAttribute('data-feature', configKey);
     toggleBtn.setAttribute('title', `Toggle ${feature.name}`);
-    
+
+    // Add prominent styling
+    toggleBtn.style.cssText = `
+      position: relative;
+      z-index: 1001;
+      font-size: 14px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    `;
+
     // Set initial state
     updateToggleState(toggleBtn, feature, isEnabled);
-    
+
     // Add click event listener
     toggleBtn.addEventListener('click', function(e) {
       e.preventDefault();
+      e.stopPropagation();
+
+      console.log(`[Page AI] ${feature.name} toggle clicked`);
+
       const currentStatus = getFeatureStatus(feature.storageKey);
       const newStatus = !currentStatus;
-      
+
       setFeatureStatus(feature.storageKey, newStatus);
       updateToggleState(toggleBtn, feature, newStatus);
       showToggleNotification(feature.name, newStatus);
-      
+
       // Reload page after delay to apply changes
       setTimeout(() => {
         window.location.reload();
       }, 1500);
     });
-    
-    // Insert the button into the header
-    headerContainer.appendChild(toggleBtn);
-    
+
+    // Insert the button into the header (prepend to make it more visible)
+    if (headerContainer.children.length > 0) {
+      headerContainer.insertBefore(toggleBtn, headerContainer.firstChild);
+    } else {
+      headerContainer.appendChild(toggleBtn);
+    }
+
     console.log(`[Page AI] Created ${feature.name} toggle for this page`);
     return true;
   }
