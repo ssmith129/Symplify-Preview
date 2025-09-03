@@ -1311,8 +1311,8 @@ Template Name: Symplify - Bootstrap Admin Template
 
 		// Inject CSS once
 		ensureAICSS();
-		// Always load master AI toggle manager
-		load('assets/js/master-ai-toggle.js');
+		// Load fixed AI toggle manager (replaces broken master-ai-toggle.js)
+		load('assets/js/fixed-ai-toggle.js');
 
 		// Initialize default AI settings (first-time users)
 		const aiFeatures = ['ai_email_enabled', 'ai_calendar_enabled', 'ai_chat_enabled', 'ai_notifications_enabled'];
