@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AI Loading Debug Test</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .debug-section { 
+            background: #f8f9fa; 
+            padding: 1rem; 
+            margin: 1rem 0; 
+            border-left: 4px solid #007bff; 
+        }
+        .status-good { color: #28a745; }
+        .status-bad { color: #dc3545; }
+        .status-warning { color: #ffc107; }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>AI Features Loading Debug Test</h1>
+        
+        <div class="debug-section">
+            <h3>Test Elements (for detection)</h3>
+            <div id="calendar" style="height: 200px; background: #e9ecef; display: flex; align-items: center; justify-content: center;">
+                Calendar Element (for appointment AI)
+            </div>
+            <div class="mails-list mt-3" style="background: #e9ecef; padding: 1rem;">
+                Mails List Element (for email AI)
+            </div>
+            <div class="chat-users mt-3" style="background: #e9ecef; padding: 1rem;">
+                Chat Users Element (for chat AI)
+            </div>
+            <div class="notication-list mt-3" style="background: #e9ecef; padding: 1rem;">
+                Notification List Element (for notifications AI)
+            </div>
+        </div>
+
+        <div class="debug-section">
+            <h3>AI Features Status</h3>
+            <div id="debug-output">
+                <p>Loading diagnostic information...</p>
+            </div>
+        </div>
+
+        <div class="debug-section">
+            <h3>Manual Controls</h3>
+            <button onclick="enableEmailAI()" class="btn btn-success">Enable Email AI</button>
+            <button onclick="disableEmailAI()" class="btn btn-warning">Disable Email AI</button>
+            <button onclick="checkFeatures()" class="btn btn-info">Re-check Features</button>
+            <button onclick="clearStorage()" class="btn btn-danger">Clear LocalStorage</button>
+        </div>
+
+        <div class="debug-section">
+            <h3>LocalStorage Settings</h3>
+            <div id="storage-status"></div>
+        </div>
+    </div>
+
+    <!-- Load main script with AI features -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        function updateDebugOutput() {
+            const output = document.getElementById('debug-output');
+            const storageStatus = document.getElementById('storage-status');
+            
+            let html = '';
+            
+            // Check if AI CSS is loaded
+            const aiCSS = document.querySelector('link[href="assets/css/ai-features.css"]');
+            html += `<p><strong>AI CSS:</strong> <span class="${aiCSS ? 'status-good' : 'status-bad'}">${aiCSS ? 'Loaded' : 'Not Loaded'}</span></p>`;
+            
+            // Check if AI scripts are loaded
+            const scripts = [
+                'assets/js/ai-toggle.js',
+                'assets/js/smart-appointment-calendar.js',
+                'assets/js/ai-email-insights.js',
+                'assets/js/ai-inbox-triage.js',
+                'assets/js/unified-chat.js',
+                'assets/js/ai-notifications-feed.js'
+            ];
+            
+            scripts.forEach(script => {
+                const exists = document.querySelector(`script[src="${script}"]`);
+                html += `<p><strong>${script}:</strong> <span class="${exists ? 'status-good' : 'status-warning'}">${exists ? 'Loaded' : 'Not Loaded'}</span></p>`;
+            });
+            
+            // Check element detection
+            const elements = [
+                { selector: '#calendar', name: 'Calendar' },
+                { selector: '.mails-list', name: 'Mails List' },
+                { selector: '.chat-users', name: 'Chat Users' },
+                { selector: '.notication-list', name: 'Notification List' },
+                { selector: '.notification-body', name: 'Notification Body' }
+            ];
+            
+            html += '<h5>Element Detection:</h5>';
+            elements.forEach(el => {
+                const exists = document.querySelector(el.selector);
+                html += `<p><strong>${el.name} (${el.selector}):</strong> <span class="${exists ? 'status-good' : 'status-bad'}">${exists ? 'Found' : 'Not Found'}</span></p>`;
+            });
+            
+            output.innerHTML = html;
+            
+            // LocalStorage status
+            const emailAI = localStorage.getItem('ai_email_enabled');
+            const calendarAI = localStorage.getItem('ai_calendar_enabled');
+            
+            storageStatus.innerHTML = `
+                <p><strong>ai_email_enabled:</strong> ${emailAI || 'Not Set'}</p>
+                <p><strong>ai_calendar_enabled:</strong> ${calendarAI || 'Not Set'}</p>
+                <p><strong>All Storage Keys:</strong></p>
+                <ul>${Object.keys(localStorage).filter(k => k.includes('ai')).map(k => `<li>${k}: ${localStorage.getItem(k)}</li>`).join('') || '<li>No AI-related keys found</li>'}</ul>
+            `;
+        }
+        
+        function enableEmailAI() {
+            localStorage.setItem('ai_email_enabled', '1');
+            console.log('Email AI enabled');
+            updateDebugOutput();
+            location.reload(); // Reload to trigger loading logic
+        }
+        
+        function disableEmailAI() {
+            localStorage.setItem('ai_email_enabled', '0');
+            console.log('Email AI disabled');
+            updateDebugOutput();
+        }
+        
+        function clearStorage() {
+            Object.keys(localStorage).filter(k => k.includes('ai')).forEach(k => localStorage.removeItem(k));
+            console.log('AI localStorage cleared');
+            updateDebugOutput();
+        }
+        
+        function checkFeatures() {
+            updateDebugOutput();
+            console.log('Features re-checked');
+        }
+        
+        // Update debug info every 2 seconds
+        setInterval(updateDebugOutput, 2000);
+        
+        // Initial update
+        setTimeout(updateDebugOutput, 500);
+        
+        console.log('AI Debug Test Page Loaded');
+        console.log('Page title:', document.title);
+        console.log('Current localStorage ai settings:', Object.keys(localStorage).filter(k => k.includes('ai')));
+    </script>
+</body>
+</html>
