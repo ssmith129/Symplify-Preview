@@ -1282,120 +1282,21 @@ Template Name: Symplify - Bootstrap Admin Template
 
 	
 
-	// AI modules dynamic loader
+	// Remove AI toggles and features
 	document.addEventListener('DOMContentLoaded', function(){
-		console.log('[AI Loader] Starting AI features detection...');
-
-		function ensureAICSS(){
-			if (!document.querySelector('link[href="assets/css/ai-features.css"]')){
-				var l = document.createElement('link');
-				l.rel = 'stylesheet';
-				l.href = 'assets/css/ai-features.css';
-				document.head.appendChild(l);
-				console.log('[AI Loader] AI CSS injected');
-			} else {
-				console.log('[AI Loader] AI CSS already present');
-			}
-		}
-		function load(src){
-			if (!document.querySelector('script[src="'+src+'"]')){
-				var s = document.createElement('script');
-				s.src = src;
-				s.defer = true;
-				document.body.appendChild(s);
-				console.log('[AI Loader] Loaded script:', src);
-			} else {
-				console.log('[AI Loader] Script already present:', src);
-			}
-		}
-
-		// Inject CSS once
-		ensureAICSS();
-		// Load page-specific AI toggle system (replaces global AI Assistance button)
-		load('assets/js/page-specific-ai-toggles.js');
-
-		// Initialize default AI settings (first-time users)
-		const aiFeatures = ['ai_email_enabled', 'ai_calendar_enabled', 'ai_chat_enabled', 'ai_notifications_enabled'];
-		aiFeatures.forEach(function(feature) {
-			if (localStorage.getItem(feature) === null) {
-				localStorage.setItem(feature, '1');
-				console.log('[AI Loader] Initialized', feature, 'as enabled');
-			}
-		});
-
-		// Check AI feature settings (moved to top to avoid undefined variables)
-		var aiEmailOn = localStorage.getItem('ai_email_enabled') !== '0';
-		var aiChatOn = localStorage.getItem('ai_chat_enabled') !== '0';
-		var aiNotificationsOn = localStorage.getItem('ai_notifications_enabled') !== '0';
-		var aiCalendarOn = localStorage.getItem('ai_calendar_enabled') !== '0';
-
-		console.log('[AI Loader] Feature status - Email:', aiEmailOn, 'Chat:', aiChatOn, 'Notifications:', aiNotificationsOn, 'Calendar:', aiCalendarOn);
-
-		// Page-aware loaders
-		console.log('[AI Loader] Checking page elements...');
-
-		if (aiNotificationsOn && document.querySelector('.notification-body')) {
-			console.log('[AI Loader] Found .notification-body and notifications AI enabled, loading ai-notifications.js');
-			load('assets/js/ai-notifications.js');
-		} else {
-			console.log('[AI Loader] Notifications AI not loaded - enabled:', aiNotificationsOn, '.notification-body found:', !!document.querySelector('.notification-body'));
-		}
-
-		if (aiCalendarOn && document.getElementById('calendar')) {
-			console.log('[AI Loader] Found #calendar and calendar AI enabled, loading appointment calendar AI');
-			load('assets/js/ai-appointment-calendar.js');
-			load('assets/js/smart-appointment-calendar.js');
-		} else {
-			console.log('[AI Loader] Calendar AI not loaded - enabled:', aiCalendarOn, '#calendar found:', !!document.getElementById('calendar'));
-		}
-
-		if (aiEmailOn && document.querySelector('.mails-list')) {
-			console.log('[AI Loader] Email AI enabled and .mails-list found, loading email insights');
-			load('assets/js/ai-email-insights.js');
-		} else {
-			console.log('[AI Loader] Email AI not loaded - enabled:', aiEmailOn, 'mails-list found:', !!document.querySelector('.mails-list'));
-		}
-
-		if (aiEmailOn && document.getElementById('ai-inbox-triage-container')) {
-			console.log('[AI Loader] Email AI enabled and triage container found, loading inbox triage');
-			load('assets/js/ai-inbox-triage.js');
-		} else {
-			console.log('[AI Loader] Inbox triage not loaded - enabled:', aiEmailOn, 'container found:', !!document.getElementById('ai-inbox-triage-container'));
-		}
-
-		// Unified Chat enhancements
-		if (aiChatOn && (document.querySelector('.chat-users') || document.querySelector('.chat-messages'))) {
-			console.log('[AI Loader] Found chat elements and chat AI enabled, loading unified chat');
-			load('assets/js/unified-chat.js');
-		} else {
-			console.log('[AI Loader] Chat AI not loaded - enabled:', aiChatOn, 'elements found:', !!(document.querySelector('.chat-users') || document.querySelector('.chat-messages')));
-		}
-
-		// Notifications feed enhancements
-		if (aiNotificationsOn && document.querySelector('.notication-list')) {
-			console.log('[AI Loader] Found .notication-list and notifications AI enabled, loading notifications feed');
-			load('assets/js/ai-notifications-feed.js');
-		} else {
-			console.log('[AI Loader] Notifications feed not loaded - enabled:', aiNotificationsOn, '.notication-list found:', !!document.querySelector('.notication-list'));
-		}
-
-		// Notification settings enhancements
-		if (document.querySelector('title') && (document.title||'').toLowerCase().includes('notifications settings')) {
-			console.log('[AI Loader] Notifications settings page detected, loading notification settings');
-			load('assets/js/ai-notification-settings.js');
-		} else {
-			console.log('[AI Loader] Not notifications settings page, title:', document.title);
-		}
-
-		// Integrations onboarding workflow
-		if (document.querySelector('title') && (document.title||'').toLowerCase().includes('integrations settings')) {
-			console.log('[AI Loader] Integrations settings page detected, loading onboarding workflow');
-			load('assets/js/ai-onboarding-workflow.js');
-		} else {
-			console.log('[AI Loader] Not integrations settings page, title:', document.title);
-		}
-
-		console.log('[AI Loader] AI detection complete');
+		try {
+			// Remove any AI Assistance buttons present in markup
+			document.querySelectorAll('a.btn-liner-gradient').forEach(function(btn){
+				if ((btn.textContent||'').includes('AI Assistance')) { btn.remove(); }
+			});
+			// Disable all AI feature flags
+			['ai_email_enabled','ai_calendar_enabled','ai_chat_enabled','ai_notifications_enabled'].forEach(function(k){
+				localStorage.setItem(k, '0');
+			});
+			// Remove AI features stylesheet if present
+			var link = document.querySelector('link[href="assets/css/ai-features.css"]');
+			if (link) { link.remove(); }
+		} catch (e) {}
 	});
 
 })();
