@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page-Specific AI Toggles Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+    
+    <!-- AI Features CSS -->
+    <link rel="stylesheet" href="assets/css/ai-features.css">
+</head>
+<body>
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+        <!-- Header (Should show NO AI buttons for this test page) -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <a href="index.html" class="logo">
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                            <span class="logo-sm"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+                    </a>
+                    <h4 class="mb-0 ms-3">Page-Specific AI Toggles Test</h4>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <!-- Original AI Assistance Button (Should be removed) -->
+                    <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+                    
+                    <!-- Note: Page-specific toggles should appear here for relevant pages -->
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">🎯 Page-Specific AI Toggle System Test</h4>
+                            </div>
+                            <div class="card-body">
+                                <!-- Status Display -->
+                                <div class="alert alert-info">
+                                    <h6>📋 Current Page Status:</h6>
+                                    <div id="page-status">
+                                        <p>Loading page analysis...</p>
+                                    </div>
+                                </div>
+
+                                <!-- Navigation to AI-enabled pages -->
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <h5>🔗 Test Navigation to AI-Enabled Pages</h5>
+                                        <p class="text-muted">Click these links to see page-specific AI toggles in action:</p>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="card border-primary">
+                                                    <div class="card-body text-center">
+                                                        <i class="ti ti-mail fs-32 text-primary mb-2"></i>
+                                                        <h6>Email AI</h6>
+                                                        <p class="small text-muted">Smart email classification</p>
+                                                        <a href="email.html" class="btn btn-primary btn-sm">
+                                                            <i class="ti ti-external-link me-1"></i>
+                                                            Test Email AI
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-3">
+                                                <div class="card border-success">
+                                                    <div class="card-body text-center">
+                                                        <i class="ti ti-calendar fs-32 text-success mb-2"></i>
+                                                        <h6>Calendar AI</h6>
+                                                        <p class="small text-muted">Intelligent scheduling</p>
+                                                        <a href="calendar.html" class="btn btn-success btn-sm">
+                                                            <i class="ti ti-external-link me-1"></i>
+                                                            Test Calendar AI
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-3">
+                                                <div class="card border-warning">
+                                                    <div class="card-body text-center">
+                                                        <i class="ti ti-message fs-32 text-warning mb-2"></i>
+                                                        <h6>Chat AI</h6>
+                                                        <p class="small text-muted">Enhanced chat features</p>
+                                                        <a href="chat.html" class="btn btn-warning btn-sm">
+                                                            <i class="ti ti-external-link me-1"></i>
+                                                            Test Chat AI
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-3">
+                                                <div class="card border-info">
+                                                    <div class="card-body text-center">
+                                                        <i class="ti ti-bell fs-32 text-info mb-2"></i>
+                                                        <h6>Notifications AI</h6>
+                                                        <p class="small text-muted">Priority filtering</p>
+                                                        <a href="notifications.html" class="btn btn-info btn-sm">
+                                                            <i class="ti ti-external-link me-1"></i>
+                                                            Test Notifications AI
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Test Results -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>🔧 Test Actions</h6>
+                                        <div class="d-flex flex-column gap-2">
+                                            <button type="button" class="btn btn-primary" onclick="runPageAnalysis()">📊 Analyze Current Page</button>
+                                            <button type="button" class="btn btn-success" onclick="testRemoveGlobalButton()">🗑️ Test Remove Global Button</button>
+                                            <button type="button" class="btn btn-info" onclick="checkAllFeatureStatus()">📋 Check All Feature Status</button>
+                                            <button type="button" class="btn btn-secondary" onclick="clearTestResults()">🧹 Clear Results</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h6>📝 Test Results</h6>
+                                        <div id="test-results" style="height: 200px; overflow-y: auto; background: #f8f9fa; padding: 10px; border-radius: 5px; font-size: 12px;">
+                                            <div class="text-muted">Test results will appear here...</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature Status Overview -->
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <h6>📊 AI Features Status Overview</h6>
+                                        <div class="row" id="features-overview">
+                                            <div class="col-md-3">
+                                                <div class="card">
+                                                    <div class="card-body text-center">
+                                                        <i class="ti ti-mail text-primary"></i>
+                                                        <div>Email AI</div>
+                                                        <span id="email-status" class="badge bg-secondary">Unknown</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card">
+                                                    <div class="card-body text-center">
+                                                        <i class="ti ti-calendar text-success"></i>
+                                                        <div>Calendar AI</div>
+                                                        <span id="calendar-status" class="badge bg-secondary">Unknown</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card">
+                                                    <div class="card-body text-center">
+                                                        <i class="ti ti-message text-warning"></i>
+                                                        <div>Chat AI</div>
+                                                        <span id="chat-status" class="badge bg-secondary">Unknown</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card">
+                                                    <div class="card-body text-center">
+                                                        <i class="ti ti-bell text-info"></i>
+                                                        <div>Notifications AI</div>
+                                                        <span id="notifications-status" class="badge bg-secondary">Unknown</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Test Script -->
+    <script>
+        function log(message, type = 'info') {
+            const results = document.getElementById('test-results');
+            const timestamp = new Date().toLocaleTimeString();
+            const icon = type === 'success' ? '✅' : type === 'error' ? '❌' : type === 'warning' ? '⚠️' : 'ℹ️';
+            
+            const entry = document.createElement('div');
+            entry.innerHTML = `<span class="text-muted">${timestamp}</span> ${icon} ${message}`;
+            entry.className = `text-${type === 'error' ? 'danger' : type === 'success' ? 'success' : type === 'warning' ? 'warning' : 'muted'}`;
+            
+            results.appendChild(entry);
+            results.scrollTop = results.scrollHeight;
+        }
+
+        function runPageAnalysis() {
+            log('🔍 Starting page analysis...', 'info');
+            
+            if (window.PageAI) {
+                const status = window.PageAI.getStatus();
+                const config = window.PageAI.getCurrentConfig();
+                
+                log(`📄 Current page: ${status.page || 'Unknown'}`, 'info');
+                log(`🤖 Has AI features: ${status.hasAI ? 'YES' : 'NO'}`, status.hasAI ? 'success' : 'warning');
+                
+                if (status.hasAI) {
+                    log(`🎯 AI Feature: ${status.featureName}`, 'info');
+                    log(`🔘 Feature enabled: ${status.enabled}`, status.enabled ? 'success' : 'warning');
+                    log(`📍 Toggle exists: ${status.toggleExists}`, status.toggleExists ? 'success' : 'error');
+                }
+                
+                updatePageStatus(status);
+            } else {
+                log('❌ PageAI system not loaded', 'error');
+            }
+        }
+
+        function testRemoveGlobalButton() {
+            log('🗑️ Testing global button removal...', 'info');
+            
+            const aiButtons = document.querySelectorAll('a.btn-liner-gradient');
+            let foundCount = 0;
+            
+            aiButtons.forEach(btn => {
+                if (btn.textContent.includes('AI Assistance')) {
+                    foundCount++;
+                }
+            });
+            
+            if (foundCount === 0) {
+                log('✅ No global AI Assistance buttons found - removal successful!', 'success');
+            } else {
+                log(`⚠️ Found ${foundCount} global AI Assistance button(s) still present`, 'warning');
+            }
+        }
+
+        function checkAllFeatureStatus() {
+            log('📋 Checking all AI feature statuses...', 'info');
+            
+            const features = [
+                { key: 'email', name: 'Email AI', storage: 'ai_email_enabled' },
+                { key: 'calendar', name: 'Calendar AI', storage: 'ai_calendar_enabled' },
+                { key: 'chat', name: 'Chat AI', storage: 'ai_chat_enabled' },
+                { key: 'notifications', name: 'Notifications AI', storage: 'ai_notifications_enabled' }
+            ];
+            
+            features.forEach(feature => {
+                const stored = localStorage.getItem(feature.storage);
+                const enabled = stored === null ? true : stored === '1';
+                
+                log(`${feature.name}: ${enabled ? 'ON' : 'OFF'} (stored: ${stored})`, enabled ? 'success' : 'warning');
+                
+                // Update status badge
+                const badge = document.getElementById(`${feature.key}-status`);
+                badge.textContent = enabled ? 'ON' : 'OFF';
+                badge.className = `badge bg-${enabled ? 'success' : 'secondary'}`;
+            });
+        }
+
+        function clearTestResults() {
+            document.getElementById('test-results').innerHTML = '<div class="text-muted">Test results cleared...</div>';
+        }
+
+        function updatePageStatus(status) {
+            const pageStatusDiv = document.getElementById('page-status');
+            
+            if (status.hasAI) {
+                pageStatusDiv.innerHTML = `
+                    <ul class="mb-0">
+                        <li><strong>Page:</strong> ${status.page}</li>
+                        <li><strong>AI Feature:</strong> ${status.featureName}</li>
+                        <li><strong>Status:</strong> <span class="badge bg-${status.enabled ? 'success' : 'secondary'}">${status.enabled ? 'ENABLED' : 'DISABLED'}</span></li>
+                        <li><strong>Toggle Present:</strong> <span class="badge bg-${status.toggleExists ? 'success' : 'danger'}">${status.toggleExists ? 'YES' : 'NO'}</span></li>
+                    </ul>
+                `;
+            } else {
+                pageStatusDiv.innerHTML = `
+                    <ul class="mb-0">
+                        <li><strong>Page:</strong> ${status.page || 'test-page-specific-toggles.html'}</li>
+                        <li><strong>AI Features:</strong> <span class="badge bg-secondary">NONE</span></li>
+                        <li><strong>Expected Behavior:</strong> No AI toggle should appear in header</li>
+                    </ul>
+                `;
+            }
+        }
+
+        // Listen for AI toggle events
+        window.addEventListener('aiFeatureToggle', function(e) {
+            log(`🔔 AI Feature Toggle Event: ${e.detail.feature} = ${e.detail.enabled}`, 'success');
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            log('🚀 Page loaded, starting initial analysis...', 'info');
+            
+            setTimeout(() => {
+                runPageAnalysis();
+                checkAllFeatureStatus();
+                testRemoveGlobalButton();
+            }, 1000);
+        });
+    </script>
+    
+    <!-- Load Main Script (includes Page-Specific AI Toggles) -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

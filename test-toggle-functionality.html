@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AI Toggle Functionality Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+    
+    <!-- AI Features CSS -->
+    <link rel="stylesheet" href="assets/css/ai-features.css">
+</head>
+<body>
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+        <!-- Header (Exact structure from email.html) -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <a href="index.html" class="logo">
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                            <span class="logo-sm"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+                    </a>
+                    <h4 class="mb-0 ms-3">Toggle Functionality Test</h4>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <!-- AI Assistance Button (Should be transformed) -->
+                    <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Real-time Status Display -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h4 class="card-title">🔄 Real-time AI Toggle Status</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>🎯 Toggle Button Status</h6>
+                                        <div id="button-status" class="mb-3">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-secondary" id="transformation-status">Checking...</span>
+                                                <span class="badge bg-secondary" id="click-status">Not clicked</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <h6>📊 AI Features Status</h6>
+                                        <div id="features-status">
+                                            <div class="row text-center">
+                                                <div class="col-3">
+                                                    <div class="card border">
+                                                        <div class="card-body p-2">
+                                                            <i class="ti ti-mail text-primary"></i>
+                                                            <div>Email</div>
+                                                            <span id="email-badge" class="badge bg-secondary">OFF</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="card border">
+                                                        <div class="card-body p-2">
+                                                            <i class="ti ti-calendar text-success"></i>
+                                                            <div>Calendar</div>
+                                                            <span id="calendar-badge" class="badge bg-secondary">OFF</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="card border">
+                                                        <div class="card-body p-2">
+                                                            <i class="ti ti-message text-warning"></i>
+                                                            <div>Chat</div>
+                                                            <span id="chat-badge" class="badge bg-secondary">OFF</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="card border">
+                                                        <div class="card-body p-2">
+                                                            <i class="ti ti-bell text-info"></i>
+                                                            <div>Notifications</div>
+                                                            <span id="notifications-badge" class="badge bg-secondary">OFF</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h6>🔧 Test Actions</h6>
+                                        <div class="d-flex flex-column gap-2 mb-3">
+                                            <button type="button" class="btn btn-primary" onclick="clickToggleButton()">👆 Click AI Toggle Button</button>
+                                            <button type="button" class="btn btn-info" onclick="refreshStatus()">🔄 Refresh Status</button>
+                                            <button type="button" class="btn btn-warning" onclick="simulatePageReload()">⏳ Simulate Page Reload</button>
+                                        </div>
+                                        
+                                        <h6>📝 Event Log</h6>
+                                        <div id="event-log" style="height: 200px; overflow-y: auto; background: #f8f9fa; padding: 10px; border-radius: 5px; font-size: 12px;">
+                                            <div class="text-muted">Event log ready...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email AI Demo Section -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">📧 Email AI Demo (Watch for changes when toggling)</h5>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="mail-notifications">
+                                    <div class="p-3 border-bottom">
+                                        <h6 class="mb-0">📧 Inbox</h6>
+                                        <small class="text-muted">AI toolbar should appear below when Email AI is enabled</small>
+                                    </div>
+                                    <!-- AI toolbar will be injected here when enabled -->
+                                    <div class="mails-list">
+                                        <div class="mail-item p-3 border-bottom">
+                                            <div class="d-flex align-items-start">
+                                                <div class="avatar avatar-sm me-2">
+                                                    <span class="avatar-title bg-danger text-white rounded">🚨</span>
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <h6 class="mb-1">Emergency Patient Alert</h6>
+                                                    <p class="text-muted mb-0">Urgent: Critical patient requires immediate attention</p>
+                                                    <small class="text-muted">Dr. Sarah Chen • Emergency</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mail-item p-3 border-bottom">
+                                            <div class="d-flex align-items-start">
+                                                <div class="avatar avatar-sm me-2">
+                                                    <span class="avatar-title bg-warning text-white rounded">📅</span>
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <h6 class="mb-1">Appointment Follow-up</h6>
+                                                    <p class="text-muted mb-0">Lab results require follow-up appointment scheduling</p>
+                                                    <small class="text-muted">Lab Services • Patient: John Miller</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Test Script -->
+    <script>
+        let eventCount = 0;
+        
+        function logEvent(message, type = 'info') {
+            eventCount++;
+            const log = document.getElementById('event-log');
+            const timestamp = new Date().toLocaleTimeString();
+            const icon = type === 'success' ? '✅' : type === 'error' ? '❌' : type === 'warning' ? '⚠️' : 'ℹ️';
+            
+            const entry = document.createElement('div');
+            entry.innerHTML = `<span class="text-muted">${timestamp}</span> ${icon} ${message}`;
+            entry.className = `text-${type === 'error' ? 'danger' : type === 'success' ? 'success' : type === 'warning' ? 'warning' : 'muted'}`;
+            
+            log.appendChild(entry);
+            log.scrollTop = log.scrollHeight;
+            
+            // Keep only last 20 entries
+            while (log.children.length > 20) {
+                log.removeChild(log.firstChild);
+            }
+        }
+
+        function updateFeatureStatus() {
+            const features = ['email', 'calendar', 'chat', 'notifications'];
+            features.forEach(feature => {
+                const badge = document.getElementById(`${feature}-badge`);
+                const stored = localStorage.getItem(`ai_${feature}_enabled`);
+                const enabled = stored === null ? true : stored === '1';
+                
+                badge.textContent = enabled ? 'ON' : 'OFF';
+                badge.className = `badge bg-${enabled ? 'success' : 'secondary'}`;
+            });
+        }
+
+        function updateButtonStatus() {
+            const originalBtn = document.querySelector('a.btn-liner-gradient');
+            const masterToggle = document.getElementById('masterAIToggle');
+            const fixedToggle = document.getElementById('fixedAIToggle');
+            
+            const transformStatus = document.getElementById('transformation-status');
+            
+            if (masterToggle) {
+                transformStatus.textContent = 'Transformed (Master)';
+                transformStatus.className = 'badge bg-success';
+                logEvent('Button successfully transformed to Master toggle', 'success');
+            } else if (fixedToggle) {
+                transformStatus.textContent = 'Dedicated Toggle';
+                transformStatus.className = 'badge bg-info';
+                logEvent('Dedicated toggle button created', 'info');
+            } else if (originalBtn) {
+                transformStatus.textContent = 'Original Button';
+                transformStatus.className = 'badge bg-warning';
+                logEvent('Original AI Assistance button still present', 'warning');
+            } else {
+                transformStatus.textContent = 'No Button Found';
+                transformStatus.className = 'badge bg-danger';
+                logEvent('No AI button found', 'error');
+            }
+        }
+
+        function clickToggleButton() {
+            const toggle = document.getElementById('masterAIToggle') || document.getElementById('fixedAIToggle');
+            
+            if (toggle) {
+                logEvent('Attempting to click AI toggle button...', 'info');
+                
+                // Get current status before click
+                const beforeStatus = window.FixedAI ? window.FixedAI.getStatus().master : 'unknown';
+                logEvent(`Status before click: ${beforeStatus}`, 'info');
+                
+                // Click the button
+                toggle.click();
+                
+                // Update click status
+                document.getElementById('click-status').textContent = 'Clicked!';
+                document.getElementById('click-status').className = 'badge bg-success';
+                
+                logEvent('Toggle button clicked!', 'success');
+                
+                // Check status after brief delay
+                setTimeout(() => {
+                    const afterStatus = window.FixedAI ? window.FixedAI.getStatus().master : 'unknown';
+                    logEvent(`Status after click: ${afterStatus}`, 'info');
+                    refreshStatus();
+                }, 100);
+                
+            } else {
+                logEvent('No toggle button found to click', 'error');
+            }
+        }
+
+        function refreshStatus() {
+            logEvent('Refreshing status...', 'info');
+            updateFeatureStatus();
+            updateButtonStatus();
+            
+            // Check for AI features
+            setTimeout(() => {
+                const aiToolbar = document.querySelector('.ai-email-toolbar');
+                if (aiToolbar) {
+                    logEvent('✅ AI email toolbar detected!', 'success');
+                } else {
+                    logEvent('No AI email toolbar found', 'warning');
+                }
+            }, 500);
+        }
+
+        function simulatePageReload() {
+            logEvent('Simulating page reload behavior...', 'info');
+            
+            // Clear status
+            document.getElementById('click-status').textContent = 'Reset';
+            document.getElementById('click-status').className = 'badge bg-secondary';
+            
+            // Re-inject toggle after delay
+            setTimeout(() => {
+                if (window.FixedAI) {
+                    window.FixedAI.inject();
+                }
+                refreshStatus();
+            }, 1000);
+        }
+
+        // Listen for AI toggle events
+        window.addEventListener('masterAIToggle', function(e) {
+            logEvent(`🔔 Master AI Toggle Event received: ${e.detail.enabled ? 'ENABLED' : 'DISABLED'}`, 'success');
+            
+            setTimeout(() => {
+                refreshStatus();
+            }, 500);
+        });
+
+        // Prevent page reload for testing
+        let originalLocation = window.location;
+        window.location = {
+            ...originalLocation,
+            reload: function() {
+                logEvent('⚠️ Page reload prevented for testing (normally would reload here)', 'warning');
+                refreshStatus();
+            }
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            logEvent('🚀 Page loaded, initializing toggle functionality test...', 'info');
+            
+            setTimeout(() => {
+                logEvent(`FixedAI system available: ${!!window.FixedAI}`, window.FixedAI ? 'success' : 'error');
+                refreshStatus();
+            }, 1000);
+            
+            // Monitor for changes
+            setInterval(() => {
+                updateFeatureStatus();
+            }, 2000);
+        });
+    </script>
+    
+    <!-- Load Main Script (includes Fixed AI Toggle) -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

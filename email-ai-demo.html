@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Email with AI Features Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+    
+    <!-- AI Features CSS -->
+    <link rel="stylesheet" href="assets/css/ai-features.css">
+    
+    <style>
+        /* Force AI toolbar styling */
+        .ai-email-toolbar {
+            background: #f8f9fa !important;
+            border-bottom: 1px solid #dee2e6 !important;
+            padding: 12px !important;
+        }
+        .ai-priority-badge {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+        .ai-confidence {
+            font-size: 9px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+        <!-- Header -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <a href="index.html" class="logo">
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                            <span class="logo-sm"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+                    </a>
+                    <h4 class="mb-0 ms-3">Email AI Demo</h4>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <!-- Master AI Toggle (Active State) -->
+                    <button id="masterAIToggle" class="btn btn-liner-gradient me-3 d-lg-flex d-none ai-enabled" style="background: linear-gradient(45deg, #4f46e5, #06b6d4);" title="Click to disable all AI features">
+                        <span class="toggle-text">AI Features ON</span>
+                        <i class="ti ti-brain-filled ms-1"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">📧 Email with AI Features Active</h4>
+                                <div class="card-tools">
+                                    <span class="badge bg-success">AI Enhanced</span>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <!-- Email Interface -->
+                                <div class="mail-notifications">
+                                    <!-- Standard Email Header -->
+                                    <div class="p-3 border-bottom">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <h6 class="mb-0">📧 Inbox</h6>
+                                            <div>
+                                                <span class="text-muted">2345 Emails</span>
+                                                <span class="badge bg-danger ms-2">56 Unread</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 🧠 AI TOOLBAR (This is what gets added when Email AI is active) -->
+                                    <div class="ai-email-toolbar p-3 border-bottom bg-light">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-info-transparent text-info d-inline-flex align-items-center">
+                                                    <i class="ti ti-brain me-1"></i>AI Triage
+                                                </span>
+                                                <div class="btn-group btn-group-sm" role="group" aria-label="AI Filters">
+                                                    <button type="button" class="btn btn-outline-dark active">All</button>
+                                                    <button type="button" class="btn btn-outline-danger">Critical</button>
+                                                    <button type="button" class="btn btn-outline-warning">High</button>
+                                                    <button type="button" class="btn btn-outline-info">Medium</button>
+                                                    <button type="button" class="btn btn-outline-success">Low</button>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-danger-transparent text-danger">Critical: 2</span>
+                                                <span class="badge bg-warning-transparent text-warning">High: 5</span>
+                                                <span class="badge bg-info-transparent text-info">Medium: 12</span>
+                                                <span class="badge bg-success-transparent text-success">Low: 37</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Email List with AI Classifications -->
+                                    <div class="mails-list">
+                                        <!-- CRITICAL Priority Email -->
+                                        <div class="mail-item p-3 border-bottom position-relative" style="border-left: 4px solid #dc3545;">
+                                            <div class="d-flex align-items-start">
+                                                <div class="avatar avatar-sm me-2">
+                                                    <span class="avatar-title bg-danger text-white rounded">🚨</span>
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <div class="d-flex align-items-center justify-content-between mb-1">
+                                                        <h6 class="mb-0">Emergency: Patient Critical Condition</h6>
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <span class="badge bg-danger ai-priority-badge">CRITICAL</span>
+                                                            <span class="badge bg-secondary ai-priority-badge">Medical</span>
+                                                            <small class="text-muted">3:13 PM</small>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-muted mb-1">Urgent: Patient in Room 204 requires immediate physician attention. Vitals showing critical decline.</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <small class="text-muted">Dr. Sarah Chen • Emergency Department</small>
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <span class="ai-confidence text-success">95% confidence</span>
+                                                            <i class="ti ti-bell text-danger" title="Action Required"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- HIGH Priority Email -->
+                                        <div class="mail-item p-3 border-bottom position-relative" style="border-left: 4px solid #ffc107;">
+                                            <div class="d-flex align-items-start">
+                                                <div class="avatar avatar-sm me-2">
+                                                    <span class="avatar-title bg-warning text-white rounded">🧪</span>
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <div class="d-flex align-items-center justify-content-between mb-1">
+                                                        <h6 class="mb-0">Lab Results - Follow-up Required</h6>
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <span class="badge bg-warning ai-priority-badge">HIGH</span>
+                                                            <span class="badge bg-secondary ai-priority-badge">Medical</span>
+                                                            <small class="text-muted">2:45 PM</small>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-muted mb-1">Blood work results show abnormal values requiring immediate follow-up appointment scheduling.</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <small class="text-muted">Lab Services • Patient: John Miller</small>
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <span class="ai-confidence text-success">90% confidence</span>
+                                                            <i class="ti ti-calendar text-warning" title="Scheduling Required"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- MEDIUM Priority Email -->
+                                        <div class="mail-item p-3 border-bottom position-relative" style="border-left: 4px solid #17a2b8;">
+                                            <div class="d-flex align-items-start">
+                                                <div class="avatar avatar-sm me-2">
+                                                    <span class="avatar-title bg-info text-white rounded">📅</span>
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <div class="d-flex align-items-center justify-content-between mb-1">
+                                                        <h6 class="mb-0">Appointment Confirmation Request</h6>
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <span class="badge bg-info ai-priority-badge">MEDIUM</span>
+                                                            <span class="badge bg-secondary ai-priority-badge">Appointment</span>
+                                                            <small class="text-muted">1:30 PM</small>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-muted mb-1">Please confirm your appointment scheduled for tomorrow at 10:00 AM with Dr. Rodriguez.</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <small class="text-muted">Reception • Patient Portal</small>
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <span class="ai-confidence text-success">88% confidence</span>
+                                                            <i class="ti ti-check text-info" title="Confirmation Needed"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- LOW Priority Email -->
+                                        <div class="mail-item p-3 border-bottom position-relative" style="border-left: 4px solid #28a745;">
+                                            <div class="d-flex align-items-start">
+                                                <div class="avatar avatar-sm me-2">
+                                                    <span class="avatar-title bg-success text-white rounded">📋</span>
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <div class="d-flex align-items-center justify-content-between mb-1">
+                                                        <h6 class="mb-0">Policy Update: Patient Data Handling</h6>
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <span class="badge bg-success ai-priority-badge">LOW</span>
+                                                            <span class="badge bg-secondary ai-priority-badge">Administrative</span>
+                                                            <small class="text-muted">11:15 AM</small>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-muted mb-1">Updated guidelines for patient data handling and privacy compliance procedures.</p>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <small class="text-muted">Compliance Department • IT Security</small>
+                                                        <div class="d-flex align-items-center gap-1">
+                                                            <span class="ai-confidence text-success">84% confidence</span>
+                                                            <i class="ti ti-info-circle text-success" title="Informational"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Features Explanation -->
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                <h5 class="card-title">🧠 AI Features Active</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>🎯 Smart Classification</h6>
+                                        <ul class="small">
+                                            <li>Medical emails prioritized</li>
+                                            <li>Emergency detection</li>
+                                            <li>Category auto-assignment</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>🚨 Priority Levels</h6>
+                                        <ul class="small">
+                                            <li><span class="badge bg-danger">Critical</span> - Emergencies</li>
+                                            <li><span class="badge bg-warning">High</span> - Follow-ups</li>
+                                            <li><span class="badge bg-info">Medium</span> - Appointments</li>
+                                            <li><span class="badge bg-success">Low</span> - Administrative</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>🔍 Smart Filtering</h6>
+                                        <ul class="small">
+                                            <li>Filter by priority level</li>
+                                            <li>Real-time counters</li>
+                                            <li>Action indicators</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h6>📊 Confidence Scores</h6>
+                                        <ul class="small">
+                                            <li>AI accuracy indicators</li>
+                                            <li>95%+ for critical items</li>
+                                            <li>Learning improves over time</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Demo Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate AI filtering
+            const filterButtons = document.querySelectorAll('[data-ai-filter]');
+            const mailItems = document.querySelectorAll('.mail-item');
+            
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.textContent.toLowerCase();
+                    
+                    // Update active button
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter emails
+                    mailItems.forEach(item => {
+                        if (filter === 'all') {
+                            item.style.display = 'block';
+                        } else {
+                            const priorityBadge = item.querySelector('.ai-priority-badge');
+                            if (priorityBadge && priorityBadge.textContent.toLowerCase().includes(filter)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                    
+                    // Show filter feedback
+                    const notification = document.createElement('div');
+                    notification.className = 'alert alert-info alert-dismissible fade show position-fixed';
+                    notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+                    notification.innerHTML = `
+                        <div class="d-flex align-items-center">
+                            <i class="ti ti-filter me-2"></i>
+                            <div>Filtering emails by: <strong>${filter}</strong></div>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    `;
+                    document.body.appendChild(notification);
+                    
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.remove();
+                        }
+                    }, 3000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

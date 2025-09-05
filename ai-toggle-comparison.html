@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AI Toggle System Comparison - Email AI Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+    
+    <!-- AI Features CSS -->
+    <link rel="stylesheet" href="assets/css/ai-features.css">
+</head>
+<body>
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+        <!-- Header with AI Assistance Button -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <h4 class="mb-0">AI Toggle Comparison Test</h4>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <!-- AI Assistance Button (For master toggle transformation) -->
+                    <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+                    
+                    <!-- Toggle Mode Selector -->
+                    <div class="dropdown me-3">
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Toggle Mode: <span id="current-mode">Master</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="switchMode('master')">Master Toggle</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="switchMode('individual')">Individual Toggles</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                
+                <!-- Mode Info Card -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="card-title">Current Mode: <span id="mode-display">Master Toggle</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="mode-description">
+                            <p><strong>Master Toggle Mode:</strong> Single button controls all AI features across the application.</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-primary" onclick="testCurrentMode()">Test Current Mode</button>
+                            <button type="button" class="btn btn-secondary" onclick="refreshPage()">Refresh Page</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test Results -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title">Test Results</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="test-output">
+                            <p class="text-muted">Click "Test Current Mode" to run tests...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email AI Demo Section -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title">Email AI Demo</h5>
+                        <div class="card-tools">
+                            <span class="badge bg-info">Watch for AI toolbar below this header</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="mail-notifications">
+                            <div class="p-3 border-bottom bg-light">
+                                <h6 class="mb-0">📧 Email Header Area</h6>
+                                <small class="text-muted">AI toolbar should appear below this when Email AI is enabled</small>
+                            </div>
+                            <!-- AI toolbar will be injected here -->
+                            <div class="mails-list">
+                                <div class="mail-item p-3 border-bottom">
+                                    <div class="d-flex align-items-start">
+                                        <div class="avatar avatar-sm me-2">
+                                            <span class="avatar-title bg-danger text-white rounded">🚨</span>
+                                        </div>
+                                        <div class="flex-fill">
+                                            <h6 class="mb-1">Emergency Patient Alert</h6>
+                                            <p class="text-muted mb-0">Urgent: Critical patient condition requires immediate attention. Please review ASAP.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mail-item p-3 border-bottom">
+                                    <div class="d-flex align-items-start">
+                                        <div class="avatar avatar-sm me-2">
+                                            <span class="avatar-title bg-warning text-white rounded">📅</span>
+                                        </div>
+                                        <div class="flex-fill">
+                                            <h6 class="mb-1">Appointment Follow-up Required</h6>
+                                            <p class="text-muted mb-0">Patient needs follow-up appointment for lab results review.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mail-item p-3 border-bottom">
+                                    <div class="d-flex align-items-start">
+                                        <div class="avatar avatar-sm me-2">
+                                            <span class="avatar-title bg-info text-white rounded">📋</span>
+                                        </div>
+                                        <div class="flex-fill">
+                                            <h6 class="mb-1">Administrative Update</h6>
+                                            <p class="text-muted mb-0">Policy update regarding patient data handling procedures.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar AI Demo Section -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title">Calendar AI Demo</h5>
+                        <div class="card-tools">
+                            <span class="badge bg-info">Watch for AI insights below calendar</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="calendar">
+                            <div class="p-4 border rounded bg-light text-center">
+                                <h6>📅 Calendar Component Area</h6>
+                                <p class="text-muted mb-0">AI scheduling insights should appear below this when Calendar AI is enabled</p>
+                            </div>
+                        </div>
+                        <!-- AI insights will be injected here -->
+                    </div>
+                </div>
+
+                <!-- Notifications AI Demo Section -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Notifications AI Demo</h5>
+                        <div class="card-tools">
+                            <span class="badge bg-info">Watch for AI summary at top</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="notification-body">
+                            <!-- AI summary will be injected here -->
+                            <div class="notification-item p-3 border-bottom">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar avatar-sm me-2">
+                                        <span class="avatar-title bg-danger text-white rounded">🚨</span>
+                                    </div>
+                                    <div class="flex-fill">
+                                        <h6 class="mb-1">Critical Surgery Alert</h6>
+                                        <p class="text-muted mb-0">Emergency surgery scheduled for patient in Room 204</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="notification-item p-3 border-bottom">
+                                <div class="d-flex align-items-start">
+                                    <div class="avatar avatar-sm me-2">
+                                        <span class="avatar-title bg-warning text-white rounded">🧪</span>
+                                    </div>
+                                    <div class="flex-fill">
+                                        <h6 class="mb-1">Lab Results Available</h6>
+                                        <p class="text-muted mb-0">Blood test results ready for Dr. Smith's review</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Mode Control Script -->
+    <script>
+        let currentToggleMode = 'master';
+        
+        const modeDescriptions = {
+            master: {
+                title: 'Master Toggle',
+                description: '<p><strong>Master Toggle Mode:</strong> Single button controls all AI features across the application.</p><ul><li>✅ Unified control</li><li>✅ Consistent experience</li><li>✅ Simple interface</li><li>❌ Less granular control</li></ul>'
+            },
+            individual: {
+                title: 'Individual Toggles',
+                description: '<p><strong>Individual Toggle Mode:</strong> Each page has its own AI feature toggle for granular control.</p><ul><li>✅ Page-specific control</li><li>✅ Granular management</li><li>✅ Context-aware</li><li>❌ More complex interface</li></ul>'
+            }
+        };
+
+        function switchMode(mode) {
+            currentToggleMode = mode;
+            updateModeDisplay();
+            
+            // Store mode preference
+            localStorage.setItem('ai_toggle_mode', mode);
+            
+            // Reload page to apply new mode
+            setTimeout(() => {
+                window.location.reload();
+            }, 500);
+        }
+
+        function updateModeDisplay() {
+            document.getElementById('current-mode').textContent = modeDescriptions[currentToggleMode].title;
+            document.getElementById('mode-display').textContent = modeDescriptions[currentToggleMode].title;
+            document.getElementById('mode-description').innerHTML = modeDescriptions[currentToggleMode].description;
+        }
+
+        function testCurrentMode() {
+            const output = document.getElementById('test-output');
+            let html = '<h6>Testing ' + modeDescriptions[currentToggleMode].title + ' Mode</h6>';
+            
+            if (currentToggleMode === 'master') {
+                // Test master toggle
+                const masterToggle = document.getElementById('masterAIToggle');
+                const aiBtn = document.querySelector('a.btn-liner-gradient');
+                
+                if (masterToggle) {
+                    html += '<div class="alert alert-success">✅ Master toggle successfully created</div>';
+                    
+                    if (window.MasterAI) {
+                        const status = window.MasterAI.getStatus();
+                        html += '<div class="alert alert-info"><strong>Master Status:</strong> ' + (status.master ? 'Enabled' : 'Disabled') + '</div>';
+                    }
+                } else if (aiBtn) {
+                    html += '<div class="alert alert-warning">⚠️ AI Assistance button found but not transformed</div>';
+                } else {
+                    html += '<div class="alert alert-danger">❌ No AI Assistance button found</div>';
+                }
+            } else {
+                // Test individual toggles
+                const individualToggle = document.querySelector('.ai-individual-toggle-container');
+                
+                if (individualToggle) {
+                    html += '<div class="alert alert-success">✅ Individual toggle created for this page</div>';
+                } else {
+                    html += '<div class="alert alert-warning">⚠️ No individual toggle found (may be because master toggle is active)</div>';
+                }
+                
+                if (window.IndividualAI) {
+                    const pageFeature = window.IndividualAI.getPageFeature();
+                    if (pageFeature) {
+                        html += '<div class="alert alert-info"><strong>Page Feature:</strong> ' + pageFeature.config.name + '</div>';
+                    } else {
+                        html += '<div class="alert alert-info">ℹ️ No specific AI feature detected for this page</div>';
+                    }
+                }
+            }
+
+            // Test AI feature visibility
+            setTimeout(() => {
+                const aiToolbar = document.querySelector('.ai-email-toolbar');
+                const aiInsights = document.querySelector('#ai-calendar-insights');
+                const aiSummary = document.querySelector('.ai-notification-summary');
+                
+                if (aiToolbar) html += '<div class="alert alert-success">✅ Email AI toolbar visible</div>';
+                if (aiInsights) html += '<div class="alert alert-success">✅ Calendar AI insights visible</div>';
+                if (aiSummary) html += '<div class="alert alert-success">✅ Notifications AI summary visible</div>';
+                
+                if (!aiToolbar && !aiInsights && !aiSummary) {
+                    html += '<div class="alert alert-warning">⚠️ No AI features currently visible (may be disabled)</div>';
+                }
+                
+                output.innerHTML = html;
+            }, 1000);
+            
+            output.innerHTML = html;
+        }
+
+        function refreshPage() {
+            window.location.reload();
+        }
+
+        // Initialize mode on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get saved mode preference
+            const savedMode = localStorage.getItem('ai_toggle_mode');
+            if (savedMode && savedMode !== currentToggleMode) {
+                currentToggleMode = savedMode;
+            }
+            
+            updateModeDisplay();
+            
+            // Auto-test after page loads
+            setTimeout(testCurrentMode, 2000);
+        });
+        
+        // Listen for AI events
+        window.addEventListener('masterAIToggle', function(e) {
+            console.log('Master AI Toggle Event:', e.detail);
+            setTimeout(testCurrentMode, 1000);
+        });
+
+        window.addEventListener('aiFeatureToggle', function(e) {
+            console.log('Individual AI Feature Toggle Event:', e.detail);
+            setTimeout(testCurrentMode, 1000);
+        });
+    </script>
+    
+    <!-- Load appropriate toggle system based on mode -->
+    <script>
+        // Determine which toggle system to load
+        const toggleMode = localStorage.getItem('ai_toggle_mode') || 'master';
+        
+        if (toggleMode === 'individual') {
+            // Load individual toggles instead of master
+            const script = document.createElement('script');
+            script.src = 'assets/js/individual-ai-toggles.js';
+            script.defer = true;
+            document.body.appendChild(script);
+            console.log('Loading individual AI toggles...');
+        } else {
+            // Load normal script with master toggle
+            const script = document.createElement('script');
+            script.src = 'assets/js/script.js';
+            script.defer = true;
+            document.body.appendChild(script);
+            console.log('Loading master AI toggle...');
+        }
+    </script>
+</body>
+</html>

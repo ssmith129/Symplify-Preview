@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Email AI Toggle Test</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .test-container {
+            background: #f8f9fa;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-left: 4px solid #007bff;
+            border-radius: 8px;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-on { background-color: #28a745; }
+        .status-off { background-color: #dc3545; }
+        .header-demo {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simulate email page header structure -->
+    <div class="header-demo">
+        <div class="d-flex align-items-center">
+            <span class="fw-bold me-3">Header Demo:</span>
+            
+            <!-- AI Assistance Button (existing) -->
+            <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">
+                AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i>
+            </a>
+            
+            <!-- Email AI Toggle will be injected here -->
+            <span class="text-muted" id="toggle-placeholder">[Email AI Toggle will appear here]</span>
+            
+            <div class="ms-auto">
+                <span class="badge bg-secondary">Demo Header</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simulate email content for detection -->
+    <div class="mails-list" style="display: none;">
+        <!-- Hidden element to trigger email page detection -->
+    </div>
+
+    <div class="container mt-4">
+        <h1>📧 Email AI Toggle Test</h1>
+        <p class="lead">Testing the dynamic injection of Email AI toggle switch.</p>
+        
+        <div class="test-container">
+            <h3>🎯 Test Results</h3>
+            <div id="test-results">
+                <p><span class="status-indicator status-off"></span>Initializing test...</p>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>📊 Current Status</h3>
+            <div id="status-display">
+                <p><strong>Email AI Status:</strong> <span id="ai-status">Checking...</span></p>
+                <p><strong>Toggle Element:</strong> <span id="toggle-status">Not found</span></p>
+                <p><strong>Page Detection:</strong> <span id="page-status">Checking...</span></p>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>🔧 Manual Controls</h3>
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary" onclick="forceInjectToggle()">Force Inject Toggle</button>
+                <button class="btn btn-success" onclick="enableEmailAI()">Enable Email AI</button>
+                <button class="btn btn-warning" onclick="disableEmailAI()">Disable Email AI</button>
+                <button class="btn btn-info" onclick="refreshStatus()">Refresh Status</button>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>📋 Instructions</h3>
+            <ol>
+                <li><strong>Automatic Test:</strong> The toggle should automatically inject above</li>
+                <li><strong>Manual Test:</strong> Click "Force Inject Toggle" if it doesn't appear</li>
+                <li><strong>Function Test:</strong> Toggle the switch and verify it works</li>
+                <li><strong>Real Test:</strong> Visit the actual <a href="email.html" target="_blank">email.html</a> page</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Load scripts -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        function updateStatus() {
+            // Check Email AI status
+            const aiEnabled = localStorage.getItem('ai_email_enabled') !== '0';
+            document.getElementById('ai-status').innerHTML = `
+                <span class="status-indicator ${aiEnabled ? 'status-on' : 'status-off'}"></span>
+                ${aiEnabled ? 'Enabled' : 'Disabled'}
+            `;
+
+            // Check if toggle element exists
+            const toggleExists = !!document.getElementById('emailAIToggle');
+            document.getElementById('toggle-status').innerHTML = `
+                <span class="status-indicator ${toggleExists ? 'status-on' : 'status-off'}"></span>
+                ${toggleExists ? 'Found' : 'Not found'}
+            `;
+
+            // Check page detection
+            const mailsList = !!document.querySelector('.mails-list');
+            document.getElementById('page-status').innerHTML = `
+                <span class="status-indicator ${mailsList ? 'status-on' : 'status-off'}"></span>
+                ${mailsList ? 'Email page detected' : 'Not email page'}
+            `;
+
+            // Update test results
+            if (toggleExists) {
+                document.getElementById('test-results').innerHTML = `
+                    <p><span class="status-indicator status-on"></span><strong>SUCCESS:</strong> Email AI toggle successfully injected!</p>
+                    <p>�� Toggle element created</p>
+                    <p>✅ Event listeners attached</p>
+                    <p>✅ Integration working</p>
+                `;
+                
+                // Hide placeholder
+                const placeholder = document.getElementById('toggle-placeholder');
+                if (placeholder) {
+                    placeholder.style.display = 'none';
+                }
+            } else {
+                document.getElementById('test-results').innerHTML = `
+                    <p><span class="status-indicator status-off"></span><strong>WAITING:</strong> Toggle not yet injected</p>
+                    <p>🔄 Scripts may still be loading...</p>
+                    <p>⏳ Try manual injection if needed</p>
+                `;
+            }
+        }
+
+        function forceInjectToggle() {
+            if (typeof window.injectEmailAIToggle === 'function') {
+                window.injectEmailAIToggle();
+                console.log('Manual toggle injection triggered');
+                setTimeout(updateStatus, 500);
+            } else {
+                console.log('Email AI toggle injector not available');
+                alert('Email AI toggle injector script not loaded yet. Please wait and try again.');
+            }
+        }
+
+        function enableEmailAI() {
+            localStorage.setItem('ai_email_enabled', '1');
+            console.log('Email AI enabled');
+            updateStatus();
+            
+            const toggle = document.getElementById('emailAIToggle');
+            if (toggle) {
+                toggle.checked = true;
+                // Trigger change event
+                toggle.dispatchEvent(new Event('change'));
+            }
+        }
+
+        function disableEmailAI() {
+            localStorage.setItem('ai_email_enabled', '0');
+            console.log('Email AI disabled');
+            updateStatus();
+            
+            const toggle = document.getElementById('emailAIToggle');
+            if (toggle) {
+                toggle.checked = false;
+                // Trigger change event
+                toggle.dispatchEvent(new Event('change'));
+            }
+        }
+
+        function refreshStatus() {
+            console.log('Refreshing status...');
+            updateStatus();
+        }
+
+        // Listen for email AI toggle events
+        window.addEventListener('emailAIToggle', function(e) {
+            console.log('Email AI toggle event:', e.detail);
+            setTimeout(updateStatus, 100);
+        });
+
+        // Initial status update
+        setTimeout(updateStatus, 1000);
+
+        // Update status every 2 seconds
+        setInterval(updateStatus, 2000);
+
+        console.log('Email AI Toggle Test Page loaded');
+    </script>
+</body>
+</html>

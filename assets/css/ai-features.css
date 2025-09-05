@@ -758,3 +758,13 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* ========================================
+   AI Visual Flags Utilities
+   ======================================== */
+.ai-flag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 6px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+.ai-flag-new { background: rgba(13,110,253,.1); color: var(--bs-primary); }
+.ai-flag-recommended { background: rgba(25,135,84,.1); color: var(--bs-success); }
+.ai-flag-warning { background: rgba(255,193,7,.1); color: var(--bs-warning); }
+.ai-flag-critical { background: rgba(220,53,69,.1); color: var(--bs-danger); }
+.ai-flag i { font-size: 12px; }

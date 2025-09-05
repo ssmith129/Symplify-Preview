@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Master AI Toggle Test Suite</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .test-container {
+            background: #f8f9fa;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-left: 4px solid #007bff;
+            border-radius: 8px;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-on { background-color: #28a745; }
+        .status-off { background-color: #dc3545; }
+        .status-loading { background-color: #ffc107; }
+        .header-demo {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            min-height: 60px;
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+            border: 2px solid #dee2e6;
+        }
+        .feature-enabled { 
+            border-color: #28a745; 
+            background-color: #f8fff8; 
+        }
+        .feature-disabled { 
+            border-color: #dc3545; 
+            background-color: #fff8f8; 
+        }
+        .console-output {
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            height: 200px;
+            overflow-y: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Demo Header Structure -->
+    <div class="header-demo">
+        <div class="d-flex align-items-center">
+            <span class="fw-bold me-3">Header:</span>
+            
+            <!-- Original AI Assistance Button (will be transformed) -->
+            <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">
+                AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i>
+            </a>
+            
+            <div class="ms-auto">
+                <span class="badge bg-info">Master Toggle Demo</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test elements for page detection -->
+    <div style="display: none;">
+        <div class="mails-list">Email page element</div>
+        <div id="calendar">Calendar page element</div>
+        <div class="chat-users">Chat page element</div>
+        <div class="notication-list">Notifications page element</div>
+        <div class="notification-body">Notification dropdown element</div>
+    </div>
+
+    <div class="container mt-4">
+        <h1>🧠 Master AI Toggle Test Suite</h1>
+        <p class="lead">Testing the unified AI Assistance button that controls all AI features.</p>
+        
+        <div class="test-container">
+            <h3>🎯 Toggle Status</h3>
+            <div id="toggle-status" class="mb-3">
+                <div class="d-flex align-items-center">
+                    <span class="status-indicator status-loading"></span>
+                    <span>Checking master toggle status...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>🔧 AI Features Status</h3>
+            <div class="row" id="features-grid">
+                <div class="col-md-3 mb-3">
+                    <div class="card feature-card" id="email-card">
+                        <div class="card-body text-center">
+                            <i class="ti ti-mail fs-36 mb-2"></i>
+                            <h6>Email AI</h6>
+                            <div class="status-display">
+                                <span class="status-indicator status-loading"></span>
+                                <small class="status-text">Loading...</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card feature-card" id="calendar-card">
+                        <div class="card-body text-center">
+                            <i class="ti ti-calendar fs-36 mb-2"></i>
+                            <h6>Calendar AI</h6>
+                            <div class="status-display">
+                                <span class="status-indicator status-loading"></span>
+                                <small class="status-text">Loading...</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card feature-card" id="chat-card">
+                        <div class="card-body text-center">
+                            <i class="ti ti-messages fs-36 mb-2"></i>
+                            <h6>Chat AI</h6>
+                            <div class="status-display">
+                                <span class="status-indicator status-loading"></span>
+                                <small class="status-text">Loading...</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card feature-card" id="notifications-card">
+                        <div class="card-body text-center">
+                            <i class="ti ti-bell fs-36 mb-2"></i>
+                            <h6>Notifications AI</h6>
+                            <div class="status-display">
+                                <span class="status-indicator status-loading"></span>
+                                <small class="status-text">Loading...</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>🧪 Test Controls</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Master Controls</h5>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <button class="btn btn-success" onclick="testEnableAll()">
+                            <i class="ti ti-brain-filled me-1"></i>Enable All AI
+                        </button>
+                        <button class="btn btn-danger" onclick="testDisableAll()">
+                            <i class="ti ti-brain me-1"></i>Disable All AI
+                        </button>
+                        <button class="btn btn-info" onclick="refreshStatus()">
+                            <i class="ti ti-refresh me-1"></i>Refresh
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>Individual Controls</h5>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <button class="btn btn-outline-primary btn-sm" onclick="toggleFeature('email')">Toggle Email</button>
+                        <button class="btn btn-outline-primary btn-sm" onclick="toggleFeature('calendar')">Toggle Calendar</button>
+                        <button class="btn btn-outline-primary btn-sm" onclick="toggleFeature('chat')">Toggle Chat</button>
+                        <button class="btn btn-outline-primary btn-sm" onclick="toggleFeature('notifications')">Toggle Notifications</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>📊 System Information</h3>
+            <div id="system-info">
+                <p><strong>Master Toggle Button:</strong> <span id="toggle-exists">Checking...</span></p>
+                <p><strong>Master AI Status:</strong> <span id="master-status">Checking...</span></p>
+                <p><strong>Total Features:</strong> <span id="total-features">4</span></p>
+                <p><strong>Enabled Features:</strong> <span id="enabled-count">Checking...</span></p>
+                <p><strong>Page Detection:</strong> <span id="page-detection">Checking...</span></p>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>🖥️ Console Output</h3>
+            <div id="console-output" class="console-output">
+                <div>[System] Console monitoring started...</div>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <h3>🚀 Production Testing</h3>
+            <p>Test the master AI toggle on real pages:</p>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="email.html" class="btn btn-outline-primary" target="_blank">
+                    <i class="ti ti-mail me-1"></i>Email Page
+                </a>
+                <a href="appointment-calendar.html" class="btn btn-outline-primary" target="_blank">
+                    <i class="ti ti-calendar me-1"></i>Calendar Page
+                </a>
+                <a href="chat.html" class="btn btn-outline-primary" target="_blank">
+                    <i class="ti ti-messages me-1"></i>Chat Page
+                </a>
+                <a href="notifications.html" class="btn btn-outline-primary" target="_blank">
+                    <i class="ti ti-bell me-1"></i>Notifications Page
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load scripts -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Console capture
+        const consoleOutput = document.getElementById('console-output');
+        const originalLog = console.log;
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            
+            const message = args.map(arg => 
+                typeof arg === 'object' ? JSON.stringify(arg) : String(arg)
+            ).join(' ');
+            
+            const div = document.createElement('div');
+            div.innerHTML = `[${new Date().toLocaleTimeString()}] ${message}`;
+            consoleOutput.appendChild(div);
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+            
+            // Keep only last 30 messages
+            while (consoleOutput.children.length > 30) {
+                consoleOutput.removeChild(consoleOutput.firstChild);
+            }
+        };
+
+        // Features to track
+        const features = ['email', 'calendar', 'chat', 'notifications'];
+        const featureKeys = {
+            email: 'ai_email_enabled',
+            calendar: 'ai_calendar_enabled', 
+            chat: 'ai_chat_enabled',
+            notifications: 'ai_notifications_enabled'
+        };
+
+        function updateFeatureStatus() {
+            features.forEach(feature => {
+                const enabled = localStorage.getItem(featureKeys[feature]) !== '0';
+                const card = document.getElementById(`${feature}-card`);
+                const indicator = card.querySelector('.status-indicator');
+                const statusText = card.querySelector('.status-text');
+                
+                indicator.className = `status-indicator ${enabled ? 'status-on' : 'status-off'}`;
+                statusText.textContent = enabled ? 'Enabled' : 'Disabled';
+                card.className = `card feature-card ${enabled ? 'feature-enabled' : 'feature-disabled'}`;
+            });
+
+            // Update toggle status
+            const toggleExists = !!document.getElementById('masterAIToggle');
+            const masterEnabled = features.some(f => localStorage.getItem(featureKeys[f]) !== '0');
+            const enabledCount = features.filter(f => localStorage.getItem(featureKeys[f]) !== '0').length;
+
+            document.getElementById('toggle-exists').innerHTML = `
+                <span class="status-indicator ${toggleExists ? 'status-on' : 'status-off'}"></span>
+                ${toggleExists ? 'Found' : 'Not Found'}
+            `;
+
+            document.getElementById('master-status').innerHTML = `
+                <span class="status-indicator ${masterEnabled ? 'status-on' : 'status-off'}"></span>
+                ${masterEnabled ? 'Enabled' : 'Disabled'}
+            `;
+
+            document.getElementById('enabled-count').textContent = `${enabledCount} / 4`;
+
+            // Update main toggle status
+            document.getElementById('toggle-status').innerHTML = `
+                <div class="d-flex align-items-center">
+                    <span class="status-indicator ${toggleExists ? 'status-on' : 'status-off'}"></span>
+                    <span class="fw-bold">${toggleExists ? 'Master Toggle Active' : 'Master Toggle Missing'}</span>
+                </div>
+                ${toggleExists ? '<small class="text-muted">AI Assistance button has been transformed into master toggle</small>' : 
+                  '<small class="text-warning">AI Assistance button not yet transformed</small>'}
+            `;
+
+            // Page detection
+            const detections = [
+                document.querySelector('.mails-list') ? 'Email' : null,
+                document.querySelector('#calendar') ? 'Calendar' : null,
+                document.querySelector('.chat-users') ? 'Chat' : null,
+                document.querySelector('.notication-list') ? 'Notifications' : null
+            ].filter(Boolean);
+
+            document.getElementById('page-detection').textContent = 
+                detections.length > 0 ? detections.join(', ') : 'No specific page detected';
+        }
+
+        function testEnableAll() {
+            console.log('🟢 Testing enable all features...');
+            if (window.MasterAI) {
+                window.MasterAI.enable();
+            } else {
+                features.forEach(feature => {
+                    localStorage.setItem(featureKeys[feature], '1');
+                });
+                updateFeatureStatus();
+                console.log('✅ All features enabled manually');
+            }
+        }
+
+        function testDisableAll() {
+            console.log('🔴 Testing disable all features...');
+            if (window.MasterAI) {
+                window.MasterAI.disable();
+            } else {
+                features.forEach(feature => {
+                    localStorage.setItem(featureKeys[feature], '0');
+                });
+                updateFeatureStatus();
+                console.log('❌ All features disabled manually');
+            }
+        }
+
+        function toggleFeature(feature) {
+            const current = localStorage.getItem(featureKeys[feature]) !== '0';
+            localStorage.setItem(featureKeys[feature], current ? '0' : '1');
+            updateFeatureStatus();
+            console.log(`🔄 ${feature} AI ${current ? 'disabled' : 'enabled'}`);
+        }
+
+        function refreshStatus() {
+            console.log('🔄 Refreshing status...');
+            updateFeatureStatus();
+            
+            if (window.MasterAI) {
+                console.log('📊 Master AI Status:', window.MasterAI.getStatus());
+            }
+        }
+
+        // Listen for master AI toggle events
+        window.addEventListener('masterAIToggle', function(e) {
+            console.log('🔄 Master AI toggle event:', e.detail);
+            setTimeout(updateFeatureStatus, 100);
+        });
+
+        // Initial update
+        setTimeout(updateFeatureStatus, 1000);
+
+        // Regular updates
+        setInterval(updateFeatureStatus, 3000);
+
+        console.log('🚀 Master AI Toggle Test Suite loaded');
+    </script>
+</body>
+</html>
