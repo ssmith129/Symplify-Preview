@@ -7,7 +7,7 @@
 	<!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Assets | Symplify - Medical & Hospital - Bootstrap 5 Admin Template</title>
+    <title>Assets | Preclinic - Medical & Hospital - Bootstrap 5 Admin Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Dreams Technologies">
 	
@@ -118,8 +118,19 @@
 
                     <!-- Appointment -->
                     <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="new-appointment.html" class="btn topbar-link"><i class="ti ti-calendar-due"></i></a>
+                        </div>
+                    </div>                    
                     <!-- Appointment -->
 
+                    <!-- Settings -->
+                    <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="profile-settings.html" class="btn topbar-link"><i class="ti ti-settings-2"></i></a>
+                        </div> 
+                    </div> 
+                    <!-- Settings -->                   
 
                     <!-- Light/Dark Mode Button -->
                     <div class="header-item d-none d-sm-flex me-2">
@@ -951,7 +962,7 @@
                                 </li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);">
-                                        <span>Other Settings</span>
+                                        <i class="ti ti-settings-2"></i><span>Other Settings</span>
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
@@ -1141,7 +1152,7 @@
                         </div>
                         <div>
                             <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
-                            <p class="fs-13 mb-0">Check 1 min video and begin use Symplify like a pro</p>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Preclinic like a pro</p>
                         </div>
                         <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
                     </div>
@@ -1209,6 +1220,7 @@
                     </div>
 
                     <div class="d-flex table-dropdown mb-3 pb-1 right-content align-items-center flex-wrap row-gap-3">
+                        <div class="dropdown me-2">
                             <a href="javascript:void(0);" class="bg-white border rounded btn btn-md text-dark fs-14 py-1 align-items-center d-flex fw-normal" data-bs-toggle="dropdown" data-bs-auto-close="outside">
                                 <i class="ti ti-filter text-gray-5 me-1"></i>Filters
                             </a>
@@ -1217,12 +1229,15 @@
                                     <h4 class="mb-0 fw-bold">Filter</h4>
                                     <div class="d-flex align-items-center">
                                         <a href="javascript:void(0);" class="link-danger text-decoration-underline">Clear All</a>
+                                    </div>
+                                </div>
                                 <form action="#">
                                     <div class="filter-body pb-0">
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Asset User</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <div class="dropdown">
                                                 <a href="javascript:void(0);" class="dropdown-toggle btn bg-white  d-flex align-items-center justify-content-start fs-13 p-2 fw-normal border" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true">
                                                     Select <i class="ti ti-chevron-down ms-auto"></i>
@@ -1234,6 +1249,8 @@
                                                                 <i class="ti ti-search"></i>
                                                             </span>
                                                             <input type="text" class="form-control form-control-md" placeholder="Search">
+                                                        </div>
+                                                    </div>
                                                     <ul class="mb-3">
                                                         <li class="mb-1">
                                                             <label class="dropdown-item px-2 d-flex align-items-center text-dark">
@@ -1263,12 +1280,19 @@
                                                     <div class="row g-2">
                                                         <div class="col-6">
                                                             <a href="javascript:void(0);" class="btn btn-outline-white w-100 close-filter">Cancel</a>
+                                                        </div>
                                                         <div class="col-6">
                                                             <a href="javascript:void(0);" class="btn btn-primary w-100">Select</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Assets</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <div class="dropdown">
                                                 <a href="javascript:void(0);" class="dropdown-toggle btn bg-white  d-flex align-items-center justify-content-start fs-13 p-2 fw-normal border" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true">
                                                     Select <i class="ti ti-chevron-down ms-auto"></i>
@@ -1280,6 +1304,8 @@
                                                                 <i class="ti ti-search"></i>
                                                             </span>
                                                             <input type="text" class="form-control form-control-md" placeholder="Search">
+                                                        </div>
+                                                    </div>
                                                     <ul class="mb-3">
                                                         <li class="mb-1">
                                                             <label class="dropdown-item px-2 d-flex align-items-center text-dark">
@@ -1339,8 +1365,14 @@
                                                     <div class="row g-2">
                                                         <div class="col-6">
                                                             <a href="javascript:void(0);" class="btn btn-outline-white w-100 close-filter">Cancel</a>
+                                                        </div>
                                                         <div class="col-6">
                                                             <a href="javascript:void(0);" class="btn btn-primary w-100">Select</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="mb-3">
                                             <label class="form-label">Amount</label>
                                             <div class="dropdown">
@@ -1351,6 +1383,10 @@
                                                     <div class="filter-range">
                                                         <input type="text" id="range_03">
                                                         <p>Range : <span class="text-gray-9">$200 - $5695</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="mb-3">
                                             <label class="form-label mb-1 text-dark fs-14 fw-medium">Date<span class="text-danger">*</span></label>
                                             <div class="input-icon-end position-relative">  
@@ -1358,10 +1394,13 @@
                                                 <span class="input-icon-addon">
                                                     <i class="ti ti-calendar"></i>
                                                 </span>
+                                            </div>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Status</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <div class="dropdown">
                                                 <a href="javascript:void(0);" class="dropdown-toggle btn bg-white  d-flex align-items-center justify-content-start fs-13 p-2 fw-normal border" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true">
                                                     Select <i class="ti ti-chevron-down ms-auto"></i>
@@ -1373,6 +1412,8 @@
                                                                 <i class="ti ti-search"></i>
                                                             </span>
                                                             <input type="text" class="form-control form-control-md" placeholder="Search">
+                                                        </div>
+                                                    </div>
                                                     <ul class="mb-3">
                                                         <li class="mb-1">
                                                             <label class="dropdown-item px-2 d-flex align-items-center text-dark">
@@ -1390,12 +1431,22 @@
                                                     <div class="row g-2">
                                                         <div class="col-6">
                                                             <a href="javascript:void(0);" class="btn btn-outline-white w-100 close-filter">Cancel</a>
+                                                        </div>
                                                         <div class="col-6">
                                                             <a href="javascript:void(0);" class="btn btn-primary w-100">Select</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="filter-footer d-flex align-items-center justify-content-end border-top">
                                         <a href="javascript:void(0);" class="btn btn-light btn-md me-2 fw-medium" id="close-filter">Close</a>
                                         <button type="submit" class="btn btn-primary btn-md fw-medium">Filter</button>
+                                    </div>
                                 </form>
+                            </div>
+                        </div>
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle btn bg-white btn-md d-inline-flex align-items-center fw-normal rounded border text-dark px-2 py-1 fs-14" data-bs-toggle="dropdown">
                                <span  class="me-1"> Sort By : </span>  Recent
@@ -1408,6 +1459,9 @@
                                     <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
                 <!--  End Filter -->
 
                 <!--  Start Table -->
@@ -1437,6 +1491,7 @@
                                             <img src="assets/img/users/user-01.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">James Adair  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     VitalScan Monitor
@@ -1469,6 +1524,7 @@
                                             <img src="assets/img/users/user-02.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Adam Milne  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     MediScope
@@ -1501,6 +1557,7 @@
                                             <img src="assets/img/users/user-03.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Richard Clark</a>
+                                    </div>
                                 </td>
                                 <td>
                                     ThermoTrack
@@ -1533,6 +1590,7 @@
                                             <img src="assets/img/users/user-04.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Robert Reid  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     InjecSure
@@ -1565,6 +1623,7 @@
                                             <img src="assets/img/users/user-05.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Dottie Jeny  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     LabMate
@@ -1597,6 +1656,7 @@
                                             <img src="assets/img/users/user-06.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Cheryl Bilodeau </a>
+                                    </div>
                                 </td>
                                 <td>
                                     MicroView
@@ -1629,6 +1689,7 @@
                                             <img src="assets/img/users/user-07.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Valerie Padgett  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     First Aid Hub
@@ -1661,6 +1722,7 @@
                                             <img src="assets/img/users/user-08.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Diane Nash  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     MediCart
@@ -1693,6 +1755,7 @@
                                             <img src="assets/img/users/user-09.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Sally Cavazos  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     SterilBox
@@ -1725,6 +1788,7 @@
                                             <img src="assets/img/users/user-10.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Forest Heath</a>
+                                    </div>
                                 </td>
                                 <td>
                                     MediLogix
@@ -1750,20 +1814,25 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
                 <!--  End Table -->
 
+            </div>
             <!-- End Content -->
 
             <!-- Footer Start -->
             <div class="footer text-center bg-white p-2 border-top">
-                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Preclinic</a>, All Rights Reserved</p>
+            </div>
             <!-- Footer End -->
 
+        </div>
 
         <!-- ========================
 			End Page Content
 		========================= -->
 
+    </div>
     <!-- End Wrapper -->
 
     <!-- Start Add Asset -->
@@ -1773,6 +1842,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title text-dark fw-bold">Add Asset</h5>
                     <button type="button" class="btn-close custom-btn-close opacity-100" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body">
 
                     <!-- start row -->
@@ -1783,6 +1853,9 @@
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium">Asset Name <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1798,6 +1871,8 @@
                                                 <i class="ti ti-search"></i>
                                             </span>
                                             <input type="text" class="form-control form-control-sm" placeholder="Select">
+                                        </div>
+                                    </div>
                                     <ul class="mb-3 list-style-none">
                                         <li class="list-none">
                                             <label class="dropdown-item px-2 d-flex align-items-center text-dark">
@@ -1836,6 +1911,10 @@
                                             </label>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1845,30 +1924,45 @@
                                     <span class="input-icon-addon">
                                         <i class="ti ti-calendar"></i>
                                     </span>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium">Purchase From <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium"> Manufacturer <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium"> Model <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium"> Serial Number <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1879,6 +1973,9 @@
                                         <option>Old one</option>
                                         <option>Recent one</option>
                                     </select>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1890,18 +1987,26 @@
                                         <option>Old one</option>
                                         <option>Recent one</option>
                                     </select>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium">  warranty <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <label class="form-label mb-1 text-dark fs-14 fw-medium">Value <span class="text-danger">* </span> </label>
                             <div class="input-group">
                                 <span class="input-group-text bg-transparent text-dark fs-14">$</span>
                                 <input type="text" class="form-control" placeholder="0">
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1912,16 +2017,28 @@
                                         <option>Approved</option>
                                         <option>Pending</option>
                                     </select>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-12">
                             <div class="mb-3">
                                 <div>
                                     <label class="form-label mb-1 text-dark fs-14 fw-medium">Description <span class="text-danger">*</span> </label>
                                     <textarea rows="4" class="form-control rounded" placeholder="Description "> </textarea>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div>
                     <!-- end row -->
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light btn-sm me-2 fs-13 fw-medium" data-bs-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary btn-sm fs-13 fw-medium">Add Asset</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End Add Asset  -->
 
     <!-- Start Edit Asset -->
@@ -1931,6 +2048,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title text-dark fw-bold">Edit Asset</h5>
                     <button type="button" class="btn-close custom-btn-close opacity-100" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body">
 
                     <!-- start row -->
@@ -1941,6 +2059,9 @@
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium">Asset Name <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" value="VitalScan Monitor">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1956,6 +2077,8 @@
                                                 <i class="ti ti-search"></i>
                                             </span>
                                             <input type="text" class="form-control form-control-sm" placeholder="Emily clerk">
+                                        </div>
+                                    </div>
                                     <ul class="mb-3 list-style-none">
                                         <li class="list-none">
                                             <label class="dropdown-item px-2 d-flex align-items-center text-dark">
@@ -1994,6 +2117,10 @@
                                             </label>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -2003,30 +2130,45 @@
                                     <span class="input-icon-addon">
                                         <i class="ti ti-calendar"></i>
                                     </span>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium">Purchase From <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" value="2547">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium"> Manufacturer <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Endosys">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium"> Model <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="CareKIT Pro">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium"> Serial Number <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="ENW12547E789">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -2038,6 +2180,9 @@
                                         <option>Old one</option>
                                         <option>Recent one</option>
                                     </select>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -2048,18 +2193,26 @@
                                         <option>Old one</option>
                                         <option>Recent one</option>
                                     </select>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium">  warranty <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" value="2 years">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <label class="form-label mb-1 text-dark fs-14 fw-medium">Value <span class="text-danger">* </span> </label>
                             <div class="input-group">
                                 <span class="input-group-text bg-transparent text-dark fs-14">$</span>
                                 <input type="text" class="form-control" placeholder="0" value="100">
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -2069,16 +2222,28 @@
                                         <option>Approved</option>
                                         <option>Pending</option>
                                     </select>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-12">
                             <div class="mb-3">
                                 <div>
                                     <label class="form-label mb-1 text-dark fs-14 fw-medium">Description <span class="text-danger">*</span> </label>
                                     <textarea rows="4" class="form-control rounded" placeholder=""> Evaluates the Autonomic Nervous System (ANS) to help identify disorders such as sudden death risk, silent heart attacks, hypertension, and syncope.​</textarea>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div>
                     <!-- end row -->
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light btn-sm me-2 fs-13 fw-medium" data-bs-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary btn-sm fs-13 fw-medium">Add Asset</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End Edit Asset  -->
 
     <!-- Start Delete Modal  -->
@@ -2090,11 +2255,17 @@
                     <img src="assets/img/bg/delete-modal-bg-02.png" alt="" class="img-fluid position-absolute bottom-0 end-0 z-0">
                     <div class="mb-3 position-relative z-1">
                         <span class="avatar avatar-lg bg-danger text-white"><i class="ti ti-trash fs-24"></i></span>
+                    </div>
                     <h5 class="fw-bold mb-1 position-relative z-1">Delete Confirmation</h5>
                     <p class="mb-3 position-relative z-1">Are you sure want to delete?</p>
                     <div class="d-flex justify-content-center">
                         <a href="javascript:void(0);" class="btn btn-light position-relative z-1 me-3" data-bs-dismiss="modal">Cancel</a>
                         <a href="" class="btn btn-danger position-relative z-1" data-bs-dismiss="modal">Yes, Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End Delete Modal  -->
 
 

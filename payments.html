@@ -7,7 +7,7 @@
 	<!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Payments | Symplify - Medical & Hospital - Bootstrap 5 Admin Template</title>
+    <title>Payments | Preclinic - Medical & Hospital - Bootstrap 5 Admin Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Dreams Technologies">
 	
@@ -115,8 +115,19 @@
 
                     <!-- Appointment -->
                     <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="new-appointment.html" class="btn topbar-link"><i class="ti ti-calendar-due"></i></a>
+                        </div>
+                    </div>                    
                     <!-- Appointment -->
 
+                    <!-- Settings -->
+                    <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="profile-settings.html" class="btn topbar-link"><i class="ti ti-settings-2"></i></a>
+                        </div> 
+                    </div> 
+                    <!-- Settings -->                   
 
                     <!-- Light/Dark Mode Button -->
                     <div class="header-item d-none d-sm-flex me-2">
@@ -948,7 +959,7 @@
                                 </li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);">
-                                        <span>Other Settings</span>
+                                        <i class="ti ti-settings-2"></i><span>Other Settings</span>
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
@@ -1138,7 +1149,7 @@
                         </div>
                         <div>
                             <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
-                            <p class="fs-13 mb-0">Check 1 min video and begin use Symplify like a pro</p>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Preclinic like a pro</p>
                         </div>
                         <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
                     </div>
@@ -1197,6 +1208,7 @@
                     </div>
 
                     <div class="d-flex table-dropdown mb-3 pb-1 right-content align-items-center flex-wrap row-gap-3">
+                        <div class="dropdown me-2">
                             <a href="javascript:void(0);" class="bg-white border rounded btn btn-md text-dark fs-14 py-1 align-items-center d-flex fw-normal" data-bs-toggle="dropdown" data-bs-auto-close="outside">
                                 <i class="ti ti-filter text-gray-5 me-1"></i>Filters
                             </a>
@@ -1205,12 +1217,15 @@
                                     <h4 class="mb-0 fw-bold">Filter</h4>
                                     <div class="d-flex align-items-center">
                                         <a href="javascript:void(0);" class="link-danger text-decoration-underline">Clear All</a>
+                                    </div>
+                                </div>
                                 <form action="#">
                                     <div class="filter-body pb-0">
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label mb-1">Patient</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Alberto Ripley</option>
                                                 <option value="m-2">Susan Babin</option>
@@ -1223,10 +1238,12 @@
                                                 <option value="m-9">Bernard Griffith</option>
                                                 <option value="m-10">John Elsass</option>
                                             </select>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Practioner</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Dr.Mick Thompson</option>
                                                 <option value="m-2">Dr.Sarah Johnson</option>
@@ -1239,10 +1256,12 @@
                                                 <option value="m-9">Dr.Rachel Green</option>
                                                 <option value="m-10">Dr.Michael Smith </option>
                                             </select>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Designation</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Cardiologist</option>
                                                 <option value="m-2">Orthopedic Surgeon</option>
@@ -1255,15 +1274,18 @@
                                                 <option value="m-9">Urologist</option>
                                                 <option value="m-10">Dermatologist</option>
                                             </select>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Payment Method</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>PayPal</option>
                                                 <option value="m-2">Debit Card</option>
                                                 <option value="m-3">Cheque</option>
                                             </select>
+                                        </div>
                                         <div class="mb-3">
                                             <label class="form-label mb-1 text-dark fs-14 fw-medium">Date</label>
                                             <div class="input-icon-end position-relative">  
@@ -1271,28 +1293,38 @@
                                                 <span class="input-icon-addon">
                                                     <i class="ti ti-calendar"></i>
                                                 </span>
+                                            </div>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Amount</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>$501 - $1000</option>
                                                 <option value="m-2">$501 - $1100</option>
                                                 <option value="m-3">$701 - $1200</option>
                                             </select>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Status</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Paid</option>
                                                 <option value="m-2">Options Enhanced</option>
                                                 <option value="m-3">Unpaid</option>
                                             </select>
+                                        </div>
+                                    </div>
                                     <div class="filter-footer d-flex align-items-center justify-content-end border-top">
                                         <a href="javascript:void(0);" class="btn btn-light btn-md me-2 fw-medium" id="close-filter">Close</a>
                                         <button type="submit" class="btn btn-primary btn-md fw-medium">Filter</button>
+                                    </div>
                                 </form>
+                            </div>
+                        </div>
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle btn bg-white btn-md d-inline-flex align-items-center fw-normal rounded border text-dark px-2 py-1 fs-14" data-bs-toggle="dropdown">
                                <span  class="me-1"> Sort By : </span>  Recent
@@ -1305,6 +1337,9 @@
                                     <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
                 <!--  End Filter -->
 
                 <!--  Start Table -->
@@ -1333,6 +1368,7 @@
                                             <img src="assets/img/users/user-01.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">James Adair  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1342,6 +1378,8 @@
                                         <div>
                                             <h6 class="mb-1 fs-14 fw-semibold"><a href="doctor-details.html">Dr. Anna Kim</a></h6>
                                             <span class="fs-13 d-block">Psychiatrist</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-dark"> 30 Apr 2025</td>
                                 <td class="fw-semibold text-dark"> $800</td>
@@ -1370,6 +1408,7 @@
                                             <img src="assets/img/users/user-02.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Emily Johnson </a>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1379,6 +1418,8 @@
                                         <div>
                                             <h6 class="mb-1 fs-14 fw-semibold"><a href="doctor-details.html">Dr.Sarah Johnson</a></h6>
                                             <span class="fs-13 d-block">Orthopedic Surgeon</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-dark"> 15 Apr 2025</td>
                                 <td class="fw-semibold text-dark"> $930</td>
@@ -1407,6 +1448,7 @@
                                             <img src="assets/img/users/user-03.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold"> Robert Mitchell </a>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1416,6 +1458,8 @@
                                         <div>
                                             <h6 class="mb-1 fs-14 fw-semibold"><a href="doctor-details.html">Dr.Emily Carter</a></h6>
                                             <span class="fs-13 d-block">Pediatrician</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-dark"> 02 Apr 2025 </td>
                                 <td class="fw-semibold text-dark"> $850</td>
@@ -1444,6 +1488,7 @@
                                             <img src="assets/img/users/user-04.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold"> Sophia Miller  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1453,6 +1498,8 @@
                                         <div>
                                             <h6 class="mb-1 fs-14 fw-semibold"><a href="doctor-details.html">Dr.David Lee</a></h6>
                                             <span class="fs-13 d-block">Gynecologist</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-dark"> 27 Mar 2025 </td>
                                 <td class="fw-semibold text-dark"> $700</td>
@@ -1481,6 +1528,7 @@
                                             <img src="assets/img/users/user-05.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Daniel Anderson  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1490,6 +1538,8 @@
                                         <div>
                                             <h6 class="mb-1 fs-14 fw-semibold"><a href="doctor-details.html">Dr.Anna Kim</a></h6>
                                             <span class="fs-13 d-block">Psychiatrist</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-dark"> 12 Mar 2025</td>
                                 <td class="fw-semibold text-dark"> $650</td>
@@ -1518,6 +1568,7 @@
                                             <img src="assets/img/users/user-06.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Olivia Davis  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1527,6 +1578,8 @@
                                         <div>
                                             <h6 class="mb-1 fs-14 fw-semibold"><a href="doctor-details.html">Dr. John Smith</a></h6>
                                             <span class="fs-13 d-block">Neurosurgeon</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-dark"> 05 Mar 2025 </td>
                                 <td class="fw-semibold text-dark"> $430 </td>
@@ -1555,6 +1608,7 @@
                                             <img src="assets/img/users/user-07.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Michael Thompson  </a>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1564,6 +1618,8 @@
                                         <div>
                                             <h6 class="mb-1 fs-14 fw-semibold"><a href="doctor-details.html">Dr.Lisa White</a></h6>
                                             <span class="fs-13 d-block">Oncologist</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-dark"> 24 Feb 2025 </td>
                                 <td class="fw-semibold text-dark"> $300</td>
@@ -1592,6 +1648,7 @@
                                             <img src="assets/img/users/user-08.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Isabella Wilson </a>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1601,6 +1658,8 @@
                                         <div>
                                             <h6 class="mb-1 fs-14 fw-semibold"><a href="doctor-details.html">Dr. Patricia Brown</a></h6>
                                             <span class="fs-13 d-block">Pulmonologist</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-dark"> 16 Feb 2025 </td>
                                 <td class="fw-semibold text-dark"> $450</td>
@@ -1629,6 +1688,7 @@
                                             <img src="assets/img/users/user-09.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold"> Michael Trade</a>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1638,6 +1698,8 @@
                                         <div>
                                             <h6 class="mb-1 fs-14 fw-semibold"><a href="doctor-details.html">Dr. Rachel Green</a></h6>
                                             <span class="fs-13 d-block">Urologist</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-dark"> 01 Feb 2025 </td>
                                 <td class="fw-semibold text-dark"> $570</td>
@@ -1666,6 +1728,7 @@
                                             <img src="assets/img/users/user-10.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="text-dark fw-semibold">Ava Robinson </a>
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1675,6 +1738,8 @@
                                         <div>
                                             <h6 class="mb-1 fs-14 fw-semibold"><a href="doctor-details.html">Dr.Michael Smith </a></h6>
                                             <span class="fs-13 d-block">Cardiologist</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td class="text-dark"> 25 Jan 2025 </td>
                                 <td class="fw-semibold text-dark"> $800</td>
@@ -1697,20 +1762,25 @@
 
                         </tbody>
                     </table>
+                </div>
                 <!--  End Table -->
 
+            </div>
             <!-- End Content -->
 
             <!-- Footer Start -->
             <div class="footer text-center bg-white p-2 border-top">
-                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Preclinic</a>, All Rights Reserved</p>
+            </div>
             <!-- Footer End -->
 
+        </div>
 
         <!-- ========================
 			End Page Content
 		========================= -->
 
+    </div>
     <!-- End Wrapper -->
 
 
@@ -1721,6 +1791,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title text-dark fw-bold">New Payment</h5>
                     <button type="button" class="btn-close btn-close-modal custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+                </div>
                 <div class="modal-body">
 
                     <!-- start row -->
@@ -1731,6 +1802,9 @@
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium" >Invoice ID <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1740,6 +1814,9 @@
                                     <span class="input-icon-addon">
                                         <i class="ti ti-calendar text-body"></i>
                                     </span>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1755,6 +1832,8 @@
                                                     <i class="ti ti-search"></i>
                                                 </span>
                                                 <input type="text" class="form-control form-control-sm" placeholder="Search">
+                                            </div>
+                                        </div>
                                         <ul class="mb-0 list-style-none">
                                             <li>
                                                 <label class="dropdown-item px-2 d-flex align-items-center text-dark">
@@ -1817,6 +1896,10 @@
                                                 </label>
                                             </li>
                                         </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1832,6 +1915,8 @@
                                                     <i class="ti ti-search"></i>
                                                 </span>
                                                 <input type="text" class="form-control form-control-sm" placeholder="Search">
+                                            </div>
+                                        </div>
                                         <ul class="mb-0 list-style-none">
                                             <li>
                                                 <label class="dropdown-item px-2 d-flex align-items-center text-dark">
@@ -1895,6 +1980,10 @@
                                             </li>
                                             
                                         </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1907,6 +1996,11 @@
                                         <div class="filter-range">
                                             <input type="text" id="range_01">
                                             <p class="mt-2 fs-13">Range : <span class="text-dark">$200 - $5695</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1919,6 +2013,7 @@
                                         <li>
                                             <div class="mb-2">
                                                 <input type="text" class="form-control form-control" placeholder="Search">
+                                            </div>
                                         </li>
                                         <li>
                                             <label class="dropdown-item px-2 d-flex align-items-center rounded-1">
@@ -1939,6 +2034,9 @@
                                             </label>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -1951,6 +2049,7 @@
                                         <li>
                                             <div class="mb-2">
                                                 <input type="text" class="form-control form-control" placeholder="Search">
+                                            </div>
                                         </li>
                                         <li>
                                             <label class="dropdown-item px-2 d-flex align-items-center rounded-1">
@@ -1977,18 +2076,30 @@
                                             </label>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-12">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium" >Other Information <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <textarea class="form-control" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
+                    </div>
                     <!-- end row -->
 
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light btn-sm me-2 fs-13 fw-medium" data-bs-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary btn-sm fs-13 fw-medium">Add New Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End Add Expense  -->
 
     <!-- Start Edit Expense -->
@@ -1998,6 +2109,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title text-dark fw-bold">Edit Payment</h5>
                     <button type="button" class="btn-close btn-close-modal custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+                </div>
                 <div class="modal-body">
 
                     <!-- start row -->
@@ -2008,6 +2120,9 @@
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium" >Invoice ID <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" value="#INV0025">
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -2017,6 +2132,9 @@
                                     <span class="input-icon-addon">
                                         <i class="ti ti-calendar text-body"></i>
                                     </span>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -2032,6 +2150,8 @@
                                                     <i class="ti ti-search"></i>
                                                 </span>
                                                 <input type="text" class="form-control form-control-sm" placeholder="Search">
+                                            </div>
+                                        </div>
                                         <ul class="mb-0 list-style-none">
                                             <li>
                                                 <label class="dropdown-item px-2 d-flex align-items-center text-dark">
@@ -2088,6 +2208,10 @@
                                                 </label>
                                             </li>
                                         </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -2103,6 +2227,8 @@
                                                     <i class="ti ti-search"></i>
                                                 </span>
                                                 <input type="text" class="form-control form-control-sm" placeholder="Search">
+                                            </div>
+                                        </div>
                                         <ul class="mb-0 list-style-none">
                                             <li>
                                                 <label class="dropdown-item px-2 d-flex align-items-center text-dark">
@@ -2166,6 +2292,10 @@
                                             </li>
                                             
                                         </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -2178,6 +2308,11 @@
                                         <div class="filter-range">
                                             <input type="text" id="range_02">
                                             <p class="mt-2 fs-13">Range : <span class="text-dark">$200 - $5695</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -2190,6 +2325,7 @@
                                         <li>
                                             <div class="mb-2">
                                                 <input type="text" class="form-control form-control" placeholder="Search">
+                                            </div>
                                         </li>
                                         <li>
                                             <label class="dropdown-item px-2 d-flex align-items-center rounded-1">
@@ -2210,6 +2346,9 @@
                                             </label>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-6">
                             <div class="mb-3">
@@ -2222,6 +2361,7 @@
                                         <li>
                                             <div class="mb-2">
                                                 <input type="text" class="form-control form-control" placeholder="Search">
+                                            </div>
                                         </li>
                                         <li>
                                             <label class="dropdown-item px-2 d-flex align-items-center rounded-1">
@@ -2248,18 +2388,30 @@
                                             </label>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
                         <div class="col-lg-12">
                             <div class="mb-3">
                                 <label class="form-label mb-1 text-dark fs-14 fw-medium" >Other Information <span class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <textarea class="form-control" rows="4"> </textarea>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
 
+                    </div>
                     <!-- end row -->
 
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light btn-sm me-2 fs-13 fw-medium" data-bs-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary btn-sm fs-13 fw-medium">Add New Expense</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End Edit Expense  -->
 
     <!-- Start Delete Modal  -->
@@ -2271,11 +2423,17 @@
                     <img src="assets/img/bg/delete-modal-bg-02.png" alt="" class="img-fluid position-absolute bottom-0 end-0 z-0">
                     <div class="mb-3 position-relative z-1">
                         <span class="avatar avatar-lg bg-danger text-white"><i class="ti ti-trash fs-24"></i></span>
+                    </div>
                     <h5 class="fw-bold mb-1 position-relative z-1">Delete Confirmation</h5>
                     <p class="mb-3 position-relative z-1">Are you sure want to delete?</p>
                     <div class="d-flex justify-content-center">
                         <a href="javascript:void(0);" class="btn btn-light position-relative z-1 me-3" data-bs-dismiss="modal">Cancel</a>
                         <a href="" class="btn btn-danger position-relative z-1" data-bs-dismiss="modal">Yes, Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End Delete Modal  -->
 
 

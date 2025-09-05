@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Utilities | Symplify - Medical & Hospital - Bootstrap 5 Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Dreams Technologies">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+	<!-- Theme Script js -->
+    <script src="assets/js/theme-script.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Topbar Start -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+
+                        <!-- Logo Normal -->
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                            <span class="logo-sm"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+
+                        <!-- Logo Dark -->
+                        <span class="logo-dark">
+                            <span class="logo-lg"><img src="assets/img/logo-white.svg" alt="dark logo"></span>
+                        </span>
+                    </a>
+
+                    <!-- Sidebar Mobile Button -->
+                    <a id="mobile_btn" class="mobile-btn" href="#sidebar">
+                        <i class="ti ti-menu-deep fs-24"></i>
+                    </a>
+                       
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2"> 
+                        <i class="ti ti-arrow-right"></i>
+                    </button>  
+					
+                    <!-- Search -->
+                    <div class="me-auto d-flex align-items-center header-search d-lg-flex d-none">
+                        <!-- Search -->
+                        <div class="input-icon-start position-relative me-2">
+                            <span class="input-icon-addon">
+                                <i class="ti ti-search"></i>
+                            </span>
+                           <input type="text" class="form-control shadow-sm" placeholder="Search">
+                           <span class="input-icon-addon text-dark shadow fs-18 d-inline-flex p-0 header-search-icon"><i class="ti ti-command"></i></span>
+                        </div>
+                        <!-- /Search -->
+                    </div>
+					
+                </div>
+
+                <div class="d-flex align-items-center">
+				
+                    <!-- Search for Mobile -->
+                    <div class="header-item d-flex d-lg-none me-2">
+                        <button class="topbar-link btn btn-icon" data-bs-toggle="modal" data-bs-target="#searchModal" type="button">
+                            <i class="ti ti-search fs-16"></i>
+                        </button>
+                    </div>
+					
+                    <!-- AI Assistance -->
+					<a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+                    <!-- AI Assistance -->
+
+                    <!-- Appointment -->
+                    <div class="header-item">
+                    <!-- Appointment -->
+
+
+                    <!-- Light/Dark Mode Button -->
+                    <div class="header-item d-none d-sm-flex me-2">
+                        <button class="topbar-link btn btn-icon topbar-link" id="light-dark-mode" type="button">
+                            <i class="ti ti-moon fs-16"></i>
+                        </button>
+                    </div>
+                    
+					
+					<!-- Notification Dropdown -->
+                    <div class="header-item">
+						<div class="dropdown me-3">
+						
+							<button class="topbar-link btn btn-icon topbar-link dropdown-toggle drop-arrow-none" data-bs-toggle="dropdown" data-bs-offset="0,24" type="button" aria-haspopup="false" aria-expanded="false">
+								<i class="ti ti-bell-check fs-16 animate-ring"></i>
+								<span class="notification-badge"></span>
+							</button>
+							
+							<div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg" style="min-height: 300px;">
+							
+								<div class="p-2 border-bottom">
+									<div class="row align-items-center">
+										<div class="col">
+											<h6 class="m-0 fs-16 fw-semibold"> Notifications</h6>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Notification Body -->
+								<div class="notification-body position-relative z-2 rounded-0" data-simplebar>
+								 
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-1">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-01.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Dr. Smith</p>
+												<p class="mb-1 text-wrap">
+													updated the <span class="fw-medium text-dark">surgery</span> schedule. 
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>4 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-1">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+							
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-2">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-06.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Dr. Patel</p>
+												<p class="mb-1 text-wrap">
+                                                    completed a <span class="fw-medium text-dark">follow-up</span> report for patient <span class="fw-medium text-dark">Emily</span>.
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>8 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-2">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-3">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-02.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Emily</p>
+												<p class="mb-1 text-wrap">
+                                                    booked an appointment with <span class="fw-medium text-dark">Dr. Patel</span> for <span class="fw-medium text-dark">April 15</span>
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>15 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-3">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap" id="notification-4">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-07.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Amelia</p>
+												<p class="mb-1 text-wrap">
+                                                    completed the <span class="fw-medium text-dark">pre-visit</span> health questionnaire.
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>20 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-4">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									 
+								</div>
+								
+								<!-- View All-->
+								<div class="p-2 rounded-bottom border-top text-center">
+									<a href="notifications.html" class="text-center text-decoration-underline fs-14 mb-0">
+										View All Notifications
+									</a>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+					<!-- User Dropdown -->
+					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/users/user-01.jpg" width="32" class="rounded-circle d-flex" alt="user-image">
+                            <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
+                        
+                            <div class="d-flex align-items-center bg-light rounded-3 p-2 mb-2">
+                                <img src="assets/img/users/user-01.jpg" class="rounded-circle" width="42" height="42" alt="">
+                                <div class="ms-2">
+                                    <p class="fw-medium text-dark mb-0">Jimmy Anderson</p>
+                                    <span class="d-block fs-13">Administrator</span>
+                                </div>
+                            </div>
+
+                            <!-- Item-->
+                            <a href="profile-settings.html" class="dropdown-item">
+                                <i class="ti ti-user-circle me-1 align-middle"></i>
+                                <span class="align-middle">Profile Settings</span>
+                            </a>
+
+                            <!-- Item-->
+                            <a href="account-settings.html" class="dropdown-item">
+                                <i class="ti ti-settings me-1 align-middle"></i>
+                                <span class="align-middle">Account Settings</span>
+                            </a>
+
+                            <!-- item -->
+                            <div class="form-check form-switch form-check-reverse d-flex align-items-center justify-content-between dropdown-item mb-0">
+                                <label class="form-check-label" for="notify"><i class="ti ti-bell me-1"></i>Notifications</label>
+                                <input class="form-check-input me-0" type="checkbox" role="switch" id="notify">
+                            </div>
+
+                            <!-- Item-->
+                            <a href="transactions.html" class="dropdown-item">
+                                <i class="ti ti-transition-right me-1 align-middle"></i>
+                                <span class="align-middle">Transactions</span>
+                            </a>
+
+                                        
+                            
+                            <!-- Item-->
+                            <div class="pt-2 mt-2 border-top">
+                                <a href="login.html" class="dropdown-item text-danger">
+                                    <i class="ti ti-logout me-1 fs-17 align-middle"></i>
+                                    <span class="align-middle">Log Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+						
+                </div>
+            </div>
+        </header>
+        <!-- Topbar End -->
+
+        <!-- Search Modal -->
+        <div class="modal fade" id="searchModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-transparent">
+                    <div class="card shadow-none mb-0">
+                        <div class="px-3 py-2 d-flex flex-row align-items-center" id="search-top">
+                            <i class="ti ti-search fs-22"></i>
+                            <input type="search" class="form-control border-0" placeholder="Search">
+                            <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x fs-22"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidenav Menu Start -->
+        <div class="sidebar" id="sidebar">
+            
+            <!-- Start Logo -->
+            <div class="sidebar-logo">
+                <div>
+                    <!-- Logo Normal -->
+                    <a href="index.html" class="logo logo-normal">
+                        <img src="assets/img/logo.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Small -->
+                    <a href="index.html" class="logo-small">
+                        <img src="assets/img/logo-small.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Dark -->
+                    <a href="index.html" class="dark-logo">
+                        <img src="assets/img/logo-white.svg" alt="Logo">
+                    </a>
+                </div>
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
+                    <i class="ti ti-arrow-left text-body"></i>
+                </button>
+
+                <!-- Sidebar Menu Close -->
+                <button class="sidebar-close">
+                    <i class="ti ti-x align-middle"></i>
+                </button>                
+            </div>
+            <!-- End Logo -->
+
+            <!-- Sidenav Menu -->
+            <div class="sidebar-inner" data-simplebar>                
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <div class="sidebar-top shadow-sm p-2 rounded-1 mb-3 dropend">
+                        <a href="javascript:void(0);" class="drop-arrow-none" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <span class="avatar rounded-circle flex-shrink-0 p-2"><img src="./assets/img/icons/trustcare.svg" alt="img"></span>
+                                    <div class="ms-2">
+                                        <h6 class="fs-14 fw-semibold mb-0">Trustcare Clinic</h6>
+                                        <p class="fs-13 mb-0">Lasvegas</p>
+                                    </div>
+                                </div>
+                                <i class="ti ti-arrows-transfer-up"></i>                            
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-lg">
+                            <div class="p-2"> 
+                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
+                                    <span class="d-flex align-items-center">
+                                        <span class="me-2"><img src="assets/img/icons/clinic-01.svg" alt=""></span>
+                                        <span class="fw-semibold text-dark">CureWell Medical Hub<small class="d-block text-muted fw-normal fs-13">Ohio</small></span>
+                                    </span>
+                                    <input class="form-check-input m-0 me-2" type="checkbox">
+                                </label> 
+                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
+                                    <span class="d-flex align-items-center">
+                                        <span class="me-2"><img src="assets/img/icons/clinic-02.svg" alt=""></span>
+                                        <span class="fw-semibold text-dark">Trustcare Clinic<small class="d-block text-muted fw-normal fs-13">Lasvegas</small></span>
+                                    </span>
+                                    <input class="form-check-input m-0 me-2" type="checkbox">
+                                </label> 
+                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
+                                    <span class="d-flex align-items-center">
+                                        <span class="me-2"><img src="assets/img/icons/clinic-03.svg" alt=""></span>
+                                        <span class="fw-semibold text-dark">NovaCare Medical<small class="d-block text-muted fw-normal fs-13">Washington</small></span>
+                                    </span>
+                                    <input class="form-check-input m-0 me-2" type="checkbox">
+                                </label> 
+                                <label class="dropdown-item d-flex align-items-center justify-content-between p-1">
+                                    <span class="d-flex align-items-center">
+                                        <span class="me-2"><img src="assets/img/icons/clinic-04.svg" alt=""></span>
+                                        <span class="fw-semibold text-dark">Greeny Medical Clinic<small class="d-block text-muted fw-normal fs-13">Illinios</small></span>
+                                    </span>
+                                    <input class="form-check-input m-0 me-2" type="checkbox">
+                                </label> 
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="menu-title"><span>Main Menu</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-layout-dashboard"></i><span>Dashboard</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="index.html">Admin Dashboard</a></li>
+                                        <li><a href="doctor-dashboard.html">Doctor Dashboard</a></li>
+                                        <li><a href="patient-dashboard.html">Patient Dashboard</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-apps"></i><span>Applications</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="chat.html">Chat</a></li>
+                                        <li class="submenu submenu-two">
+                                            <a href="#">Calls<span class="menu-arrow inside-submenu"></span></a>
+                                            <ul>
+                                                <li><a href="voice-call.html">Voice Call</a></li>
+                                                <li><a href="video-call.html">Video Call</a></li>
+                                                <li><a href="outgoing-call.html">Outgoing Call</a></li>
+                                                <li><a href="incoming-call.html">Incoming Call</a></li>
+                                                <li><a href="call-history.html">Call History</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="calendar.html">Calendar</a></li>
+                                        <li><a href="contacts.html">Contacts</a></li>		
+                                        <li><a href="email.html">Email</a></li>
+                                        <li class="submenu submenu-two">
+                                            <a href="#">Invoices<span class="menu-arrow inside-submenu"></span></a>
+                                            <ul>
+                                                <li><a href="invoice.html">Invoices</a></li>
+                                                <li><a href="invoice-details.html">Invoice Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="todo.html">To Do</a></li>
+                                        <li><a href="notes.html">Notes</a></li>
+                                        <li><a href="kanban-view.html">Kanban Board</a></li>
+                                        <li><a href="file-manager.html">File Manager</a></li>
+                                        <li><a href="social-feed.html">Social Feed</a></li>
+                                        <li><a href="search-list.html">Search Result</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-layout-sidebar"></i><span>Layouts</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="index.html">Default</a></li>
+                                        <li><a href="layout-mini.html">Mini</a></li>
+                                        <li><a href="layout-hover-view.html">Hover View</a></li>
+                                        <li><a href="layout-hidden.html">Hidden</a></li>
+                                        <li><a href="layout-full-width.html">Full Width</a></li>
+                                        <li><a href="layout-rtl.html">RTL</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Clinic</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-user-plus"></i><span>Doctors</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="doctors.html">Doctors</a></li>
+                                        <li><a href="doctor-details.html">Doctor Details</a></li>
+                                        <li><a href="add-doctor.html">Add Doctor</a></li>
+                                        <li><a href="doctor-schedule.html">Doctor Schedule</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-user-heart"></i><span>Patients</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="patients.html">Patients</a></li>
+                                        <li><a href="patient-details.html">Patient Details</a></li>
+                                        <li><a href="create-patient.html">Create Patient</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-calendar-check"></i><span>Appointments</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="appointments.html">Appointments</a></li>
+                                        <li><a href="new-appointment.html">New Appointment</a></li>
+                                        <li><a href="appointment-calendar.html">Calendar</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="locations.html">
+                                        <i class="ti ti-map-pin"></i><span>Locations</span>
+                                    </a>
+                                </li>  
+                                <li>
+                                    <a href="services.html">
+                                        <i class="ti ti-user-cog"></i><span>Services</span>
+                                    </a>
+                                </li>  
+                                <li>
+                                    <a href="specializations.html">
+                                        <i class="ti ti-user-shield"></i><span>Specializations</span>
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="assets.html">
+                                        <i class="ti ti-asset"></i><span>Assets</span>
+                                    </a>
+                                </li>  
+                                <li>
+                                    <a href="activities.html">
+                                        <i class="ti ti-activity"></i><span>Activities</span>
+                                    </a>
+                                </li> 
+                                <li>
+                                    <a href="messages.html">
+                                        <i class="ti ti-messages"></i><span>Messages</span>
+                                    </a>
+                                </li>                           
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>HRM</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="staffs.html">
+                                        <i class="ti ti-users-group"></i><span>Staffs</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="hrm-departments.html">
+                                        <i class="ti ti-building-bank"></i><span>Departments</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="designation.html">
+                                        <i class="ti ti-user-cog"></i><span>Designation</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="attendance.html">
+                                        <i class="ti ti-user-check"></i><span>Attendance</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-users-minus"></i><span>Leaves</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="leaves.html">Leaves</a></li>
+                                        <li><a href="leave-type.html">Leave Type</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="holidays.html">
+                                        <i class="ti ti-home-exclamation"></i><span>Holidays</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="payroll.html">
+                                        <i class="ti ti-coin"></i><span>Payroll</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Finance & Accounts</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-credit-card"></i><span>Expenses</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="expenses.html">Expenses</a></li>
+                                        <li><a href="expense-category.html">Expense Category</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="income.html">
+                                        <i class="ti ti-coins"></i><span>Income</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-file-invoice"></i><span>Invoices</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="invoices.html">Invoices</a></li>
+                                        <li><a href="invoices-details.html">Invoice Details</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="payments.html">
+                                        <i class="ti ti-cards"></i><span>Payments</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="transactions.html">
+                                        <i class="ti ti-transition-right"></i><span>Transactions</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Administration</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-user"></i><span>Users</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="roles-and-permissions.html">Roles & Permissions</a></li>
+                                        <li><a href="delete-account-request.html">Delete Account Request</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-report"></i><span>Reports</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="income-report.html">Income Report</a></li>
+                                        <li><a href="expense-report.html">Expense Report</a></li>
+                                        <li><a href="profit-and-loss.html">Profit & Loss</a></li>
+                                        <li><a href="appointment-report.html">Appointment Report</a></li>
+                                        <li><a href="patient-report.html">Patient Report</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Content</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="pages.html">
+                                        <i class="ti ti-brand-pagekit"></i><span>Pages</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-brand-blogger"></i><span>Blogs</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="add-blog.html">Add Blog</a></li>
+                                        <li><a href="blogs.html">Blogs</a></li>
+                                        <li><a href="blog-categories.html">Blog Categories</a></li>
+                                        <li><a href="blog-comments.html">Blog Comments</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-map-pins"></i><span>Location</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="countries.html">Countries</a></li>
+                                        <li><a href="states.html">States</a></li>
+                                        <li><a href="cities.html">Cities</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="testimonials.html">
+                                        <i class="ti ti-brand-wechat"></i><span>Testimonials</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faq.html">
+                                        <i class="ti ti-question-mark"></i><span>FAQ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Support</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="contact-messages.html">
+                                        <i class="ti ti-message-dots"></i><span>Contact Messages</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tickets.html">
+                                        <i class="ti ti-ticket"></i><span>Tickets</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="announcements.html">
+                                        <i class="ti ti-speakerphone"></i><span>Announcements</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="newsletters.html">
+                                        <i class="ti ti-mail-bolt"></i><span>Newsletters</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Pages</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="starter.html">
+                                        <i class="ti ti-player-play"></i><span>Starter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="profile.html">
+                                        <i class="ti ti-user-circle"></i><span>Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gallery.html">
+                                        <i class="ti ti-photo"></i><span>Gallery</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="timeline.html">
+                                        <i class="ti ti-timeline-event-text"></i><span>Timeline</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pricing.html">
+                                        <i class="ti ti-tag"></i><span>Pricing</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="coming-soon.html">
+                                        <i class="ti ti-sparkles"></i><span>Coming Soon</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="under-maintenance.html">
+                                        <i class="ti ti-settings-down"></i><span>Under Maintenance</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="privacy-policy.html">
+                                        <i class="ti ti-shield-check"></i><span>Privacy Policy</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="terms-and-conditions.html">
+                                        <i class="ti ti-file-time"></i><span>Terms & Conditions</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Authentication</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-login"></i><span>Login</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="login-cover.html">Cover</a></li>
+                                        <li><a href="login-illustration.html">Illustration</a></li>
+                                        <li><a href="login-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-file-pencil"></i><span>Register</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="register-cover.html">Cover</a></li>
+                                        <li><a href="register-illustration.html">Illustration</a></li>
+                                        <li><a href="register-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-lock-exclamation"></i><span>Forgot Password</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="forgot-password-cover.html">Cover</a></li>
+                                        <li><a href="forgot-password-illustration.html">Illustration</a></li>
+                                        <li><a href="forgot-password-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-restore"></i><span>Reset Password</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="reset-password-cover.html">Cover</a></li>
+                                        <li><a href="reset-password-illustration.html">Illustration</a></li>
+                                        <li><a href="reset-password-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-mail-check"></i><span>Email Verification</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="email-verification-cover.html">Cover</a></li>
+                                        <li><a href="email-verification-illustration.html">Illustration</a></li>
+                                        <li><a href="email-verification-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-discount-check"></i><span>2 Step Verification</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="two-step-verification-cover.html">Cover</a></li>
+                                        <li><a href="two-step-verification-illustration.html">Illustration</a></li>
+                                        <li><a href="two-step-verification-basic.html">Basic</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="lock-screen.html">
+                                        <i class="ti ti-lock"></i><span>Lock Screen</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-exclamation-mark-off"></i><span>Error Pages</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="error-404.html">404 Error</a></li>
+                                        <li><a href="error-500.html">500 Error</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Settings</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-user-cog"></i><span>Account Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="profile-settings.html">Profile</a></li>
+                                        <li><a href="security-settings.html">Security</a></li>
+                                        <li><a href="notifications-settings.html">Notifications</a></li>
+                                        <li><a href="integrations-settings.html">Integrations</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-world-cog"></i><span>Website Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="organization-settings.html">Organization</a></li>
+                                        <li><a href="localization-settings.html">Localization</a></li>
+                                        <li><a href="prefixes-settings.html">Prefixes</a></li>
+                                        <li><a href="seo-setup-settings.html">SEO Setup</a></li>
+                                        <li><a href="language-settings.html">Language</a></li>
+                                        <li><a href="maintenance-mode-settings.html">Maintenance Mode</a></li>
+                                        <li><a href="login-and-register-settings.html">Login & Register</a></li>
+                                        <li><a href="preferences-settings.html">Preferences</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-building-hospital"></i><span>Clinic Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="appointment-settings.html">Appointment</a></li>
+                                        <li><a href="working-hours-settings.html">Working Hours</a></li>
+                                        <li><a href="cancellation-reason-settings.html">Cancellation Reason</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-device-mobile-cog"></i><span>App Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="invoice-settings.html">Invoice Settings</a></li>
+                                        <li><a href="invoice-templates-settings.html">Invoice Templates</a></li>
+                                        <li><a href="signatures-settings.html">Signatures</a></li>
+                                        <li><a href="custom-fields-settings.html">Custom Fields</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-device-desktop-cog"></i><span>System Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="email-settings.html">Email Settings</a></li>
+                                        <li><a href="email-templates-settings.html">Email Templates</a></li>
+                                        <li><a href="sms-gateways-settings.html">SMS Gateways</a></li>
+                                        <li><a href="sms-templates-settings.html">SMS Templates</a></li>
+                                        <li><a href="gdpr-cookies-settings.html">GDPR Cookies</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-settings-dollar"></i><span>Finance & Accounts</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="payment-methods-settings.html">Payment Methods</a></li>
+                                        <li><a href="bank-accounts-settings.html">Bank Accounts</a></li>
+                                        <li><a href="tax-rates-settings.html">Tax Rates</a></li>
+                                        <li><a href="currencies-settings.html">Currencies</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <span>Other Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="sitemap-settings.html">Sitemap</a></li>
+                                        <li><a href="clear-cache-settings.html">Clear Cache</a></li>
+                                        <li><a href="storage-settings.html">Storage</a></li>
+                                        <li><a href="cronjob-settings.html">Cronjob</a></li>
+                                        <li><a href="ban-ip-address-settings.html">Ban IP Address</a></li>
+                                        <li><a href="system-backup-settings.html">System Backup</a></li>
+                                        <li><a href="database-backup-settings.html">Database Backup</a></li>
+                                        <li><a href="system-update.html">System Update</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>UI Interface</span></li>
+                        <li>
+                            <ul>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);" class="active subdrop">
+                                        <i class="ti ti-chart-pie"></i><span>Base UI</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="ui-accordion.html">Accordion</a></li>
+                                        <li><a href="ui-alerts.html">Alerts</a></li>
+                                        <li><a href="ui-avatar.html">Avatar</a></li>
+                                        <li><a href="ui-badges.html">Badges</a></li>
+                                        <li><a href="ui-breadcrumb.html">Breadcrumb</a></li>
+                                        <li><a href="ui-buttons.html">Buttons</a></li>
+                                        <li><a href="ui-buttons-group.html">Button Group</a></li>
+                                        <li><a href="ui-cards.html">Card</a></li>
+                                        <li><a href="ui-carousel.html">Carousel</a></li>
+                                        <li><a href="ui-collapse.html">Collapse</a></li>
+                                        <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                                        <li><a href="ui-ratio.html">Ratio</a></li>
+                                        <li><a href="ui-grid.html">Grid</a></li>
+                                        <li><a href="ui-images.html">Images</a></li>
+                                        <li><a href="ui-links.html">Links</a></li>
+                                        <li><a href="ui-list-group.html">List Group</a></li>
+                                        <li><a href="ui-modals.html">Modals</a></li>
+                                        <li><a href="ui-offcanvas.html">Offcanvas</a></li>
+                                        <li><a href="ui-pagination.html">Pagination</a></li>
+                                        <li><a href="ui-placeholders.html">Placeholders</a></li>
+                                        <li><a href="ui-popovers.html">Popovers</a></li>
+                                        <li><a href="ui-progress.html">Progress</a></li>
+                                        <li><a href="ui-scrollspy.html">Scrollspy</a></li>
+                                        <li><a href="ui-spinner.html">Spinner</a></li>
+                                        <li><a href="ui-nav-tabs.html">Tabs</a></li>
+                                        <li><a href="ui-toasts.html">Toasts</a></li>
+                                        <li><a href="ui-tooltips.html">Tooltips</a></li>
+                                        <li><a href="ui-typography.html">Typography</a></li>
+                                        <li><a href="ui-utilities.html" class="active">Utilities</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-radar"></i><span>Advanced UI</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="extended-dragula.html">Dragula</a></li>
+                                        <li><a href="ui-clipboard.html">Clipboard</a></li>
+                                        <li><a href="ui-rangeslider.html">Range Slider</a></li>
+                                        <li><a href="ui-sweetalerts.html">Sweet Alerts</a></li>
+										<li><a href="ui-lightbox.html">Lightbox</a></li>
+										<li><a href="ui-rating.html">Rating</a></li>
+										<li><a href="ui-scrollbar.html">Scrollbar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-forms"></i><span>Forms</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li class="submenu submenu-two">
+                                            <a href="javascript:void(0);">Form Elements<span class="menu-arrow inside-submenu"></span></a>
+                                            <ul>
+                                                <li><a href="form-basic-inputs.html">Basic Inputs</a></li>
+                                                <li><a href="form-checkbox-radios.html">Checkbox & Radios</a></li>
+                                                <li><a href="form-input-groups.html">Input Groups</a></li>
+                                                <li><a href="form-grid-gutters.html">Grid & Gutters</a></li>
+                                                <li><a href="form-mask.html">Input Masks</a></li>
+                                                <li><a href="form-fileupload.html">File Uploads</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu submenu-two">
+                                            <a href="javascript:void(0);">Layouts<span class="menu-arrow inside-submenu"></span></a>
+                                            <ul>
+                                                <li><a href="form-horizontal.html">Horizontal Form</a></li>
+                                                <li><a href="form-vertical.html">Vertical Form</a></li>
+                                                <li><a href="form-floating-labels.html">Floating Labels</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="form-validation.html">Form Validation</a></li>
+                                        <li><a href="form-select2.html">Select2</a></li>
+                                        <li><a href="form-wizard.html">Form Wizard</a></li>
+                                        <li><a href="form-pickers.html">Form Picker</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-table-row"></i><span>Tables</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="tables-basic.html">Basic Tables </a></li>
+                                        <li><a href="data-tables.html">Data Table </a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-chart-donut"></i>
+                                        <span>Charts</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="chart-apex.html">Apex Charts</a></li>
+                                        <li><a href="chart-c3.html">Chart C3</a></li>
+                                        <li><a href="chart-js.html">Chart Js</a></li>
+                                        <li><a href="chart-morris.html">Morris Charts</a></li>
+                                        <li><a href="chart-flot.html">Flot Charts</a></li>
+                                        <li><a href="chart-peity.html">Peity Charts</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-icons"></i>
+                                        <span>Icons</span><span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
+                                        <li><a href="icon-tabler.html">Tabler Icons</a></li>
+                                        <li><a href="icon-bootstrap.html">Bootstrap Icons</a></li>
+                                        <li><a href="icon-remix.html">Remix Icons</a></li>
+                                        <li><a href="icon-feather.html">Feather Icons</a></li>
+                                        <li><a href="icon-ionic.html">Ionic Icons</a></li>
+                                        <li><a href="icon-material.html">Material Icons</a></li>
+                                        <li><a href="icon-pe7.html">Pe7 Icons</a></li>
+                                        <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
+                                        <li><a href="icon-themify.html">Themify Icons</a></li>
+                                        <li><a href="icon-weather.html">Weather Icons</a></li>
+                                        <li><a href="icon-typicons.html">Typicons Icons</a></li>
+                                        <li><a href="icon-flag.html">Flag Icons</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-title"><span>Help</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="ti ti-file-dots"></i><span>Documentation</span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);"><i class="ti ti-status-change"></i><span>Changelog</span><span class="badge bg-danger ms-2 badge-md rounded-2 fs-12 fw-medium">v1.6.8</span></a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-versions"></i><span>Multi Level</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="javascript:void(0);">Multilevel 1</a></li>
+                                        <li class="submenu submenu-two">
+                                            <a href="javascript:void(0);">Multilevel 2<span
+                                                    class="menu-arrow inside-submenu"></span></a>
+                                            <ul>
+                                                <li><a href="javascript:void(0);">Multilevel 2.1</a></li>
+                                                <li class="submenu submenu-two submenu-three">
+                                                    <a href="javascript:void(0);">Multilevel 2.2<span
+                                                            class="menu-arrow inside-submenu inside-submenu-two"></span></a>
+                                                    <ul>
+                                                        <li><a href="javascript:void(0);">Multilevel 2.2.1</a></li>
+                                                        <li><a href="javascript:void(0);">Multilevel 2.2.2</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0);">Multilevel 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>                        
+                    </ul>                   
+                </div>
+                <div class="sidebar-footer border-top mt-3">
+                    <div class="trial-item mt-0 p-3 text-center">
+                        <div class="trial-item-icon rounded-4 mb-3 p-2 text-center shadow-sm d-inline-flex">
+                            <img src="./assets/img/icons/sidebar-icon.svg" alt="img">
+                        </div>
+                        <div>
+                            <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Symplify like a pro</p>
+                        </div>
+                        <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Sidenav Menu End -->
+
+        <!-- ========================
+			Start Page Content
+		========================= -->
+
+        <div class="page-wrapper">
+
+			<!-- Start Content -->
+            <div class="content pb-0">
+                
+                <div class="d-flex align-items-sm-center flex-sm-row flex-column gap-2 pb-3">
+                    <div class="flex-grow-1">
+                        <h4 class="fw-bold mb-0">Utilities</h4>
+                    </div>
+
+                    <div class="text-end">
+                        <ol class="breadcrumb m-0 py-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                            
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Base UI</a></li>
+                            
+                            <li class="breadcrumb-item active">Utilities</li>
+                        </ol>
+                    </div>
+                </div>
+                
+				<!-- start row -->
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Background Color</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Similar to the contextual text color classes, set the background
+                                    of an element to any contextual class. Background
+                                    utilities <strong>do not set <code>color</code></strong>, so in some cases you’ll
+                                    want to use <code>.text-*</code>color utilities.</p>
+
+                                <div class="bg-primary text-white p-2 mb-2">.bg-primary</div>
+                                <div class="bg-secondary text-white p-2 mb-2">.bg-secondary</div>
+                                <div class="bg-success text-white p-2 mb-2">.bg-success</div>
+                                <div class="bg-danger text-white p-2 mb-2">.bg-danger</div>
+                                <div class="bg-warning text-dark p-2 mb-2">.bg-warning</div>
+                                <div class="bg-info text-dark p-2 mb-2">.bg-info</div>
+                                <div class="bg-light text-dark p-2 mb-2">.bg-light</div>
+                                <div class="bg-dark p-2 mb-2">.bg-dark</div>
+                                <div class="bg-body text-dark p-2 mb-2">.bg-body</div>
+                                <div class="bg-body-secondary text-dark p-2 mb-2">.bg-body-secondary</div>
+                                <div class="bg-body-tertiary text-dark p-2 mb-2">.bg-body-tertiary</div>
+                                <div class="bg-white p-2 mb-2">.bg-white</div>
+                                <div class="bg-black text-white p-2 mb-2">.bg-black</div>
+                                <div class="bg-transparent text-dark p-2">.bg-transparent</div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-6">
+                        <div class="card card-h-100">
+                            <div class="card-header">
+                                <h5 class="header-title">Background Gradient Color</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">By adding a <code>.bg-gradient</code> class, a linear gradient is
+                                    added as background image to the backgrounds. This
+                                    gradient starts with a semi-transparent white which fades out to the bottom.</p>
+
+                                <div class="p-2 mb-2 bg-primary bg-gradient text-white">.bg-gradient.bg-primary</div>
+                                <div class="p-2 mb-2 bg-secondary bg-gradient text-white">
+                                    .bg-secondary.bg-gradient</div>
+                                <div class="p-2 mb-2 bg-success bg-gradient text-white">.bg-success.bg-gradient</div>
+                                <div class="p-2 mb-2 bg-danger bg-gradient text-white">.bg-danger.bg-gradient</div>
+                                <div class="p-2 mb-2 bg-warning bg-gradient text-dark">.bg-warning.bg-gradient</div>
+                                <div class="p-2 mb-2 bg-info bg-gradient text-dark">.bg-info.bg-gradient</div>
+                                <div class="p-2 mb-2 bg-light bg-gradient text-dark">.bg-light.bg-gradient</div>
+                                <div class="p-2 mb-2 bg-dark bg-gradient text-white">.bg-dark.bg-gradient</div>
+                                <div class="p-2 mb-2 bg-black bg-gradient text-white">.bg-black.bg-gradient</div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Soft Background</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities do not set <code>color</code>, so in some cases you’ll want to use <code>.text-*</code> <a href="https://getbootstrap.com/docs/5.3/utilities/colors/">color utilities</a>. </p>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex flex-column gap-2">
+                                            <div class="bg-primary-subtle p-2"><code class="text-primary-emphasis">.bg-primary-subtle</code></div>
+                                            <div class="bg-secondary-subtle p-2"><code class="text-secondary-emphasis">.bg-secondary-subtle </code></div>
+                                            <div class="bg-success-subtle p-2"><code class="text-success-emphasis">.bg-success-subtle</code></div>
+                                            <div class="bg-danger-subtle p-2"><code class="text-danger-emphasis">.bg-danger-subtle</code></div>
+                                            <div class="bg-warning-subtle p-2"><code class="text-warning-emphasis">.bg-warning-subtle</code></div>
+                                            <div class="bg-info-subtle p-2"><code class="text-info-emphasis">.bg-info-subtle</code></div>
+                                            <div class="bg-light-subtle p-2"><code class="text-light-emphasis">.bg-light-subtle</code></div>
+                                            <div class="bg-dark-subtle p-2"><code class="text-dark-emphasis">.bg-dark-subtle</code></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Background Gradient Color 2</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Similar to the contextual text color classes, set the background
+                                    of an element to any contextual class. Background utilities do not set
+                                    <code>color</code>, so in some cases you’ll want to use <code>.text-*</code> <a href="https://getbootstrap.com/docs/5.3/utilities/colors/">color utilities</a>.
+                                </p>
+								<div class="row row-cols-12 d-flex align-items-center">
+                                    <div class="p-3 col">
+                                        <div class="m-2 bg-primary-gradient mx-auto color-container"></div>
+                                        <p class="pb-0 mb-0 fw-semibold text-center"><code>.bg-primary-gradient</code>
+                                        </p>
+                                    </div>
+                                    <div class="p-3 col">
+                                        <div class="m-2 bg-secondary-gradient mx-auto color-container"></div>
+                                        <p class="pb-0 mb-0 fw-semibold text-center"><code>.bg-secondary-gradient</code>
+                                        </p>
+                                    </div>
+                                    <div class="p-3 col">
+                                        <div class="m-2 bg-warning-gradient mx-auto color-container"></div>
+                                        <p class="pb-0 mb-0 fw-semibold text-center"><code>.bg-warning-gradient</code>
+                                        </p>
+                                    </div>
+                                    <div class="p-3 col">
+                                        <div class="m-2 bg-info-gradient mx-auto color-container"></div>
+                                        <p class="pb-0 mb-0 fw-semibold text-center"><code>.bg-info-gradient</code></p>
+                                    </div>
+                                    <div class="p-3 col">
+                                        <div class="m-2 bg-success-gradient mx-auto color-container"></div>
+                                        <p class="pb-0 mb-0 fw-semibold text-center"><code>.bg-success-gradient</code>
+                                        </p>
+                                    </div>
+                                    <div class="p-3 col">
+                                        <div class="m-2 bg-danger-gradient mx-auto color-container"></div>
+                                        <p class="pb-0 mb-0 fw-semibold text-center"><code>.bg-danger-gradient</code>
+                                        </p>
+                                    </div>
+                                    <div class="p-3 col">
+                                        <div class="m-2 bg-light-gradient mx-auto color-container"></div>
+                                        <p class="pb-0 mb-0 fw-semibold text-center"><code>.bg-light-gradient</code></p>
+                                    </div>
+                                    <div class="p-3 col">
+                                        <div class="m-2 bg-dark-gradient mx-auto color-container"></div>
+                                        <p class="pb-0 mb-0 fw-semibold text-center"><code>.bg-dark-gradient</code></p>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div>
+				<!-- end row -->
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Color & Background</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Color and background helpers combine the power of our
+                                    <code>.text-*</code> utilities and <code>.bg-*</code> utilities in one class. Using
+                                    our Sass <code>color-contrast()</code> function, we automatically determine a
+                                    contrasting <code>color</code> for a particular <code>background-color</code>.
+                                </p>
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="text-bg-primary p-2">Primary with contrasting color (.text-bg-primary)</div>
+                                    <div class="text-bg-secondary p-2">Secondary with contrasting color (.text-bg-secondary)</div>
+                                    <div class="text-bg-success p-2">Success with contrasting color (.text-bg-success)</div>
+                                    <div class="text-bg-danger p-2">Danger with contrasting color (.text-bg-danger)</div>
+                                    <div class="text-bg-warning p-2">Warning with contrasting color (.text-bg-warning)</div>
+                                    <div class="text-bg-info p-2">Info with contrasting color (.text-bg-info)</div>
+                                    <div class="text-bg-light p-2">Light with contrasting color (.text-bg-light)</div>
+                                    <div class="text-bg-dark p-2">Dark with contrasting color (.text-bg-dark)</div>
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-6">
+                        <div class="card card-h-100">
+                            <div class="card-header">
+                                <h5 class="header-title">Colored links</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted fs-14">You can use the <code>.link-*</code> classes to colorize
+                                    links. Unlike the <code>.text-*</code> classes, these classes have a
+                                    <code>:hover</code> and <code>:focus</code> state.
+                                </p>
+                                <div class="d-flex flex-column gap-2">
+                                    <a href="#" class="link-primary">Primary link</a>
+                                    <a href="#" class="link-secondary">Secondary link</a>
+                                    <a href="#" class="link-success">Success link</a>
+                                    <a href="#" class="link-danger">Danger link</a>
+                                    <a href="#" class="link-warning">Warning link</a>
+                                    <a href="#" class="link-info">Info link</a>
+                                    <a href="#" class="link-light">Light link</a>
+                                    <a href="#" class="link-dark">Dark link</a>
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Background Opacity</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted"><code>background-color</code> utilities are generated with Sass
+                                    using CSS variables. This
+                                    allows for real-time color changes without compilation and dynamic alpha
+                                    transparency changes.</p>
+                                <div class="bg-primary p-2 text-white">This is default primary background</div>
+                                <div class="bg-primary p-2 text-white bg-opacity-75">This is 75% opacity primary background</div>
+                                <div class="bg-primary p-2 text-dark bg-opacity-50">This is 50% opacity primary background</div>
+                                <div class="bg-primary p-2 text-dark bg-opacity-25">This is 25% opacity primary background</div>
+                                <div class="bg-primary p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Text Color</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Colorize text with color utilities. If you want to colorize links, you can use the <code>.link-*</code> helper classes which have <code>:hover</code> and <code>:focus</code> states.</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p class="text-primary">.text-primary</p>
+                                        <p class="text-primary-emphasis">.text-primary-emphasis</p>
+                                        <p class="text-secondary">.text-secondary</p>
+                                        <p class="text-secondary-emphasis">.text-secondary-emphasis</p>
+                                        <p class="text-success">.text-success</p>
+                                        <p class="text-success-emphasis">.text-success-emphasis</p>
+                                        <p class="text-danger">.text-danger</p>
+                                        <p class="text-danger-emphasis">.text-danger-emphasis</p>
+                                        <p class="text-warning">.text-warning</p>
+                                        <p class="text-warning-emphasis">.text-warning-emphasis</p>
+                                        <p class="text-info">.text-info</p>
+                                        <p class="text-info-emphasis">.text-info-emphasis</p>
+                                        <p class="text-light bg-dark">.text-light</p>
+                                        <p class="text-light-emphasis">.text-light-emphasis</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="text-dark">.text-dark</p>
+                                        <p class="text-dark-emphasis">.text-dark-emphasis</p>
+                                        <p class="text-muted">.text-muted</p>
+                                        <p class="text-body">.text-body</p>
+                                        <p class="text-body-emphasis">.text-body-emphasis</p>
+                                        <p class="text-body-secondary">.text-body-secondary</p>
+                                        <p class="text-body-tertiary">.text-body-tertiary</p>
+                                        <p class="text-black">.text-black</p>
+                                        <p class="text-white bg-dark">.text-white</p>
+                                        <p class="text-black-50">.text-black-50</p>
+                                        <p class="text-white-50 bg-dark">.text-white-50</p>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div> <!-- end row -->
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Text Opacity Color</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">text color utilities are generated with Sass using CSS variables.
+                                    This allows for real-time color
+                                    changes without compilation and dynamic alpha transparency changes.</p>
+                                <div class="text-primary">This is default primary text</div>
+                                <div class="text-primary text-opacity-75">This is 75% opacity primary text</div>
+                                <div class="text-primary text-opacity-50">This is 50% opacity primary text</div>
+                                <div class="text-primary text-opacity-25">This is 25% opacity primary text</div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-6">
+                        <div class="card card-h-100">
+                            <div class="card-header">
+                                <h5 class="header-title">Opacity</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">The <code>opacity</code> property sets the opacity level for an
+                                    element. The opacity level describes the transparency
+                                    level, where <code>1</code> is not transparent at all, <code>.5</code> is 50%
+                                    visible, and <code>0</code> is
+                                    completely transparent. Set the <code>opacity</code> of an element using
+                                    <code>.opacity-{value}</code> utilities.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <div class="opacity-100 p-2 bg-primary text-light fw-bold rounded">100%</div>
+                                    <div class="opacity-75 p-2 bg-primary text-light fw-bold rounded">75%</div>
+                                    <div class="opacity-50 p-2 bg-primary text-light fw-bold rounded">50%</div>
+                                    <div class="opacity-25 p-2 bg-primary text-light fw-bold rounded">25%</div>
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div><!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Additive(Add) Border</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Use border utilities to <b>add</b> an element’s borders. Choose
+                                    from all borders or one at a time.</p>
+                                <div class="d-flex align-items-start flex-wrap gap-4">
+                                    <div class="text-center">
+                                        <div class="border avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border-top avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border-end avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border-bottom avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border-start avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Subtractive(Remove) Border</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Use border utilities to <b>remove</b> an element’s borders. Choose
+                                    from all borders or one at a time.</p>
+                                <div class="d-flex align-items-start flex-wrap gap-4">
+                                    <div class="text-center">
+                                        <div class="border border-0 avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-top-0 avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-end-0 avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-bottom-0 avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-start-0 avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Border Color</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Change the border color using utilities built on our theme colors.
+                                </p>
+                                <div class="d-flex align-items-start flex-wrap gap-2">
+                                    <div class="text-center">
+                                        <div class="border border-primary avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-secondary avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-success avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-danger avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-warning avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-info avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-light avatar-xl"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-dark avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                </div>
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Border Width Size</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-start flex-wrap gap-2">
+                                    <div class="text-center">
+                                        <div class="border border-1 avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-2 avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-3 avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-4 avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-5 avatar-xl bg-light bg-opacity-50"></div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-6">
+                        <div class="card card-h-100">
+                            <div class="card-header">
+                                <h5 class="header-title">Border Opacity</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">choose from any of the <code>.border-opacity</code> utilities:</p>
+                                <div class="border border-success p-2 mb-2">This is default success border</div>
+                                <div class="border border-success p-2 mb-2 border-opacity-75">This is 75% opacity success border</div>
+                                <div class="border border-success p-2 mb-2 border-opacity-50">This is 50% opacity success border</div>
+                                <div class="border border-success p-2 mb-2 border-opacity-25">This is 25% opacity success border</div>
+                                <div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Border Subtle Color</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Change the border color using utilities built on our theme colors.
+                                </p>
+                                <div class="d-flex align-items-start flex-wrap gap-2">
+                                    <div class="text-center">
+                                        <div class="border border-primary-subtle avatar-xl bg-light bg-opacity-50">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-secondary-subtle avatar-xl bg-light bg-opacity-50">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-success-subtle avatar-xl bg-light bg-opacity-50">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-danger-subtle avatar-xl bg-light bg-opacity-50">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-warning-subtle avatar-xl bg-light bg-opacity-50">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-info-subtle avatar-xl bg-light bg-opacity-50">
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-light-subtle avatar-xl"></div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="border border-dark-subtle avatar-xl bg-light bg-opacity-50">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div><!--end row-->
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Border Radius</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Add classes to an element to easily round its corners.</p>
+                                <div class="d-flex align-items-start flex-wrap gap-2">
+                                    <img src="assets/img/users/avatar-2.jpg" class="avatar-lg rounded" alt="rounded">
+                                    <img src="assets/img/users/avatar-2.jpg" class="avatar-lg rounded-top" alt="rounded-top">
+                                    <img src="assets/img/users/avatar-2.jpg" class="avatar-lg rounded-end" alt="rounded-end">
+                                    <img src="assets/img/users/avatar-2.jpg" class="avatar-lg rounded-bottom" alt="rounded-bottom">
+                                    <img src="assets/img/users/avatar-2.jpg" class="avatar-lg rounded-start" alt="rounded-start">
+                                    <img src="assets/img/users/avatar-2.jpg" class="avatar-lg rounded-circle" alt="rounded-circle">
+                                    <img src="assets/img/users/small-2.jpg" class="avatar-lg w-auto rounded-pill" alt="rounded-pill">
+                                </div>
+
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Border Radius Size</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Use the scaling classes for larger or smaller rounded corners.
+                                    Sizes range from <code>0</code> to <code>5</code>.</p>
+                                <div class="d-flex align-items-start flex-wrap gap-2">
+                                    <img src="assets/img/users/avatar-4.jpg" class="avatar-lg rounded-0" alt="rounded-0">
+                                    <img src="assets/img/users/avatar-4.jpg" class="avatar-lg rounded-1" alt="rounded-1">
+                                    <img src="assets/img/users/avatar-4.jpg" class="avatar-lg rounded-2" alt="rounded-2">
+                                    <img src="assets/img/users/avatar-4.jpg" class="avatar-lg rounded-3" alt="rounded-3">
+                                    <img src="assets/img/users/avatar-4.jpg" class="avatar-lg rounded-4" alt="rounded-4">
+                                    <img src="assets/img/users/avatar-4.jpg" class="avatar-lg rounded-5" alt="rounded-5">
+                                </div>
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Text Selection</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Use <code>user-select-all</code>, <code>user-select-auto</code>, or <code>user-select-none</code> class to the content which is selected when the user interacts with it. </p>
+                                <p class="user-select-all">This paragraph will be entirely selected when clicked by the user.</p>
+                                <p class="user-select-auto">This paragraph has default select behavior.</p>
+                                <p class="user-select-none mb-0">This paragraph will not be selectable when clicked by the user.</p>
+                            </div> <!-- end card body -->
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="header-title">Pointer Events</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted">Bootstrap provides <code>.pe-none</code> and <code>.pe-auto</code> classes to prevent or add element interactions.</p>
+
+
+                                <p><a href="#" class="pe-none" tabindex="-1">This link</a> can not be clicked.</p>
+                                <p><a href="#" class="pe-auto">This link</a> can be clicked (this is default behavior).</p>
+                                <p class="pe-none"><a href="#" tabindex="-1">This link</a> can not be clicked because the <code>pointer-events</code> property is inherited from its parent. However, <a href="#" class="pe-auto">this link</a> has a <code>pe-auto</code> class and can be clicked.</p>
+							</div> <!-- end card body -->
+						</div> <!-- end card -->
+					</div> <!-- end col -->
+				</div>
+				<!-- end row -->
+
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="header-title">Overflow</h5>
+							</div>
+							<div class="card-body">
+								<p class="text-muted">Adjust the <code>overflow</code> property on the fly with four default values and classes. These classes are not responsive by default.</p>
+								<div class="d-flex flex-wrap gap-3">
+									<div class="overflow-auto p-3 bg-light" style="max-width: 260px; max-height: 100px;">
+										This is an example of using <code>.overflow-auto</code> on an element with set width and height dimensions. By design, this content will vertically scroll.
+									</div>
+									<div class="overflow-hidden p-3 bg-light" style="max-width: 260px; max-height: 100px;">
+										This is an example of using <code>.overflow-hidden</code> on an element with set width and height dimensions.
+									</div>
+									<div class="overflow-visible p-3 bg-light" style="max-width: 260px; max-height: 100px;">
+										This is an example of using <code>.overflow-visible</code> on an elementwith set width and height dimensions.
+									</div>
+									<div class="overflow-scroll p-3 bg-light" style="max-width: 260px; max-height: 100px;">
+										This is an example of using <code>.overflow-scroll</code> on an elementwith set width and height dimensions.
+									</div>
+								</div>
+							</div> <!-- end card body -->
+						</div> <!-- end card -->
+					</div> <!-- end col -->
+				</div>
+				<!-- end row -->
+
+				<div class="row">
+					<div class="col-xl-6">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="header-title">Position in Arrange</h5>
+							</div>
+							<div class="card-body">
+								<p class="text-muted">Arrange elements easily with the edge positioning utilities. The format is <code>{property}-{position}</code>.</p>
+								<!-- Arrange elements -->
+								<div class="position-relative p-5 bg-light bg-opacity-50 m-3 border rounded" style="height: 180px;">
+									<div class="position-absolute top-0 start-0 avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-0 end-0 avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-50 start-50 avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute bottom-50 end-50 avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute bottom-0 start-0 avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute bottom-0 end-0 avatar-xs bg-dark rounded"></div>
+								</div>
+
+							</div> <!-- end card body -->
+						</div> <!-- end card -->
+					</div> <!-- end col -->
+
+					<div class="col-xl-6">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="header-title">Position in Center</h5>
+							</div>
+							<div class="card-body">
+								<p class="text-muted">In addition, you can also center the elements with the transform utility class <code>.translate-middle</code>.</p>
+								<!-- Center elements -->
+								<div class="position-relative m-3 bg-light bg-opacity-50 border rounded" style="height: 180px;">
+									<div class="position-absolute top-0 start-0 translate-middle avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-0 start-50 translate-middle avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-0 start-100 translate-middle avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-50 start-0 translate-middle avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-50 start-50 translate-middle avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-50 start-100 translate-middle avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-100 start-0 translate-middle avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-100 start-50 translate-middle avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-100 start-100 translate-middle avatar-xs bg-dark rounded"></div>
+								</div>
+
+							</div> <!-- end card body -->
+						</div> <!-- end card -->
+					</div> <!-- end col -->
+				</div>
+				<!-- end row -->
+
+				<div class="row">
+					<div class="col-xl-6">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="header-title">Position in Axis</h5>
+							</div>
+							<div class="card-body">
+								<p class="text-muted">By adding <code>.translate-middle-x</code> or <code>.translate-middle-y</code> classes, elements can be positioned only in horizontal or vertical direction. </p>
+
+								<!-- Center elements -->
+								<div class="position-relative m-3 bg-light border rounded" style="height: 180px;">
+									<div class="position-absolute top-0 start-0 avatar-xs bg-dark rounded "></div>
+									<div class="position-absolute top-0 start-50 translate-middle-x avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-0 end-0 avatar-xs bg-dark rounded"></div>
+
+									<div class="position-absolute top-50 start-0 translate-middle-y avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-50 start-50 translate-middle avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute top-50 end-0 translate-middle-y avatar-xs bg-dark rounded"></div>
+
+									<div class="position-absolute bottom-0 start-0 avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute bottom-0 start-50 translate-middle-x avatar-xs bg-dark rounded"></div>
+									<div class="position-absolute bottom-0 end-0 avatar-xs bg-dark rounded"></div>
+								</div>
+
+							</div> <!-- end card body -->
+						</div> <!-- end card -->
+					</div> <!-- end col -->
+
+					<div class="col-xl-6">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="header-title">Shadows</h5>
+							</div>
+
+							<div class="card-body">
+								<p class="text-muted">While shadows on components are disabled by default in Bootstrap
+									and can be enabled via
+									<code>$enable-shadows</code>, you can also quickly add or remove a shadow with our
+									<code>box-shadow</code> utility
+									classes. Includes support for <code>.shadow-none</code> and three default sizes
+									(which have associated variables to
+									match).
+								</p>
+								<div class="shadow-none p-2 mb-2 bg-light rounded">No shadow</div>
+								<div class="shadow-sm p-2 mb-2 rounded">Small shadow</div>
+								<div class="shadow p-2 mb-2 rounded">Regular shadow</div>
+								<div class="shadow-lg p-2 rounded">Larger shadow</div>
+
+							</div> <!-- end card body -->
+						</div> <!-- end card -->
+					</div> <!-- end col -->
+				</div>
+				<!-- end row -->
+
+
+				<div class="row">
+					<div class="col-xl-6">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="header-title">Width</h5>
+							</div>
+
+							<div class="card-body">
+								<p class="text-muted">Width utilities are generated from the utility API in
+									<code>_utilities.scss</code>. Includes support for
+									<code>25%</code>, <code>50%</code>, <code>75%</code>, <code>100%</code>, and
+									<code>auto</code> by default. Modify
+									those values as you need to generate different utilities here.
+								</p>
+								<!-- Width -->
+								<div class="w-25 p-2 bg-light mb-2">Width 25%</div>
+
+								<div class="w-50 p-2 bg-light mb-2">Width 50%</div>
+
+								<div class="w-75 p-2 bg-light mb-2">Width 75%</div>
+
+								<div class="w-100 p-2 bg-light mb-2">Width 100%</div>
+
+								<div class="w-auto p-2 bg-light">Width auto</div>
+
+							</div> <!-- end card body -->
+						</div> <!-- end card -->
+					</div> <!-- end col -->
+
+					<div class="col-xl-6">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="header-title">Height</h5>
+							</div>
+
+							<div class="card-body">
+								<p class="text-muted">Height utilities are generated from the utility API in
+									<code>_utilities.scss</code>. Includes support for
+									<code>25%</code>, <code>50%</code>, <code>75%</code>, <code>100%</code>, and
+									<code>auto</code> by default. Modify
+									those values as you need to generate different utilities here.
+								</p>
+								<div class="d-flex flex-wrap gap-2 align-items-start" style="height: 255px;">
+									<!-- Height -->
+									<div class="h-25 p-2 bg-light">Height25%</div>
+
+									<div class="h-50 p-2 bg-light">Height50%</div>
+
+									<div class="h-75 p-2 bg-light">Height75%</div>
+
+									<div class="h-100 p-2 bg-light">Height100%</div>
+
+									<div class="h-auto p-2 bg-light">Height auto</div>
+								</div>
+
+							</div> <!-- end card body -->
+						</div> <!-- end card -->
+					</div> <!-- end col -->
+				</div>
+				<!-- end row -->
+
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="header-title">Object Fit</h5>
+							</div>
+
+							<div class="card-body">
+								<p class="text-muted">Change the value of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit"><code>object-fit</code>
+										property</a> with our responsive <code>object-fit</code> utility classes. This
+									property tells the content to fill the parent container in a variety of ways, such
+									as preserving the aspect ratio or stretching to take up as much space as possible.
+								</p>
+								<div class="d-flex align-items-start flex-wrap gap-3 text-center">
+									<div>
+										<img src="assets/img/media/img-2.jpg" class="object-fit-contain border rounded avatar-xl" alt="...">
+										<p class="mt-1 mb-0"><code class="user-select-all">.object-fit-contain</code></p>
+									</div>
+									<div>
+										<img src="assets/img/media/img-2.jpg" class="object-fit-cover border rounded avatar-xl" alt="...">
+										<p class="mt-1 mb-0"><code class="user-select-all">.object-fit-cover</code></p>
+									</div>
+									<div>
+										<img src="assets/img/media/img-2.jpg" class="object-fit-fill border rounded avatar-xl" alt="...">
+										<p class="mt-1 mb-0"><code class="user-select-all">.object-fit-fill</code></p>
+									</div>
+									<div>
+										<img src="assets/img/media/img-2.jpg" class="object-fit-scale border rounded avatar-xl" alt="...">
+										<p class="mt-1 mb-0"><code class="user-select-all">.object-fit-scale</code></p>
+									</div>
+									<div>
+										<img src="assets/img/media/img-2.jpg" class="object-fit-none border rounded avatar-xl" alt="...">
+										<p class="mt-1 mb-0"><code class="user-select-all">.object-fit-none</code></p>
+									</div>
+								</div>
+
+							</div> <!-- end card body -->
+						</div> <!-- end card -->
+					</div> <!-- end col -->
+				</div><!-- end end -->
+
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="header-title">Z-index</h5>
+							</div>
+
+							<div class="card-body pb-0">
+								<p class="text-muted">Use <code>z-index</code> utilities to stack elements on top of one
+									another. Requires a <code>position</code> value other than <code>static</code>,
+									which can be set with custom styles or using our <a href="/docs/5.3/utilities/position/">position utilities</a>.</p>
+
+								<div class="bd-example-zindex-levels position-relative">
+
+									<div class="z-3 position-absolute p-5 rounded-3 bg-primary"><span>z-3</span></div>
+									<div class="z-2 position-absolute p-5 rounded-3 bg-success"><span>z-2</span></div>
+									<div class="z-1 position-absolute p-5 rounded-3 bg-warning"><span>z-1</span></div>
+									<div class="z-0 position-absolute p-5 rounded-3 bg-danger"><span>z-0</span></div>
+									<div class="z-n1 position-absolute p-5 rounded-3 bg-info"><span>z-n1</span></div>
+
+								</div>
+
+							</div> <!-- end card body -->
+						</div> <!-- end card -->
+					</div> <!-- end col -->
+				</div><!-- end end -->
+
+        	</div>
+			<!-- End Content -->
+
+            <!-- Footer Start -->
+            <div class="footer text-center bg-white p-2 border-top">
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
+            </div>
+            <!-- Footer End -->
+
+    	</div>
+
+		<!-- ========================
+			End Page Content
+		========================= -->
+
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- jQuery -->
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+
+	<!-- Simplebar JS -->
+	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
+
+	<!-- Feather Icon JS -->
+	<script src="assets/js/feather.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script> 
+
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

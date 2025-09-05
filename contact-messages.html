@@ -7,7 +7,7 @@
 	<!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contact Messages | Symplify - Medical & Hospital - Bootstrap 5 Admin Template</title>
+    <title>Contact Messages | Preclinic - Medical & Hospital - Bootstrap 5 Admin Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Dreams Technologies">
 	
@@ -111,8 +111,19 @@
 
                     <!-- Appointment -->
                     <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="new-appointment.html" class="btn topbar-link"><i class="ti ti-calendar-due"></i></a>
+                        </div>
+                    </div>                    
                     <!-- Appointment -->
 
+                    <!-- Settings -->
+                    <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="profile-settings.html" class="btn topbar-link"><i class="ti ti-settings-2"></i></a>
+                        </div> 
+                    </div> 
+                    <!-- Settings -->                   
 
                     <!-- Light/Dark Mode Button -->
                     <div class="header-item d-none d-sm-flex me-2">
@@ -939,7 +950,7 @@
                                 </li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);">
-                                        <span>Other Settings</span>
+                                        <i class="ti ti-settings-2"></i><span>Other Settings</span>
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
@@ -1129,7 +1140,7 @@
                         </div>
                         <div>
                             <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
-                            <p class="fs-13 mb-0">Check 1 min video and begin use Symplify like a pro</p>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Preclinic like a pro</p>
                         </div>
                         <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
                     </div>
@@ -1169,6 +1180,7 @@
                         </div>
                     </div>
                     <div class="d-flex table-dropdown mb-3 pb-1 right-content align-items-center flex-wrap row-gap-3">
+                        <div class="dropdown me-2">
                             <a href="javascript:void(0);" class="dropdown-toggle btn bg-white btn-md d-inline-flex align-items-center fw-normal rounded border text-dark px-2 py-1 fs-14" data-bs-toggle="dropdown" data-bs-auto-close="outside">
                                 <i class="ti ti-filter me-2 fs-14"></i>Filter 
                             </a>
@@ -1177,6 +1189,8 @@
                                     <h4 class="fs-18 fw-bold">Filter</h4>
                                     <div class="d-flex align-items-center">
                                         <a href="javascript:void(0);" class="link-danger text-decoration-underline me-3">Clear All</a>
+                                    </div>
+                                </div>
                                 <form action="#">
                                     <div class="filter-body pb-1">
                                         <div class="mb-3">
@@ -1192,6 +1206,8 @@
                                                                 <i class="isax isax-search-normal"></i>
                                                             </span>
                                                             <input type="text" class="form-control form-control-sm" placeholder="Search">
+                                                        </div>
+                                                    </div>
                                                     <ul class="mb-3">
                                                         <li class="d-flex align-items-center justify-content-between mb-3">
                                                             <label class="d-inline-flex align-items-center text-gray-9">
@@ -1227,20 +1243,33 @@
                                                     <div class="row g-2">
                                                         <div class="col-6">
                                                             <a href="javascript:void(0);" class="btn btn-outline-white w-100 close-filter">Cancel</a>
+                                                        </div>
                                                         <div class="col-6">
                                                             <a href="javascript:void(0);" class="btn btn-primary w-100">Select</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Date</label>
+                                            </div>
                                             <div class="input-group position-relative">
                                                 <input type="text" class="form-control date-range bookingrange rounded-end h-auto py-2 bg-white">
                                                 <span class="input-icon-addon fs-16 text-gray-9">
                                                     <i class="ti ti-calendar"></i>
                                                 </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="filter-footer d-flex align-items-center justify-content-end border-top">
                                         <a href="javascript:void(0);" class="btn btn-light btn-md me-2" id="close-filter">Close</a>
                                         <button type="submit" class="btn btn-primary btn-md">Filter</button>
+                                    </div>
                                 </form>
+                            </div>
+                        </div>
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle btn bg-white btn-md d-inline-flex align-items-center fw-normal rounded border text-dark px-2 py-1 fs-14" data-bs-toggle="dropdown">
                                <span  class="me-1"> Sort By : </span>  Recent
@@ -1253,6 +1282,9 @@
                                     <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="table-responsive">
                     <table class="table table-nowrap datatable">
@@ -1274,6 +1306,7 @@
                                             <img src="assets/img/users/user-33.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="fw-medium">Alberto Ripley</a>
+                                    </div>
                                 </td>
                                 <td>+1 41245 54132</td>
                                 <td>alberto@example.com</td>
@@ -1300,6 +1333,7 @@
                                             <img src="assets/img/users/user-01.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="fw-medium">Susan Babin</a>
+                                    </div>
                                 </td>
                                 <td>+1 54554 54789</td>
                                 <td>susan@example.com</td>
@@ -1326,6 +1360,7 @@
                                             <img src="assets/img/users/user-02.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="fw-medium">Carol Lam</a>
+                                    </div>
                                 </td>
                                 <td>+1  43554 54985</td>
                                 <td>carol@example.com</td>
@@ -1352,6 +1387,7 @@
                                             <img src="assets/img/users/user-04.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="fw-medium">Marsha Noland</a>
+                                    </div>
                                 </td>
                                 <td>+1 47554 54257</td>
                                 <td>marsha@example.com</td>
@@ -1378,6 +1414,7 @@
                                             <img src="assets/img/users/user-05.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="fw-medium">Irma Armstrong</a>
+                                    </div>
                                 </td>
                                 <td>+1 54114 57526</td>
                                 <td>irma@example.com</td>
@@ -1404,6 +1441,7 @@
                                             <img src="assets/img/users/user-07.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="fw-medium">Jesus Adams</a>
+                                    </div>
                                 </td>
                                 <td>+1 51247 56574</td>
                                 <td>jesus@example.com</td>
@@ -1430,6 +1468,7 @@
                                             <img src="assets/img/users/user-08.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="fw-medium">Ezra Belcher</a>
+                                    </div>
                                 </td>
                                 <td>+1 41452 25741</td>
                                 <td>ezra@example.com</td>
@@ -1456,6 +1495,7 @@
                                             <img src="assets/img/users/user-10.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="fw-medium">Glen Lentz</a>
+                                    </div>
                                 </td>
                                 <td>+1 51425 21498</td>
                                 <td>glen@example.com</td>
@@ -1482,6 +1522,7 @@
                                             <img src="assets/img/users/user-12.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="fw-medium">Bernard Griffith</a>
+                                    </div>
                                 </td>
                                 <td>+1 45214 98741</td>
                                 <td>bernard@example.com</td>
@@ -1508,6 +1549,7 @@
                                             <img src="assets/img/users/user-14.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);" class="fw-medium">John Elsass</a>
+                                    </div>
                                 </td>
                                 <td>+1 41245 32540</td>
                                 <td>john@example.com</td>
@@ -1529,19 +1571,24 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
                 
+            </div>
             <!-- End Content -->
 
             <!-- Footer Start -->
             <div class="footer text-center bg-white p-2 border-top">
-                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Preclinic</a>, All Rights Reserved</p>
+            </div>
             <!-- Footer End -->
 
+        </div>
 
         <!-- ========================
 			End Page Content
 		========================= -->
 
+    </div>
     <!-- End Wrapper -->
 
     <!-- Start Edit Contact -->
@@ -1551,6 +1598,7 @@
                 <div class="modal-header">
                     <h5 class="text-dark modal-title">Edit New Country</h5>
                     <button type="button" class="btn-close btn-close-modal custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+                </div>
                 <form action="contact-messages.html">
                     <div class="modal-body">
                         <!-- start row -->
@@ -1559,23 +1607,37 @@
                                 <div class="mb-2">
                                     <label class="form-label">Name<span class="text-danger ms-1">*</span></label>
                                     <input type="text" class="form-control" value="John Carter">
+                                </div>
+                            </div><!-- end col -->
                             <div class="col-lg-6">
                                 <div class="mb-2">
                                     <label class="form-label">Email Address<span class="text-danger ms-1">*</span></label>
                                     <input type="text" class="form-control" value="john@example.com">
+                                </div>
+                            </div><!-- end col -->
                             <div class="col-lg-6">
                                 <div class="mb-2">
                                     <label class="form-label">Phone Number<span class="text-danger ms-1">*</span></label>
                                     <input type="text" class="form-control" id="phone">
+                                </div>
+                            </div><!-- end col -->
                             <div class="col-lg-12">
                                 <div class="mb-2">
                                     <label class="form-label">Message</label>
                                     <textarea class="form-control" rows="3">Unable to log into my account. Can you assist?</textarea>
+                                </div>
+                            </div><!-- end col -->
+                        </div>
                         <!-- end row -->
+                    </div>
                     <div class="modal-footer d-flex align-items-center gap-1">
                         <button type="button" class="btn btn-white border" data-bs-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
                 </form>
+            </div>
+        </div>
+    </div>
     <!-- End Edit Contact -->
 
     <!-- Start Delete Modal  -->
@@ -1587,11 +1649,17 @@
                     <img src="assets/img/bg/delete-modal-bg-02.png" alt="" class="img-fluid position-absolute bottom-0 end-0">
                     <div class="mb-3">
                         <span class="avatar avatar-lg bg-danger text-white"><i class="ti ti-trash fs-24"></i></span>
+                    </div>
                     <h5 class="fw-bold mb-1">Delete Confirmation</h5>
                     <p class="mb-3">Are you sure want to delete?</p>
                     <div class="d-flex justify-content-center">
                         <a href="javascript:void(0);" class="btn btn-light position-relative z-1 me-3" data-bs-dismiss="modal">Cancel</a>
                         <a href="contact-messages.html" class="btn btn-danger position-relative z-1">Yes, Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End Delete Modal  -->
 
     <!-- jQuery -->
