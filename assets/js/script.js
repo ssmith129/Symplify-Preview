@@ -1291,4 +1291,53 @@ Template Name: Symplify - Bootstrap Admin Template
 		} catch (e) {}
 	});
 
-})();
+	// Minimal AI feature loader (no toggles)
+	document.addEventListener('DOMContentLoaded', function(){
+		function ensureAICSS(){
+			if (!document.querySelector('link[href="assets/css/ai-features.css"]')){
+				var l = document.createElement('link');
+				l.rel = 'stylesheet';
+				l.href = 'assets/css/ai-features.css';
+				document.head.appendChild(l);
+			}
+		}
+		function load(src){
+			if (!document.querySelector('script[src="'+src+'"]')){
+				var s = document.createElement('script');
+				s.src = src;
+				s.defer = true;
+				document.body.appendChild(s);
+			}
+		}
+		ensureAICSS();
+		// Email enhancements
+		var mailsList = document.querySelector('.mails-list');
+		if (mailsList) {
+			if (!document.getElementById('ai-inbox-triage-container')) {
+				var wrap = document.createElement('div');
+				wrap.id = 'ai-inbox-triage-container';
+				mailsList.parentNode.insertBefore(wrap, mailsList);
+			}
+			load('assets/js/ai-email-insights.js');
+			load('assets/js/ai-inbox-triage.js');
+		}
+		// Calendar insights
+		if (document.getElementById('calendar')) {
+			load('assets/js/ai-appointment-calendar.js');
+			load('assets/js/smart-appointment-calendar.js');
+		}
+		// Notifications feed pages
+		if (document.querySelector('.notication-list')) {
+			load('assets/js/ai-notifications-feed.js');
+		}
+		// Chat enhancements
+		if (document.querySelector('.chat-users') || document.querySelector('.chat-messages')) {
+			load('assets/js/unified-chat.js');
+		}
+		// Header dropdown intelligence
+		if (document.querySelector('.notification-body')) {
+			load('assets/js/ai-notifications.js');
+		}
+	});
+
+	})();
