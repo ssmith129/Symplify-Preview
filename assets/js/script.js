@@ -1282,20 +1282,12 @@ Template Name: Symplify - Bootstrap Admin Template
 
 	
 
-	// Remove AI toggles and features
+	// Remove legacy AI Assistance buttons only (no toggles, no feature flags changes)
 	document.addEventListener('DOMContentLoaded', function(){
 		try {
-			// Remove any AI Assistance buttons present in markup
 			document.querySelectorAll('a.btn-liner-gradient').forEach(function(btn){
 				if ((btn.textContent||'').includes('AI Assistance')) { btn.remove(); }
 			});
-			// Disable all AI feature flags
-			['ai_email_enabled','ai_calendar_enabled','ai_chat_enabled','ai_notifications_enabled'].forEach(function(k){
-				localStorage.setItem(k, '0');
-			});
-			// Remove AI features stylesheet if present
-			var link = document.querySelector('link[href="assets/css/ai-features.css"]');
-			if (link) { link.remove(); }
 		} catch (e) {}
 	});
 
