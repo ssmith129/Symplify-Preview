@@ -1282,21 +1282,63 @@ Template Name: Symplify - Bootstrap Admin Template
 
 	
 
-	// Remove AI toggles and features
+	// Remove legacy AI Assistance buttons only (no toggles, no feature flags changes)
 	document.addEventListener('DOMContentLoaded', function(){
 		try {
-			// Remove any AI Assistance buttons present in markup
 			document.querySelectorAll('a.btn-liner-gradient').forEach(function(btn){
 				if ((btn.textContent||'').includes('AI Assistance')) { btn.remove(); }
 			});
-			// Disable all AI feature flags
-			['ai_email_enabled','ai_calendar_enabled','ai_chat_enabled','ai_notifications_enabled'].forEach(function(k){
-				localStorage.setItem(k, '0');
-			});
-			// Remove AI features stylesheet if present
-			var link = document.querySelector('link[href="assets/css/ai-features.css"]');
-			if (link) { link.remove(); }
 		} catch (e) {}
 	});
 
-})();
+	// Minimal AI feature loader (no toggles)
+	document.addEventListener('DOMContentLoaded', function(){
+		function ensureAICSS(){
+			if (!document.querySelector('link[href="assets/css/ai-features.css"]')){
+				var l = document.createElement('link');
+				l.rel = 'stylesheet';
+				l.href = 'assets/css/ai-features.css';
+				document.head.appendChild(l);
+			}
+		}
+		function load(src){
+			if (!document.querySelector('script[src="'+src+'"]')){
+				var s = document.createElement('script');
+				s.src = src;
+				s.defer = true;
+				document.body.appendChild(s);
+			}
+		}
+		ensureAICSS();
+		// Email enhancements
+		var mailsList = document.querySelector('.mails-list');
+		if (mailsList) {
+			if (!document.getElementById('ai-inbox-triage-container')) {
+				var wrap = document.createElement('div');
+				wrap.id = 'ai-inbox-triage-container';
+				mailsList.parentNode.insertBefore(wrap, mailsList);
+			}
+			load('assets/js/ai-email-insights.js');
+			load('assets/js/ai-inbox-triage.js');
+		}
+		// Calendar insights
+		if (document.getElementById('calendar')) {
+			load('assets/js/ai-appointment-calendar.js');
+			load('assets/js/smart-appointment-calendar.js');
+		}
+		// Notifications feed pages
+		if (document.querySelector('.notication-list')) {
+			load('assets/js/ai-notifications-feed.js');
+		}
+		// Chat enhancements
+		if (document.querySelector('.chat-users') || document.querySelector('.chat-messages')) {
+			load('assets/js/unified-chat.js');
+			load('assets/js/ai-messages.js');
+		}
+		// Header dropdown intelligence
+		if (document.querySelector('.notification-body')) {
+			load('assets/js/ai-notifications.js');
+		}
+	});
+
+	})();

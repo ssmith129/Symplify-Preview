@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Messages | Symplify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Symplify">
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+  <!-- Theme / Core CSS -->
+  <script src="assets/js/theme-script.js"></script>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+  <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+
+  <!-- AI Features CSS (ADDED) -->
+  <!-- AI: Styles for inbox triage indicators, badges, confidence meters -->
+  <link rel="stylesheet" href="assets/css/ai-features.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <!-- Header -->
+    <header class="navbar-header">
+      <div class="page-container topbar-menu">
+        <div class="d-flex align-items-center gap-2">
+          <a href="index.html" class="logo">
+            <img src="assets/img/logo.svg" alt="Symplify" class="logo-normal">
+            <img src="assets/img/logo-small.svg" alt="Symplify" class="logo-small">
+          </a>
+          <button class="topbar-link btn btn-icon" id="sidebar-toggle" type="button">
+            <i class="ti ti-menu-2 fs-16" aria-hidden="true"></i><span class="visually-hidden">Toggle sidebar</span>
+          </button>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="header-item">
+            <button class="topbar-link btn btn-icon topbar-link" data-bs-toggle="modal" data-bs-target="#searchModal" type="button" aria-label="Search">
+              <i class="ti ti-search fs-16" aria-hidden="true"></i>
+            </button>
+          </div>
+          <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1" aria-hidden="true"></i></a>
+          <div class="header-item d-none d-sm-flex me-2">
+            <button class="topbar-link btn btn-icon topbar-link" id="light-dark-mode" type="button" aria-label="Toggle theme">
+              <i class="ti ti-moon fs-16" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="header-item">
+            <div class="dropdown me-3">
+              <button class="topbar-link btn btn-icon topbar-link dropdown-toggle drop-arrow-none" data-bs-toggle="dropdown" data-bs-offset="0,24" type="button" aria-haspopup="false" aria-expanded="false" aria-label="Notifications">
+                <i class="ti ti-bell-check fs-16 animate-ring" aria-hidden="true"></i>
+                <span class="notification-badge"></span>
+              </button>
+              <div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg" style="min-height: 300px;">
+                <div class="p-2 border-bottom">
+                  <div class="row align-items-center">
+                    <div class="col"><h6 class="m-0 fs-16 fw-semibold">Notifications</h6></div>
+                  </div>
+                </div>
+                <div class="notification-body position-relative z-2 rounded-0" data-simplebar>
+                  <!-- existing notification items preserved -->
+                </div>
+                <div class="p-2 rounded-bottom border-top text-center">
+                  <a href="notifications.html" class="text-center text-decoration-underline fs-14 mb-0">View All Notifications</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-item">
+            <div class="dropdown">
+              <a href="javascript:void(0);" class="avatar" data-bs-toggle="dropdown" data-bs-offset="0,20" aria-expanded="false">
+                <img src="assets/img/profiles/avatar-23.jpg" alt="User" class="rounded-circle">
+              </a>
+              <div class="dropdown-menu">
+                <div class="px-2 py-2">
+                  <div class="d-flex align-items-center">
+                    <img src="assets/img/profiles/avatar-23.jpg" alt="User" class="avatar avatar-md rounded-circle me-2 flex-shrink-0">
+                    <div>
+                      <h6 class="mb-1 fw-semibold fs-14">Admin User</h6>
+                      <p class="mb-0 fs-13">admin@symplify.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown-divider my-1"></div>
+                <a href="profile.html" class="dropdown-item">
+                  <i class="ti ti-user me-1 align-middle" aria-hidden="true"></i><span class="align-middle">My Profile</span>
+                </a>
+                <a href="javascript:void(0);" class="dropdown-item">
+                  <i class="ti ti-logout me-1 align-middle" aria-hidden="true"></i><span class="align-middle">Logout</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">
+      <div class="content pb-0">
+        <!-- Page Header -->
+        <div class="d-flex align-items-sm-center justify-content-between flex-wrap gap-2 mb-4">
+          <div>
+            <h4 class="fw-bold mb-0">Messages</h4>
+            <p class="text-muted mb-0">Clinic communications</p>
+          </div>
+          <div class="d-flex align-items-center flex-wrap gap-2">
+            <a href="index.html" class="btn btn-outline-primary d-inline-flex align-items-center"><i class="ti ti-arrow-left me-1" aria-hidden="true"></i>Back to Dashboard</a>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <!-- Left: Message list / filters -->
+          <div class="col-xl-4 col-lg-5 d-flex">
+            <div class="card shadow-sm flex-fill w-100">
+              <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="fw-bold mb-0">Inbox</h5>
+                <div class="d-flex align-items-center gap-2">
+                  <button class="btn btn-sm btn-outline-secondary" type="button" aria-label="Refresh messages">
+                    <i class="ti ti-refresh" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Search / Filters -->
+              <div class="px-3 pt-3">
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="search-icon"><i class="ti ti-search" aria-hidden="true"></i></span>
+                  <input type="search" class="form-control" placeholder="Search messages" aria-label="Search messages" aria-describedby="search-icon">
+                </div>
+
+                <!-- AI FILTER BAR (ADDED) -->
+                <!-- AI: Always-visible quick filters and status pills -->
+                <div class="d-flex flex-wrap gap-2 mb-3" role="toolbar" aria-label="AI filters">
+                  <button class="btn btn-sm btn-outline-danger ai-filter" data-ai-filter="priority:Critical" aria-pressed="false">Critical</button>
+                  <button class="btn btn-sm btn-outline-warning ai-filter" data-ai-filter="priority:High" aria-pressed="false">High</button>
+                  <button class="btn btn-sm btn-outline-info ai-filter" data-ai-filter="priority:Medium" aria-pressed="false">Medium</button>
+                  <button class="btn btn-sm btn-outline-success ai-filter" data-ai-filter="priority:Low" aria-pressed="false">Low</button>
+                  <button class="btn btn-sm btn-outline-secondary ai-filter" data-ai-filter="category:Clinical" aria-pressed="false">Clinical</button>
+                  <button class="btn btn-sm btn-outline-secondary ai-filter" data-ai-filter="category:Admin" aria-pressed="false">Admin</button>
+                  <button class="btn btn-sm btn-outline-secondary ai-filter" data-ai-filter="category:Appointment" aria-pressed="false">Appointment</button>
+                </div>
+              </div>
+
+              <!-- Message list (preserved structure) -->
+              <div class="card-body p-0" data-simplebar style="max-height: 60vh">
+                <ul class="list-group list-group-flush" id="message-list" role="list">
+                  <!-- Existing li items preserved by backend rendering -->
+                  <!-- AI: Priority Badges & Confidence added via JS on render -->
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Message detail -->
+          <div class="col-xl-8 col-lg-7 d-flex">
+            <div class="card shadow-sm flex-fill w-100">
+              <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="fw-bold mb-0">Message Detail</h5>
+
+                <!-- AI ACTION BAR (ADDED) -->
+                <!-- AI: Always-visible quick actions w/ ARIA labels -->
+                <div class="d-flex flex-wrap gap-2" role="toolbar" aria-label="AI quick actions">
+                  <button class="btn btn-sm btn-primary ai-action" data-ai-action="reply-draft">
+                    <i class="ti ti-message-dots me-1" aria-hidden="true"></i>Draft Reply
+                  </button>
+                  <button class="btn btn-sm btn-outline-primary ai-action" data-ai-action="summarize">
+                    <i class="ti ti-notes me-1" aria-hidden="true"></i>Summarize
+                  </button>
+                  <button class="btn btn-sm btn-outline-primary ai-action" data-ai-action="route">
+                    <i class="ti ti-route me-1" aria-hidden="true"></i>Route
+                  </button>
+                  <button class="btn btn-sm btn-outline-primary ai-action" data-ai-action="schedule">
+                    <i class="ti ti-calendar-time me-1" aria-hidden="true"></i>Schedule
+                  </button>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <!-- AI STATUS STRIP (ADDED) -->
+                <!-- AI: Prominent status with priority, category, confidence -->
+                <div class="alert ai-status d-flex align-items-center justify-content-between" role="status" aria-live="polite">
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="badge rounded-pill ai-priority-badge" aria-label="AI priority">Medium</span>
+                    <span class="badge rounded-pill ai-category-badge" aria-label="AI category">Administrative</span>
+                    <div class="d-flex align-items-center gap-2" aria-label="AI confidence">
+                      <i class="ti ti-brain" aria-hidden="true"></i>
+                      <span class="ai-confidence-text">Confidence: 82%</span>
+                      <div class="progress ai-confidence-meter" style="width:120px" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="82">
+                        <div class="progress-bar" style="width:82%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="text-muted small"><i class="ti ti-clock me-1" aria-hidden="true"></i><span class="ai-eta">ETA: ~30 min</span></span>
+                  </div>
+                </div>
+
+                <!-- Message header -->
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div>
+                    <h6 class="mb-1" id="msg-subject">Subject</h6>
+                    <p class="mb-0 text-muted small">
+                      <span id="msg-from">From: Patient Name</span> • <span id="msg-time">2h ago</span>
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-sm btn-outline-secondary" type="button" aria-label="Mark as read">
+                      <i class="ti ti-mail-opened" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary" type="button" aria-label="More options">
+                      <i class="ti ti-dots" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Message body -->
+                <div id="msg-body" class="mb-3">
+                  <!-- Preserved message content -->
+                </div>
+
+                <!-- AI SUGGESTIONS PANEL (ADDED) -->
+                <!-- AI: Inline triage suggestions; visible by default -->
+                <div class="card bg-light border-0 ai-suggestions" aria-labelledby="ai-suggestions-title">
+                  <div class="card-header bg-transparent px-0">
+                    <h6 id="ai-suggestions-title" class="mb-0 d-flex align-items-center">
+                      <i class="ti ti-sparkles me-2" aria-hidden="true"></i>AI Triage Suggestions
+                    </h6>
+                  </div>
+                  <div class="card-body px-0 pt-2">
+                    <ul class="list-unstyled mb-0" id="ai-suggestion-list">
+                      <!-- Filled by ai-inbox-triage.js -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer text-center bg-white p-2 border-top">
+        <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-transparent">
+        <div class="card shadow-none mb-0">
+          <div class="px-3 py-2 d-flex flex-row align-items-center" id="search-top">
+            <i class="ti ti-search fs-22" aria-hidden="true"></i>
+            <input type="search" class="form-control border-0" placeholder="Search">
+            <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x fs-22" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JS -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/plugins/simplebar/simplebar.min.js"></script>
+  <script src="assets/js/theme-settings.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <!-- AI Inbox Triage Component (ADDED) -->
+  <!-- AI: Provides prioritization badges, confidence meter, suggestions, quick actions -->
+  <script src="assets/js/ai-inbox-triage.js"></script>
+
+  <!-- Integration glue code (ADDED) -->
+  <script>
+    // Minimal adaptor: connects existing message list/detail to AI component
+    // Assumes aiInboxTriage global or module initializes against a container/list
+    (function() {
+      // Example hook points; replace with your app's selectors/data wiring
+      const listEl = document.getElementById('message-list');
+      const statusStrip = document.querySelector('.ai-status');
+      const priorityEl = statusStrip.querySelector('.ai-priority-badge');
+      const categoryEl = statusStrip.querySelector('.ai-category-badge');
+      const confText = statusStrip.querySelector('.ai-confidence-text');
+      const confBar = statusStrip.querySelector('.progress-bar');
+      const etaEl = statusStrip.querySelector('.ai-eta');
+      const suggestionList = document.getElementById('ai-suggestion-list');
+
+      // Render helpers
+      function updateStatus({ priority, category, confidence, eta }) {
+        priorityEl.textContent = priority;
+        categoryEl.textContent = category;
+        confText.textContent = `Confidence: ${confidence}%`;
+        confBar.style.width = confidence + '%';
+        confBar.setAttribute('aria-valuenow', confidence);
+        etaEl.textContent = `ETA: ~${eta}`;
+        priorityEl.className = 'badge rounded-pill ai-priority-badge ai-priority-' + String(priority).toLowerCase();
+      }
+
+      function renderSuggestions(items) {
+        suggestionList.innerHTML = '';
+        items.forEach((s) => {
+          const li = document.createElement('li');
+          li.className = 'mb-2 d-flex align-items-start gap-2';
+          li.innerHTML = `<i class="ti ti-bulb" aria-hidden="true"></i><span>${s.text}</span>`;
+          suggestionList.appendChild(li);
+        });
+      }
+
+      // Example: attach quick actions
+      document.querySelectorAll('.ai-action').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const action = btn.getAttribute('data-ai-action');
+          // Replace with real handlers
+          console.log('[AI] action:', action);
+        });
+      });
+
+      // Example: AI list decoration (badges in message list)
+      function decorateList(items) {
+        listEl.innerHTML = '';
+        items.forEach(msg => {
+          const li = document.createElement('li');
+          li.className = 'list-group-item d-flex align-items-start justify-content-between';
+          li.innerHTML = `
+            <div class="me-3">
+              <div class="fw-semibold">${msg.subject}</div>
+              <div class="small text-muted">${msg.from} • ${msg.timeAgo}</div>
+            </div>
+            <div class="text-end">
+              <span class="badge ai-priority-badge ai-priority-${msg.priority.toLowerCase()}" aria-label="Priority ${msg.priority}">${msg.priority}</span>
+              <div class="small text-muted mt-1">${msg.confidence}%</div>
+            </div>`;
+          li.addEventListener('click', () => {
+            // Load detail + AI analysis
+            document.getElementById('msg-subject').textContent = msg.subject;
+            document.getElementById('msg-from').textContent = 'From: ' + msg.from;
+            document.getElementById('msg-time').textContent = msg.timeAgo;
+            document.getElementById('msg-body').textContent = msg.preview;
+            updateStatus({ priority: msg.priority, category: msg.category, confidence: msg.confidence, eta: msg.eta });
+            renderSuggestions(msg.suggestions || []);
+          });
+          listEl.appendChild(li);
+        });
+      }
+
+      // Demo data — replace with live data from backend/AI service
+      const demoItems = [{
+        subject: 'Medication refill request',
+        from: 'Jane Doe',
+        timeAgo: '12m ago',
+        preview: 'I need a refill on my prescription...',
+        priority: 'High',
+        category: 'Clinical',
+        confidence: 86,
+        eta: '30 min',
+        suggestions: [{ text: 'Draft a refill response with last visit data.' }, { text: 'Route to PCP if refill criteria unmet.' }]
+      },{
+        subject: 'Insurance coverage question',
+        from: 'Mark Rivera',
+        timeAgo: '2h ago',
+        preview: 'Does my plan cover the MRI?',
+        priority: 'Medium',
+        category: 'Administrative',
+        confidence: 79,
+        eta: '2 hrs',
+        suggestions: [{ text: 'Insert coverage summary from payer on file.' }, { text: 'Attach pre-auth checklist template.' }]
+      },{
+        subject: 'Severe chest pain right now',
+        from: 'Tanya Lee',
+        timeAgo: '3m ago',
+        preview: 'Severe chest pain and shortness of breath...',
+        priority: 'Critical',
+        category: 'Emergency',
+        confidence: 94,
+        eta: '10 min',
+        suggestions: [{ text: 'Escalate to urgent protocol and call back NOW.' }, { text: 'Attach triage script and log call.' }]
+      }];
+
+      decorateList(demoItems);
+      // Preselect first item
+      listEl.querySelector('.list-group-item')?.click();
+
+      // Filter buttons
+      document.querySelectorAll('.ai-filter').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const [key, value] = btn.getAttribute('data-ai-filter').split(':');
+          const filtered = demoItems.filter(m => String(m[key]).toLowerCase() === value.toLowerCase());
+          decorateList(filtered.length ? filtered : demoItems);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
