@@ -1386,6 +1386,10 @@
                         <button class="btn btn-outline-secondary btn-sm" data-ai-action="refresh" aria-label="Refresh suggestions"><i class="ti ti-refresh me-1"></i>Refresh</button>
                       </div>
                     </div>
+                    <div class="ai-suggestion-action-row d-flex align-items-center gap-2 flex-wrap mt-2">
+                      <button class="btn btn-primary btn-sm ai-action-btn" data-ai-action="apply-reply" aria-label="Apply suggested reply"><i class="ti ti-send me-1"></i>Apply</button>
+                      <button class="btn btn-outline-warning btn-sm ai-action-btn" data-ai-action="flag" aria-label="Flag message"><i class="ti ti-flag-3 me-1"></i>Flag</button>
+                    </div>
                     <div class="mt-2">
                       <ul class="list-unstyled mb-0">
                         <li class="d-flex align-items-start gap-2 py-1">
@@ -1394,7 +1398,6 @@
                             <small class="fw-semibold d-block">Send rescheduling link</small>
                             <small class="text-muted">Patient requested to reschedule. Include next available slots.</small>
                           </div>
-                          <button class="btn btn-primary btn-sm ai-action-btn" data-ai-action="apply-reply" aria-label="Apply suggested reply"><i class="ti ti-send me-1"></i>Apply</button>
                         </li>
                         <li class="d-flex align-items-start gap-2 py-1">
                           <i class="ti ti-alert-octagon text-warning mt-1" aria-hidden="true"></i>
@@ -1402,7 +1405,6 @@
                             <small class="fw-semibold d-block">Flag as needs action</small>
                             <small class="text-muted">Requires team response within 2 hours.</small>
                           </div>
-                          <button class="btn btn-outline-warning btn-sm ai-action-btn" data-ai-action="flag" aria-label="Flag message"><i class="ti ti-flag-3 me-1"></i>Flag</button>
                         </li>
                       </ul>
                     </div>
