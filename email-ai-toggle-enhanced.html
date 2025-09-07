@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Email with Enhanced AI Toggle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+    
+    <!-- AI Features CSS -->
+    <link rel="stylesheet" href="assets/css/ai-features.css">
+    
+    <style>
+        /* Enhanced AI Toggle Styling */
+        .enhanced-ai-toggle {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+            border: none !important;
+            color: white !important;
+            font-weight: 600 !important;
+            padding: 12px 20px !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3) !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            z-index: 1002 !important;
+            min-width: 160px !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+        
+        .enhanced-ai-toggle:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4) !important;
+        }
+        
+        .enhanced-ai-toggle.ai-disabled {
+            background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%) !important;
+            box-shadow: 0 4px 15px rgba(107, 114, 128, 0.3) !important;
+        }
+        
+        .enhanced-ai-toggle.ai-disabled:hover {
+            box-shadow: 0 6px 20px rgba(107, 114, 128, 0.4) !important;
+        }
+        
+        .ai-toggle-container {
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            margin-right: 20px !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+        <!-- Header -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <a href="index.html" class="logo">
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                            <span class="logo-sm"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+                    </a>
+                    <h4 class="mb-0 ms-3">Enhanced Email AI</h4>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <!-- Enhanced AI Toggle (Manually placed for visibility) -->
+                    <div class="ai-toggle-container">
+                        <button id="enhancedEmailAIToggle" class="enhanced-ai-toggle" type="button">
+                            <i class="ti ti-mail me-2"></i>
+                            <span>Email AI ON</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Search for Mobile -->
+                    <div class="header-item d-flex d-lg-none me-2">
+                        <button class="topbar-link btn btn-icon" data-bs-toggle="modal" data-bs-target="#searchModal" type="button">
+                            <i class="ti ti-search fs-16"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Status Card -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h4 class="card-title">📧 Enhanced Email AI Demo</h4>
+                                <div class="card-tools">
+                                    <span class="badge bg-success">AI Enhanced</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-info">
+                                    <h6>✨ Enhanced AI Toggle Features:</h6>
+                                    <ul class="mb-0">
+                                        <li>🎨 <strong>Prominent Styling</strong> - Gradient background with hover effects</li>
+                                        <li>📱 <strong>Responsive Design</strong> - Visible on all screen sizes</li>
+                                        <li>🎯 <strong>Better Positioning</strong> - Strategically placed in header</li>
+                                        <li>🔧 <strong>Enhanced Click Handling</strong> - Improved feedback and functionality</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>🎛️ Toggle Controls</h6>
+                                        <div class="d-flex flex-column gap-2">
+                                            <button type="button" class="btn btn-primary" onclick="toggleEmailAI()">🔄 Toggle Email AI</button>
+                                            <button type="button" class="btn btn-info" onclick="checkToggleStatus()">📊 Check Status</button>
+                                            <button type="button" class="btn btn-warning" onclick="testToggleVisibility()">👁️ Test Visibility</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h6>📈 Status Display</h6>
+                                        <div id="status-display" class="bg-light p-3 rounded">
+                                            <p class="mb-1"><strong>Email AI Status:</strong> <span id="ai-status">Loading...</span></p>
+                                            <p class="mb-1"><strong>Toggle Visible:</strong> <span id="toggle-visible">Checking...</span></p>
+                                            <p class="mb-0"><strong>Last Updated:</strong> <span id="last-updated">—</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email Interface -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">📧 Email Interface</h5>
+                                <div class="card-tools">
+                                    <span class="badge bg-info">AI Features will appear when enabled</span>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="mail-notifications">
+                                    <div class="p-3 border-bottom">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <h6 class="mb-0">📧 Inbox</h6>
+                                            <div>
+                                                <span class="text-muted">2345 Emails</span>
+                                                <span class="badge bg-danger ms-2">56 Unread</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- AI Toolbar will be injected here when enabled -->
+                                    
+                                    <div class="mails-list">
+                                        <div class="mail-item p-3 border-bottom">
+                                            <div class="d-flex align-items-start">
+                                                <div class="avatar avatar-sm me-2">
+                                                    <span class="avatar-title bg-danger text-white rounded">🚨</span>
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <h6 class="mb-1">Emergency Patient Alert</h6>
+                                                    <p class="text-muted mb-0">Urgent: Critical patient requires immediate attention</p>
+                                                    <small class="text-muted">Dr. Sarah Chen • Emergency</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mail-item p-3 border-bottom">
+                                            <div class="d-flex align-items-start">
+                                                <div class="avatar avatar-sm me-2">
+                                                    <span class="avatar-title bg-warning text-white rounded">📅</span>
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <h6 class="mb-1">Appointment Follow-up</h6>
+                                                    <p class="text-muted mb-0">Lab results require follow-up appointment scheduling</p>
+                                                    <small class="text-muted">Lab Services • Patient: John Miller</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mail-item p-3 border-bottom">
+                                            <div class="d-flex align-items-start">
+                                                <div class="avatar avatar-sm me-2">
+                                                    <span class="avatar-title bg-success text-white rounded">📋</span>
+                                                </div>
+                                                <div class="flex-fill">
+                                                    <h6 class="mb-1">Administrative Update</h6>
+                                                    <p class="text-muted mb-0">Policy changes for patient data handling</p>
+                                                    <small class="text-muted">Compliance • IT Security</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Enhanced Toggle Script -->
+    <script>
+        let emailAIEnabled = localStorage.getItem('ai_email_enabled') !== '0';
+        
+        function updateToggleUI() {
+            const toggle = document.getElementById('enhancedEmailAIToggle');
+            const statusSpan = document.getElementById('ai-status');
+            const lastUpdated = document.getElementById('last-updated');
+            
+            if (emailAIEnabled) {
+                toggle.innerHTML = '<i class="ti ti-mail me-2"></i><span>Email AI ON</span>';
+                toggle.classList.remove('ai-disabled');
+                toggle.style.background = 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)';
+                statusSpan.innerHTML = '<span class="badge bg-success">ENABLED</span>';
+            } else {
+                toggle.innerHTML = '<i class="ti ti-mail me-2"></i><span>Email AI OFF</span>';
+                toggle.classList.add('ai-disabled');
+                toggle.style.background = 'linear-gradient(135deg, #6b7280 0%, #9ca3af 100%)';
+                statusSpan.innerHTML = '<span class="badge bg-secondary">DISABLED</span>';
+            }
+            
+            lastUpdated.textContent = new Date().toLocaleTimeString();
+        }
+        
+        function toggleEmailAI() {
+            emailAIEnabled = !emailAIEnabled;
+            localStorage.setItem('ai_email_enabled', emailAIEnabled ? '1' : '0');
+            updateToggleUI();
+            
+            // Show notification
+            showNotification(`Email AI ${emailAIEnabled ? 'Enabled' : 'Disabled'}`, emailAIEnabled ? 'success' : 'info');
+            
+            // Reload after delay (comment out for testing)
+            // setTimeout(() => window.location.reload(), 1500);
+        }
+        
+        function checkToggleStatus() {
+            const toggle = document.getElementById('enhancedEmailAIToggle');
+            const isVisible = toggle && toggle.offsetParent !== null;
+            
+            document.getElementById('toggle-visible').innerHTML = 
+                `<span class="badge bg-${isVisible ? 'success' : 'danger'}">${isVisible ? 'YES' : 'NO'}</span>`;
+            
+            console.log('Toggle Status:', {
+                exists: !!toggle,
+                visible: isVisible,
+                enabled: emailAIEnabled,
+                classes: toggle?.className,
+                styles: toggle?.style.cssText
+            });
+        }
+        
+        function testToggleVisibility() {
+            const toggle = document.getElementById('enhancedEmailAIToggle');
+            if (toggle) {
+                // Flash the toggle to show it's there
+                toggle.style.transform = 'scale(1.1)';
+                toggle.style.boxShadow = '0 0 20px rgba(79, 70, 229, 0.8)';
+                
+                setTimeout(() => {
+                    toggle.style.transform = '';
+                    toggle.style.boxShadow = emailAIEnabled ? 
+                        '0 4px 15px rgba(79, 70, 229, 0.3)' : 
+                        '0 4px 15px rgba(107, 114, 128, 0.3)';
+                }, 1000);
+                
+                showNotification('Toggle highlighted for visibility test!', 'info');
+            } else {
+                showNotification('Toggle not found!', 'error');
+            }
+        }
+        
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = `
+                top: 80px;
+                right: 20px;
+                z-index: 9999;
+                min-width: 300px;
+                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+                border: none;
+                border-radius: 12px;
+            `;
+            
+            notification.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <i class="ti ti-${type === 'success' ? 'check' : type === 'error' ? 'x' : 'info-circle'} fs-20 me-2"></i>
+                    <div class="flex-grow-1">${message}</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 3000);
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateToggleUI();
+            checkToggleStatus();
+            
+            // Add click handler to enhanced toggle
+            document.getElementById('enhancedEmailAIToggle').addEventListener('click', toggleEmailAI);
+            
+            // Update status periodically
+            setInterval(checkToggleStatus, 2000);
+        });
+    </script>
+    
+    <!-- Load Main Script -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

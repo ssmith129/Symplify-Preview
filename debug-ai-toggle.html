@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Debug AI Toggle - Test Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+    
+    <!-- AI Features CSS -->
+    <link rel="stylesheet" href="assets/css/ai-features.css">
+</head>
+<body>
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+        <!-- Simple Header -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+                    <h4 class="mb-0">AI Toggle Debug</h4>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <!-- AI Assistance Button (This should be transformed) -->
+                    <a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">AI Toggle System Debug</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Current AI Status</h5>
+                                        <div id="ai-status-display">
+                                            <p>Loading...</p>
+                                        </div>
+                                        
+                                        <h5 class="mt-4">LocalStorage Values</h5>
+                                        <div id="localStorage-display">
+                                            <p>Loading...</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h5>Debug Actions</h5>
+                                        <div class="d-flex flex-column gap-2">
+                                            <button type="button" class="btn btn-primary" onclick="refreshStatus()">Refresh Status</button>
+                                            <button type="button" class="btn btn-success" onclick="enableAllAI()">Enable All AI</button>
+                                            <button type="button" class="btn btn-danger" onclick="disableAllAI()">Disable All AI</button>
+                                            <button type="button" class="btn btn-warning" onclick="toggleMaster()">Toggle Master</button>
+                                            <button type="button" class="btn btn-info" onclick="injectToggle()">Force Inject Toggle</button>
+                                            <button type="button" class="btn btn-secondary" onclick="clearStorage()">Clear Storage</button>
+                                        </div>
+                                        
+                                        <h5 class="mt-4">Console Output</h5>
+                                        <div id="console-output" style="height: 200px; overflow-y: auto; background: #f8f9fa; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 12px;">
+                                            <p>Debug console ready...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Test AI Features -->
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <h5>Test AI Features</h5>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Email AI</h6>
+                                                        <div class="mails-list">
+                                                            <p>Test email list for AI detection</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Calendar AI</h6>
+                                                        <div id="calendar">
+                                                            <p>Test calendar for AI detection</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Chat AI</h6>
+                                                        <div class="chat-messages">
+                                                            <p>Test chat for AI detection</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>Notifications AI</h6>
+                                                        <div class="notification-body">
+                                                            <p>Test notifications for AI detection</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Debug Script -->
+    <script>
+        // Enhanced logging
+        function log(message) {
+            console.log(message);
+            const output = document.getElementById('console-output');
+            const p = document.createElement('p');
+            p.textContent = new Date().toLocaleTimeString() + ': ' + message;
+            output.appendChild(p);
+            output.scrollTop = output.scrollHeight;
+        }
+
+        // Override console.log for this page
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            log(args.join(' '));
+        };
+
+        // Debug functions
+        function refreshStatus() {
+            displayAIStatus();
+            displayLocalStorage();
+        }
+
+        function enableAllAI() {
+            if (window.MasterAI) {
+                window.MasterAI.enable();
+            } else {
+                log('MasterAI not available, setting localStorage directly');
+                localStorage.setItem('ai_email_enabled', '1');
+                localStorage.setItem('ai_calendar_enabled', '1');
+                localStorage.setItem('ai_chat_enabled', '1');
+                localStorage.setItem('ai_notifications_enabled', '1');
+                refreshStatus();
+            }
+        }
+
+        function disableAllAI() {
+            if (window.MasterAI) {
+                window.MasterAI.disable();
+            } else {
+                log('MasterAI not available, setting localStorage directly');
+                localStorage.setItem('ai_email_enabled', '0');
+                localStorage.setItem('ai_calendar_enabled', '0');
+                localStorage.setItem('ai_chat_enabled', '0');
+                localStorage.setItem('ai_notifications_enabled', '0');
+                refreshStatus();
+            }
+        }
+
+        function toggleMaster() {
+            if (window.MasterAI) {
+                window.MasterAI.toggle();
+            } else {
+                log('MasterAI not available');
+            }
+        }
+
+        function injectToggle() {
+            if (window.MasterAI) {
+                window.MasterAI.inject();
+            } else {
+                log('MasterAI not available');
+            }
+        }
+
+        function clearStorage() {
+            localStorage.removeItem('ai_email_enabled');
+            localStorage.removeItem('ai_calendar_enabled');
+            localStorage.removeItem('ai_chat_enabled');
+            localStorage.removeItem('ai_notifications_enabled');
+            log('Cleared AI localStorage');
+            refreshStatus();
+        }
+
+        function displayAIStatus() {
+            const statusDiv = document.getElementById('ai-status-display');
+            let html = '<ul>';
+            
+            if (window.MasterAI) {
+                const status = window.MasterAI.getStatus();
+                html += `<li><strong>Master Status:</strong> ${status.master}</li>`;
+                html += `<li><strong>Toggle Exists:</strong> ${status.toggleExists}</li>`;
+                html += '<li><strong>Features:</strong><ul>';
+                for (const [feature, info] of Object.entries(status.features)) {
+                    html += `<li>${feature}: ${info.enabled} (stored: ${info.stored})</li>`;
+                }
+                html += '</ul></li>';
+            } else {
+                html += '<li><strong>MasterAI:</strong> Not available</li>';
+            }
+            
+            html += '</ul>';
+            statusDiv.innerHTML = html;
+        }
+
+        function displayLocalStorage() {
+            const storageDiv = document.getElementById('localStorage-display');
+            let html = '<ul>';
+            
+            const features = ['ai_email_enabled', 'ai_calendar_enabled', 'ai_chat_enabled', 'ai_notifications_enabled'];
+            features.forEach(feature => {
+                const value = localStorage.getItem(feature);
+                html += `<li><strong>${feature}:</strong> ${value}</li>`;
+            });
+            
+            html += '</ul>';
+            storageDiv.innerHTML = html;
+        }
+
+        // Listen for master toggle events
+        window.addEventListener('masterAIToggle', function(e) {
+            log(`Master AI Toggle Event: ${e.detail.enabled}`);
+            refreshStatus();
+        });
+
+        // Initialize display on load
+        document.addEventListener('DOMContentLoaded', function() {
+            log('Page loaded, initializing debug...');
+            
+            // Check if AI button exists
+            const aiBtn = document.querySelector('a.btn-liner-gradient');
+            log(`AI Assistance button found: ${!!aiBtn}`);
+            
+            // Wait a bit for scripts to load
+            setTimeout(() => {
+                log(`MasterAI available: ${!!window.MasterAI}`);
+                refreshStatus();
+            }, 1000);
+            
+            // Check periodically for button transformation
+            let checkCount = 0;
+            const checkInterval = setInterval(() => {
+                checkCount++;
+                const masterToggle = document.getElementById('masterAIToggle');
+                const aiBtn = document.querySelector('a.btn-liner-gradient');
+                
+                log(`Check #${checkCount}: Original button: ${!!aiBtn}, Master toggle: ${!!masterToggle}`);
+                
+                if (checkCount >= 10) {
+                    clearInterval(checkInterval);
+                    log('Stopped checking after 10 attempts');
+                }
+            }, 500);
+        });
+    </script>
+    
+    <!-- Main Script -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
