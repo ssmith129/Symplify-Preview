@@ -547,6 +547,10 @@
     font-weight: 600;
 }
 
+/* Horizontal action row for AI Suggestions */
+.ai-suggestion-action-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.ai-suggestion-action-row .btn { white-space: nowrap; }
+
 /* AI Insights */
 .insights-list .insight-item {
     transition: all 0.2s ease-in-out;
