@@ -9,8 +9,8 @@ This guide will help you understand and effectively use the AI-powered features 
 ### Accessing AI Features
 
 1. **Dashboard View**: AI features are integrated directly into your main dashboard
-2. **Demo Mode**: Visit `ai-inbox-triage-demo.html` to explore features in a sandbox environment
-3. **AI Button**: Click the "AI Assistance" button in the top navigation for quick access
+2. **AI Button**: Click the "AI Assistance" ON/OFF button in the top navigation for quick access
+3. **Page-Specific View**: AI features are integrated & visible directly within their respective pages.
 
 ### First Time Setup
 

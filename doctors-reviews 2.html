@@ -1,0 +1,811 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reviews | Symplify - Medical & Hospital - Bootstrap 5 Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Dreams Technologies">
+	
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Apple Icon -->
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+
+    <!-- Theme Config Js -->
+    <script src="assets/js/theme-script.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="assets/plugins/tabler-icons/tabler-icons.min.css">
+
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="assets/plugins/select2/css/select2.min.css">
+
+	<!-- Daterangepikcer CSS -->
+	<link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker.css">
+
+    <!-- Datetimepicker CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+    <!-- Simplebar CSS -->
+    <link rel="stylesheet" href="assets/plugins/simplebar/simplebar.min.css">
+
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" id="app-style">
+
+</head>
+
+<body>
+
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Topbar Start -->
+        <header class="navbar-header">
+            <div class="page-container topbar-menu">
+                <div class="d-flex align-items-center gap-2">
+
+                    <!-- Logo -->
+                    <a href="index.html" class="logo">
+
+                        <!-- Logo Normal -->
+                        <span class="logo-light">
+                            <span class="logo-lg"><img src="assets/img/logo.svg" alt="logo"></span>
+                            <span class="logo-sm"><img src="assets/img/logo-small.svg" alt="small logo"></span>
+                        </span>
+
+                        <!-- Logo Dark -->
+                        <span class="logo-dark">
+                            <span class="logo-lg"><img src="assets/img/logo-white.svg" alt="dark logo"></span>
+                        </span>
+                    </a>
+
+                    <!-- Sidebar Mobile Button -->
+                    <a id="mobile_btn" class="mobile-btn" href="#sidebar">
+                        <i class="ti ti-menu-deep fs-24"></i>
+                    </a>
+                       
+                    <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn2"> 
+                        <i class="ti ti-arrow-right"></i>
+                    </button>  
+					
+                    <!-- Search -->
+                    <div class="me-auto d-flex align-items-center header-search d-lg-flex d-none">
+                        <!-- Search -->
+                        <div class="input-icon-start position-relative me-2">
+                            <span class="input-icon-addon">
+                                <i class="ti ti-search"></i>
+                            </span>
+                           <input type="text" class="form-control shadow-sm" placeholder="Search">
+                           <span class="input-icon-addon text-dark shadow fs-18 d-inline-flex p-0 header-search-icon"><i class="ti ti-command"></i></span>
+                        </div>
+                        <!-- /Search -->
+                    </div>
+					
+                </div>
+
+                <div class="d-flex align-items-center">
+				
+                    <!-- Search for Mobile -->
+                    <div class="header-item d-flex d-lg-none me-2">
+                        <button class="topbar-link btn btn-icon" data-bs-toggle="modal" data-bs-target="#searchModal" type="button">
+                            <i class="ti ti-search fs-16"></i>
+                        </button>
+                    </div>
+					
+                    <!-- AI Assistance -->
+					<a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
+
+                    <div class="header-item">
+
+                    <div class="header-item">
+                        </div> 
+                    </div>                    
+
+                    <!-- Light/Dark Mode Button -->
+                    <div class="header-item d-none d-sm-flex me-2">
+                        <button class="topbar-link btn btn-icon topbar-link" id="light-dark-mode" type="button">
+                            <i class="ti ti-moon fs-16"></i>
+                        </button>
+                    </div>
+                    
+					
+					<!-- Notification Dropdown -->
+                    <div class="header-item">
+						<div class="dropdown me-3">
+						
+							<button class="topbar-link btn btn-icon topbar-link dropdown-toggle drop-arrow-none" data-bs-toggle="dropdown" data-bs-offset="0,24" type="button" aria-haspopup="false" aria-expanded="false">
+								<i class="ti ti-bell-check fs-16 animate-ring"></i>
+								<span class="notification-badge"></span>
+							</button>
+							
+							<div class="dropdown-menu p-0 dropdown-menu-end dropdown-menu-lg" style="min-height: 300px;">
+							
+								<div class="p-2 border-bottom">
+									<div class="row align-items-center">
+										<div class="col">
+											<h6 class="m-0 fs-16 fw-semibold"> Notifications</h6>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Notification Body -->
+								<div class="notification-body position-relative z-2 rounded-0" data-simplebar>
+								 
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-1">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-01.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Dr. Smith</p>
+												<p class="mb-1 text-wrap">
+													updated the <span class="fw-medium text-dark">surgery</span> schedule. 
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>4 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-1">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+							
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-2">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-06.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Dr. Patel</p>
+												<p class="mb-1 text-wrap">
+                                                    completed a <span class="fw-medium text-dark">follow-up</span> report for patient <span class="fw-medium text-dark">Emily</span>.
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>8 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-2">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap border-bottom" id="notification-3">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-02.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Emily</p>
+												<p class="mb-1 text-wrap">
+                                                    booked an appointment with <span class="fw-medium text-dark">Dr. Patel</span> for <span class="fw-medium text-dark">April 15</span>
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>15 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-3">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Item-->
+									<div class="dropdown-item notification-item py-3 text-wrap" id="notification-4">
+										<div class="d-flex">
+											<div class="me-2 position-relative flex-shrink-0">
+												<img src="assets/img/doctors/doctor-07.jpg" class="avatar-md rounded-circle" alt="">
+											</div>
+											<div class="flex-grow-1">
+												<p class="mb-0 fw-medium text-dark">Amelia</p>
+												<p class="mb-1 text-wrap">
+                                                    completed the <span class="fw-medium text-dark">pre-visit</span> health questionnaire.
+												</p>
+												<div class="d-flex justify-content-between align-items-center">
+													<span class="fs-12"><i class="ti ti-clock me-1"></i>20 min ago</span>
+													<div class="notification-action d-flex align-items-center float-end gap-2">
+														<a href="javascript:void(0);" class="notification-read rounded-circle bg-danger" data-bs-toggle="tooltip" title="" data-bs-original-title="Make as Read" aria-label="Make as Read"></a>
+														<button class="btn rounded-circle p-0" data-dismissible="#notification-4">
+															<i class="ti ti-x"></i>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									 
+								</div>
+								
+								<!-- View All-->
+								<div class="p-2 rounded-bottom border-top text-center">
+									<a href="doctors-notifications.html" class="text-center text-decoration-underline fs-14 mb-0">
+										View All Notifications
+									</a>
+								</div> 
+								
+							</div>
+						</div>
+					</div>
+					
+					<!-- User Dropdown -->
+					<div class="dropdown profile-dropdown d-flex align-items-center justify-content-center">
+                        <a href="javascript:void(0);" class="topbar-link dropdown-toggle drop-arrow-none position-relative" data-bs-toggle="dropdown" data-bs-offset="0,22" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/img/doctors/doctor-01.jpg" width="32" class="rounded-circle d-flex" alt="user-image">
+                            <span class="online text-success"><i class="ti ti-circle-filled d-flex bg-white rounded-circle border border-1 border-white"></i></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-2">
+                        
+                            <div class="d-flex align-items-center bg-light rounded-3 p-2 mb-2">
+                                <img src="assets/img/doctors/doctor-01.jpg" class="rounded-circle" width="42" height="42" alt="">
+                                <div class="ms-2">
+                                    <p class="fw-medium text-dark mb-0">Dr.Michael Smith</p>
+                                    <span class="d-block fs-13">Cardiologist</span>
+                                </div>
+                            </div>
+
+                            <!-- Item-->
+                            <a href="doctors-profile-settings.html" class="dropdown-item">
+                                <i class="ti ti-user-circle me-1 align-middle"></i>
+                                <span class="align-middle">Profile Settings</span>
+                            </a>
+
+                            <!-- item -->
+                            <div class="form-check form-switch form-check-reverse d-flex align-items-center justify-content-between dropdown-item mb-0">
+                                <label class="form-check-label" for="notify"><i class="ti ti-bell me-1"></i>Notifications</label>
+                                <input class="form-check-input me-0" type="checkbox" role="switch" id="notify">
+                            </div>
+
+                            <!-- Item-->
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="ti ti-receipt me-1 align-middle"></i>
+                                <span class="align-middle">Activity Logs</span>
+                            </a>
+
+                             <!-- Item-->
+                             <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="ti ti-help me-1 align-middle"></i>
+                                <span class="align-middle">Help & Support</span>
+                            </a>
+                                        
+                            
+                            <!-- Item-->
+                            <div class="pt-2 mt-2 border-top">
+                                <a href="login.html" class="dropdown-item text-danger">
+                                    <i class="ti ti-logout me-1 fs-17 align-middle"></i>
+                                    <span class="align-middle">Log Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+						
+                </div>
+            </div>
+        </header>
+        <!-- Topbar End -->
+
+        <!-- Search Modal -->
+        <div class="modal fade" id="searchModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-transparent">
+                    <div class="card shadow-none mb-0">
+                        <div class="px-3 py-2 d-flex flex-row align-items-center" id="search-top">
+                            <i class="ti ti-search fs-22"></i>
+                            <input type="search" class="form-control border-0" placeholder="Search">
+                            <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x fs-22"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidenav Menu Start -->
+        <div class="sidebar" id="sidebar">
+            
+            <!-- Start Logo -->
+            <div class="sidebar-logo">
+                <div>
+                    <!-- Logo Normal -->
+                    <a href="index.html" class="logo logo-normal">
+                        <img src="assets/img/logo.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Small -->
+                    <a href="index.html" class="logo-small">
+                        <img src="assets/img/logo-small.svg" alt="Logo">
+                    </a>
+
+                    <!-- Logo Dark -->
+                    <a href="index.html" class="dark-logo">
+                        <img src="assets/img/logo-white.svg" alt="Logo">
+                    </a>
+                </div>
+                <button class="sidenav-toggle-btn btn border-0 p-0 active" id="toggle_btn"> 
+                    <i class="ti ti-arrow-left text-body"></i>
+                </button>
+
+                <!-- Sidebar Menu Close -->
+                <button class="sidebar-close">
+                    <i class="ti ti-x align-middle"></i>
+                </button>                
+            </div>
+            <!-- End Logo -->
+
+            <!-- Sidenav Menu -->
+            <div class="sidebar-inner" data-simplebar>                
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title"><span>Main Menu</span></li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="doctor-dashboard.html">
+                                        <i class="ti ti-layout-dashboard"></i><span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-calendar-check"></i><span>Appointments</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="doctors-appointments.html">Appointments</a></li>
+                                        <li><a href="online-consultations.html">Online Consultations</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="doctors-schedules.html">
+                                        <i class="ti ti-clock-check"></i><span>My Schedule</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="doctors-prescriptions.html">
+                                        <i class="ti ti-prescription"></i><span>Prescriptions</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="doctors-leaves.html">
+                                        <i class="ti ti-calendar-x"></i><span>Leave</span>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="doctors-reviews.html">
+                                        <i class="ti ti-star"></i><span>Reviews</span>
+                                    </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:void(0);">
+                                        <i class="ti ti-settings"></i><span>Settings</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="doctors-profile-settings.html">Profile Settings</a></li>
+                                        <li><a href="doctors-password-settings.html">Change Password</a></li>
+                                        <li><a href="doctors-notification-settings.html">Notifications</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                                        
+                    </ul>                   
+                </div>
+                <div class="sidebar-footer border-top mt-3">
+                    <div class="trial-item mt-0 p-3 text-center">
+                        <div class="trial-item-icon rounded-4 mb-3 p-2 text-center shadow-sm d-inline-flex">
+                            <img src="./assets/img/icons/sidebar-icon.svg" alt="img">
+                        </div>
+                        <div>
+                            <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Symplify like a pro</p>
+                        </div>
+                        <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Sidenav Menu End -->
+
+        <!-- ========================
+			Start Page Content
+		========================= -->
+         
+        <div class="page-wrapper">
+
+            <!-- Start Content -->
+            <div class="content">
+
+                <!-- Start Page Header -->
+                <div class="d-flex align-items-sm-center flex-sm-row flex-column gap-2 pb-3 mb-3 border-1 border-bottom">
+                    <div class="flex-grow-1">
+                        <h4 class="fw-bold mb-0"> Reviews </h4>
+                    </div>
+                    <div class="text-end">
+                        <!-- dropdown-->
+                        <div class="dropdown me-1">
+							<a href="javascript:void(0);" class="btn btn-md fw-normal border bg-white rounded text-dark d-inline-flex align-items-center fs-14"  data-bs-toggle="dropdown">
+								Export<i class="ti ti-chevron-down ms-2"></i>
+							</a>
+							<ul class="dropdown-menu p-2">
+								<li>
+									<a class="dropdown-item" href="#">Download as PDF</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">Download as Excel</a>
+								</li>
+							</ul>
+						</div>
+                    </div>
+				</div>
+				<!-- End Page Header -->
+
+                
+                <div class=" d-flex align-items-center justify-content-between flex-wrap row-gap-3">
+                    <div class="search-set mb-3">
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                            <div class="table-search d-flex align-items-center mb-0">
+                                <div class="search-input">
+                                    <a href="javascript:void(0);" class="btn-searchset"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex table-dropdown mb-3 pb-1 right-content align-items-center flex-wrap row-gap-3">
+                        
+                            <a href="javascript:void(0);" class="bg-white border rounded btn btn-md text-dark fs-14 py-1 align-items-center d-flex fw-normal" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                <i class="ti ti-filter text-gray-5 me-1"></i>Filters
+                            </a>
+                            <div class="dropdown-menu dropdown-lg dropdown-menu-end filter-dropdown p-0" id="filter-dropdown">
+                                <div class="d-flex align-items-center justify-content-between border-bottom filter-header">
+                                    <h4 class="mb-0 fw-bold">Filter</h4>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="link-danger text-decoration-underline">Clear All</a>
+                                <form action="#">
+                                    <div class="filter-body pb-0">
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <label class="form-label mb-1">Doctor</label>
+                                                <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            <select class="select2" multiple="multiple">
+                                                <option value="m-1" selected>Dr. Mick Thompson</option>
+                                                <option value="m-2">Dr. Sarah Johnson</option>
+                                                <option value="m-3">Dr. Emily Carter</option>
+                                                <option value="m-4">Dr. David Lee</option>
+                                                <option value="m-5">Dr. Anna Kim</option>
+                                            </select>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <label class="form-label">Designation</label>
+                                                <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            <select class="select2" multiple="multiple">
+                                                <option value="m-1" selected>Cardiologist</option>
+                                                <option value="m-2">Orthopedic Surgeon</option>
+                                                <option value="m-3">Pediatrician</option>
+                                                <option value="m-4">Gynecologist</option>
+                                            </select>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <label class="form-label">Department</label>
+                                                <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            <select class="select2" multiple="multiple">
+                                                <option value="m-1" selected>Cardiology</option>
+                                                <option value="m-2">Orthopedics</option>
+                                                <option value="m-3">Pediatrics</option>
+                                            </select>
+                                        <div class="mb-3">
+                                            <label class="form-label mb-1 text-dark fs-14 fw-medium">Date<span class="text-danger">*</span></label>
+                                            <div class="input-icon-end position-relative">  
+                                                <input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
+                                                <span class="input-icon-addon">
+                                                    <i class="ti ti-calendar"></i>
+                                                </span>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <label class="form-label">Amount</label>
+                                                <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            <select class="select2" multiple="multiple">
+                                                <option value="m-1" selected>$501 - $1000</option>
+                                                <option value="m-2">$501 - $1100</option>
+                                                <option value="m-3">$701 - $1200</option>
+                                            </select>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <label class="form-label">Status</label>
+                                                <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            <select class="select2" multiple="multiple">
+                                                <option value="m-1" selected>Available</option>
+                                                <option value="m-2">Unavailable</option>
+                                            </select>
+                                    <div class="filter-footer d-flex align-items-center justify-content-end border-top">
+                                        <a href="javascript:void(0);" class="btn btn-light btn-md me-2 fw-medium" id="close-filter">Close</a>
+                                        <button type="submit" class="btn btn-primary btn-md fw-medium">Filter</button>
+                                </form>
+
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle btn bg-white btn-md d-inline-flex align-items-center fw-normal rounded border text-dark px-2 py-1 fs-14" data-bs-toggle="dropdown">
+                               <span  class="me-1"> Sort By : </span>  Recent
+                            </a>
+                            <ul class="dropdown-menu  dropdown-menu-end p-2">
+                                <li>
+                                    <a href="javascript:void(0);" class="dropdown-item rounded-1">Recent</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
+                                </li>
+                                </li>
+                            </ul>
+
+                <div class="table-responsive">
+                    <table class="table table-nowrap datatable">
+                        <thead class="thead-light">
+                            <tr>
+                                <th class="no-sort">
+                                    Reviewed By
+                                </th>
+                                <th>Review</th>
+                                <th>Ratings</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="avatar avatar-sm me-2">
+                                            <img src="assets/img/users/user-33.jpg" alt="product" class="rounded-circle">
+                                        </a>
+                                        <a href="javascript:void(0);">Alberto Ripley</a>
+                                </td>
+                                <td>The clinic was well-organized, and I didn’t have to wait long. </td>
+                                <td>
+                                    <div class="star-ratings d-flex align-items-center">
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                </td>
+                                <td>30 Apr 2025</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="avatar avatar-sm me-2">
+                                            <img src="assets/img/users/user-01.jpg" alt="product" class="rounded-circle">
+                                        </a>
+                                        <a href="javascript:void(0);">Susan Babin</a>
+                                </td>
+                                <td>Dr. Mick explained everything in simple terms and made sure I understood my condition and treatm. </td>
+                                <td>
+                                    <div class="star-ratings d-flex align-items-center">
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-light"></i>
+                                </td>
+                                <td>15 Apr 2025</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="avatar avatar-sm me-2">
+                                            <img src="assets/img/users/user-02.jpg" alt="product" class="rounded-circle">
+                                        </a>
+                                        <a href="javascript:void(0);">Carol Lam</a>
+                                </td>
+                                <td>From the front desk to the consultation, everything was smooth. Dr. Mick and his staff were friend. </td>
+                                <td>
+                                    <div class="star-ratings d-flex align-items-center">
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-light"></i>
+                                </td>
+                                <td>02 Apr 2025</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="avatar avatar-sm me-2">
+                                            <img src="assets/img/users/user-04.jpg" alt="product" class="rounded-circle">
+                                        </a>
+                                        <a href="javascript:void(0);">Marsha Noland</a>
+                                </td>
+                                <td>While the doctor was knowledgeable, I felt a bit rushed during my visit. I would’ve appreciated. </td>
+                                <td>
+                                    <div class="star-ratings d-flex align-items-center">
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-light"></i>
+                                        <i class="ti ti-star-filled fs-14 text-light"></i>
+                                        <i class="ti ti-star-filled fs-14 text-light"></i>
+                                </td>
+                                <td>27 Mar 2025</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="avatar avatar-sm me-2">
+                                            <img src="assets/img/users/user-05.jpg" alt="product" class="rounded-circle">
+                                        </a>
+                                        <a href="javascript:void(0);">Irma Armstrong</a>
+                                </td>
+                                <td>This is helpful information! If anyone has ongoing symptoms, don’t hesitate to speak to a licensed  </td>
+                                <td>
+                                    <div class="star-ratings d-flex align-items-center">
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-light"></i>
+                                        <i class="ti ti-star-filled fs-14 text-light"></i>
+                                </td>
+                                <td>12 Mar 2025</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="avatar avatar-sm me-2">
+                                            <img src="assets/img/users/user-07.jpg" alt="product" class="rounded-circle">
+                                        </a>
+                                        <a href="javascript:void(0);">Jesus Adams</a>
+                                </td>
+                                <td>Very professional and caring staff. I felt heard and understood throughout my treatment. </td>
+                                <td>
+                                    <div class="star-ratings d-flex align-items-center">
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                </td>
+                                <td>05 Mar 2025</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="avatar avatar-sm me-2">
+                                            <img src="assets/img/users/user-08.jpg" alt="product" class="rounded-circle">
+                                        </a>
+                                        <a href="javascript:void(0);">Ezra Belcher</a>
+                                </td>
+                                <td>The doctors took time to explain everything clearly. I left feeling informed and reassured. </td>
+                                <td>
+                                    <div class="star-ratings d-flex align-items-center">
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-light"></i>
+                                </td>
+                                <td>19 Feb 2025</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="avatar avatar-sm me-2">
+                                            <img src="assets/img/users/user-10.jpg" alt="product" class="rounded-circle">
+                                        </a>
+                                        <a href="javascript:void(0);">Glen Lentz</a>
+                                </td>
+                                <td>Exceptional care from start to finish. The clinic is clean, organized, and patient-focused. </td>
+                                <td>
+                                    <div class="star-ratings d-flex align-items-center">
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-light"></i>
+                                </td>
+                                <td>16 Feb 2025</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="avatar avatar-sm me-2">
+                                            <img src="assets/img/users/user-12.jpg" alt="product" class="rounded-circle">
+                                        </a>
+                                        <a href="javascript:void(0);">Bernard Griffith</a>
+                                </td>
+                                <td>Booking was easy, the team was punctual, and I received excellent medical attention.. </td>
+                                <td>
+                                    <div class="star-ratings d-flex align-items-center">
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                </td>
+                                <td>01 Feb 2025</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <a href="javascript:void(0);" class="avatar avatar-sm me-2">
+                                            <img src="assets/img/users/user-14.jpg" alt="product" class="rounded-circle">
+                                        </a>
+                                        <a href="javascript:void(0);">John Elsass</a>
+                                </td>
+                                <td>Great experience! The doctor truly listened and provided personalized advice. </td>
+                                <td>
+                                    <div class="star-ratings d-flex align-items-center">
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                        <i class="ti ti-star-filled fs-14 text-warning"></i>
+                                </td>
+                                <td>20 Jas 2025</td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                
+            <!-- End Content -->
+             <!-- Footer Start -->
+            <div class="footer text-center bg-white p-2 border-top">
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
+            <!-- Footer End -->
+
+
+        <!-- ========================
+			End Page Content
+		========================= -->
+    <!-- End Wrapper -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>    
+
+	<!-- Simplebar JS -->
+	<script src="assets/plugins/simplebar/simplebar.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+
+    <!-- Daterangepikcer JS -->
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+
+    <!-- Datetimepicker JS -->
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script> 
+
+    <!-- Datatable JS -->
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

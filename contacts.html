@@ -7,7 +7,7 @@
 	<!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contacts | Symplify - Medical & Hospital - Bootstrap 5 Admin Template</title>
+    <title>Contacts | Preclinic - Medical & Hospital - Bootstrap 5 Admin Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Dreams Technologies">
 	
@@ -104,8 +104,19 @@
 
                     <!-- Appointment -->
                     <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="new-appointment.html" class="btn topbar-link"><i class="ti ti-calendar-due"></i></a>
+                        </div>
+                    </div>                    
                     <!-- Appointment -->
 
+                    <!-- Settings -->
+                    <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="profile-settings.html" class="btn topbar-link"><i class="ti ti-settings-2"></i></a>
+                        </div> 
+                    </div> 
+                    <!-- Settings -->                   
 
                     <!-- Light/Dark Mode Button -->
                     <div class="header-item d-none d-sm-flex me-2">
@@ -932,7 +943,7 @@
                                 </li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);">
-                                        <span>Other Settings</span>
+                                        <i class="ti ti-settings-2"></i><span>Other Settings</span>
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
@@ -1122,7 +1133,7 @@
                         </div>
                         <div>
                             <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
-                            <p class="fs-13 mb-0">Check 1 min video and begin use Symplify like a pro</p>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Preclinic like a pro</p>
                         </div>
                         <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
                     </div>
@@ -1155,6 +1166,7 @@
                     </div>
                     <div class="d-flex mb-3 align-items-center flex-wrap row-gap-3">
 
+                        <div class="dropdown me-2">
                             <a href="javascript:void(0);" class="dropdown-toggle btn fs-14 py-1 btn-outline-white bg-white btn-md d-inline-flex align-items-center" data-bs-toggle="dropdown">
                                 Status
                             </a>
@@ -1167,6 +1179,7 @@
                                 </li>
 
                             </ul>
+                        </div>
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle btn fs-14 py-1 btn-outline-white bg-white btn-md d-inline-flex align-items-center" data-bs-toggle="dropdown">
                                 Sort By : Last 7 Days
@@ -1188,7 +1201,10 @@
                                     <a href="javascript:void(0);" class="dropdown-item rounded-1">Last 7 Days</a>
                                 </li>
                             </ul>
+                        </div>
                         <a href="javascript:void(0);" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#add-contact"><i class="ti ti-circle-plus me-1"></i>Add Contact</a>
+                    </div>
+                </div>
                 <div class="table-responsive">
                     <table class="table table-nowrap datatable">
                         <thead>
@@ -1196,6 +1212,7 @@
                                 <th class="no-sort">
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox" id="select-all">
+                                    </div>
                                 </th>
                                 <th>Name</th>
                                 <th>Email</th>
@@ -1210,6 +1227,7 @@
                                 <td>
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox">
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1217,6 +1235,7 @@
                                             <img src="assets/img/users/user-33.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);">Carl Evans</a>
+                                    </div>
                                 </td>
                                 <td>carlevans@example.com</td>
                                 <td>+12163547758</td>
@@ -1240,6 +1259,7 @@
                                 <td>
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox">
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1247,6 +1267,7 @@
                                             <img src="assets/img/users/user-02.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);">Minerva Rameriz</a>
+                                    </div>
                                 </td>
                                 <td>rameriz@example.com</td>
                                 <td>+11367529510 </td>
@@ -1270,6 +1291,7 @@
                                 <td>
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox">
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1277,6 +1299,7 @@
                                             <img src="assets/img/users/user-34.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);">Robert Lamon</a>
+                                    </div>
                                 </td>
                                 <td>robert@example.com</td>
                                 <td>+15362789414</td>
@@ -1300,6 +1323,7 @@
                                 <td>
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox">
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1307,6 +1331,7 @@
                                             <img src="assets/img/users/user-35.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);">Patricia Lewis</a>
+                                    </div>
                                 </td>
                                 <td>patricia@example.com</td>
                                 <td>+18513094627</td>
@@ -1330,6 +1355,7 @@
                                 <td>
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox">
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1337,6 +1363,7 @@
                                             <img src="assets/img/users/user-36.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);">Mark Joslyn</a>
+                                    </div>
                                 </td>
                                 <td>markjoslyn@example.com</td>
                                 <td>+14678219025</td>
@@ -1360,6 +1387,7 @@
                                 <td>
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox">
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1367,6 +1395,7 @@
                                             <img src="assets/img/users/user-37.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);">Marsha Betts</a>
+                                    </div>
                                 </td>
                                 <td>marshabetts@example.com</td>
                                 <td>+10913278319</td>
@@ -1390,6 +1419,7 @@
                                 <td>
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox">
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1397,6 +1427,7 @@
                                             <img src="assets/img/users/user-28.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);">Daniel Jude</a>
+                                    </div>
                                 </td>
                                 <td>daieljude@example.com</td>
                                 <td>+19125852947</td>
@@ -1420,6 +1451,7 @@
                                 <td>
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox">
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1427,6 +1459,7 @@
                                             <img src="assets/img/users/user-38.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);">Emma Bates</a>
+                                    </div>
                                 </td>
                                 <td>emmabates@example.com</td>
                                 <td>+13671835209</td>
@@ -1450,6 +1483,7 @@
                                 <td>
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox">
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1457,6 +1491,7 @@
                                             <img src="assets/img/users/user-39.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);">Richard Fralick</a>
+                                    </div>
                                 </td>
                                 <td>richard@example.com</td>
                                 <td>+19756194733</td>
@@ -1480,6 +1515,7 @@
                                 <td>
                                     <div class="form-check form-check-md">
                                         <input class="form-check-input" type="checkbox">
+                                    </div>
                                 </td>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -1487,6 +1523,7 @@
                                             <img src="assets/img/users/user-03.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="javascript:void(0);">Michelle Robison</a>
+                                    </div>
                                 </td>
                                 <td>robinson@example.com</td>
                                 <td>+19167850925</td>
@@ -1508,13 +1545,17 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
 			<!-- End Content -->
 
             <!-- Footer Start -->
             <div class="footer text-center bg-white p-2 border-top">
-                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Preclinic</a>, All Rights Reserved</p>
+            </div>
             <!-- Footer End -->
 
+        </div>
 
         <!-- ========================
 			End Page Content
@@ -1527,31 +1568,41 @@
                     <div class="modal-header">
                         <div class="page-title">
                             <h5 class="mb-0">Add Contact</h5>
+                        </div>
                         <button type="button" class="btn-close btn-close-modal custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
 
+                    </div>
                     <form action="contacts.html">
                         <div class="modal-body">
                             <div class="d-flex align-items-center mb-3">
                                 <div class="avatar avatar-xxl border border-dashed bg-light me-3 flex-shrink-0">
                                     <i class="ti ti-photo text-primary"></i>
+                                </div>
                                 <div class="d-inline-flex flex-column align-items-start">
                                     <div class="drag-upload-btn btn btn-sm btn-primary position-relative mb-2">
                                         <i class="ti ti-photo me-1"></i>Upload Image
                                         <input type="file" class="form-control image-sign" multiple="">
+                                    </div>
                                     <span class="text-gray-9 fs-12">JPG or PNG format, not exceeding 5MB.</span>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-lg-6 mb-3">
                                     <label class="form-label">First Name<span class="text-danger ms-1">*</span></label>
                                     <input type="text" class="form-control">
+                                </div>
                                 <div class="col-lg-6 mb-3">
                                     <label class="form-label">Last Name<span class="text-danger ms-1">*</span></label>
                                     <input type="text" class="form-control">
+                                </div>
                                 <div class="col-lg-12 mb-3">
                                     <label class="form-label">Email<span class="text-danger ms-1">*</span></label>
                                     <input type="email" class="form-control">
+                                </div>
                                 <div class="col-lg-12 mb-3">
                                     <label class="form-label">Phone<span class="text-danger ms-1">*</span></label>
                                     <input type="tel" class="form-control">
+                                </div>
                                 <div class="col-lg-12">
                                     <div class="mb-0">
                                         <label class="form-label">Contact Type <span class="text-danger">*</span></label>
@@ -1560,10 +1611,18 @@
                                             <option>Admin</option>
                                             <option>Salesman</option>
                                         </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn me-2 btn-light fs-13 fw-medium shadow-none" data-bs-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary fs-13 fw-medium">Add Contact</button>
+                        </div>
                     </form>
+                </div>
+            </div>
+        </div>
         <!-- End Add Customer -->
 
         <!-- Start Edit Customer -->
@@ -1573,7 +1632,9 @@
                     <div class="modal-header">
                         <div class="page-title">
                             <h5 class="mb-0">Edit Contact</h5>
+                        </div>
                         <button type="button" class="btn-close btn-close-modal custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+                    </div>
                     <form action="contacts.html">
                         <div class="modal-body">
                             <div class="d-flex align-items-center mb-3">
@@ -1581,24 +1642,33 @@
                                     <div class="position-relative d-flex align-items-center">
                                         <img src="assets/img/profiles/avatar-01.jpg" class="avatar avatar-xl " alt="User Img">
                                         <a href="javascript:void(0);" class="rounded-trash trash-top d-flex align-items-center justify-content-center"><i class="ti ti-trash"></i></a>
+                                    </div>
+                                </div>
                                 <div class="d-inline-flex flex-column align-items-start">
                                     <div class="drag-upload-btn btn btn-sm btn-primary position-relative mb-2">
                                         <i class="ti ti-photo me-1"></i>Upload Image
                                         <input type="file" class="form-control image-sign" multiple="">
+                                    </div>
                                     <span class="text-gray-9 fs-12">JPG or PNG format, not exceeding 5MB.</span>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-lg-6 mb-3">
                                     <label class="form-label">First Name<span class="text-danger ms-1">*</span></label>
                                     <input type="text" class="form-control" value="Carl">
+                                </div>
                                 <div class="col-lg-6 mb-3">
                                     <label class="form-label">Last Name<span class="text-danger ms-1">*</span></label>
                                     <input type="text" class="form-control" value="Evans">
+                                </div>
                                 <div class="col-lg-12 mb-3">
                                     <label class="form-label">Email<span class="text-danger ms-1">*</span></label>
                                     <input type="email" class="form-control" value="carlevans@example.com">
+                                </div>
                                 <div class="col-lg-12 mb-3">
                                     <label class="form-label">Phone<span class="text-danger ms-1">*</span></label>
                                     <input type="tel" class="form-control" value="+12163547758 ">
+                                </div>
                                 <div class="col-lg-12">
                                     <div class="mb-0">
                                         <label class="form-label">Contact Type <span class="text-danger">*</span></label>
@@ -1607,11 +1677,19 @@
                                             <option selected>Admin</option>
                                             <option>Salesman</option>
                                         </select>
+                                    </div>
+                                </div>
 
+                            </div>
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn me-2 btn-light fs-13 fw-medium shadow-none" data-bs-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary fs-13 fw-medium">Save Changes</button>
+                        </div>
                     </form>
+                </div>
+            </div>
+        </div>
         <!-- End Edit Customer -->
 
         <!-- Start Delete Modal  -->
@@ -1623,13 +1701,20 @@
                         <img src="assets/img/bg/delete-modal-bg-02.png" alt="" class="img-fluid position-absolute bottom-0 end-0 z-0">
                         <div class="mb-3 position-relative z-1">
                             <span class="avatar avatar-lg bg-danger text-white"><i class="ti ti-trash fs-24"></i></span>
+                        </div>
                         <h5 class="fw-bold mb-1 position-relative z-1">Delete Confirmation</h5>
                         <p class="mb-3 position-relative z-1">Are you sure want to delete?</p>
                         <div class="d-flex justify-content-center">
                             <a href="javascript:void(0);" class="btn btn-light position-relative z-1 me-3" data-bs-dismiss="modal">Cancel</a>
                             <a href="" class="btn btn-danger position-relative z-1" data-bs-dismiss="modal">Yes, Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- End Delete Modal  -->
 
+    </div>
     <!-- End Wrapper -->
 
     <!-- jQuery -->

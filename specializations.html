@@ -114,8 +114,19 @@
 
                     <!-- Appointment -->
                     <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="new-appointment.html" class="btn topbar-link"><i class="ti ti-calendar-due"></i></a>
+                        </div>
+                    </div>                    
                     <!-- Appointment -->
 
+                    <!-- Settings -->
+                    <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="profile-settings.html" class="btn topbar-link"><i class="ti ti-settings-2"></i></a>
+                        </div> 
+                    </div> 
+                    <!-- Settings -->                   
 
                     <!-- Light/Dark Mode Button -->
                     <div class="header-item d-none d-sm-flex me-2">
@@ -942,7 +953,7 @@
                                 </li>
                                 <li class="submenu">
                                     <a href="javascript:void(0);">
-                                        <span>Other Settings</span>
+                                        <i class="ti ti-settings-2"></i><span>Other Settings</span>
                                         <span class="menu-arrow"></span>
                                     </a>
                                     <ul>
@@ -1132,7 +1143,7 @@
                         </div>
                         <div>
                             <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
-                            <p class="fs-13 mb-0">Check 1 min video and begin use Symplify like a pro</p>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Preclinic like a pro</p>
                         </div>
                         <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
                     </div>
@@ -1173,6 +1184,7 @@
                         </div>
                     </div>
                     <div class="d-flex table-dropdown mb-3 pb-1 right-content align-items-center flex-wrap row-gap-3">
+                        <div class="dropdown me-2">
                             <a href="javascript:void(0);" class="btn btn-white fs-14 py-1 bg-white border d-inline-flex text-dark align-items-center" data-bs-toggle="dropdown" data-bs-auto-close="outside">
                                 <i class="ti ti-filter text-gray-5 me-1"></i>Filters
                             </a>
@@ -1181,11 +1193,14 @@
                                     <h5 class="mb-0 fw-bold">Filter</h5>
                                     <div class="d-flex align-items-center">
                                         <a href="javascript:void(0);" class="link-danger text-decoration-underline">Clear All</a>
+                                    </div>
+                                </div>
                                 <form action="#">
                                     <div class="filter-body pb-0">
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Specialization</label>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>General Medicine</option>
                                                 <option value="m-2">Dentistry</option>
@@ -1198,6 +1213,7 @@
                                                 <option value="m-4">ENT</option>
                                                 <option value="m-4">Nutrition</option>
                                             </select>
+                                        </div>
                                         <div class="mb-3">
                                             <label class="form-label mb-1 text-dark fs-14 fw-medium">Date</label>
                                             <div class="input-icon-end position-relative">  
@@ -1205,17 +1221,25 @@
                                                 <span class="input-icon-addon">
                                                     <i class="ti ti-calendar"></i>
                                                 </span>
+                                            </div>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Status</label>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Active</option>
                                                 <option value="m-2">Inactive</option>
                                             </select>
+                                        </div>
+                                    </div>
                                     <div class="filter-footer d-flex align-items-center justify-content-end border-top">
                                         <a href="javascript:void(0);" class="btn btn-light btn-md me-2" id="close-filter">Close</a>
                                         <button type="submit" class="btn btn-primary btn-md">Filter</button>
+                                    </div>
                                 </form>
+                            </div>
+                        </div>
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle btn bg-white btn-md d-inline-flex align-items-center fw-normal rounded border text-dark px-2 py-1 fs-14" data-bs-toggle="dropdown">
                                <span  class="me-1"> Sort By : </span>  Recent
@@ -1228,6 +1252,9 @@
                                     <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="table-responsive">
                     <table class="table table-nowrap datatable">
@@ -1249,6 +1276,8 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">General Medicine</a></h6>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>22 Apr 2025</td>
                                 <td>20</td>
@@ -1266,6 +1295,7 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_specialization">Delete</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1276,6 +1306,8 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Dentistry</a></h6>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>12 Apr 2025</td>
                                 <td>15</td>
@@ -1293,6 +1325,7 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_specialization">Delete</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1303,6 +1336,8 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Ophthalmology</a></h6>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>01 Apr 2025</td>
                                 <td>10</td>
@@ -1320,6 +1355,7 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_specialization">Delete</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1330,6 +1366,8 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Radiology</a></h6>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>05 Mar 2025</td>
                                 <td>13</td>
@@ -1347,6 +1385,7 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_specialization">Delete</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1357,6 +1396,8 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Physiotherapy</a></h6>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>20 Mar 2025</td>
                                 <td>17</td>
@@ -1374,6 +1415,7 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_specialization">Delete</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1384,6 +1426,8 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Cardiology</a></h6>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>01 Mar 2025</td>
                                 <td>20</td>
@@ -1401,6 +1445,7 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_specialization">Delete</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1411,6 +1456,8 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Dermatology</a></h6>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>15 Feb 2025</td>
                                 <td>25</td>
@@ -1428,6 +1475,7 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_specialization">Delete</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1438,6 +1486,8 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Pathology</a></h6>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>09 Feb 2025</td>
                                 <td>15</td>
@@ -1455,6 +1505,7 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_specialization">Delete</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1465,6 +1516,8 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">ENT</a></h6>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>01 Feb 2025</td>
                                 <td>19</td>
@@ -1482,6 +1535,7 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_specialization">Delete</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -1492,6 +1546,8 @@
                                         </a>
                                         <div>
                                             <h6 class="mb-0 fs-14 fw-semibold"><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_staff">Nutrition</a></h6>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td>12 Jan 2025</td>
                                 <td>24</td>
@@ -1509,18 +1565,23 @@
                                                 <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_specialization">Delete</a>
                                             </li>
                                         </ul>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
                                 
+            </div>
             <!-- End Content -->
 
             <!-- Footer Start -->
             <div class="footer text-center bg-white p-2 border-top">
-                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Preclinic</a>, All Rights Reserved</p>
+            </div>
             <!-- Footer End -->
 
+        </div>
 
         <!-- ========================
 			End Page Content
@@ -1533,18 +1594,26 @@
                     <div class="modal-header">
                         <h4 class="text-dark modal-title fw-bold">Add New Specialization</h4>
                         <button type="button" class="btn-close btn-close-modal custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+                    </div>
                     <form action="specializations.html">
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label class="form-label">Specialization<span class="text-danger ms-1">*</span></label>
                                 <input type="text" class="form-control">
+                            </div>
                             <div class="mb-0">
                                 <label class="form-label">Description</label>
                                 <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
                         <div class="modal-footer d-flex align-items-center gap-1">
                             <button type="button" class="btn btn-light border" data-bs-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary">Add Specialization</button>
+                        </div>
                     </form>
+                </div>
+            </div>
+        </div>
         <!-- End Add Modal -->
 
         <!-- Start Add Modal -->
@@ -1554,18 +1623,26 @@
                     <div class="modal-header">
                         <h4 class="text-dark modal-title fw-bold">Edit Specialization</h4>
                         <button type="button" class="btn-close btn-close-modal custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+                    </div>
                     <form action="specializations.html">
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label class="form-label">Specialization<span class="text-danger ms-1">*</span></label>
                                 <input type="text" class="form-control" value="Cardiologist">
+                            </div>
                             <div class="mb-0">
                                 <label class="form-label">Description</label>
                                 <textarea class="form-control" rows="3">Focuses on heart conditions in children.</textarea>
+                            </div>
+                        </div>
                         <div class="modal-footer d-flex align-items-center gap-1">
                             <button type="button" class="btn btn-white border" data-bs-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
                     </form>
+                </div>
+            </div>
+        </div>
         <!-- End Add Modal -->
 
         <!-- Start Delete Modal  -->
@@ -1577,13 +1654,20 @@
                         <img src="assets/img/bg/delete-modal-bg-02.png" alt="" class="img-fluid position-absolute bottom-0 end-0 z-n1">
                         <div class="mb-3">
                             <span class="avatar avatar-lg bg-danger text-white"><i class="ti ti-trash fs-24"></i></span>
+                        </div>
                         <h5 class="fw-bold mb-1">Delete Confirmation</h5>
                         <p class="mb-3">Are you sure want to delete?</p>
                         <div class="d-flex justify-content-center">
                             <a href="javascript:void(0);" class="btn btn-light position-relative z-1 me-3" data-bs-dismiss="modal">Cancel</a>
                             <a href="specializations.html" class="btn btn-danger position-relative z-1">Yes, Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- End Delete Modal  -->
 
+    </div>
     <!-- End Wrapper -->
 
     <!-- jQuery -->

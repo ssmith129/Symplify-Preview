@@ -7,7 +7,7 @@
 	<!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Doctors | Symplify - Medical & Hospital - Bootstrap 5 Admin Template</title>
+    <title>Doctors | Preclinic - Medical & Hospital - Bootstrap 5 Admin Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Dreams Technologies">
 	
@@ -112,8 +112,14 @@
 					<a href="javascript:void(0);" class="btn btn-liner-gradient me-3 d-lg-flex d-none">AI Assistance<i class="ti ti-chart-bubble-filled ms-1"></i></a>
 
                     <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="patient-appointments.html" class="btn topbar-link"><i class="ti ti-calendar-due"></i></a>
+                        </div>
+                    </div>                    
 
                     <div class="header-item">
+                        <div class="dropdown me-2">
+                            <a href="patient-profile-settings.html" class="btn topbar-link"><i class="ti ti-settings-2"></i></a>
                         </div> 
                     </div>                    
 
@@ -414,7 +420,7 @@
                         </div>
                         <div>
                             <h6 class="fs-14 fw-semibold mb-1">Upgrade To Pro</h6>
-                            <p class="fs-13 mb-0">Check 1 min video and begin use Symplify like a pro</p>
+                            <p class="fs-13 mb-0">Check 1 min video and begin use Preclinic like a pro</p>
                         </div>
                         <a href="javascript:void(0);" class="close-icon shadow-sm"><i class="ti ti-x"></i></a>
                     </div>
@@ -469,6 +475,7 @@
                         </div>
                     </div>
                     <div class="d-flex table-dropdown mb-3 pb-1 right-content align-items-center flex-wrap row-gap-3">
+                        <div class="dropdown me-2">
                             <a href="javascript:void(0);" class="bg-white border rounded btn btn-md text-dark fs-14 py-1 align-items-center d-flex fw-normal" data-bs-toggle="dropdown" data-bs-auto-close="outside">
                                 <i class="ti ti-filter text-gray-5 me-1"></i>Filters
                             </a>
@@ -477,12 +484,15 @@
                                     <h4 class="mb-0 fw-bold">Filter</h4>
                                     <div class="d-flex align-items-center">
                                         <a href="javascript:void(0);" class="link-danger text-decoration-underline">Clear All</a>
+                                    </div>
+                                </div>
                                 <form action="#">
                                     <div class="filter-body pb-0">
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label mb-1">Doctor</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Dr. Mick Thompson</option>
                                                 <option value="m-2">Dr. Sarah Johnson</option>
@@ -490,25 +500,30 @@
                                                 <option value="m-4">Dr. David Lee</option>
                                                 <option value="m-5">Dr. Anna Kim</option>
                                             </select>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Designation</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Cardiologist</option>
                                                 <option value="m-2">Orthopedic Surgeon</option>
                                                 <option value="m-3">Pediatrician</option>
                                                 <option value="m-4">Gynecologist</option>
                                             </select>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Department</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Cardiology</option>
                                                 <option value="m-2">Orthopedics</option>
                                                 <option value="m-3">Pediatrics</option>
                                             </select>
+                                        </div>
                                         <div class="mb-3">
                                             <label class="form-label mb-1 text-dark fs-14 fw-medium">Date<span class="text-danger">*</span></label>
                                             <div class="input-icon-end position-relative">  
@@ -516,27 +531,37 @@
                                                 <span class="input-icon-addon">
                                                     <i class="ti ti-calendar"></i>
                                                 </span>
+                                            </div>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Amount</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>$501 - $1000</option>
                                                 <option value="m-2">$501 - $1100</option>
                                                 <option value="m-3">$701 - $1200</option>
                                             </select>
+                                        </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <label class="form-label">Status</label>
                                                 <a href="javascript:void(0);" class="link-primary mb-1">Reset</a>
+                                            </div>
                                             <select class="select2" multiple="multiple">
                                                 <option value="m-1" selected>Available</option>
                                                 <option value="m-2">Unavailable</option>
                                             </select>
+                                        </div>
+                                    </div>
                                     <div class="filter-footer d-flex align-items-center justify-content-end border-top">
                                         <a href="javascript:void(0);" class="btn btn-light btn-md me-2 fw-medium" id="close-filter">Close</a>
                                         <button type="submit" class="btn btn-primary btn-md fw-medium">Filter</button>
+                                    </div>
                                 </form>
+                            </div>
+                        </div>
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle btn bg-white btn-md d-inline-flex align-items-center fw-normal rounded border text-dark px-2 py-1 fs-14" data-bs-toggle="dropdown">
                                <span  class="me-1"> Sort By : </span>  Recent
@@ -558,6 +583,9 @@
                                     <a href="javascript:void(0);" class="dropdown-item rounded-1">Last 7 Days</a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="table-responsive">
                     <table class="table table-nowrap datatable">
@@ -580,6 +608,7 @@
                                             <img src="assets/img/doctors/doctor-02.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="patients-doctor-details.html" class="text-dark fw-semibold">Dr. Mick Thompson <span class="text-body fs-13 fw-normal d-block"> Cardiologist </span>  </a>
+                                    </div>
                                 </td>
                                 <td>+1 41245 54132 </td>
                                 <td>
@@ -610,6 +639,7 @@
                                             <img src="assets/img/doctors/doctor-03.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="patients-doctor-details.html" class="text-dark fw-semibold">Dr. Sarah Johnson<span class="text-body fs-13 fw-normal d-block"> Orthopedic Surgeon </span>  </a>
+                                    </div>
                                 </td>
                                 <td>+1 54554 54789</td>
                                 <td>
@@ -640,6 +670,7 @@
                                             <img src="assets/img/doctors/doctor-04.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="patients-doctor-details.html" class="text-dark fw-semibold">Dr. Emily Carter <span class="text-body fs-13 fw-normal d-block"> Pediatrician </span>  </a>
+                                    </div>
                                 </td>
                                 <td>+1  43554 54985</td>
                                 <td>
@@ -670,6 +701,7 @@
                                             <img src="assets/img/doctors/doctor-05.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="patients-doctor-details.html" class="text-dark fw-semibold">Dr. David Lee<span class="text-body fs-13 fw-normal d-block"> Gynecologist </span>  </a>
+                                    </div>
                                 </td>
                                 <td>+1 41245 54124 </td>
                                 <td>
@@ -700,6 +732,7 @@
                                             <img src="assets/img/doctors/doctor-06.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="patients-doctor-details.html" class="text-dark fw-semibold">Dr. Anna Kim <span class="text-body fs-13 fw-normal d-block"> Psychiatrist </span>  </a>
+                                    </div>
                                 </td>
                                 <td>+1 41245 23143 </td>
                                 <td>
@@ -730,6 +763,7 @@
                                             <img src="assets/img/doctors/doctor-07.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="patients-doctor-details.html" class="text-dark fw-semibold">Dr. John Smith<span class="text-body fs-13 fw-normal d-block"> Neurosurgeon </span>  </a>
+                                    </div>
                                 </td>
                                 <td>+1 51247 56574 </td>
                                 <td>
@@ -760,6 +794,7 @@
                                             <img src="assets/img/doctors/doctor-09.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="patients-doctor-details.html" class="text-dark fw-semibold">Dr. Lisa White <span class="text-body fs-13 fw-normal d-block"> Oncologist </span>  </a>
+                                    </div>
                                 </td>
                                 <td>+1 23423 54132 </td>
                                 <td>
@@ -790,6 +825,7 @@
                                             <img src="assets/img/doctors/doctor-12.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="patients-doctor-details.html" class="text-dark fw-semibold">Dr. Patricia Brown <span class="text-body fs-13 fw-normal d-block"> Pulmonologist </span>  </a>
+                                    </div>
                                 </td>
                                 <td>+1 51425 21498</td>
                                 <td>
@@ -820,6 +856,7 @@
                                             <img src="assets/img/doctors/doctor-15.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="patients-doctor-details.html" class="text-dark fw-semibold">Dr. Rachel Green<span class="text-body fs-13 fw-normal d-block"> Urologist </span>  </a>
+                                    </div>
                                 </td>
                                 <td>+1 45214 98741 </td>
                                 <td>
@@ -850,6 +887,7 @@
                                             <img src="assets/img/doctors/doctor-14.jpg" alt="product" class="rounded-circle">
                                         </a>
                                         <a href="patients-doctor-details.html" class="text-dark fw-semibold">Dr. Michael Smith <span class="text-body fs-13 fw-normal d-block"> Cardiologist </span>  </a>
+                                    </div>
                                 </td>
                                 <td>+1 41245 32540 </td>
                                 <td>
@@ -875,19 +913,24 @@
 
                         </tbody>
                     </table>
+                </div>
                 
+            </div>
             <!-- End Content -->
 
             <!-- Footer Start -->
             <div class="footer text-center bg-white p-2 border-top">
-                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
+                <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Preclinic</a>, All Rights Reserved</p>
+            </div>
             <!-- Footer End -->
 
+        </div>
 
         <!-- ========================
 			End Page Content
 		========================= -->
 
+    </div>
     <!-- End Wrapper -->
 
 
@@ -898,6 +941,7 @@
                 <div class="modal-header">
                     <h5 class="text-dark modal-title">Edit Date</h5>
                     <button type="button" class="btn-close btn-close-modal custom-btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-x"></i></button>
+                </div>
                 <form action="categories.html">
                     <div class="modal-body">
                         <div class="mb-2">
@@ -907,6 +951,8 @@
                                 <span class="input-icon-addon fs-16 text-dark">
                                     <i class="ti ti-calendar "></i>
                                 </span>
+                            </div>
+                        </div>
                         <div class="mb-0">
                             <label class="form-label">Status<span class="text-danger ms-1">*</span></label>
                             <select class="select">
@@ -914,10 +960,16 @@
                                 <option selected>Active</option>
                                 <option>Inactive</option>
                             </select>
+                        </div>
+                    </div>
                     <div class="modal-footer d-flex align-items-center gap-1">
                         <button type="button" class="btn btn-white border" data-bs-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
                 </form>
+            </div>
+        </div>
+    </div>
     <!-- End Edit Modal -->
 
     <!-- Start Delete Modal  -->
@@ -929,11 +981,17 @@
                     <img src="assets/img/bg/delete-modal-bg-02.png" alt="" class="img-fluid position-absolute bottom-0 end-0 z-0">
                     <div class="mb-3 position-relative z-1">
                         <span class="avatar avatar-lg bg-danger text-white"><i class="ti ti-trash fs-24"></i></span>
+                    </div>
                     <h5 class="fw-bold mb-1 position-relative z-1">Delete Confirmation</h5>
                     <p class="mb-3 position-relative z-1">Are you sure want to delete?</p>
                     <div class="d-flex justify-content-center">
                         <a href="javascript:void(0);" class="btn btn-light position-relative z-1 me-3" data-bs-dismiss="modal">Cancel</a>
                         <a href="" class="btn btn-danger position-relative z-1" data-bs-dismiss="modal">Yes, Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End Delete Modal  -->
 
     <!-- jQuery -->
