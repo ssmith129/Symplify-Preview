@@ -1333,6 +1333,7 @@ Template Name: Symplify - Bootstrap Admin Template
 		// Chat enhancements
 		if (document.querySelector('.chat-users') || document.querySelector('.chat-messages')) {
 			load('assets/js/unified-chat.js');
+			load('assets/js/ai-messages.js');
 		}
 		// Header dropdown intelligence
 		if (document.querySelector('.notification-body')) {
