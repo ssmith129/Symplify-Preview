@@ -631,6 +631,210 @@
     }
 }
 
+/* ========================================
+   Figma Priority Filter Container
+   ======================================== */
+.figma-priority-filter-container {
+    margin-bottom: 1rem;
+}
+
+/* Figma Smart Sorting Button */
+.figma-smart-sorting-btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.figma-smart-sorting-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(23, 162, 184, 0.3);
+}
+
+.figma-smart-sorting-btn:focus {
+    outline: 2px solid rgba(23, 162, 184, 0.5);
+    outline-offset: 2px;
+}
+
+/* Figma Filter Buttons */
+.figma-filter-btn {
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.figma-filter-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.figma-filter-btn:focus {
+    outline: 2px solid var(--bs-primary);
+    outline-offset: 2px;
+}
+
+.figma-filter-btn:active {
+    transform: translateY(0);
+}
+
+/* Active state for filter buttons */
+.figma-filter-btn.active div {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effects for different priority buttons */
+.figma-filter-btn[data-priority="critical"]:hover div {
+    background: rgba(220, 53, 69, 0.15) !important;
+}
+
+.figma-filter-btn[data-priority="high"]:hover div {
+    background: rgba(255, 193, 7, 0.15) !important;
+}
+
+.figma-filter-btn[data-priority="medium"]:hover div {
+    background: #B8BCC4 !important;
+}
+
+.figma-filter-btn[data-priority="low"]:hover div {
+    background: rgba(25, 135, 84, 0.15) !important;
+}
+
+.figma-filter-btn[data-priority="all"]:hover div {
+    background: #F8F9FA !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Icon sizing and alignment */
+.figma-filter-btn svg {
+    flex-shrink: 0;
+}
+
+.figma-filter-btn i {
+    flex-shrink: 0;
+}
+
+/* Responsive adjustments for Figma filters */
+@media (max-width: 768px) {
+    .figma-priority-filter-container {
+        gap: 6px !important;
+    }
+
+    .figma-filter-btn span {
+        font-size: 9px !important;
+    }
+
+    .figma-filter-btn svg {
+        width: 9px;
+        height: 9px;
+    }
+
+    .figma-filter-btn i {
+        font-size: 9px !important;
+    }
+
+    .figma-smart-sorting-btn span {
+        font-size: 9px !important;
+    }
+
+    .figma-smart-sorting-btn i {
+        font-size: 9px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .figma-priority-filter-container {
+        flex-wrap: wrap;
+        gap: 4px !important;
+    }
+
+    .figma-filter-btn div,
+    .figma-smart-sorting-btn div {
+        padding: 1px 4px !important;
+    }
+
+    .figma-filter-btn span,
+    .figma-smart-sorting-btn span {
+        font-size: 8px !important;
+        line-height: 12px !important;
+    }
+}
+
+/* Accessibility improvements */
+.figma-filter-btn[aria-pressed="true"] {
+    position: relative;
+}
+
+.figma-filter-btn[aria-pressed="true"]::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 2px;
+    background-color: var(--bs-primary);
+    border-radius: 1px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .figma-filter-btn div {
+        border: 2px solid currentColor !important;
+    }
+
+    .figma-smart-sorting-btn div {
+        border: 2px solid white !important;
+    }
+
+    .figma-filter-btn:focus {
+        outline: 3px solid var(--bs-primary);
+        outline-offset: 3px;
+    }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .figma-filter-btn[data-priority="all"] div {
+        background: #2D3748 !important;
+        color: white !important;
+    }
+
+    .figma-filter-btn[data-priority="all"] span {
+        color: white !important;
+    }
+
+    .figma-filter-btn[data-priority="all"]:hover div {
+        background: #4A5568 !important;
+    }
+
+    .figma-filter-btn[data-priority="medium"] div {
+        background: #4A5568 !important;
+    }
+
+    .figma-filter-btn[data-priority="medium"]:hover div {
+        background: #5A6B7D !important;
+    }
+}
+
+/* Loading state for filters */
+.figma-filter-btn.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.figma-filter-btn.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--bs-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1;
+}
+
 /* Form Enhancements for Smart Mode */
 .smart-form-field {
     position: relative;
