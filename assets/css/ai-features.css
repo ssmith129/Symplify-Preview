@@ -634,7 +634,8 @@
 /* ========================================
    Figma Priority Filter Container
    ======================================== */
-.figma-priority-filter-container {
+.figma-priority-filter-container,
+.figma-complete-filter-container {
     margin-bottom: 1rem;
 }
 
