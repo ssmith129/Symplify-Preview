@@ -714,7 +714,8 @@
 
 /* Responsive adjustments for Figma filters */
 @media (max-width: 768px) {
-    .figma-priority-filter-container {
+    .figma-priority-filter-container,
+    .figma-complete-filter-container {
         gap: 6px !important;
     }
 
