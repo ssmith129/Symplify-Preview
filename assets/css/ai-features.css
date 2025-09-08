@@ -742,7 +742,8 @@
 }
 
 @media (max-width: 480px) {
-    .figma-priority-filter-container {
+    .figma-priority-filter-container,
+    .figma-complete-filter-container {
         flex-wrap: wrap;
         gap: 4px !important;
     }
