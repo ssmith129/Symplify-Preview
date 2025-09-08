@@ -835,6 +835,73 @@
     z-index: 1;
 }
 
+/* ========================================
+   Figma High Badge Component
+   ======================================== */
+.figma-high-badge {
+    transition: all 0.2s ease-in-out;
+    cursor: default;
+}
+
+.figma-high-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+}
+
+.figma-high-badge i {
+    flex-shrink: 0;
+}
+
+.figma-high-badge span {
+    font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Responsive adjustments for Figma High badge */
+@media (max-width: 768px) {
+    .figma-high-badge {
+        padding: 3px 6px !important;
+        gap: 3px !important;
+    }
+
+    .figma-high-badge i {
+        font-size: 9px !important;
+        line-height: 9px !important;
+    }
+
+    .figma-high-badge span {
+        font-size: 9px !important;
+        line-height: 9px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .figma-high-badge {
+        padding: 2px 4px !important;
+        gap: 2px !important;
+    }
+
+    .figma-high-badge span {
+        font-size: 8px !important;
+        line-height: 8px !important;
+    }
+}
+
+/* Dark mode adjustments for Figma High badge */
+@media (prefers-color-scheme: dark) {
+    .figma-high-badge {
+        background: rgba(255, 193, 7, 0.15) !important;
+    }
+}
+
+/* High contrast mode support for Figma High badge */
+@media (prefers-contrast: high) {
+    .figma-high-badge {
+        border: 1px solid #E2B93B !important;
+    }
+}
+
 /* Form Enhancements for Smart Mode */
 .smart-form-field {
     position: relative;
