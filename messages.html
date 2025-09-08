@@ -1215,59 +1215,59 @@
                     <div class="chat-users p-4" data-simplebar>
                       <div class="d-flex flex-column mb-3">
                         <div class="d-flex flex-column">
-                          <div class="figma-priority-filter-container d-flex align-items-center gap-2 flex-wrap" role="toolbar" aria-label="Message priority filters">
+                          <div class="figma-complete-filter-container d-flex align-items-center gap-2 flex-wrap" role="toolbar" aria-label="Message priority filters">
                             <!-- Smart Sorting Badge -->
                             <button type="button" class="figma-smart-sorting-btn btn p-0 border-0" aria-label="AI Smart Sorting enabled">
-                              <div class="d-flex align-items-center gap-2 px-2 py-1 text-white" style="background: linear-gradient(102deg, #17A2B8 0%, #138496 100%); border-radius: 12px; font-size: 10px;">
-                                <i class="ti ti-brain" style="font-size: 10px; line-height: 10px;"></i>
-                                <span style="line-height: 15px; font-weight: 400;">Smart Sorting</span>
+                              <div class="d-flex align-items-center px-1 py-0" style="background: linear-gradient(102deg, #17A2B8 0%, #138496 100%); border-radius: 12px; padding: 2px 6px; gap: 2px;">
+                                <i class="ti ti-brain" style="color: #FFF; font-size: 10px; font-weight: 400; line-height: 10px;"></i>
+                                <span style="color: #FFF; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 400; line-height: 15px;">Smart Sorting</span>
                               </div>
                             </button>
 
                             <!-- All Filter -->
                             <button type="button" class="figma-filter-btn btn p-0 border-0 active" data-priority="all" aria-pressed="true">
-                              <div class="d-flex align-items-center justify-content-center px-2 py-1" style="background: #FFF; border-radius: 10px; min-width: 30px;">
-                                <span style="color: #0B0D0E; font-size: 10px; font-weight: 600; line-height: 15px;">All</span>
+                              <div class="d-flex align-items-center justify-content-center" style="width: 30px; padding: 2px 6px; gap: 4px; border-radius: 10px; background: #FFF;">
+                                <span style="color: #0B0D0E; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">All</span>
                               </div>
                             </button>
 
                             <!-- Critical Filter -->
                             <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="critical" aria-pressed="false">
-                              <div class="d-flex align-items-center gap-1 px-2 py-1" style="background: rgba(220, 53, 69, 0.10); border-radius: 10px; height: 18px;">
+                              <div class="d-flex align-items-center" style="height: 18px; padding: 0 6px; gap: 4px; border-radius: 10px; background: rgba(220, 53, 69, 0.10);">
                                 <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.33011 1.2703C4.49811 1.0223 4.73411 0.8503 5.03811 0.7543C5.34211 0.6503 5.64611 0.6423 5.95011 0.7303C6.26211 0.8263 6.51011 1.0103 6.69411 1.2823C6.75011 1.3703 7.45011 2.5383 8.79411 4.7863C10.1541 7.0583 10.8461 8.2183 10.8701 8.2663C10.9661 8.4903 11.0101 8.7143 11.0021 8.9383C11.0021 9.2663 10.8861 9.5623 10.6541 9.8263C10.4221 10.0903 10.1261 10.2503 9.76611 10.3063C9.62211 10.3223 8.20211 10.3303 5.50611 10.3303H2.51811C1.92611 10.3303 1.54611 10.3263 1.37811 10.3183C1.25011 10.3103 1.15411 10.2983 1.09011 10.2823L1.05411 10.2703C0.758105 10.1823 0.518105 10.0223 0.334105 9.7903C0.158105 9.5663 0.0501053 9.3183 0.0101053 9.0463C-0.0218947 8.7663 0.0221052 8.5063 0.142105 8.2663C0.166105 8.2183 0.858105 7.0543 2.21811 4.7743C3.58611 2.4943 4.29011 1.3263 4.33011 1.2703ZM5.99811 4.2703C5.97411 4.0863 5.88611 3.9583 5.73411 3.8863C5.58211 3.8143 5.43011 3.8143 5.27811 3.8863C5.12611 3.9583 5.03811 4.0863 5.01411 4.2703C5.00611 4.3263 5.00211 4.6823 5.00211 5.3383C5.00211 5.9863 5.00611 6.3383 5.01411 6.3943C5.02211 6.4663 5.05011 6.5383 5.0981 6.6103C5.18611 6.7463 5.32211 6.8143 5.50611 6.8143C5.60211 6.8143 5.6901 6.7943 5.7701 6.7543C5.89811 6.6823 5.97411 6.5583 5.99811 6.3823C6.00611 6.3183 6.01011 5.9663 6.01011 5.3263C6.01011 4.6783 6.00611 4.3263 5.99811 4.2703ZM5.38611 7.3423C5.32211 7.3583 5.25811 7.3903 5.19411 7.4383C5.08211 7.5343 5.02611 7.6623 5.02611 7.8223C5.02611 7.9743 5.07011 8.0943 5.15811 8.1823C5.24611 8.2703 5.35011 8.3183 5.47011 8.3263C5.59811 8.3343 5.7101 8.3023 5.80611 8.2303C5.91011 8.1503 5.97411 8.0423 5.99811 7.9063C6.01411 7.7943 5.99411 7.6903 5.93811 7.5943C5.89011 7.4903 5.81411 7.4183 5.71011 7.3783C5.60611 7.3303 5.49811 7.3183 5.38611 7.3423Z" fill="#DC3545"/>
+                                  <path d="M4.33011 1.27024C4.49811 1.02224 4.73411 0.850239 5.03811 0.754239C5.34211 0.650239 5.64611 0.642239 5.95011 0.730239C6.26211 0.826239 6.51011 1.01024 6.69411 1.28224C6.75011 1.37024 7.45011 2.53824 8.79411 4.78624C10.1541 7.05824 10.8461 8.21824 10.8701 8.26624C10.9661 8.49024 11.0101 8.71424 11.0021 8.93824C11.0021 9.26624 10.8861 9.56224 10.6541 9.82624C10.4221 10.0902 10.1261 10.2502 9.76611 10.3062C9.62211 10.3222 8.20211 10.3302 5.50611 10.3302H2.51811C1.92611 10.3302 1.54611 10.3262 1.37811 10.3182C1.25011 10.3102 1.15411 10.2982 1.09011 10.2822L1.05411 10.2702C0.758105 10.1822 0.518105 10.0222 0.334105 9.79024C0.158105 9.56624 0.0501053 9.31824 0.0101053 9.04624C-0.0218947 8.76624 0.0221052 8.50624 0.142105 8.26624C0.166105 8.21824 0.858105 7.05424 2.21811 4.77424C3.58611 2.49424 4.29011 1.32624 4.33011 1.27024ZM5.99811 4.27024C5.97411 4.08624 5.88611 3.95824 5.73411 3.88624C5.58211 3.81424 5.43011 3.81424 5.27811 3.88624C5.12611 3.95824 5.03811 4.08624 5.01411 4.27024C5.00611 4.32624 5.00211 4.68224 5.00211 5.33824C5.00211 5.98624 5.00611 6.33824 5.01411 6.39424C5.02211 6.46624 5.05011 6.53824 5.0981 6.61024C5.18611 6.74624 5.32211 6.81424 5.50611 6.81424C5.60211 6.81424 5.6901 6.79424 5.7701 6.75424C5.89811 6.68224 5.97411 6.55824 5.99811 6.38224C6.00611 6.31824 6.01011 5.96624 6.01011 5.32624C6.01011 4.67824 6.00611 4.32624 5.99811 4.27024ZM5.38611 7.34224C5.32211 7.35824 5.25811 7.39024 5.19411 7.43824C5.08211 7.53424 5.02611 7.66224 5.02611 7.82224C5.02611 7.97424 5.07011 8.09424 5.15811 8.18224C5.24611 8.27024 5.35011 8.31824 5.47011 8.32624C5.59811 8.33424 5.7101 8.30224 5.80611 8.23024C5.91011 8.15024 5.97411 8.04224 5.99811 7.90624C6.01411 7.79424 5.99411 7.69024 5.93811 7.59424C5.89011 7.49024 5.81411 7.41824 5.71011 7.37824C5.60611 7.33024 5.49811 7.31824 5.38611 7.34224Z" fill="#DC3545"/>
                                 </svg>
-                                <span style="color: #DC3545; font-size: 10px; font-weight: 600; line-height: 15px;">Critical</span>
+                                <span style="color: #DC3545; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">Critical</span>
                               </div>
                             </button>
 
                             <!-- High Filter -->
                             <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="high" aria-pressed="false">
-                              <div class="d-flex align-items-center gap-1 px-2 py-1" style="background: rgba(255, 193, 7, 0.10); border-radius: 10px;">
-                                <div class="d-flex align-items-center" style="padding-right: 4px;">
-                                  <i class="ti ti-exclamation-circle" style="color: #E2B93B; font-size: 10.5px; line-height: 10.5px;"></i>
+                              <div class="d-flex align-items-center" style="padding: 4px 7.2px; gap: -0.01px; border-radius: 10px; background: rgba(255, 193, 7, 0.10);">
+                                <div class="d-flex flex-column align-items-center" style="padding-right: 4px;">
+                                  <i class="ti ti-exclamation-circle" style="color: #E2B93B; text-align: center; font-size: 10.5px; font-weight: 400; line-height: 10.5px;"></i>
                                 </div>
-                                <span style="color: #E2B93B; font-size: 10.5px; font-weight: 600; line-height: 10.5px;">High: 3</span>
+                                <span style="color: #E2B93B; text-align: center; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10.5px; font-weight: 600; line-height: 10.5px;">High: 3</span>
                               </div>
                             </button>
 
                             <!-- Medium Filter -->
                             <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="medium" aria-pressed="false">
-                              <div class="d-flex align-items-center gap-1 px-2 py-1" style="background: #C5C9D0; border-radius: 10px;">
-                                <div class="d-flex align-items-center">
-                                  <i class="ti ti-info-circle" style="color: #6C7688; font-size: 12px; line-height: 12px;"></i>
+                              <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px; background: #C5C9D0;">
+                                <div class="d-flex flex-column align-items-start">
+                                  <i class="ti ti-info-circle" style="color: #6C7688; font-size: 12px; font-weight: 400; line-height: 12px;"></i>
                                 </div>
-                                <span style="color: #6C7688; font-size: 10px; font-weight: 600; line-height: 15px;">Medium: 2</span>
+                                <span style="color: #6C7688; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">Medium: 2</span>
                               </div>
                             </button>
 
                             <!-- Low Filter -->
                             <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="low" aria-pressed="false">
-                              <div class="d-flex align-items-center gap-1 px-2 py-1" style="background: rgba(25, 135, 84, 0.10); border-radius: 10px;">
-                                <div class="d-flex align-items-center">
-                                  <i class="ti ti-check" style="color: #198754; font-size: 12px; line-height: 12px;"></i>
+                              <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px; background: rgba(25, 135, 84, 0.10);">
+                                <div class="d-flex flex-column align-items-start">
+                                  <i class="ti ti-check" style="color: #198754; font-size: 12px; font-weight: 400; line-height: 12px;"></i>
                                 </div>
-                                <span style="color: #198754; font-size: 10px; font-weight: 600; line-height: 15px;">Low: 3</span>
+                                <span style="color: #198754; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">Low: 3</span>
                               </div>
                             </button>
                           </div>
