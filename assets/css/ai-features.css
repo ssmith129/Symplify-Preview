@@ -902,6 +902,79 @@
     }
 }
 
+/* ========================================
+   Figma Critical Badge Component
+   ======================================== */
+.figma-critical-badge {
+    transition: all 0.2s ease-in-out;
+    cursor: default;
+}
+
+.figma-critical-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+.figma-critical-badge svg {
+    flex-shrink: 0;
+}
+
+.figma-critical-badge span {
+    font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+/* Responsive adjustments for Figma Critical badge */
+@media (max-width: 768px) {
+    .figma-critical-badge {
+        height: 16px !important;
+        padding: 0 5px !important;
+        gap: 3px !important;
+    }
+
+    .figma-critical-badge svg {
+        width: 9px;
+        height: 9px;
+    }
+
+    .figma-critical-badge span {
+        font-size: 9px !important;
+        line-height: 13px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .figma-critical-badge {
+        height: 14px !important;
+        padding: 0 4px !important;
+        gap: 2px !important;
+    }
+
+    .figma-critical-badge svg {
+        width: 8px;
+        height: 8px;
+    }
+
+    .figma-critical-badge span {
+        font-size: 8px !important;
+        line-height: 12px !important;
+    }
+}
+
+/* Dark mode adjustments for Figma Critical badge */
+@media (prefers-color-scheme: dark) {
+    .figma-critical-badge {
+        background: rgba(220, 53, 69, 0.15) !important;
+    }
+}
+
+/* High contrast mode support for Figma Critical badge */
+@media (prefers-contrast: high) {
+    .figma-critical-badge {
+        border: 1px solid #DC3545 !important;
+    }
+}
+
 /* Form Enhancements for Smart Mode */
 .smart-form-field {
     position: relative;
