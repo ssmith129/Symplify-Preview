@@ -1110,6 +1110,35 @@
     100% { transform: rotate(360deg); }
 }
 
+/* Additional animations for Figma messages */
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes contactHover {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(2px);
+    }
+}
+
+.figma-message {
+    animation: messageSlideIn 0.3s ease-out;
+}
+
+.figma-contact-item:hover {
+    animation: contactHover 0.2s ease-out forwards;
+}
+
 /* ========================================
    AI Visual Flags Utilities
    ======================================== */
@@ -1119,3 +1148,670 @@
 .ai-flag-warning { background: rgba(255,193,7,.1); color: var(--bs-warning); }
 .ai-flag-critical { background: rgba(220,53,69,.1); color: var(--bs-danger); }
 .ai-flag i { font-size: 12px; }
+
+/* ========================================
+   Figma Messages Container Styles
+   ======================================== */
+
+/* Base Figma Messages Container */
+.figma-messages-container {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Figma Sidebar */
+.figma-sidebar {
+    transition: all 0.3s ease-in-out;
+    background: #FFF;
+    z-index: 1000;
+}
+
+/* Figma User Header */
+.figma-user-header {
+    background: #FFF;
+    border-color: #E7E8EB;
+}
+
+.figma-user-header .avatar img {
+    border-radius: 4.8px;
+}
+
+/* Figma Search */
+.figma-search .input-group-text {
+    background: #FFF;
+    border-color: #E7E8EB;
+}
+
+.figma-search .form-control {
+    border-color: #E7E8EB;
+    background: #FFF;
+}
+
+.figma-search .form-control::placeholder {
+    color: #858D9C;
+}
+
+/* Figma Priority Filters */
+.figma-priority-filters .figma-filter-btn {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.figma-priority-filters .figma-filter-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.figma-priority-filters .figma-filter-btn:focus {
+    outline: 2px solid var(--bs-primary);
+    outline-offset: 2px;
+}
+
+.figma-priority-filters .figma-filter-btn:active {
+    transform: translateY(0);
+}
+
+/* Figma Contact List */
+.figma-contact-list {
+    background: #FFF;
+}
+
+.figma-contact-item {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 4.8px;
+    margin: 1px;
+}
+
+.figma-contact-item:hover {
+    background: rgba(13, 110, 253, 0.05) !important;
+    transform: translateX(2px);
+}
+
+.figma-contact-item.active,
+.figma-contact-item.bg-light {
+    background: #FCFDFD !important;
+}
+
+.figma-contact-item .avatar img {
+    border-radius: 4.8px;
+}
+
+/* Figma Main Chat */
+.figma-main-chat {
+    background: #FFF;
+}
+
+/* Figma Chat Header */
+.figma-chat-header {
+    background: #FFF;
+    border-color: #E7E8EB;
+}
+
+.figma-chat-header .avatar img {
+    border-radius: 4.8px;
+}
+
+/* Figma AI Assistance */
+.figma-ai-assistance {
+    border-color: #E7E8EB;
+}
+
+.figma-ai-assistance .btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.figma-ai-assistance .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Figma Chat Messages */
+.figma-chat-messages {
+    background: #FFF;
+}
+
+.figma-message {
+    transition: all 0.2s ease-in-out;
+}
+
+.figma-message .avatar img {
+    border-radius: 4.8px;
+}
+
+.figma-message .message-bubble {
+    transition: all 0.2s ease-in-out;
+}
+
+.figma-message .message-bubble:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Figma Message Input */
+.figma-message-input {
+    background: #FFF;
+    border-color: #E7E8EB;
+}
+
+.figma-message-input .form-control {
+    background: #FFF;
+}
+
+.figma-message-input .form-control::placeholder {
+    color: #858D9C;
+}
+
+.figma-message-input .btn {
+    transition: all 0.2s ease-in-out;
+}
+
+.figma-message-input .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Figma Scrollbar */
+.figma-scrollbar {
+    position: absolute;
+    right: 0;
+    top: 170px;
+}
+
+/* ========================================
+   Responsive Design for Figma Messages
+   ======================================== */
+
+/* Tablet Styles (768px - 1023px) */
+@media (max-width: 1023.98px) {
+    .figma-messages-container {
+        height: auto !important;
+        min-height: 600px;
+    }
+
+    .figma-sidebar {
+        width: 300px !important;
+        min-width: 300px !important;
+    }
+
+    .figma-ai-assistance .d-flex {
+        flex-wrap: wrap;
+        gap: 8px !important;
+    }
+
+    .figma-ai-assistance .btn {
+        font-size: 12px !important;
+        padding: 6px 8px !important;
+    }
+
+    .figma-priority-filters .d-flex {
+        gap: 4px !important;
+    }
+
+    .figma-priority-filters .figma-filter-btn span {
+        font-size: 9px !important;
+    }
+
+    .figma-contact-item {
+        padding: 12px !important;
+    }
+
+    .figma-contact-item h6 {
+        font-size: 13px !important;
+    }
+
+    .figma-contact-item p {
+        font-size: 13px !important;
+    }
+
+    .figma-message .message-bubble {
+        max-width: 300px !important;
+    }
+
+    .figma-message .message-bubble p {
+        font-size: 15px !important;
+        line-height: 22px !important;
+    }
+}
+
+/* Mobile Styles (768px and below) */
+@media (max-width: 767.98px) {
+    .figma-messages-container {
+        height: auto !important;
+        min-height: 500px;
+        flex-direction: column !important;
+    }
+
+    .figma-messages-container .d-flex {
+        flex-direction: column !important;
+    }
+
+    .figma-sidebar {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-height: 300px;
+        order: 1;
+        border-right: none !important;
+        border-bottom: 1px solid #E7E8EB !important;
+    }
+
+    .figma-main-chat {
+        order: 2;
+        width: 100% !important;
+    }
+
+    .figma-contact-list {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    .figma-contact-item {
+        padding: 10px !important;
+    }
+
+    .figma-contact-item .avatar {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .figma-contact-item .avatar img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .figma-contact-item h6 {
+        font-size: 12px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .figma-contact-item p {
+        font-size: 11px !important;
+    }
+
+    .figma-contact-item .text-end span {
+        font-size: 11px !important;
+    }
+
+    .figma-priority-filters {
+        padding: 12px !important;
+        padding-top: 8px !important;
+    }
+
+    .figma-priority-filters .d-flex {
+        gap: 3px !important;
+        flex-wrap: wrap;
+    }
+
+    .figma-priority-filters .figma-filter-btn div {
+        padding: 1px 4px !important;
+    }
+
+    .figma-priority-filters .figma-filter-btn span {
+        font-size: 8px !important;
+        line-height: 12px !important;
+    }
+
+    .figma-priority-filters .figma-filter-btn svg {
+        width: 8px !important;
+        height: 8px !important;
+    }
+
+    .figma-user-header {
+        padding: 12px !important;
+    }
+
+    .figma-user-header .avatar {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .figma-user-header .avatar img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .figma-user-header h6 {
+        font-size: 13px !important;
+    }
+
+    .figma-user-header p {
+        font-size: 12px !important;
+    }
+
+    .figma-user-header .btn {
+        width: 28px !important;
+        height: 28px !important;
+        padding: 7px !important;
+    }
+
+    .figma-search {
+        padding: 12px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .figma-search .input-group-text {
+        padding: 6px 0 6px 10px !important;
+    }
+
+    .figma-search .form-control {
+        padding: 4px 10px !important;
+        font-size: 13px !important;
+    }
+
+    .figma-chat-header {
+        padding: 12px !important;
+    }
+
+    .figma-chat-header .avatar {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .figma-chat-header .avatar img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .figma-chat-header h6 {
+        font-size: 13px !important;
+    }
+
+    .figma-chat-header span {
+        font-size: 12px !important;
+    }
+
+    .figma-chat-header .btn {
+        width: 32px !important;
+        height: 32px !important;
+        padding: 1px !important;
+    }
+
+    .figma-ai-assistance {
+        padding: 12px !important;
+    }
+
+    .figma-ai-assistance h6 {
+        font-size: 14px !important;
+    }
+
+    .figma-ai-assistance .d-flex {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+    }
+
+    .figma-ai-assistance .btn {
+        font-size: 11px !important;
+        padding: 5px 7px !important;
+        white-space: nowrap;
+    }
+
+    .figma-ai-assistance .btn i {
+        font-size: 11px !important;
+    }
+
+    .figma-chat-messages {
+        padding: 12px !important;
+        max-height: 300px;
+    }
+
+    .figma-message {
+        margin-bottom: 12px !important;
+    }
+
+    .figma-message .avatar {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .figma-message .avatar img {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .figma-message h6 {
+        font-size: 12px !important;
+    }
+
+    .figma-message .message-bubble {
+        max-width: 250px !important;
+        padding: 10px !important;
+    }
+
+    .figma-message .message-bubble p {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .figma-message-input {
+        padding: 12px !important;
+    }
+
+    .figma-message-input .form-control {
+        padding: 8px 10px !important;
+        font-size: 13px !important;
+    }
+
+    .figma-message-input .btn {
+        width: 32px !important;
+        height: 32px !important;
+        padding: 1px !important;
+    }
+
+    .figma-scrollbar {
+        display: none !important;
+    }
+
+    /* Hide complex elements on mobile for better performance */
+    .figma-message .position-absolute {
+        width: 8px !important;
+        height: 8px !important;
+    }
+}
+
+/* Small Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+    .figma-messages-container {
+        height: auto !important;
+        min-height: 400px;
+        margin: 0 -15px;
+        border-radius: 0 !important;
+    }
+
+    .figma-sidebar {
+        max-height: 250px;
+    }
+
+    .figma-contact-list {
+        max-height: 150px;
+    }
+
+    .figma-contact-item {
+        padding: 8px !important;
+    }
+
+    .figma-contact-item .avatar {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .figma-contact-item .avatar img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .figma-contact-item h6 {
+        font-size: 11px !important;
+    }
+
+    .figma-contact-item p {
+        font-size: 10px !important;
+    }
+
+    .figma-priority-filters .figma-filter-btn span {
+        font-size: 7px !important;
+        line-height: 10px !important;
+    }
+
+    .figma-chat-messages {
+        max-height: 250px;
+        padding: 8px !important;
+    }
+
+    .figma-message .message-bubble {
+        max-width: 200px !important;
+        padding: 8px !important;
+    }
+
+    .figma-message .message-bubble p {
+        font-size: 13px !important;
+        line-height: 18px !important;
+    }
+
+    .figma-ai-assistance .btn {
+        font-size: 10px !important;
+        padding: 4px 6px !important;
+    }
+
+    .figma-message-input .form-control {
+        font-size: 12px !important;
+    }
+}
+
+/* Large Desktop Styles (1200px and above) */
+@media (min-width: 1200px) {
+    .figma-messages-container {
+        height: 900px;
+        min-height: 900px;
+    }
+
+    .figma-sidebar {
+        width: 380px;
+        min-width: 380px;
+    }
+
+    .figma-chat-messages {
+        max-height: calc(100% - 320px);
+    }
+
+    .figma-contact-list {
+        max-height: calc(100% - 200px);
+    }
+
+    .figma-message .message-bubble {
+        max-width: 500px;
+    }
+}
+
+/* Dark Mode Support for Figma Messages */
+@media (prefers-color-scheme: dark) {
+    .figma-messages-container {
+        background: #2D3748;
+        border-color: #4A5568;
+    }
+
+    .figma-sidebar,
+    .figma-main-chat,
+    .figma-user-header,
+    .figma-chat-header,
+    .figma-ai-assistance,
+    .figma-chat-messages,
+    .figma-message-input {
+        background: #2D3748 !important;
+        border-color: #4A5568 !important;
+    }
+
+    .figma-search .input-group-text,
+    .figma-search .form-control,
+    .figma-message-input .form-control {
+        background: #4A5568 !important;
+        border-color: #718096 !important;
+        color: #E2E8F0 !important;
+    }
+
+    .figma-contact-item:hover {
+        background: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .figma-contact-item.active,
+    .figma-contact-item.bg-light {
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .figma-message .message-bubble {
+        background: #4A5568 !important;
+        border-color: #718096 !important;
+    }
+
+    .figma-priority-filters .figma-filter-btn[data-priority="all"] div {
+        background: #4A5568 !important;
+        color: white !important;
+    }
+
+    .figma-priority-filters .figma-filter-btn[data-priority="all"] span {
+        color: white !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .figma-messages-container {
+        border: 2px solid currentColor;
+    }
+
+    .figma-sidebar,
+    .figma-main-chat {
+        border: 1px solid currentColor;
+    }
+
+    .figma-priority-filters .figma-filter-btn div {
+        border: 2px solid currentColor !important;
+    }
+
+    .figma-contact-item,
+    .figma-message .message-bubble {
+        border: 1px solid currentColor !important;
+    }
+
+    .figma-ai-assistance .btn {
+        border: 2px solid currentColor !important;
+    }
+}
+
+/* Accessibility Improvements */
+.figma-contact-item:focus {
+    outline: 2px solid var(--bs-primary);
+    outline-offset: 2px;
+}
+
+.figma-priority-filters .figma-filter-btn:focus {
+    outline: 2px solid var(--bs-primary);
+    outline-offset: 2px;
+}
+
+.figma-ai-assistance .btn:focus {
+    outline: 2px solid var(--bs-primary);
+    outline-offset: 2px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .figma-contact-item,
+    .figma-priority-filters .figma-filter-btn,
+    .figma-ai-assistance .btn,
+    .figma-message .message-bubble,
+    .figma-message-input .btn {
+        transition: none !important;
+        transform: none !important;
+    }
+
+    .figma-contact-item:hover {
+        transform: none !important;
+    }
+
+    .figma-priority-filters .figma-filter-btn:hover,
+    .figma-ai-assistance .btn:hover,
+    .figma-message-input .btn:hover {
+        transform: none !important;
+    }
+}
