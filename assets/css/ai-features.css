@@ -1197,6 +1197,24 @@
     cursor: pointer;
 }
 
+/* Unified sizing and layout for remaining sorting buttons */
+.figma-priority-filters .d-flex { gap: 8px; }
+.figma-priority-filters .figma-filter-btn > div {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    padding: 2px 8px;
+    border-radius: 5px;
+    gap: 4px;
+}
+.figma-priority-filters .figma-filter-btn span {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
+
 .figma-priority-filters .figma-filter-btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
