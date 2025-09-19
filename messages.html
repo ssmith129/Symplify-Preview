@@ -1164,624 +1164,555 @@
         </div>
         <!-- End Page Header -->
 
-        <!-- AI Inbox Triage: Summary and Quick Actions (Always Visible) -->
-        <div class="card border-0 mb-3" role="region" aria-label="AI inbox triage summary">
-          <div class="card-body p-3">
-            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
-              <div class="d-flex align-items-center gap-2">
-                <span class="smart-sorting-badge" aria-label="AI smart sorting enabled"><i class="ti ti-brain"></i> Smart Sorting</span>
-                <span class="figma-critical-badge d-inline-flex align-items-center" style="height: 18px; padding: 0 6px; gap: 4px; border-radius: 10px; background: rgba(220, 53, 69, 0.10);">
-                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.33011 1.27024C4.49811 1.02224 4.73411 0.850239 5.03811 0.754239C5.34211 0.650239 5.64611 0.642239 5.95011 0.730239C6.26211 0.826239 6.51011 1.01024 6.69411 1.28224C6.75011 1.37024 7.45011 2.53824 8.79411 4.78624C10.1541 7.05824 10.8461 8.21824 10.8701 8.26624C10.9661 8.49024 11.0101 8.71424 11.0021 8.93824C11.0021 9.26624 10.8861 9.56224 10.6541 9.82624C10.4221 10.0902 10.1261 10.2502 9.76611 10.3062C9.62211 10.3222 8.20211 10.3302 5.50611 10.3302H2.51811C1.92611 10.3302 1.54611 10.3262 1.37811 10.3182C1.25011 10.3102 1.15411 10.2982 1.09011 10.2822L1.05411 10.2702C0.758105 10.1822 0.518105 10.0222 0.334105 9.79024C0.158105 9.56624 0.0501053 9.31824 0.0101053 9.04624C-0.0218947 8.76624 0.0221052 8.50624 0.142105 8.26624C0.166105 8.21824 0.858105 7.05424 2.21811 4.77424C3.58611 2.49424 4.29011 1.32624 4.33011 1.27024ZM5.99811 4.27024C5.97411 4.08624 5.88611 3.95824 5.73411 3.88624C5.58211 3.81424 5.43011 3.81424 5.27811 3.88624C5.12611 3.95824 5.03811 4.08624 5.01411 4.27024C5.00611 4.32624 5.00211 4.68224 5.00211 5.33824C5.00211 5.98624 5.00611 6.33824 5.01411 6.39424C5.02211 6.46624 5.05011 6.53824 5.0981 6.61024C5.18611 6.74624 5.32211 6.81424 5.50611 6.81424C5.60211 6.81424 5.6901 6.79424 5.7701 6.75424C5.89811 6.68224 5.97411 6.55824 5.99811 6.38224C6.00611 6.31824 6.01011 5.96624 6.01011 5.32624C6.01011 4.67824 6.00611 4.32624 5.99811 4.27024ZM5.38611 7.34224C5.32211 7.35824 5.25811 7.39024 5.19411 7.43824C5.08211 7.53424 5.02611 7.66224 5.02611 7.82224C5.02611 7.97424 5.07011 8.09424 5.15811 8.18224C5.24611 8.27024 5.35011 8.31824 5.47011 8.32624C5.59811 8.33424 5.7101 8.30224 5.80611 8.23024C5.91011 8.15024 5.97411 8.04224 5.99811 7.90624C6.01411 7.79424 5.99411 7.69024 5.93811 7.59424C5.89011 7.49024 5.81411 7.41824 5.71011 7.37824C5.60611 7.33024 5.49811 7.31824 5.38611 7.34224Z" fill="#DC3545"/>
-                  </svg>
-                  <span style="color: #DC3545; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">Critical</span>
-                </span>
-                <span class="figma-high-badge d-inline-flex align-items-center" style="background: rgba(255, 193, 7, 0.10); border-radius: 10px; padding: 4px 7.2px; gap: 4px;">
-                  <i class="ti ti-exclamation-circle" style="color: #E2B93B; font-size: 10.5px; line-height: 10.5px;"></i>
-                  <span style="color: #E2B93B; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10.5px; font-weight: 600; line-height: 10.5px;">High: 3</span>
-                </span>
-              </div>
-              <div class="d-flex align-items-center gap-2">
-                <button class="btn btn-outline-primary btn-sm ai-action-btn" data-ai-action="analyze" aria-label="Analyze inbox"><i class="ti ti-robot me-1"></i>Analyze</button>
-                <button class="btn btn-outline-success btn-sm ai-action-btn" data-ai-action="triage" aria-label="Mark selected as triaged"><i class="ti ti-checks me-1"></i>Mark Triaged</button>
-                <button class="btn btn-outline-danger btn-sm ai-action-btn" data-ai-action="escalate" aria-label="Escalate critical messages"><i class="ti ti-arrow-up-right me-1"></i>Escalate</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End AI Inbox Triage: Summary and Quick Actions -->
-
-        <div class="card shadow-none mb-0">
-          <div class="card-body p-0">
-
-            <div class="d-md-flex">
-              <div class="chat-user-nav">
-                <div>
-                  <div class="d-flex align-items-center justify-content-between border-bottom p-3">
-                    <div class="d-flex align-items-center">
-                      <span class="avatar me-2 flex-shrink-0"><img src="assets/img/users/user-01.jpg" alt="user"></span>
-                      <div>
-                        <h6 class="fs-14 mb-1">James Hong </h6>
-                        <p class="mb-0">Admin</p>
-                      </div>
-                    </div>
-                    <a href="#" class="btn p-2 btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="New Chat"><i class="ti ti-plus"></i></a>
+        <!-- Figma Messages Container -->
+        <div class="figma-messages-container border border-light rounded" style="height: 802px; min-height: 802px;">
+          <div class="d-flex h-100">
+            
+            <!-- Left Sidebar -->
+            <div class="figma-sidebar border-end" style="width: 350px; min-width: 350px;">
+              
+              <!-- User Profile Header -->
+              <div class="figma-user-header d-flex align-items-center justify-content-between p-3 border-bottom">
+                <div class="d-flex align-items-center">
+                  <div class="avatar me-2 flex-shrink-0">
+                    <img src="assets/img/users/user-01.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
                   </div>
                   <div>
-                    <div class="input-group w-auto input-group-flat p-4 pb-0">
-                      <span class="input-group-text border-end-0"><i class="ti ti-search"></i></span>
-                      <input type="text" class="form-control" placeholder="Search Keyword">
-                    </div>
-                    <div class="chat-users p-4" data-simplebar>
-                      <div class="d-flex flex-column mb-3">
-                        <div class="d-flex flex-column">
-                          <div class="figma-complete-filter-container d-flex align-items-center gap-2 flex-wrap" role="toolbar" aria-label="Message priority filters">
-                            <!-- Smart Sorting Badge -->
-                            <button type="button" class="figma-smart-sorting-btn btn p-0 border-0" aria-label="AI Smart Sorting enabled">
-                              <div class="d-flex align-items-center px-1 py-0" style="background: linear-gradient(102deg, #17A2B8 0%, #138496 100%); border-radius: 12px; padding: 2px 6px; gap: 2px;">
-                                <i class="ti ti-brain" style="color: #FFF; font-size: 10px; font-weight: 400; line-height: 10px;"></i>
-                                <span style="color: #FFF; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 400; line-height: 15px;">Smart Sorting</span>
-                              </div>
-                            </button>
-
-                            <!-- All Filter -->
-                            <button type="button" class="figma-filter-btn btn p-0 border-0 active" data-priority="all" aria-pressed="true">
-                              <div class="d-flex align-items-center justify-content-center" style="width: 30px; padding: 2px 6px; gap: 4px; border-radius: 10px; background: #FFF;">
-                                <span style="color: #0B0D0E; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">All</span>
-                              </div>
-                            </button>
-
-                            <!-- Critical Filter -->
-                            <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="critical" aria-pressed="false">
-                              <div class="d-flex align-items-center" style="height: 18px; padding: 0 6px; gap: 4px; border-radius: 10px; background: rgba(220, 53, 69, 0.10);">
-                                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.33011 1.27024C4.49811 1.02224 4.73411 0.850239 5.03811 0.754239C5.34211 0.650239 5.64611 0.642239 5.95011 0.730239C6.26211 0.826239 6.51011 1.01024 6.69411 1.28224C6.75011 1.37024 7.45011 2.53824 8.79411 4.78624C10.1541 7.05824 10.8461 8.21824 10.8701 8.26624C10.9661 8.49024 11.0101 8.71424 11.0021 8.93824C11.0021 9.26624 10.8861 9.56224 10.6541 9.82624C10.4221 10.0902 10.1261 10.2502 9.76611 10.3062C9.62211 10.3222 8.20211 10.3302 5.50611 10.3302H2.51811C1.92611 10.3302 1.54611 10.3262 1.37811 10.3182C1.25011 10.3102 1.15411 10.2982 1.09011 10.2822L1.05411 10.2702C0.758105 10.1822 0.518105 10.0222 0.334105 9.79024C0.158105 9.56624 0.0501053 9.31824 0.0101053 9.04624C-0.0218947 8.76624 0.0221052 8.50624 0.142105 8.26624C0.166105 8.21824 0.858105 7.05424 2.21811 4.77424C3.58611 2.49424 4.29011 1.32624 4.33011 1.27024ZM5.99811 4.27024C5.97411 4.08624 5.88611 3.95824 5.73411 3.88624C5.58211 3.81424 5.43011 3.81424 5.27811 3.88624C5.12611 3.95824 5.03811 4.08624 5.01411 4.27024C5.00611 4.32624 5.00211 4.68224 5.00211 5.33824C5.00211 5.98624 5.00611 6.33824 5.01411 6.39424C5.02211 6.46624 5.05011 6.53824 5.0981 6.61024C5.18611 6.74624 5.32211 6.81424 5.50611 6.81424C5.60211 6.81424 5.6901 6.79424 5.7701 6.75424C5.89811 6.68224 5.97411 6.55824 5.99811 6.38224C6.00611 6.31824 6.01011 5.96624 6.01011 5.32624C6.01011 4.67824 6.00611 4.32624 5.99811 4.27024ZM5.38611 7.34224C5.32211 7.35824 5.25811 7.39024 5.19411 7.43824C5.08211 7.53424 5.02611 7.66224 5.02611 7.82224C5.02611 7.97424 5.07011 8.09424 5.15811 8.18224C5.24611 8.27024 5.35011 8.31824 5.47011 8.32624C5.59811 8.33424 5.7101 8.30224 5.80611 8.23024C5.91011 8.15024 5.97411 8.04224 5.99811 7.90624C6.01411 7.79424 5.99411 7.69024 5.93811 7.59424C5.89011 7.49024 5.81411 7.41824 5.71011 7.37824C5.60611 7.33024 5.49811 7.31824 5.38611 7.34224Z" fill="#DC3545"/>
-                                </svg>
-                                <span style="color: #DC3545; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">Critical</span>
-                              </div>
-                            </button>
-
-                            <!-- High Filter -->
-                            <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="high" aria-pressed="false">
-                              <div class="d-flex align-items-center" style="padding: 4px 7.2px; gap: -0.01px; border-radius: 10px; background: rgba(255, 193, 7, 0.10);">
-                                <div class="d-flex flex-column align-items-center" style="padding-right: 4px;">
-                                  <i class="ti ti-exclamation-circle" style="color: #E2B93B; text-align: center; font-size: 10.5px; font-weight: 400; line-height: 10.5px;"></i>
-                                </div>
-                                <span style="color: #E2B93B; text-align: center; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10.5px; font-weight: 600; line-height: 10.5px;">High: 3</span>
-                              </div>
-                            </button>
-
-                            <!-- Medium Filter -->
-                            <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="medium" aria-pressed="false">
-                              <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px; background: #C5C9D0;">
-                                <div class="d-flex flex-column align-items-start">
-                                  <i class="ti ti-info-circle" style="color: #6C7688; font-size: 12px; font-weight: 400; line-height: 12px;"></i>
-                                </div>
-                                <span style="color: #6C7688; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">Medium: 2</span>
-                              </div>
-                            </button>
-
-                            <!-- Low Filter -->
-                            <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="low" aria-pressed="false">
-                              <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px; background: rgba(25, 135, 84, 0.10);">
-                                <div class="d-flex flex-column align-items-start">
-                                  <i class="ti ti-check" style="color: #198754; font-size: 12px; font-weight: 400; line-height: 12px;"></i>
-                                </div>
-                                <span style="color: #198754; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">Low: 3</span>
-                              </div>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="d-flex align-items-center justify-content-between rounded p-3 user-list active mb-1">
-                        <div class="d-flex align-items-center">
-                          <a href="#" class="avatar me-2 flex-shrink-0"><img src="assets/img/users/user-02.jpg" alt="user"></a>
-                          <div>
-                            <h6 class="fs-14 mb-1"><a href="#">Mark Smith</a></h6>
-                            <div class="d-flex align-items-center gap-1 mt-1" aria-label="AI triage for Mark Smith">
-                              <span class="ai-flag ai-flag-critical"><i class="ti ti-alert-triangle-filled"></i> Critical</span>
-                              <span class="fs-10 ai-confidence">95%</span>
-                            </div>
-                            <p class="mb-0 text-truncate">Hey Sam! Did you Ch...</p>
-                          </div>
-                        </div>
-                        <div class="text-end">
-                          <span class="text-dark d-block">10:10 AM</span>
-                          <span class="d-block text-success"><i class="ti ti-checks"></i></span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between rounded p-3 user-list mb-1">
-                        <div class="d-flex align-items-center">
-                          <a href="#" class="avatar me-2 flex-shrink-0"><img src="assets/img/users/user-03.jpg" alt="user"></a>
-                          <div>
-                            <h6 class="fs-14 mb-1"><a href="#">Eugene Sikora</a></h6>
-                            <div class="d-flex align-items-center gap-1 mt-1" aria-label="AI triage for Eugene Sikora">
-                              <span class="ai-flag ai-flag-warning"><i class="ti ti-exclamation-circle"></i> High</span>
-                              <span class="fs-10 ai-confidence">82%</span>
-                            </div>
-                            <p class="mb-0 text-truncate">How are your Today</p>
-                          </div>
-                        </div>
-                        <div class="text-end">
-                          <span class="text-dark d-block mb-1">08:26 AM</span>
-                          <span class="badge ms-auto bg-danger rounded-circle message-count">5</span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between rounded p-3 user-list mb-1">
-                        <div class="d-flex align-items-center">
-                          <a href="#" class="avatar me-2 flex-shrink-0"><img src="assets/img/users/user-04.jpg" alt="user"></a>
-                          <div>
-                            <h6 class="fs-14 mb-1"><a href="#">Robert Fassett</a></h6>
-                            <div class="d-flex align-items-center gap-1 mt-1" aria-label="AI triage for Robert Fassett">
-                              <span class="ai-flag ai-flag-warning"><i class="ti ti-exclamation-circle"></i> High</span>
-                              <span class="fs-10 ai-confidence">78%</span>
-                            </div>
-                            <p class="mb-0 text-truncate">Here are some of ve...</p>
-                          </div>
-                        </div>
-                        <div class="text-end">
-                          <span class="text-dark d-block mb-1">yesterday</span>
-                          <span class="badge ms-auto bg-danger rounded-circle message-count">5</span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between rounded p-3 user-list mb-1">
-                        <div class="d-flex align-items-center">
-                          <a href="#" class="avatar me-2 flex-shrink-0"><img src="assets/img/users/user-05.jpg" alt="user"></a>
-                          <div>
-                            <h6 class="fs-14 mb-1"><a href="#">Andrew Fletcher</a></h6>
-                            <div class="d-flex align-items-center gap-1 mt-1" aria-label="AI triage for Andrew Fletcher">
-                              <span class="ai-flag ai-flag-recommended"><i class="ti ti-check"></i> Low</span>
-                              <span class="fs-10 ai-confidence">60%</span>
-                            </div>
-                            <p class="mb-0 text-truncate">Use tools like Trello...</p>
-                          </div>
-                        </div>
-                        <div class="text-end">
-                          <span class="text-dark d-block mb-1">yesterday</span>
-                          <span class="d-block text-light"><i class="ti ti-checks"></i></span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between rounded p-3 user-list mb-1">
-                        <div class="d-flex align-items-center">
-                          <a href="#" class="avatar badge-soft-purple fw-semibold me-2 flex-shrink-0">TD</a>
-                          <div>
-                            <h6 class="fs-14 mb-1"><a href="#">Tyron Derby</a></h6>
-                            <div class="d-flex align-items-center gap-1 mt-1" aria-label="AI triage for Tyron Derby">
-                              <span class="ai-flag ai-flag-recommended"><i class="ti ti-check"></i> Low</span>
-                              <span class="fs-10 ai-confidence">65%</span>
-                            </div>
-                            <p class="mb-0 text-truncate">Let's reconvene next...</p>
-                          </div>
-                        </div>
-                        <div class="text-end">
-                          <span class="text-dark d-block mb-1">12:55 PM</span>
-                          <span class="d-block text-light"><i class="ti ti-checks text-success"></i></span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between rounded p-3 user-list mb-1">
-                        <div class="d-flex align-items-center">
-                          <a href="#" class="avatar me-2 flex-shrink-0"><img src="assets/img/users/user-06.jpg" alt="user"></a>
-                          <div>
-                            <h6 class="fs-14 mb-1"><a href="#">Anna Johnson</a></h6>
-                            <div class="d-flex align-items-center gap-1 mt-1" aria-label="AI triage for Anna Johnson">
-                              <span class="ai-flag"><i class="ti ti-info-circle"></i> Medium</span>
-                              <span class="fs-10 ai-confidence">73%</span>
-                            </div>
-                            <p class="mb-0 text-truncate">How are your Today</p>
-                          </div>
-                        </div>
-                        <div class="text-end">
-                          <span class="text-dark d-block mb-1">12:54 PM</span>
-                          <span class="d-block text-light"><i class="ti ti-check text-light"></i></span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between rounded p-3 user-list mb-1">
-                        <div class="d-flex align-items-center">
-                          <a href="#" class="avatar me-2 flex-shrink-0"><img src="assets/img/users/user-07.jpg" alt="user"></a>
-                          <div>
-                            <h6 class="fs-14 mb-1"><a href="#">Emily Davis</a></h6>
-                            <div class="d-flex align-items-center gap-1 mt-1" aria-label="AI triage for Emily Davis">
-                              <span class="ai-flag ai-flag-warning"><i class="ti ti-exclamation-circle"></i> High</span>
-                              <span class="fs-10 ai-confidence">84%</span>
-                            </div>
-                            <p class="mb-0 text-truncate">Sure, I can help with...</p>
-                          </div>
-                        </div>
-                        <div class="text-end">
-                          <span class="text-dark d-block mb-1">11:47 PM</span>
-                          <span class="d-block text-light"><i class="ti ti-checks text-light"></i></span>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between rounded p-3 user-list">
-                        <div class="d-flex align-items-center">
-                          <a href="#" class="avatar me-2 flex-shrink-0"><img src="assets/img/users/user-09.jpg" alt="user"></a>
-                          <div>
-                            <h6 class="fs-14 mb-1"><a href="#">David Cruz</a></h6>
-                            <div class="d-flex align-items-center gap-1 mt-1" aria-label="AI triage for David Cruz">
-                              <span class="ai-flag ai-flag-recommended"><i class="ti ti-check"></i> Low</span>
-                              <span class="fs-10 ai-confidence">68%</span>
-                            </div>
-                            <p class="mb-0 text-truncate">Let me know if you...</p>
-                          </div>
-                        </div>
-                        <div class="text-end">
-                          <span class="text-dark d-block mb-1">10:43 PM</span>
-                          <span class="d-block text-light"><i class="ti ti-checks text-light"></i></span>
-                        </div>
-                      </div>
-                    </div>
+                    <h6 class="fs-14 fw-medium mb-1" style="color: #0A1B39;">James Hong</h6>
+                    <p class="mb-0 fs-14" style="color: #6C7688;">Admin</p>
                   </div>
+                </div>
+                <button class="btn btn-primary d-flex align-items-center justify-content-center" style="width: 31px; height: 30px; padding: 9px; border-radius: 5px;">
+                  <i class="ti ti-plus" style="font-size: 12px; color: #FFF;"></i>
+                </button>
+              </div>
 
+              <!-- Search Bar -->
+              <div class="figma-search p-3 pb-0">
+                <div class="input-group">
+                  <span class="input-group-text bg-white border-end-0" style="border-radius: 6px 0 0 6px; padding: 7px 0 7px 13px;">
+                    <i class="ti ti-search" style="color: #0A1B39; font-size: 14px;"></i>
+                  </span>
+                  <input type="text" class="form-control border-start-0" placeholder="Search Keyword" style="border-radius: 0 5px 5px 0; padding: 5.5px 12px; color: #858D9C;">
                 </div>
               </div>
-              <div class="flex-fill chat-messages">
-                <div class="card border-0 mb-0">
 
-                  <div class="card-header d-flex align-items-center justify-content-between flex-wrap row-gap-3 p-3">
-                    <div class="d-flex align-items-center">
-                      <span class="avatar me-2 flex-shrink-0"><img src="assets/img/users/user-10.jpg" alt="user"></span>
-                      <div>
-                        <h6 class="fs-14 fw-semibold mb-1">Mark Smith</h6>
-                        <p class="mb-0 d-inline-flex align-items-center"><i class="ti ti-point-filled text-success"></i>Online</p>
-                      </div>
+              <!-- Priority Filters -->
+              <div class="figma-priority-filters p-3 pt-2">
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                  <!-- All Filter -->
+                  <button type="button" class="figma-filter-btn btn p-0 border-0 active" data-priority="all">
+                    <div class="d-flex align-items-center justify-content-center" style="width: 30px; height: 19px; padding: 3px 7px; border-radius: 5px; background: #2D3748; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);">
+                      <span style="color: #FFF; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">All</span>
                     </div>
-                    <div class="gap-2 d-flex align-items-center flex-wrap">
-                      <a href="voice-call.html" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Voice Call"><i class="ti ti-phone"></i></a>
-                      <a href="video-call.html" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Video Call"><i class="ti ti-video"></i></a>
-                      <a href="javascript:void(0);" class="btn btn-icon btn-light" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Info"><i class="ti ti-info-circle"></i></a>
-                      <a href="javascript:void(0);" class="btn btn-icon btn-light close-chat d-md-none"><i class="ti ti-x"></i></a>
-                    </div>
-                  </div>
+                  </button>
 
-                  <section class="ai-suggestions border-top border-bottom p-3" aria-label="AI triage suggestions">
-                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
-                      <div class="d-flex align-items-center gap-2">
-                        <i class="ti ti-bulb text-primary" aria-hidden="true"></i>
-                        <h6 class="mb-0 fw-semibold">AI Suggestions</h6>
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <span class="badge bg-light text-dark">Auto</span>
-                        <button class="btn btn-outline-secondary btn-sm" data-ai-action="refresh" aria-label="Refresh suggestions"><i class="ti ti-refresh me-1"></i>Refresh</button>
-                      </div>
+                  <!-- Critical Filter -->
+                  <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="critical">
+                    <div class="d-flex align-items-center" style="height: 18px; padding: 0 6px; gap: 4px; border-radius: 5px; background: rgba(220, 53, 69, 0.10);">
+                      <svg width="11" height="11" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.855469 8.39583L5.50045 0.375L10.1454 8.39583H0.855469ZM5.50045 7.16189C5.60533 7.16189 5.69325 7.1264 5.76422 7.05544C5.83518 6.98447 5.87067 6.89655 5.87067 6.79167C5.87067 6.68678 5.83518 6.59886 5.76422 6.5279C5.69325 6.45693 5.60533 6.42145 5.50045 6.42145C5.39557 6.42145 5.30764 6.45693 5.23668 6.5279C5.16571 6.59886 5.13023 6.68678 5.13023 6.79167C5.13023 6.89655 5.16571 6.98447 5.23668 7.05544C5.30764 7.1264 5.39557 7.16189 5.50045 7.16189ZM5.1567 5.96311H5.8442V3.67145H5.1567V5.96311Z" fill="#DC3545"/>
+                      </svg>
+                      <span style="color: #DC3545; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">Critical</span>
                     </div>
-                    <div class="ai-suggestion-action-row d-flex align-items-center gap-2 flex-wrap mt-2">
-                      <button class="btn btn-primary btn-sm ai-action-btn" data-ai-action="apply-reply" aria-label="Apply suggested reply"><i class="ti ti-send me-1"></i>Apply</button>
-                      <button class="btn btn-outline-warning btn-sm ai-action-btn" data-ai-action="flag" aria-label="Flag message"><i class="ti ti-flag-3 me-1"></i>Flag</button>
-                    </div>
-                    <div class="mt-2">
-                      <ul class="list-unstyled mb-0">
-                        <li class="d-flex align-items-start gap-2 py-1">
-                          <i class="ti ti-arrow-badge-right text-success mt-1" aria-hidden="true"></i>
-                          <div class="flex-grow-1">
-                            <small class="fw-semibold d-block">Send rescheduling link</small>
-                            <small class="text-muted">Patient requested to reschedule. Include next available slots.</small>
-                          </div>
-                        </li>
-                        <li class="d-flex align-items-start gap-2 py-1">
-                          <i class="ti ti-alert-octagon text-warning mt-1" aria-hidden="true"></i>
-                          <div class="flex-grow-1">
-                            <small class="fw-semibold d-block">Flag as needs action</small>
-                            <small class="text-muted">Requires team response within 2 hours.</small>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="ai-loading d-none mt-2" aria-live="polite" aria-busy="true">
-                      <div class="d-flex align-items-center gap-2">
-                        <span class="spinner-border spinner-border-sm text-primary" role="status" aria-hidden="true"></span>
-                        <small>Analyzing conversation…</small>
-                      </div>
-                    </div>
-                  </section>
+                  </button>
 
-                  <div class="card-body p-0">
-                    <div class="message-body p-4" data-simplebar>
-                      <div class="chat-list mb-3">
-                        <div class="d-flex align-items-start">
-                          <span class="avatar online me-2 flex-shrink-0"><img src="assets/img/users/user-10.jpg" alt="user"></span>
-                          <div>
-                            <div class="d-flex align-items-center mb-1">
-                              <h6 class="fs-14 mb-0">Mark Smith</h6>
-                              <p class="mb-0 d-inline-flex align-items-center"><i class="ti ti-point-filled mx-2"></i>02:39 PM</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                              <div class="message-box receive-message p-3">
-                                <p class="mb-0 fs-16">Hey mark! Did you check out the new logo design?</p>
-                              </div>
-                              <div class="ms-2">
-                                <a href="javascript:void(0);" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></a>
-                                <ul class="dropdown-menu p-2">
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Reply</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Forward</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-file-export me-1"></i>Copy</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Mark as Favourite</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-trash me-1"></i>Delete</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-check me-1"></i>Mark as Unread</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-box-align-right me-1"></i>Archeive Chat</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Pin Chat</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                  <!-- High Filter -->
+                  <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="high">
+                    <div class="d-flex align-items-center" style="padding: 4px 7.2px; border-radius: 5px; background: rgba(255, 193, 7, 0.10);">
+                      <div class="d-flex flex-column align-items-center" style="padding-right: 4px;">
+                        <svg width="11" height="11" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M4.70182 6.66861C4.8067 6.66861 4.89463 6.63312 4.96559 6.56216C5.03656 6.49119 5.07204 6.40327 5.07204 6.29839C5.07204 6.19351 5.03656 6.10558 4.96559 6.03462C4.89463 5.96373 4.8067 5.92828 4.70182 5.92828C4.59694 5.92828 4.50902 5.96373 4.43805 6.03462C4.36709 6.10558 4.3316 6.19351 4.3316 6.29839C4.3316 6.40327 4.36709 6.49119 4.43805 6.56216C4.50902 6.63312 4.59694 6.66861 4.70182 6.66861ZM4.35807 4.99397H5.04557V2.24397H4.35807V4.99397ZM4.70262 8.85451C4.10037 8.85451 3.53429 8.74023 3.00439 8.51168C2.47448 8.28312 2.01354 7.97295 1.62159 7.58115C1.22964 7.18935 0.919312 6.72861 0.690604 6.19893C0.461972 5.66925 0.347656 5.10332 0.347656 4.50115C0.347656 3.8989 0.461934 3.33282 0.69049 2.80291C0.919045 2.273 1.22922 1.81207 1.62102 1.42012C2.01282 1.02817 2.47356 0.717835 3.00324 0.489127C3.53292 0.260495 4.09885 0.146179 4.70102 0.146179C5.30327 0.146179 5.86935 0.260457 6.39926 0.489012C6.92917 0.717568 7.3901 1.02775 7.78205 1.41954C8.174 1.81134 8.48433 2.27208 8.71304 2.80176C8.94167 3.33144 9.05599 3.89737 9.05599 4.49954C9.05599 5.10179 8.94171 5.66787 8.71316 6.19778C8.4846 6.72769 8.17442 7.18862 7.78262 7.58058C7.39083 7.97253 6.93009 8.28286 6.40041 8.51156C5.87073 8.7402 5.3048 8.85451 4.70262 8.85451ZM4.70182 8.16701C5.72543 8.16701 6.59245 7.8118 7.30286 7.10139C8.01328 6.39097 8.36849 5.52396 8.36849 4.50035C8.36849 3.47673 8.01328 2.60972 7.30286 1.8993C6.59245 1.18889 5.72543 0.833679 4.70182 0.833679C3.67821 0.833679 2.8112 1.18889 2.10078 1.8993C1.39036 2.60972 1.03516 3.47673 1.03516 4.50035C1.03516 5.52396 1.39036 6.39097 2.10078 7.10139C2.8112 7.8118 3.67821 8.16701 4.70182 8.16701Z" fill="#E2B93B"/>
+                        </svg>
                       </div>
-                      <div class="chat-list ms-auto mb-3">
-                        <div class="d-flex align-items-start justify-content-end">
-                          <div>
-                            <div class="d-flex align-items-center justify-content-end mb-1">
-                              <p class="mb-0 d-inline-flex align-items-center"><i class="ti ti-checks text-success me-1"></i>02:39 PM<i class="ti ti-point-filled mx-2"></i></p>
-                              <h6 class="fs-14 fw-semibold mb-0">You</h6>
-                            </div>
-                            <div class="d-flex align-items-center">
-                              <div class="me-2">
-                                <a href="javascript:void(0);" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></a>
-                                <ul class="dropdown-menu p-2">
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Reply</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Forward</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-file-export me-1"></i>Copy</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Mark as Favourite</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-trash me-1"></i>Delete</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-check me-1"></i>Mark as Unread</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-box-align-right me-1"></i>Archeive Chat</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Pin Chat</a></li>
-                                </ul>
-                              </div>
-                              <div class="message-box sent-message p-3">
-                                <p class="mb-0 fs-16">Not yet. Can you send it here?</p>
-                              </div>
-                            </div>
-                          </div>
-                          <span class="avatar ms-2 online flex-shrink-0"><img src="assets/img/users/user-11.jpg" alt="user"></span>
-                        </div>
-                      </div>
-                      <div class="chat-list mb-3">
-                        <div class="d-flex align-items-start">
-                          <span class="avatar online me-2 flex-shrink-0"><img src="assets/img/users/user-10.jpg" alt="user"></span>
-                          <div>
-                            <div class="d-flex align-items-center mb-1">
-                              <h6 class="fs-14 mb-0">Mark Smith</h6>
-                              <p class="mb-0 d-inline-flex align-items-center"><i class="ti ti-point-filled mx-2"></i>02:39 PM</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                              <div class="message-box receive-message p-3">
-                                <p class="mb-2 fs-16">Sure! Please check the below logo Attached!!!</p>
-                                <div class="d-flex align-items-center gap-2 d-none">
-                                  <span class="bg-white d-block rounded p-1"><img src="assets/img/favicon.png" class="rounded" alt="attachment"></span>
-                                  <span class="bg-white d-block rounded p-1"><img src="assets/img/favicon.png" class="rounded" alt="attachment"></span>
-                                </div>
-                              </div>
-                              <div class="ms-2">
-                                <a href="javascript:void(0);" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></a>
-                                <ul class="dropdown-menu p-2">
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Reply</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Forward</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-file-export me-1"></i>Copy</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Mark as Favourite</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-trash me-1"></i>Delete</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-check me-1"></i>Mark as Unread</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-box-align-right me-1"></i>Archeive Chat</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Pin Chat</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="text-center"><span class="badge bg-light rounded-pill px-3 text-dark fs-14">Today</span></div>
-                      <div class="chat-list ms-auto mb-3">
-                        <div class="d-flex align-items-start justify-content-end">
-                          <div>
-                            <div class="d-flex align-items-center justify-content-end mb-1">
-                              <p class="mb-0 d-inline-flex align-items-center"><i class="ti ti-checks text-success me-1"></i>10:00 AM<i class="ti ti-point-filled mx-2"></i></p>
-                              <h6 class="fs-14 fw-semibold mb-0">You</h6>
-                            </div>
-                            <div class="d-flex align-items-center">
-                              <div class="me-2">
-                                <a href="javascript:void(0);" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></a>
-                                <ul class="dropdown-menu p-2">
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Reply</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Forward</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-file-export me-1"></i>Copy</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Mark as Favourite</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-trash me-1"></i>Delete</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-check me-1"></i>Mark as Unread</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-box-align-right me-1"></i>Archeive Chat</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Pin Chat</a></li>
-                                </ul>
-                              </div>
-                              <div class="message-box sent-message p-3">
-                                <p class="mb-0 fs-16">Looks clean! I like the font. Maybe try a slightly darker blue?</p>
-                              </div>
-                            </div>
-                          </div>
-                          <span class="avatar ms-2 online flex-shrink-0"><img src="assets/img/users/user-11.jpg" alt="user"></span>
-                        </div>
-                      </div>
-                      <div class="chat-list mb-3">
-                        <div class="d-flex align-items-start">
-                          <span class="avatar online me-2 flex-shrink-0"><img src="assets/img/users/user-10.jpg" alt="user"></span>
-                          <div>
-                            <div class="d-flex align-items-center mb-1">
-                              <h6 class="fs-14 mb-0">Mark Smith</h6>
-                              <p class="mb-0 d-inline-flex align-items-center"><i class="ti ti-point-filled mx-2"></i>10:05 AM</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                              <div class="message-box receive-message p-3">
-                                <p class="mb-0 fs-16">Perfect! That layout will work great on the landing page. 👍</p>
-                              </div>
-                              <div class="ms-2">
-                                <a href="javascript:void(0);" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></a>
-                                <ul class="dropdown-menu p-2">
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Reply</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Forward</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-file-export me-1"></i>Copy</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Mark as Favourite</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-trash me-1"></i>Delete</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-check me-1"></i>Mark as Unread</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-box-align-right me-1"></i>Archeive Chat</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Pin Chat</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="chat-list ms-auto mb-3">
-                        <div class="d-flex align-items-start justify-content-end">
-                          <div>
-                            <div class="d-flex align-items-center justify-content-end mb-1">
-                              <p class="mb-0 d-inline-flex align-items-center"><i class="ti ti-checks text-success me-1"></i>10:00 AM<i class="ti ti-point-filled mx-2"></i></p>
-                              <h6 class="fs-14 fw-semibold mb-0">You</h6>
-                            </div>
-                            <div class="d-flex align-items-center">
-                              <div class="me-2">
-                                <a href="javascript:void(0);" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></a>
-                                <ul class="dropdown-menu p-2">
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Reply</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Forward</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-file-export me-1"></i>Copy</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Mark as Favourite</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-trash me-1"></i>Delete</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-check me-1"></i>Mark as Unread</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti 
- ti-box-align-right me-1"></i>Archeive Chat</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Pin Chat</a></li>
-                                </ul>
-                              </div>
-                              <div class="message-box sent-message p-3">
-                                <p class="mb-0 fs-16">Perfect It looks Great!!!</p>
-                              </div>
-                            </div>
-                          </div>
-                          <span class="avatar ms-2 online flex-shrink-0"><img src="assets/img/users/user-11.jpg" alt="user"></span>
-                        </div>
-                      </div>
-                      <div class="chat-list">
-                        <div class="d-flex align-items-start">
-                          <span class="avatar online me-2 flex-shrink-0"><img src="assets/img/users/user-10.jpg" alt="user"></span>
-                          <div>
-                            <div class="d-flex align-items-center mb-1">
-                              <h6 class="fs-14 mb-0">Mark Smith</h6>
-                              <p class="mb-0 d-inline-flex align-items-center"><i class="ti ti-point-filled mx-2"></i>02:39 PM</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                              <div class="message-box receive-message p-3">
-                                <p class="mb-0 fs-16">Hey mark! Did you check out the new logo design?</p>
-                              </div>
-                              <div class="ms-2">
-                                <a href="javascript:void(0);" data-bs-toggle="dropdown"><i class="ti ti-dots-vertical"></i></a>
-                                <ul class="dropdown-menu p-2">
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Reply</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Forward</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-file-export me-1"></i>Copy</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-heart me-1"></i>Mark as Favourite</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-trash me-1"></i>Delete</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-check me-1"></i>Mark as Unread</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-box-align-right me-1"></i>Archeive Chat</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="ti ti-pinned me-1"></i>Pin Chat</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <span style="color: #E2B93B; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10.5px; font-weight: 600; line-height: 10.5px;">High: 3</span>
                     </div>
-                    <div class="message-footer d-flex align-items-center border-top p-3">
-                      <div class="flex-fill">
-                        <input type="text" class="form-control border-0" placeholder="Type Something...">
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i class="ti ti-photo-plus"></i></a>
-                        <a href="javascript:void(0);" class="btn btn-icon btn-light"><i class="ti ti-mood-smile-beam"></i></a>
-                        <div>
-                          <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
-                          <ul class="dropdown-menu p-2">
-                            <li>
-                              <a href="#" class="dropdown-item"><i class="ti ti-camera-selfie me-2"></i>Camera</a>
-                            </li>
-                            <li>
-                              <a href="#" class="dropdown-item"><i class="ti ti-photo-up me-2"></i>Gallery</a>
-                            </li>
-                            <li>
-                              <a href="#" class="dropdown-item"><i class="ti ti-music me-2"></i>Audio</a>
-                            </li>
-                            <li>
-                              <a href="#" class="dropdown-item"><i class="ti ti-map-pin-share me-2"></i>Location</a>
-                            </li>
-                            <li>
-                              <a href="#" class="dropdown-item"><i class="ti ti-user-check me-2"></i>Contact</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  </button>
 
+                  <!-- Medium Filter -->
+                  <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="medium">
+                    <div class="d-flex align-items-center" style="width: 78px; padding: 2px 6px; gap: 4px; border-radius: 5px; background: #4A5568;">
+                      <svg width="11" height="11" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.55339 6.67709H5.24089V4.04168H4.55339V6.67709ZM4.89714 3.25724C5.00202 3.25724 5.08994 3.22176 5.16091 3.15079C5.23187 3.07983 5.26735 2.9919 5.26735 2.88702C5.26735 2.78214 5.23187 2.69422 5.16091 2.62325C5.08994 2.55236 5.00202 2.51692 4.89714 2.51692C4.79225 2.51692 4.70433 2.55236 4.63336 2.62325C4.5624 2.69422 4.52692 2.78214 4.52692 2.88702C4.52692 2.9919 4.5624 3.07983 4.63336 3.15079C4.70433 3.22176 4.79225 3.25724 4.89714 3.25724ZM4.89794 8.85418C4.29569 8.85418 3.72961 8.7399 3.1997 8.51134C2.66979 8.28279 2.20886 7.97261 1.81691 7.58081C1.42495 7.18901 1.11462 6.72827 0.885917 6.19859C0.657285 5.66891 0.542969 5.10299 0.542969 4.50081C0.542969 3.89856 0.657247 3.33248 0.885802 2.80257C1.11436 2.27266 1.42453 1.81173 1.81633 1.41978C2.20813 1.02783 2.66887 0.7175 3.19855 0.488791C3.72823 0.260159 4.29416 0.145844 4.89633 0.145844C5.49858 0.145844 6.06466 0.260121 6.59457 0.488677C7.12448 0.717232 7.58541 1.02741 7.97736 1.41921C8.36932 1.81101 8.67965 2.27175 8.90835 2.80143C9.13699 3.33111 9.2513 3.89703 9.2513 4.49921C9.2513 5.10146 9.13702 5.66754 8.90847 6.19745C8.67991 6.72736 8.36974 7.18829 7.97794 7.58024C7.58614 7.97219 7.1254 8.28252 6.59572 8.51123C6.06604 8.73986 5.50011 8.85418 4.89794 8.85418ZM4.89714 8.16668C5.92075 8.16668 6.78776 7.81147 7.49818 7.10105C8.20859 6.39063 8.5638 5.52362 8.5638 4.50001C8.5638 3.4764 8.20859 2.60939 7.49818 1.89897C6.78776 1.18855 5.92075 0.833343 4.89714 0.833343C3.87352 0.833343 3.00651 1.18855 2.29609 1.89897C1.58568 2.60939 1.23047 3.4764 1.23047 4.50001C1.23047 5.52362 1.58568 6.39063 2.29609 7.10105C3.00651 7.81147 3.87352 8.16668 4.89714 8.16668Z" fill="#00D3C7"/>
+                      </svg>
+                      <span style="color: #00D3C7; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">Medium: 2</span>
+                    </div>
+                  </button>
+
+                  <!-- Low Filter -->
+                  <button type="button" class="figma-filter-btn btn p-0 border-0" data-priority="low">
+                    <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 3.99px; border-radius: 5px; background: rgba(25, 135, 84, 0.10);">
+                      <svg width="11" height="11" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.30389 7L0.398438 4.06396L1.23099 3.22265L3.30389 5.31737L8.56589 0L9.39844 0.841314L3.30389 7Z" fill="#198754"/>
+                      </svg>
+                      <span style="color: #198754; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px;">Low: 3</span>
+                    </div>
+                  </button>
                 </div>
-                <!-- card start -->
+              </div>
+
+              <!-- Contact List -->
+              <div class="figma-contact-list flex-grow-1" style="overflow-y: auto; max-height: calc(100% - 180px);">
+                
+                <!-- Mark Smith (Active) -->
+                <div class="figma-contact-item d-flex align-items-center p-3 bg-light rounded">
+                  <div class="avatar me-2 flex-shrink-0 position-relative">
+                    <img src="assets/img/users/user-02.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="fs-14 fw-medium mb-1" style="color: #0A1B39;">Mark Smith</h6>
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                      <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px; background: rgba(220, 53, 69, 0.10);">
+                        <i class="ti ti-alert-triangle-filled" style="color: #DC3545; font-size: 12px;"></i>
+                        <span style="color: #DC3545; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600;">Critical</span>
+                      </div>
+                    </div>
+                    <p class="mb-0 text-truncate" style="color: #6C7688; font-size: 14px;">Hey Sam! Did you Ch...</p>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block mb-1" style="color: #0A1B39; font-size: 14px;">10:10 AM</span>
+                    <i class="ti ti-checks" style="color: #27AE60; font-size: 14px;"></i>
+                  </div>
+                </div>
+
+                <!-- Eugene Sikora -->
+                <div class="figma-contact-item d-flex align-items-center p-3">
+                  <div class="avatar me-2 flex-shrink-0">
+                    <img src="assets/img/users/user-03.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="fs-14 fw-medium mb-1" style="color: #0A1B39;">Eugene Sikora</h6>
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                      <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px; background: rgba(255, 193, 7, 0.10);">
+                        <i class="ti ti-exclamation-circle" style="color: #FFC107; font-size: 12px;"></i>
+                        <span style="color: #FFC107; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600;">High</span>
+                      </div>
+                    </div>
+                    <p class="mb-0 text-truncate" style="color: #6C7688; font-size: 14px;">How are your Today</p>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block mb-1" style="color: #0A1B39; font-size: 14px;">08:26 AM</span>
+                    <div class="badge bg-danger rounded-circle" style="width: 16px; height: 16px; padding: 4px; font-size: 10px;">5</div>
+                  </div>
+                </div>
+
+                <!-- Robert Fassett -->
+                <div class="figma-contact-item d-flex align-items-center p-3">
+                  <div class="avatar me-2 flex-shrink-0">
+                    <img src="assets/img/users/user-04.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="fs-14 fw-medium mb-1" style="color: #0A1B39;">Robert Fassett</h6>
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                      <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px; background: rgba(255, 193, 7, 0.10);">
+                        <i class="ti ti-exclamation-circle" style="color: #FFC107; font-size: 12px;"></i>
+                        <span style="color: #FFC107; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600;">High</span>
+                      </div>
+                    </div>
+                    <p class="mb-0 text-truncate" style="color: #6C7688; font-size: 14px;">Here are some of ve...</p>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block mb-1" style="color: #0A1B39; font-size: 14px;">yesterday</span>
+                    <div class="badge bg-danger rounded-circle" style="width: 16px; height: 16px; padding: 4px; font-size: 10px;">5</div>
+                  </div>
+                </div>
+
+                <!-- Andrew Fletcher -->
+                <div class="figma-contact-item d-flex align-items-center p-3">
+                  <div class="avatar me-2 flex-shrink-0">
+                    <img src="assets/img/users/user-05.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="fs-14 fw-medium mb-1" style="color: #0A1B39;">Andrew Fletcher</h6>
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                      <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px; background: rgba(25, 135, 84, 0.10);">
+                        <i class="ti ti-check" style="color: #198754; font-size: 12px;"></i>
+                        <span style="color: #198754; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600;">Low</span>
+                      </div>
+                    </div>
+                    <p class="mb-0 text-truncate" style="color: #6C7688; font-size: 14px;">Use tools like Trello...</p>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block mb-1" style="color: #0A1B39; font-size: 14px;">yesterday</span>
+                    <i class="ti ti-checks" style="color: #F5F6F8; font-size: 14px;"></i>
+                  </div>
+                </div>
+
+                <!-- Tyron Derby -->
+                <div class="figma-contact-item d-flex align-items-center p-3">
+                  <div class="avatar me-2 flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; border-radius: 4.8px; background: #F9F2F9;">
+                    <span style="color: #800080; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 14px; font-weight: 600;">TD</span>
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="fs-14 fw-medium mb-1" style="color: #0A1B39;">Tyron Derby</h6>
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                      <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px; background: rgba(25, 135, 84, 0.10);">
+                        <i class="ti ti-check" style="color: #198754; font-size: 12px;"></i>
+                        <span style="color: #198754; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600;">Low</span>
+                      </div>
+                    </div>
+                    <p class="mb-0 text-truncate" style="color: #6C7688; font-size: 14px;">Let's reconvene next...</p>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block mb-1" style="color: #0A1B39; font-size: 14px;">12:55 PM</span>
+                    <i class="ti ti-checks" style="color: #27AE60; font-size: 14px;"></i>
+                  </div>
+                </div>
+
+                <!-- Anna Johnson -->
+                <div class="figma-contact-item d-flex align-items-center p-3">
+                  <div class="avatar me-2 flex-shrink-0">
+                    <img src="assets/img/users/user-06.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="fs-14 fw-medium mb-1" style="color: #0A1B39;">Anna Johnson</h6>
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                      <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px;">
+                        <i class="ti ti-info-circle" style="color: #6C7688; font-size: 12px;"></i>
+                        <span style="color: #6C7688; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600;">Medium</span>
+                      </div>
+                    </div>
+                    <p class="mb-0 text-truncate" style="color: #6C7688; font-size: 14px;">How are your pati...</p>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block mb-1" style="color: #0A1B39; font-size: 14px;">12:54 PM</span>
+                    <i class="ti ti-checks" style="color: #F5F6F8; font-size: 14px;"></i>
+                  </div>
+                </div>
+
+                <!-- Emily Davis -->
+                <div class="figma-contact-item d-flex align-items-center p-3">
+                  <div class="avatar me-2 flex-shrink-0">
+                    <img src="assets/img/users/user-07.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="fs-14 fw-medium mb-1" style="color: #0A1B39;">Emily Davis</h6>
+                    <div class="d-flex align-items-center gap-1 mb-1">
+                      <div class="d-flex align-items-center" style="padding: 2px 6px; gap: 4px; border-radius: 10px; background: rgba(255, 193, 7, 0.10);">
+                        <i class="ti ti-exclamation-circle" style="color: #FFC107; font-size: 12px;"></i>
+                        <span style="color: #FFC107; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 10px; font-weight: 600;">High</span>
+                      </div>
+                    </div>
+                    <p class="mb-0 text-truncate" style="color: #6C7688; font-size: 14px;">Sure, I can help with...</p>
+                  </div>
+                  <div class="text-end">
+                    <span class="d-block mb-1" style="color: #0A1B39; font-size: 14px;">11:47 PM</span>
+                    <i class="ti ti-checks" style="color: #F5F6F8; font-size: 14px;"></i>
+                  </div>
+                </div>
+
               </div>
             </div>
-          </div><!-- end card body -->
-        </div><!-- end card -->
+
+            <!-- Main Chat Area -->
+            <div class="figma-main-chat flex-grow-1 d-flex flex-column">
+              
+              <!-- Chat Header -->
+              <div class="figma-chat-header d-flex align-items-center justify-content-between p-3 border-bottom">
+                <div class="d-flex align-items-center">
+                  <div class="avatar me-2 flex-shrink-0">
+                    <img src="assets/img/users/user-10.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                  </div>
+                  <div>
+                    <h6 class="fs-14 fw-semibold mb-0" style="color: #0A1B39;">Mark Smith</h6>
+                    <div class="d-flex align-items-center">
+                      <i class="ti ti-point-filled text-success me-1" style="font-size: 14px;"></i>
+                      <span style="color: #6C7688; font-size: 14px;">Online</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <button class="btn btn-light" style="width: 38px; height: 38px; padding: 1px; border-radius: 5px; border: 1px solid #F5F6F8;">
+                    <i class="ti ti-phone" style="color: #0A1B39; font-size: 12px;"></i>
+                  </button>
+                  <button class="btn btn-light" style="width: 38px; height: 38px; padding: 1px; border-radius: 5px; border: 1px solid #F5F6F8;">
+                    <i class="ti ti-video" style="color: #0A1B39; font-size: 12px;"></i>
+                  </button>
+                  <button class="btn btn-light" style="width: 38px; height: 38px; padding: 1px; border-radius: 5px; border: 1px solid #F5F6F8;">
+                    <i class="ti ti-info-circle" style="color: #0A1B39; font-size: 12px;"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- AI Assistance Section -->
+              <div class="figma-ai-assistance border-bottom p-3" style="background: #FFF;">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <div class="d-flex align-items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71435 0.748731C7.76562 0.466938 7.9066 0.274807 8.1373 0.172338C8.36799 0.0698679 8.59869 0.0762722 8.82938 0.191551C9.07289 0.294021 9.22669 0.479747 9.29077 0.748731C9.30359 0.812774 9.31 0.998501 9.31 1.30591C9.31 1.60051 9.30359 1.77984 9.29077 1.84388C9.27795 1.95916 9.2331 2.06803 9.1562 2.1705C9.0024 2.38825 8.78452 2.49712 8.50256 2.49712C8.2206 2.49712 8.00272 2.38825 7.84893 2.1705C7.77203 2.06803 7.72717 1.95916 7.71435 1.84388C7.70154 1.77984 7.69513 1.60051 7.69513 1.30591C7.69513 0.998501 7.70154 0.812774 7.71435 0.748731ZM2.58138 2.99667C2.58138 2.76611 2.65187 2.57398 2.79285 2.42027C2.93384 2.26657 3.1389 2.18971 3.40804 2.18971C3.54902 2.18971 3.67078 2.22174 3.77331 2.28578C3.87584 2.34982 4.02964 2.48432 4.2347 2.68925C4.43976 2.8942 4.57433 3.0479 4.63842 3.15037C4.7025 3.25284 4.73454 3.38093 4.73454 3.53463C4.73454 3.76519 4.65764 3.95732 4.50384 4.11103C4.35005 4.26473 4.1578 4.34158 3.92711 4.34158C3.77331 4.34158 3.64515 4.30956 3.54261 4.24552C3.44008 4.18147 3.27988 4.04698 3.062 3.84204C2.85694 3.62429 2.72236 3.47059 2.65828 3.38093C2.60702 3.27846 2.58138 3.15037 2.58138 2.99667ZM13.078 4.34158C12.8473 4.34158 12.6551 4.26473 12.5013 4.11103C12.3475 3.95732 12.2706 3.76519 12.2706 3.53463C12.2706 3.38093 12.2962 3.25924 12.3475 3.16958C12.4116 3.07992 12.559 2.91981 12.7897 2.68925C13.0203 2.4587 13.1741 2.3178 13.251 2.26657C13.3408 2.21533 13.4753 2.18971 13.6548 2.18971C13.8342 2.18971 14.0008 2.25376 14.1546 2.38185C14.334 2.54836 14.4237 2.7533 14.4237 2.99667C14.4237 3.15037 14.3917 3.27846 14.3276 3.38093C14.2764 3.47059 14.1418 3.62429 13.9239 3.84204C13.7188 4.04698 13.565 4.18147 13.4625 4.24552C13.36 4.30956 13.2318 4.34158 13.078 4.34158ZM3.73486 7.43489C3.87584 6.58952 4.17703 5.85301 4.63842 5.22539C5.03573 4.68742 5.54197 4.25192 6.15716 3.91889C6.68263 3.6371 7.24015 3.45138 7.8297 3.36171C8.35517 3.27205 8.81016 3.26565 9.19465 3.3425C10.0021 3.47059 10.739 3.79081 11.4055 4.30316C12.0719 4.8027 12.5718 5.43033 12.905 6.18604C13.2639 7.0058 13.3856 7.87039 13.2703 8.77981C13.1677 9.38182 12.9691 9.94541 12.6743 10.4706C12.3923 10.9829 12.0335 11.4184 11.5977 11.7771C11.2901 12.0204 11.0851 12.3214 10.9825 12.6801C10.9185 12.885 10.8864 13.154 10.8864 13.487C10.8864 13.8841 10.88 14.1211 10.8672 14.1979C10.7903 14.5566 10.6301 14.896 10.3866 15.2162C9.92518 15.8054 9.29077 16.1 8.48334 16.1C7.86815 16.1 7.33627 15.8951 6.8877 15.4852C6.51602 15.1394 6.2661 14.7103 6.13794 14.1979C6.12512 14.1211 6.11871 13.9097 6.11871 13.5639C6.11871 13.1796 6.08667 12.885 6.02259 12.6801C5.93287 12.3342 5.72781 12.0332 5.4074 11.7771C4.52307 11.0342 3.97196 10.0543 3.75408 8.83745C3.72845 8.67094 3.70923 8.44038 3.69641 8.14578C3.69641 7.83837 3.70923 7.60141 3.73486 7.43489ZM8.25264 4.91798C7.58619 4.9564 7.00304 5.18696 6.5032 5.60965C6.01618 6.00672 5.67014 6.51266 5.46508 7.12748C5.26001 7.7423 5.24079 8.35072 5.4074 8.95273C5.58683 9.61878 5.96491 10.1824 6.54165 10.6435C6.64418 10.7331 6.72108 10.81 6.77235 10.874C6.86206 10.9637 6.98382 11.111 7.13762 11.3159H9.86751C10.0982 11.0213 10.3545 10.746 10.6365 10.4898C10.7903 10.3489 10.8992 10.2336 10.9633 10.1439C11.0915 9.99024 11.2196 9.7917 11.3478 9.54833C11.4503 9.33059 11.5336 9.08082 11.5977 8.79902C11.7131 8.29948 11.7195 7.81916 11.617 7.35804C11.476 6.73041 11.1363 6.17964 10.598 5.70571C10.3417 5.48796 10.0533 5.30864 9.73294 5.16775C9.42534 5.02685 9.11775 4.95 8.81016 4.93719L8.56024 4.91798H8.25264ZM1.12031 7.31961C1.17158 7.30681 1.3446 7.3004 1.63938 7.3004C1.94697 7.3004 2.14563 7.30681 2.23534 7.31961C2.35069 7.33242 2.45963 7.37725 2.56216 7.45411C2.78004 7.60781 2.88898 7.82556 2.88898 8.10735C2.88898 8.38914 2.78004 8.60689 2.56216 8.7606C2.45963 8.83745 2.35069 8.88228 2.23534 8.89509C2.17126 8.9079 1.98542 8.9143 1.67783 8.9143C1.38305 8.9143 1.20362 8.9079 1.13954 8.89509C0.870394 8.83105 0.684556 8.68374 0.582025 8.45319C0.479494 8.22263 0.473086 7.99207 0.5628 7.76152C0.665332 7.53096 0.851169 7.38366 1.12031 7.31961ZM14.1161 8.10735C14.1161 7.82556 14.2187 7.60781 14.4237 7.45411C14.5391 7.37725 14.648 7.33242 14.7506 7.31961C14.8146 7.30681 15.0005 7.3004 15.3081 7.3004C15.6285 7.3004 15.8143 7.30681 15.8656 7.31961C16.1475 7.38366 16.3334 7.53096 16.4231 7.76152C16.5256 7.99207 16.5256 8.22263 16.4231 8.45319C16.3206 8.68374 16.1347 8.83105 15.8656 8.89509C15.8015 8.9079 15.6157 8.9143 15.3081 8.9143C15.0133 8.9143 14.8339 8.9079 14.7698 8.89509C14.6544 8.88228 14.5455 8.83745 14.443 8.7606C14.2251 8.60689 14.1161 8.38914 14.1161 8.10735ZM7.73358 13.4294V13.9481C7.78484 14.089 7.85533 14.2043 7.94505 14.294C8.08603 14.4221 8.27187 14.4861 8.50256 14.4861C8.65636 14.4861 8.79093 14.4541 8.90628 14.39C9.08571 14.3004 9.20747 14.1531 9.27155 13.9481V12.9106H7.73358V13.4294Z" fill="#2E37A4"/>
+                    </svg>
+                    <h6 class="mb-0 fw-semibold" style="color: #0A1B39; font-size: 16px;">AI Assistance</h6>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-sm border-0" style="padding: 7px 11px; border-radius: 5px; border: 1px solid #00D3C7; background: #FFF;">
+                      <i class="ti ti-aperture" style="color: #00D3C7; font-size: 13px;"></i>
+                    </button>
+                    <button class="btn btn-sm" style="padding: 6px 10px; border-radius: 5px; background: linear-gradient(113deg, #0D6EFD 0%, #4A5568 100%);">
+                      <i class="ti ti-send me-1" style="color: #FFF; font-size: 13px;"></i>
+                      <span style="color: #FFF; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 13px; font-weight: 600;">Apply</span>
+                    </button>
+                    <button class="btn btn-sm border-0" style="padding: 7px 11px; border-radius: 5px; border: 1px solid #E2B93B; background: #FFF;">
+                      <i class="ti ti-flag me-1" style="color: #E2B93B; font-size: 13px;"></i>
+                      <span style="color: #E2B93B; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 13px; font-weight: 600;">Flag</span>
+                    </button>
+                    <button class="btn btn-sm border-0" style="padding: 7px 9px; border-radius: 5px; border: 1px solid #2E37A4; background: #FFF;">
+                      <i class="ti ti-brain me-1" style="color: #2E37A4; font-size: 13px;"></i>
+                      <span style="color: #2E37A4; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 13px; font-weight: 600;">Analyze</span>
+                    </button>
+                    <button class="btn btn-sm border-0" style="padding: 7px 9px; border-radius: 5px; border: 1px solid #27AE60; background: #FFF;">
+                      <i class="ti ti-checks me-1" style="color: #27AE60; font-size: 13px;"></i>
+                      <span style="color: #27AE60; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 13px; font-weight: 600;">Triage</span>
+                    </button>
+                    <button class="btn btn-sm border-0" style="padding: 7px 9px; border-radius: 5px; border: 1px solid #EF1E1E; background: #FFF;">
+                      <i class="ti ti-alert-triangle me-1" style="color: #EF1E1E; font-size: 13px;"></i>
+                      <span style="color: #EF1E1E; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 13px; font-weight: 600;">Escalate</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Chat Messages -->
+              <div class="figma-chat-messages flex-grow-1 p-4" style="overflow-y: auto; max-height: calc(100% - 280px);">
+                
+                <!-- Message from Mark Smith -->
+                <div class="figma-message d-flex align-items-start mb-3">
+                  <div class="avatar me-2 flex-shrink-0 position-relative">
+                    <img src="assets/img/users/user-10.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                    <div class="position-absolute" style="width: 11px; height: 11px; border-radius: 50%; border: 2px solid #FFF; background: #27AE60; bottom: 0; right: 0;"></div>
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="fs-14 mb-0 me-2" style="color: #0A1B39;">Mark Smith</h6>
+                      <i class="ti ti-point-filled mx-1" style="color: #6C7688; font-size: 14px;"></i>
+                      <span style="color: #6C7688; font-size: 14px;">02:39 PM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="message-bubble p-3 rounded" style="border-radius: 0 5px 5px 5px; border: 1px solid #E7E8EB; background: #FCFDFD; max-width: 400px;">
+                        <p class="mb-0" style="color: #6C7688; font-size: 16px; line-height: 24px;">Hey mark! Did you check out the new logo design?</p>
+                      </div>
+                      <div class="ms-2">
+                        <button class="btn btn-sm p-0">
+                          <i class="ti ti-dots-vertical" style="color: #0A1B39; font-size: 14px;"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Message from You (Reply) -->
+                <div class="figma-message d-flex align-items-start justify-content-end mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="me-2">
+                      <button class="btn btn-sm p-0">
+                        <i class="ti ti-dots-vertical" style="color: #0A1B39; font-size: 14px;"></i>
+                      </button>
+                    </div>
+                    <div class="message-bubble p-3 rounded" style="border-radius: 5px 0 5px 5px; border: 1px solid #E7E8EB; background: #F7F8FA; max-width: 400px;">
+                      <p class="mb-0" style="color: #6C7688; font-size: 16px; line-height: 24px;">Not yet. Can you send it here?</p>
+                    </div>
+                  </div>
+                  <div class="avatar ms-2 flex-shrink-0 position-relative">
+                    <img src="assets/img/users/user-01.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                    <div class="position-absolute" style="width: 11px; height: 11px; border-radius: 50%; border: 2px solid #FFF; background: #27AE60; bottom: 0; right: 0;"></div>
+                  </div>
+                </div>
+                <div class="text-end mb-3">
+                  <div class="d-flex align-items-center justify-content-end">
+                    <i class="ti ti-checks me-1" style="color: #27AE60; font-size: 14px;"></i>
+                    <span style="color: #6C7688; font-size: 14px;">02:39 PM</span>
+                    <i class="ti ti-point-filled mx-1" style="color: #6C7688; font-size: 14px;"></i>
+                    <span style="color: #0A1B39; font-size: 14px; font-weight: 600;">You</span>
+                  </div>
+                </div>
+
+                <!-- Message from Mark Smith -->
+                <div class="figma-message d-flex align-items-start mb-3">
+                  <div class="avatar me-2 flex-shrink-0 position-relative">
+                    <img src="assets/img/users/user-10.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                    <div class="position-absolute" style="width: 11px; height: 11px; border-radius: 50%; border: 2px solid #FFF; background: #27AE60; bottom: 0; right: 0;"></div>
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="fs-14 mb-0 me-2" style="color: #0A1B39;">Mark Smith</h6>
+                      <i class="ti ti-point-filled mx-1" style="color: #6C7688; font-size: 14px;"></i>
+                      <span style="color: #6C7688; font-size: 14px;">02:39 PM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="message-bubble p-3 rounded" style="border-radius: 0 5px 5px 5px; border: 1px solid #E7E8EB; background: #FCFDFD; max-width: 400px;">
+                        <p class="mb-0" style="color: #6C7688; font-size: 16px; line-height: 24px;">Sure! Please check the below logo Attached!!!</p>
+                      </div>
+                      <div class="ms-2">
+                        <button class="btn btn-sm p-0">
+                          <i class="ti ti-dots-vertical" style="color: #0A1B39; font-size: 14px;"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Today Separator -->
+                <div class="text-center my-3">
+                  <div class="d-inline-flex align-items-center justify-content-center px-3 py-1" style="border-radius: 800px; background: #F7F8FA;">
+                    <span style="color: #0A1B39; font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-size: 14px; font-weight: 700;">Today</span>
+                  </div>
+                </div>
+
+                <!-- Message from You -->
+                <div class="figma-message d-flex align-items-start justify-content-end mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="me-2">
+                      <button class="btn btn-sm p-0">
+                        <i class="ti ti-dots-vertical" style="color: #0A1B39; font-size: 14px;"></i>
+                      </button>
+                    </div>
+                    <div class="message-bubble p-3 rounded" style="border-radius: 5px 0 5px 5px; border: 1px solid #E7E8EB; background: #F7F8FA; max-width: 400px;">
+                      <p class="mb-0" style="color: #6C7688; font-size: 16px; line-height: 24px;">Looks clean! I like the font. Maybe try a slightly darker blue?</p>
+                    </div>
+                  </div>
+                  <div class="avatar ms-2 flex-shrink-0 position-relative">
+                    <img src="assets/img/users/user-01.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                    <div class="position-absolute" style="width: 11px; height: 11px; border-radius: 50%; border: 2px solid #FFF; background: #27AE60; bottom: 0; right: 0;"></div>
+                  </div>
+                </div>
+                <div class="text-end mb-3">
+                  <div class="d-flex align-items-center justify-content-end">
+                    <i class="ti ti-checks me-1" style="color: #27AE60; font-size: 14px;"></i>
+                    <span style="color: #6C7688; font-size: 14px;">10:00 AM</span>
+                    <i class="ti ti-point-filled mx-1" style="color: #6C7688; font-size: 14px;"></i>
+                    <span style="color: #0A1B39; font-size: 14px; font-weight: 600;">You</span>
+                  </div>
+                </div>
+
+                <!-- Message from Mark Smith -->
+                <div class="figma-message d-flex align-items-start mb-3">
+                  <div class="avatar me-2 flex-shrink-0 position-relative">
+                    <img src="assets/img/users/user-10.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                    <div class="position-absolute" style="width: 11px; height: 11px; border-radius: 50%; border: 2px solid #FFF; background: #27AE60; bottom: 0; right: 0;"></div>
+                  </div>
+                  <div class="flex-grow-1">
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="fs-14 mb-0 me-2" style="color: #0A1B39;">Mark Smith</h6>
+                      <i class="ti ti-point-filled mx-1" style="color: #6C7688; font-size: 14px;"></i>
+                      <span style="color: #6C7688; font-size: 14px;">10:05 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="message-bubble p-3 rounded" style="border-radius: 0 5px 5px 5px; border: 1px solid #E7E8EB; background: #FCFDFD; max-width: 400px;">
+                        <p class="mb-0" style="color: #6C7688; font-size: 16px; line-height: 24px;">Perfect! That layout will work great on the landing page. ��</p>
+                      </div>
+                      <div class="ms-2">
+                        <button class="btn btn-sm p-0">
+                          <i class="ti ti-dots-vertical" style="color: #0A1B39; font-size: 14px;"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Final Reply from You -->
+                <div class="figma-message d-flex align-items-start justify-content-end mb-3">
+                  <div class="d-flex align-items-center">
+                    <div class="me-2">
+                      <button class="btn btn-sm p-0">
+                        <i class="ti ti-dots-vertical" style="color: #0A1B39; font-size: 14px;"></i>
+                      </button>
+                    </div>
+                    <div class="message-bubble p-3 rounded" style="border-radius: 5px 0 5px 5px; border: 1px solid #E7E8EB; background: #F7F8FA; max-width: 400px;">
+                      <p class="mb-0" style="color: #6C7688; font-size: 16px; line-height: 24px;">Perfect It looks Great!!!</p>
+                    </div>
+                  </div>
+                  <div class="avatar ms-2 flex-shrink-0 position-relative">
+                    <img src="assets/img/users/user-01.jpg" alt="user" class="rounded" style="width: 40px; height: 40px;">
+                    <div class="position-absolute" style="width: 11px; height: 11px; border-radius: 50%; border: 2px solid #FFF; background: #27AE60; bottom: 0; right: 0;"></div>
+                  </div>
+                </div>
+                <div class="text-end mb-3">
+                  <div class="d-flex align-items-center justify-content-end">
+                    <i class="ti ti-checks me-1" style="color: #27AE60; font-size: 14px;"></i>
+                    <span style="color: #6C7688; font-size: 14px;">10:00 AM</span>
+                    <i class="ti ti-point-filled mx-1" style="color: #6C7688; font-size: 14px;"></i>
+                    <span style="color: #0A1B39; font-size: 14px; font-weight: 600;">You</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Message Input Area -->
+              <div class="figma-message-input border-top p-3">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="flex-grow-1">
+                    <input type="text" class="form-control border-0" placeholder="Type Something..." style="padding: 10px 12px; border-radius: 5px; background: #FFF; color: #858D9C;">
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-light" style="width: 38px; height: 38px; padding: 1px; border-radius: 5px; border: 1px solid #F5F6F8;">
+                      <i class="ti ti-paperclip" style="color: #0A1B39; font-size: 12px;"></i>
+                    </button>
+                    <button class="btn btn-light" style="width: 38px; height: 38px; padding: 1px; border-radius: 5px; border: 1px solid #F5F6F8;">
+                      <i class="ti ti-camera" style="color: #0A1B39; font-size: 12px;"></i>
+                    </button>
+                    <button class="btn btn-light" style="width: 38px; height: 38px; padding: 13px 1px; border-radius: 5px; border: 1px solid #F5F6F8;">
+                      <i class="ti ti-send" style="color: #0A1B39; font-size: 12px;"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Scrollbar -->
+            <div class="figma-scrollbar" style="width: 11px; padding: 120.99px 6px 1.01px 0; height: 604px;">
+              <div style="width: 5px; height: 482px; padding: 2px 0;">
+                <div style="width: 5px; height: 478px; border-radius: 5px; background: #B6BBC4;"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- End Figma Messages Container -->
 
       </div>
       <!-- End Content -->
 
-      <!-- Footer Start -->
-      <div class="footer text-center bg-white p-2 border-top">
-        <p class="text-dark mb-0">2025 &copy; <a href="javascript:void(0);" class="link-primary">Symplify</a>, All Rights Reserved</p>
-      </div>
-      <!-- Footer End -->
-
     </div>
+    <!-- End Page Wrapper -->
 
-    <!-- ========================
-      End Page Content
-    ========================= -->
+  </div>
+  <!-- End Main Wrapper -->
 
-   </div>
-   <!-- End Wrapper -->
+  <!-- jQuery -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
 
-   <!-- jQuery -->
-   <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap Core JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-   <!-- Bootstrap Core JS -->
-   <script src="assets/js/bootstrap.bundle.min.js"></script>    
-   
-   <!-- Simplebar JS -->
-   <script src="assets/plugins/simplebar/simplebar.min.js"></script>
+  <!-- Simplebar JS -->
+  <script src="assets/plugins/simplebar/simplebar.min.js"></script>
 
-   <!-- Select2 JS -->
-   <script src="assets/plugins/select2/js/select2.min.js"></script>
+  <!-- Slimscroll JS -->
+  <script src="assets/js/jquery.slimscroll.min.js"></script>
 
-   <!-- Daterangepikcer JS -->
-   <script src="assets/js/moment.min.js"></script>
-   <script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Select2 JS -->
+  <script src="assets/plugins/select2/js/select2.min.js"></script>
 
-   <!-- Slimscroll JS -->
-   <script src="assets/js/jquery.slimscroll.min.js"></script>
+  <!-- Moment JS -->
+  <script src="assets/plugins/moment/moment.min.js"></script>
 
-   <!-- Main JS -->
-   <script src="assets/js/chat.js"></script>
-   <script src="assets/js/slimscroll.js"></script>
-   <script src="assets/js/script.js"></script>
+  <!-- Daterangepicker JS -->
+  <script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
 
-   <!-- AI Inbox Triage: Minimal interaction script for loading indicator -->
-   <script>
-     document.addEventListener('DOMContentLoaded', function() {
-       document.querySelectorAll('[data-ai-action]').forEach(function(btn) {
-         btn.addEventListener('click', function() {
-           var panel = document.querySelector('.ai-suggestions');
-           var loader = panel ? panel.querySelector('.ai-loading') : null;
-           if (loader) {
-             loader.classList.remove('d-none');
-             setTimeout(function(){ loader.classList.add('d-none'); }, 1200);
-           }
-         });
-       });
-     });
-   </script>
+  <!-- Theme Settings JS -->
+  <script src="assets/js/theme-settings.js"></script>
+
+  <!-- Greedynav JS -->
+  <script src="assets/plugins/greedynav/greedynav.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- AI Messages JS -->
+  <script src="assets/js/ai-messages.js"></script>
+
+  <!-- Figma Messages JS -->
+  <script src="assets/js/figma-messages.js"></script>
 
 </body>
 
