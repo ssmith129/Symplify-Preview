@@ -1722,53 +1722,51 @@
 }
 
 /* Dark Mode Support for Figma Messages */
-@media (prefers-color-scheme: dark) {
-    .figma-messages-container {
-        background: #2D3748;
-        border-color: #4A5568;
-    }
+html[data-bs-theme=dark] .figma-messages-container {
+    background: #2D3748;
+    border-color: #4A5568;
+}
 
-    .figma-sidebar,
-    .figma-main-chat,
-    .figma-user-header,
-    .figma-chat-header,
-    .figma-ai-assistance,
-    .figma-chat-messages,
-    .figma-message-input {
-        background: #2D3748 !important;
-        border-color: #4A5568 !important;
-    }
+html[data-bs-theme=dark] .figma-sidebar,
+html[data-bs-theme=dark] .figma-main-chat,
+html[data-bs-theme=dark] .figma-user-header,
+html[data-bs-theme=dark] .figma-chat-header,
+html[data-bs-theme=dark] .figma-ai-assistance,
+html[data-bs-theme=dark] .figma-chat-messages,
+html[data-bs-theme=dark] .figma-message-input {
+    background: #2D3748 !important;
+    border-color: #4A5568 !important;
+}
 
-    .figma-search .input-group-text,
-    .figma-search .form-control,
-    .figma-message-input .form-control {
-        background: #4A5568 !important;
-        border-color: #718096 !important;
-        color: #E2E8F0 !important;
-    }
+html[data-bs-theme=dark] .figma-search .input-group-text,
+html[data-bs-theme=dark] .figma-search .form-control,
+html[data-bs-theme=dark] .figma-message-input .form-control {
+    background: #4A5568 !important;
+    border-color: #718096 !important;
+    color: #E2E8F0 !important;
+}
 
-    .figma-contact-item:hover {
-        background: rgba(255, 255, 255, 0.05) !important;
-    }
+html[data-bs-theme=dark] .figma-contact-item:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
 
-    .figma-contact-item.active,
-    .figma-contact-item.bg-light {
-        background: rgba(255, 255, 255, 0.08) !important;
-    }
+html[data-bs-theme=dark] .figma-contact-item.active,
+html[data-bs-theme=dark] .figma-contact-item.bg-light {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
 
-    .figma-message .message-bubble {
-        background: #4A5568 !important;
-        border-color: #718096 !important;
-    }
+html[data-bs-theme=dark] .figma-message .message-bubble {
+    background: #4A5568 !important;
+    border-color: #718096 !important;
+}
 
-    .figma-priority-filters .figma-filter-btn[data-priority="all"] div {
-        background: #4A5568 !important;
-        color: white !important;
-    }
+html[data-bs-theme=dark] .figma-priority-filters .figma-filter-btn[data-priority="all"] div {
+    background: #4A5568 !important;
+    color: white !important;
+}
 
-    .figma-priority-filters .figma-filter-btn[data-priority="all"] span {
-        color: white !important;
-    }
+html[data-bs-theme=dark] .figma-priority-filters .figma-filter-btn[data-priority="all"] span {
+    color: white !important;
 }
 
 /* High Contrast Mode Support */
